@@ -118,6 +118,7 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
   ])}></script>
 </head>
 <body>
+  <script is:inline>if(location.hostname.includes('pages.dev')){location.replace('https://dividend01.com'+location.pathname+location.search)}</script>
   <header>
     <div class="container">
       <h1><slot name="title">Dividend Guide</slot></h1>
