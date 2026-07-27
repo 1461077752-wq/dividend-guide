@@ -1,0 +1,19 @@
+﻿# Dividend Guide
+> A practical, step-by-step guide to dividend investing — learn how to pick dividend stocks, calculate yield, and build passive income.
+
+## Core Pages
+- [Dividend Guide](/): Complete introduction to dividend investing with key metrics, how-to timeline, and FAQ.
+- [Best Dividend Stocks](/stocks): Curated lists of Dividend Aristocrats, high-yield, dividend growth, and monthly payers.
+- [Dividend Calculator](/calculator): Free interactive tools for yield calculation, DRIP growth projection, and income goal planning.
+- [Dividend Strategies](/strategy): Comparison of five strategies — DRIP, growth, high yield, Dogs of the Dow, covered calls.
+
+## Trust & Legal
+- [About](/about): Editorial standards, methodology, and disclaimer.
+- [Contact](/contact): Email contacts for inquiries, corrections, and partnerships.
+- [Privacy Policy](/privacy): Data handling and cookie policy.
+- [Terms of Use](/terms): Usage terms and liability limitations.
+
+## Optional
+- Site: https://dividendguide.com
+- Language: en
+- Updated: 2026-07-27

@@ -1,0 +1,160 @@
+---
+import '../styles/global.css';
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  pubDate?: string;
+  modDate?: string;
+  schemaType?: 'Article' | 'WebPage';
+  image?: string;
+}
+const {
+  title,
+  description,
+  canonical,
+  pubDate = '2026-01-15',
+  modDate = new Date().toISOString().split('T')[0],
+  schemaType = 'WebPage',
+  image
+} = Astro.props;
+const currentPath = Astro.url.pathname;
+const pageUrl = canonical || `https://dividendguide.com${currentPath}`;
+const currentYear = new Date().getFullYear();
+const navItems = [
+  { href: '/', label: 'Guide', icon: 'home' },
+  { href: '/stocks', label: 'Stocks', icon: 'chart' },
+  { href: '/calculator', label: 'Calculator', icon: 'calc' },
+  { href: '/strategy', label: 'Strategy', icon: 'activity' },
+];
+
+const pageNames: Record<string, string> = {
+  '/': 'Dividend Guide',
+  '/stocks': 'Best Dividend Stocks',
+  '/calculator': 'Dividend Calculator',
+  '/strategy': 'Dividend Strategies',
+  '/about': 'About',
+  '/contact': 'Contact',
+  '/privacy': 'Privacy Policy',
+  '/terms': 'Terms of Use',
+};
+
+const breadcrumbItems = currentPath === '/'
+  ? [{ name: 'Home', path: '/' }]
+  : [
+      { name: 'Home', path: '/' },
+      { name: pageNames[currentPath] || title, path: currentPath }
+    ];
+const ogImage = image || 'https://dividendguide.com/images/og-default.jpg';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta name="author" content="Dividend Guide">
+  {canonical && <link rel="canonical" href={canonical}>}
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Font Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={pageUrl}>
+  <meta property="og:site_name" content="Dividend Guide">
+  <meta property="og:image" content={ogImage}>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={ogImage}>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json" set:html={JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Dividend Guide",
+      "url": "https://dividendguide.com",
+      "description": "A practical, step-by-step guide to dividend investing.",
+      "sameAs": [
+        "https://twitter.com/dividendguide",
+        "https://github.com/dividendguide"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Dividend Guide",
+      "url": "https://dividendguide.com",
+      "description": "A practical, step-by-step guide to dividend investing."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": schemaType,
+      "headline": title,
+      "description": description,
+      "url": pageUrl,
+      "datePublished": pubDate,
+      "dateModified": modDate,
+      "author": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividendguide.com/about" },
+      "publisher": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividendguide.com/about" }
+    },
+    ...(currentPath !== '/' ? [{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbItems.map((item, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": item.name,
+        "item": `https://dividendguide.com${item.path}`
+      }))
+    }] : [])
+  ])}></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><slot name="title">Dividend Guide</slot></h1>
+      <p class="subtitle"><slot name="subtitle">{description}</slot></p>
+      <p class="byline">By <a href="/about">Dividend Guide</a> &middot; Updated <time datetime={currentYear + '-01-01'}>{currentYear}</time></p>
+      <div class="hero-cta">
+        <a href="/stocks" class="btn">Browse Stocks</a>
+        <a href="/calculator" class="btn btn-outline">Try Calculator</a>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-brand">DG</a>
+      {navItems.map(item => (
+        <a href={item.href} class:list={[{ active: currentPath === item.href || (currentPath !== '/' && item.href !== '/' && currentPath.startsWith(item.href)) }]}>
+          {item.icon === 'home' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>}
+          {item.icon === 'chart' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>}
+          {item.icon === 'calc' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r="1"/><circle cx="12" cy="11" r="1"/><circle cx="16" cy="11" r="1"/><circle cx="8" cy="16" r="1"/><circle cx="12" cy="16" r="1"/><circle cx="16" cy="18" r="1"/></svg>}
+          {item.icon === 'activity' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>}
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </nav>
+  <main class="container"><slot /></main>
+  <footer>
+    <div class="container">
+      <p><strong>Dividend Guide</strong> &mdash; Educational content only. Not financial advice. Always do your own research before investing.</p>
+      <nav class="footer-links">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
+      </nav>
+      <p style="margin-top:16px;font-size:.75rem;opacity:.7">&copy; {currentYear} Dividend Guide. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
