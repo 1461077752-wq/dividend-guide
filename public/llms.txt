@@ -1,4 +1,4 @@
-﻿# Dividend Guide
+# Dividend Guide
 > A practical, step-by-step guide to dividend investing — learn how to pick dividend stocks, calculate yield, and build passive income.
 
 ## Core Pages
@@ -14,6 +14,6 @@
 - [Terms of Use](/terms): Usage terms and liability limitations.
 
 ## Optional
-- Site: https://dividendguide.com
+- Site: https://dividend01.com
 - Language: en
 - Updated: 2026-07-27

@@ -19,7 +19,7 @@ const {
   image
 } = Astro.props;
 const currentPath = Astro.url.pathname;
-const pageUrl = canonical || `https://dividendguide.com${currentPath}`;
+const pageUrl = canonical || `https://dividend01.com${currentPath}`;
 const currentYear = new Date().getFullYear();
 const navItems = [
   { href: '/', label: 'Guide', icon: 'home' },
@@ -45,7 +45,7 @@ const breadcrumbItems = currentPath === '/'
       { name: 'Home', path: '/' },
       { name: pageNames[currentPath] || title, path: currentPath }
     ];
-const ogImage = image || 'https://dividendguide.com/images/og-default.jpg';
+const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -80,7 +80,7 @@ const ogImage = image || 'https://dividendguide.com/images/og-default.jpg';
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Dividend Guide",
-      "url": "https://dividendguide.com",
+      "url": "https://dividend01.com",
       "description": "A practical, step-by-step guide to dividend investing.",
       "sameAs": [
         "https://twitter.com/dividendguide",
@@ -91,7 +91,7 @@ const ogImage = image || 'https://dividendguide.com/images/og-default.jpg';
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Dividend Guide",
-      "url": "https://dividendguide.com",
+      "url": "https://dividend01.com",
       "description": "A practical, step-by-step guide to dividend investing."
     },
     {
@@ -102,8 +102,8 @@ const ogImage = image || 'https://dividendguide.com/images/og-default.jpg';
       "url": pageUrl,
       "datePublished": pubDate,
       "dateModified": modDate,
-      "author": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividendguide.com/about" },
-      "publisher": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividendguide.com/about" }
+      "author": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividend01.com/about" },
+      "publisher": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividend01.com/about" }
     },
     ...(currentPath !== '/' ? [{
       "@context": "https://schema.org",
@@ -112,7 +112,7 @@ const ogImage = image || 'https://dividendguide.com/images/og-default.jpg';
         "@type": "ListItem",
         "position": i + 1,
         "name": item.name,
-        "item": `https://dividendguide.com${item.path}`
+        "item": `https://dividend01.com${item.path}`
       }))
     }] : [])
   ])}></script>

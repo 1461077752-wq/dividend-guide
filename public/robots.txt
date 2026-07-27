@@ -13,4 +13,4 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
-Sitemap: https://dividendguide.com/sitemap.xml
+Sitemap: https://dividend01.com/sitemap.xml
