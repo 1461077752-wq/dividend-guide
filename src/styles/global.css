@@ -123,9 +123,11 @@ blockquote footer a { color: var(--accent); font-weight: 600; }
 .calc-field input { width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: var(--radius); font-size: 1rem; font-family: var(--font-mono); color: var(--text); background: #fff; transition: border-color .15s; }
 .calc-field input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(45,143,111,.15); }
 .calc-result { background: var(--accent-light); border: 1px solid var(--accent); border-radius: var(--radius); padding: 16px 18px; font-size: 1.1rem; font-weight: 600; color: #1e4d3a; }
-.btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 22px; background: var(--accent); color: #fff; border: none; border-radius: var(--radius); font-size: .9rem; font-weight: 600; cursor: pointer; transition: background var(--transition), transform var(--transition); text-decoration: none; }
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 22px; background: var(--accent); color: #fff; border: none; border-radius: var(--radius); font-size: .9rem; font-weight: 600; cursor: pointer; transition: background var(--transition), transform var(--transition), color var(--transition); text-decoration: none; }
 .btn:hover { background: var(--accent-hover); transform: translateY(-1px); text-decoration: none; color: #fff; }
 .btn:active { transform: translateY(0); }
+.btn-outline { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); }
+.btn-outline:hover { background: var(--accent); color: #fff; }
 .timeline { margin: 0 0 32px; }
 .timeline-item { display: flex; gap: 16px; padding-bottom: 20px; position: relative; }
 .timeline-item::before { content: ''; width: 2px; background: var(--border); position: absolute; left: 15px; top: 32px; bottom: 0; }
