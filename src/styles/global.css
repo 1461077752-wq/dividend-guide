@@ -211,7 +211,7 @@ blockquote footer a { color: var(--accent); font-weight: 600; }
 }
 .article-cover {
   width: 100%; height: auto; border-radius: var(--radius-lg);
-  margin-bottom: 24px; aspect-ratio: 16/9; object-fit: cover;
+  margin-top: 24px; aspect-ratio: 16/9; object-fit: cover;
 }
 .article-header .article-desc {
   font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;

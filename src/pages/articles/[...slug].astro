@@ -26,9 +26,6 @@ const modDate = article.data.modDate
   image={article.data.image}
 >
   <div class="article-header">
-    {article.data.image && (
-      <img src={article.data.image} alt={article.data.title} class="article-cover" loading="eager">
-    )}
     <h1>{article.data.title}</h1>
     <p class="article-desc">{article.data.description}</p>
     <div class="article-meta-bar">
@@ -42,6 +39,9 @@ const modDate = article.data.modDate
         </span>
       )}
     </div>
+    {article.data.image && (
+      <img src={article.data.image} alt={article.data.title} class="article-cover" loading="eager">
+    )}
   </div>
   <article class="article-content">
     <Content />
