@@ -18,7 +18,9 @@ const {
 } = Astro.props;
 const currentPath = Astro.url.pathname;
 const pageUrl = canonical || `https://dividend01.com${currentPath}`;
-const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
+const ogImage = image
+  ? (image.startsWith('http') ? image : `https://dividend01.com${image}`)
+  : 'https://dividend01.com/images/og-default.jpg';
 ---
 <!DOCTYPE html>
 <html lang="en">

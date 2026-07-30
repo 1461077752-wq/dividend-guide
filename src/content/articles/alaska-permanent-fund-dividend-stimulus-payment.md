@@ -5,7 +5,7 @@ pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Market News"
 tags: ["Alaska PFD", "permanent fund dividend", "stimulus payment", "Alaska", "state dividend"]
-image: "../../../assets/images/articles/alaska-permanent-fund-dividend-stimulus-payment.webp"
+image: "/images/articles/alaska-permanent-fund-dividend-stimulus-payment.webp"
 draft: false
 ---
 

@@ -5,7 +5,7 @@ pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Basics"
 tags: ["dividend stocks", "beginners", "passive income", "SCHD", "JNJ"]
-image: "../../../assets/images/articles/best-dividend-stocks-for-beginners.webp"
+image: "/images/articles/best-dividend-stocks-for-beginners.webp"
 draft: false
 ---
 
