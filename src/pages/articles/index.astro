@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allArticles = await getCollection('articles');
+const articles = allArticles
+  .filter(a => !a.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<BaseLayout title="Articles - Dividend Guide" description="In-depth articles about dividend investing, strategies, stock analysis, and building passive income." canonical="https://dividend01.com/articles">
+  <slot slot="title">Articles</slot>
+  <slot slot="subtitle">In-depth guides and analysis on dividend investing &mdash; from beginner basics to advanced strategies.</slot>
+  <div class="article-list">
+    {articles.map(article => (
+      <a href={`/articles/${article.id}/`} class="article-card">
+        <div class="article-card-body">
+          <span class="article-category">{article.data.category}</span>
+          <h2>{article.data.title}</h2>
+          <p>{article.data.description}</p>
+          <div class="article-meta">
+            <time datetime={article.data.pubDate.toISOString()}>
+              {article.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+            {article.data.tags.length > 0 && (
+              <span class="article-tags">
+                {article.data.tags.map(tag => <span class="tag">{tag}</span>)}
+              </span>
+            )}
+          </div>
+        </div>
+        <span class="article-arrow">&rarr;</span>
+      </a>
+    ))}
+  </div>
+  {articles.length === 0 && <p>No articles published yet. Check back soon!</p>}
+</BaseLayout>
