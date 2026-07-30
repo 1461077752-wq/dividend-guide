@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -17,18 +17,17 @@ const modDate = article.data.modDate
   ? article.data.modDate.toISOString().split('T')[0]
   : pubDate;
 ---
-<BaseLayout
+<ArticleLayout
   title={`${article.data.title} - Dividend Guide`}
   description={article.data.description}
   canonical={`https://dividend01.com/articles/${article.id}/`}
-  schemaType="Article"
   pubDate={pubDate}
   modDate={modDate}
   image={article.data.image}
 >
-  <slot slot="title">{article.data.title}</slot>
-  <slot slot="subtitle">{article.data.description}</slot>
-  <article class="article-content">
+  <div class="article-header">
+    <h1>{article.data.title}</h1>
+    <p class="article-desc">{article.data.description}</p>
     <div class="article-meta-bar">
       <span class="article-category">{article.data.category}</span>
       <time datetime={pubDate}>
@@ -40,10 +39,12 @@ const modDate = article.data.modDate
         </span>
       )}
     </div>
+  </div>
+  <article class="article-content">
     <Content />
   </article>
   <div class="article-nav">
     <a href="/articles/" class="btn btn-outline">&larr; All Articles</a>
     <a href="/stocks" class="btn">Browse Stocks</a>
   </div>
-</BaseLayout>
+</ArticleLayout>

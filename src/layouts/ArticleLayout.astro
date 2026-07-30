@@ -1,0 +1,94 @@
+---
+import '../styles/global.css';
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  pubDate?: string;
+  modDate?: string;
+  image?: string;
+}
+const {
+  title,
+  description,
+  canonical,
+  pubDate = new Date().toISOString().split('T')[0],
+  modDate = new Date().toISOString().split('T')[0],
+  image
+} = Astro.props;
+const currentPath = Astro.url.pathname;
+const pageUrl = canonical || `https://dividend01.com${currentPath}`;
+const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta name="author" content="Dividend Guide">
+  {canonical && <link rel="canonical" href={canonical}>}
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:type" content="article">
+  <meta property="og:url" content={pageUrl}>
+  <meta property="og:site_name" content="Dividend Guide">
+  <meta property="og:image" content={ogImage}>
+  <meta property="article:published_time" content={pubDate}>
+  <meta property="article:modified_time" content={modDate}>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={ogImage}>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "url": pageUrl,
+    "datePublished": pubDate,
+    "dateModified": modDate,
+    "image": ogImage,
+    "author": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividend01.com/about" },
+    "publisher": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividend01.com/about" }
+  })}></script>
+</head>
+<body>
+  <script is:inline>if(location.hostname.includes('pages.dev')){location.replace('https://dividend01.com'+location.pathname+location.search)}</script>
+  <div class="article-topbar">
+    <div class="article-topbar-inner">
+      <a href="/" class="article-topbar-brand">
+        <span class="article-topbar-logo">DG</span>
+        <span class="article-topbar-name">Dividend Guide</span>
+      </a>
+      <nav class="article-topbar-nav">
+        <a href="/">Guide</a>
+        <a href="/articles/">Articles</a>
+        <a href="/stocks">Stocks</a>
+        <a href="/calculator">Calculator</a>
+        <a href="/strategy">Strategy</a>
+      </nav>
+    </div>
+  </div>
+  <main class="article-main"><slot /></main>
+  <footer class="article-footer">
+    <div class="article-footer-inner">
+      <p><strong>Dividend Guide</strong> &mdash; Educational content only. Not financial advice. Always do your own research before investing.</p>
+      <nav class="article-footer-links">
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
