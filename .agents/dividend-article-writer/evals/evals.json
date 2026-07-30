@@ -1,0 +1,23 @@
+{
+  "skill_name": "dividend-article-writer",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Write an article for keyword 'what are dividends'",
+      "expected_output": "Generate an English markdown article in src/content/articles/what-are-dividends.md, covering dividend basics, key metrics table, payment timeline, FAQ, with external links to SEC/NASDAQ/Investopedia and internal links to /calculator, /stocks, /strategy",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "Write an article about 'dividend aristocrats 2026'",
+      "expected_output": "Generate an English markdown article in src/content/articles/dividend-aristocrats-2026.md, covering S&P 500 Dividend Aristocrats list, sector breakdown, screening criteria table, FAQ, with external links to S&P Dow Jones Indices and internal links to /stocks, /strategy",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "keyword: 'dividend yield vs growth', search volume 5.2k, difficulty 28%",
+      "expected_output": "Generate an English markdown article comparing dividend yield and growth strategies, with comparison table, historical performance data, investor suitability analysis, FAQ, external links to SEC/Investopedia, internal links to /calculator, /strategy",
+      "files": []
+    }
+  ]
+}
