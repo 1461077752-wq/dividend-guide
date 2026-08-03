@@ -5,10 +5,13 @@ pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Stock Analysis"
 tags: ["SCHD", "dividend ETF", "Schwab", "dividend yield"]
+image: "/images/articles/schd-dividend.webp"
 draft: false
 ---
 
 SCHD (Schwab U.S. Dividend Equity ETF) currently yields approximately **3.4%** and has increased its dividend distributions every year since its 2011 launch — making it one of the most popular dividend ETFs for income investors. It holds roughly 100 high-quality U.S. dividend stocks selected by a rules-based index, with a low 0.06% expense ratio.
+
+<!-- Cover image: Stock market chart displayed on laptop screen, representing ETF performance tracking -->
 
 ## SCHD Dividend Snapshot
 

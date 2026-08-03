@@ -5,10 +5,13 @@ pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Basics"
 tags: ["dividends", "passive income", "dividend income", "monthly income"]
+image: "/images/articles/dividends.webp"
 draft: false
 ---
 
 With $50,000 invested at a 3.5% dividend yield, you earn about **$1,750 per year — roughly $145 per month** — without selling a single share. Scaling up, $500,000 at the same yield produces $17,500 annually. That's the honest math behind dividend income: it's powerful when compounded over decades, but it is not an overnight fortune.
+
+<!-- Cover image: Fan of U.S. dollar banknotes, representing dividend passive income -->
 
 > **Key facts at a glance**
 >

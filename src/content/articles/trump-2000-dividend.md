@@ -5,10 +5,13 @@ pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Market News"
 tags: ["Trump", "DOGE", "stimulus", "dividend check", "government savings"]
+image: "/images/articles/trump-2000-dividend.webp"
 draft: false
 ---
 
 The "Trump dividend" is a **proposed one-time payment to U.S. households** funded by a portion of savings from the Department of Government Efficiency (DOGE). The most widely reported version — floated by investor James Fishback and endorsed by President Trump in early 2025 — proposed **$5,000 per household**, funded by a reported percentage of DOGE-identified savings. News coverage later referenced **lower per-household figures, including the $2,000 range**, as the idea evolved and savings estimates were revised. As of July 2026, **no checks have been distributed**, and the proposal requires congressional approval to become law.
+
+<!-- Cover image: Sunrise at the US Capitol building in Washington DC, representing the government policy proposal -->
 
 **Key facts at a glance:**
 

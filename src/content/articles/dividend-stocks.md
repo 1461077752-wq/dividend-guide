@@ -5,10 +5,13 @@ pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Basics"
 tags: ["dividend stocks", "income investing", "dividend yield", "portfolio"]
+image: "/images/articles/dividend-stocks.webp"
 draft: false
 ---
 
 A dividend stock is a publicly traded company that distributes a portion of its profits to shareholders as regular cash payments, typically quarterly. The best dividend stocks share three qualities: a **history of consistent payments**, a **sustainable payout ratio**, and a **defensive or durable business model**. Together these traits make dividend stocks a cornerstone of long-term income investing.
+
+<!-- Cover image: A glass jar filled with coins and a growing plant, representing savings and investment growth -->
 
 ## Dividend Stocks at a Glance
 

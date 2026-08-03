@@ -5,10 +5,13 @@ pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Stock Analysis"
 tags: ["MSTY", "YieldMax", "covered call", "ETF", "high yield", "MSTR"]
+image: "/images/articles/msty-dividend-history.webp"
 draft: false
 ---
 
 MSTY is the **YieldMax MSTR Option Income Strategy ETF**, a covered-call fund that sells options on MicroStrategy (MSTR) stock and pays the premium income to shareholders as monthly distributions. Since its launch in January 2024, it has paid monthly distributions ranging from roughly **$0.50 to over $4.00 per share**.
+
+<!-- Cover image: Stock and crypto market candlestick chart on dark screen, representing volatile options trading -->
 
 Here's the critical caveat: the ETF's share price erodes over time, so its "yield" is not the same as a sustainable dividend. This article walks through the distribution history, explains why payouts swing so wildly, and shows how to judge MSTY by total return rather than headline yield.
 
