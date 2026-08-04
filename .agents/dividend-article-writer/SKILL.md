@@ -305,10 +305,13 @@ Google 的 Sept 2025 QRG 正式要求评估内容是否看起来像 AI 生成的
 
 ### Step 7：封面图
 
-文章 frontmatter 中 `image` 指向：
+文章 frontmatter 中 `image` 指向 public 目录下的绝对路径：
 ```yaml
-image: "../../../assets/images/articles/{slug}.webp"
+image: "/images/articles/{slug}.webp"
 ```
+
+**图片存放目录：`public/images/articles/`（不是 `src/assets/`）。**
+这是项目约定：public 目录下的文件在 `npm run build` 时会被原样复制到 `dist/`，而 `src/assets/` 下的文件不会被自动复制，会导致图片在部署后 404。frontmatter 的 `image` 必须使用 `/images/articles/{slug}.webp` 绝对路径（带开头的 `/`）。
 
 ### 封面图硬性要求
 
@@ -316,8 +319,8 @@ image: "../../../assets/images/articles/{slug}.webp"
 
 封面图来源处理流程（按优先级）：
 
-1. **用户提供 URL**：先用 `Invoke-WebRequest -Uri <url> -OutFile "src/assets/images/articles/{slug}.jpg"` 下载
-2. **用户提供本地文件**：复制到 `src/assets/images/articles/{slug}.jpg`
+1. **用户提供 URL**：先用 `Invoke-WebRequest -Uri <url> -OutFile "public/images/articles/{slug}.jpg"` 下载
+2. **用户提供本地文件**：复制到 `public/images/articles/{slug}.jpg`
 3. **用户无提供，主动从免费图库获取**（按此顺序逐个尝试，一个成功即停止）：
 
    **3a. Unsplash：** 在搜索引擎搜索 `unsplash <关键词> photo` 或 `site:unsplash.com <关键词>` 找到 CC0 图片页面。使用 `webfetch` 打开图片页，从中提取图片直链（通常是 `images.unsplash.com` 域名），再用 `Invoke-WebRequest` 下载。
@@ -326,7 +329,7 @@ image: "../../../assets/images/articles/{slug}.webp"
 
    **3c. Pixabay：** 同上模式，搜索 `site:pixabay.com <关键词>`，找到直链（`pixabay.com/get/`）后下载。
 
-   **3d. StockSnap：** 搜索 `site:stocksnap.io <关键词>`，找到免费图片页，提取图片直链后下载。
+   **3d. StockSnap：** 搜索 `site:stocksnap.io <关键词>`，找到免费图片页，提取图片直链后下载。注意 StockSnap 完整图 URL 格式为 `https://cdn.stocksnap.io/img-thumbs/960w/{title}_{code}.jpg`（`960w` 为可用的大图尺寸，`280h` 为缩略图）。搜索接口有频率限制，避免连续请求。
 
    **3e. CC0.cn：** 搜索 `site:cc0.cn <关键词>`，找到免费图片页，提取图片直链后下载。
 
@@ -334,17 +337,17 @@ image: "../../../assets/images/articles/{slug}.webp"
 
    下载后裁剪为 1200×630 比例，转码为 webp（quality: 85）。
 
-4. **前三步均失败**：调用 `seo-image-gen` skill（使用 `skill` 工具加载 `seo-image-gen`），用 Gemini 根据文章主题生成封面图，输出到 `src/assets/images/articles/{slug}.webp`。prompt 示例：`"A professional, clean stock photo style image about [关键词], suitable for a finance article cover, 1200x630 aspect ratio"`。
+4. **前三步均失败**：调用 `seo-image-gen` skill（使用 `skill` 工具加载 `seo-image-gen`），用 Gemini 根据文章主题生成封面图，输出到 `public/images/articles/{slug}.webp`。prompt 示例：`"A professional, clean stock photo style image about [关键词], suitable for a finance article cover, 1200x630 aspect ratio"`。
 
 5. **全部失败**（极少数情况）：保留路径引用但记录缺失，在自检清单中勾选"封面图缺失"。
 
 下载/复制后统一转码（仅对非 webp 源文件执行）：
 1. 用 `sharp` 将 JPG/PNG 转为 WebP：
    ```powershell
-   node -e "const sharp = require('sharp'); sharp('src/assets/images/articles/{slug}.jpg').resize(1200, 630).webp({ quality: 85 }).toFile('src/assets/images/articles/{slug}.webp').then(() => console.log('OK'))"
+   node -e "const sharp = require('sharp'); sharp('public/images/articles/{slug}.jpg').resize(1200, 630).webp({ quality: 85 }).toFile('public/images/articles/{slug}.webp').then(() => console.log('OK'))"
    ```
 2. 删除原始格式文件（保留 webp）
-3. 确认 frontmatter 中的 `image` 路径已正确引用
+3. 确认 frontmatter 中的 `image` 路径已正确引用（`/images/articles/{slug}.webp`）
 
 ### Step 8：构建前外链验证
 
@@ -405,12 +408,14 @@ Step 9 是**前置检查**，质量自检清单是**后置确认**。先过 Step
 
 ### Step 11：本地构建验证
 
-全部内容就绪后，本地构建确认无 error：
+全部内容就绪后，在**项目根目录**下本地构建确认无 error：
 
 ```powershell
-cd "D:\Workspace\web\Dividend Guide"
+cd "<项目根目录>"
 npm run build
 ```
+
+> **项目根目录 =** 包含 `package.json`、`src/`、`public/` 的目录（如 `D:\Workspace\web\Dividend Guide`）。本 skill 为全局 skill，可应用于任意 Dividend 项目——使用前先确认当前工作目录即是项目根目录，或在命令中指定正确路径。
 
 构建输出到 `dist/` 目录。确认 `npm run build` 成功（0 errors）。
 
@@ -444,7 +449,8 @@ npm run build ; npx wrangler pages deploy dist --project-name=dividend-guide
 - [ ] 投资者示例包含直接引语和具体困难/弯路描述（Experience 信号）
 - [ ] 常见问题解答 5-8 个，使用用户真实搜索表述
 - [ ] H2 标题不使用"真实案例""FAQ""总结/结语"等工厂式标签
-- [ ] 封面图已存在且路径正确（`Test-Path src/assets/images/articles/{slug}.webp` 返回 True）
+- [ ] 封面图已存在且路径正确（`Test-Path public/images/articles/{slug}.webp` 返回 True）
+- [ ] frontmatter 的 `image` 使用 `/images/articles/{slug}.webp` 绝对路径（带开头的 `/`）
 - [ ] 若全部途径失败，封面图仍缺失（需标注说明）
 - [ ] 文末有免责声明和最后更新日期
 - [ ] `npm run build` 通过（0 errors）

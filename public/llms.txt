@@ -7,6 +7,17 @@
 - [Dividend Calculator](/calculator): Free interactive tools for yield calculation, DRIP growth projection, and income goal planning.
 - [Dividend Strategies](/strategy): Comparison of five strategies — DRIP, growth, high yield, Dogs of the Dow, covered calls.
 
+## Articles
+- [QQQI Dividend History](/articles/qqqi-dividend-history/): Complete NEOS Nasdaq 100 High Income ETF distribution history since its January 2024 launch, and how it compares to JEPQ and QYLD.
+- [SCHD Dividend History](/articles/schd-dividend-history/): Every SCHD annual dividend since its 2011 launch, the 2024 stock split explained, and what 13 years of dividend growth delivers.
+- [Dividend Stocks: How to Screen](/articles/dividend-dividend-stocks/): Step-by-step screening filters — yield, payout ratio, and growth streak — that separate quality dividend payers from yield traps.
+- [Dividend Yield Explained](/articles/dividend-yield/): What dividend yield means, how to calculate it, what counts as good, and the high-yield traps to avoid.
+- [High Dividend Stocks](/articles/high-dividend-stocks/): The best high-yield picks by sector (4-8% yields), why some pay reliably, and the structural risks.
+- [Highest Dividend Stocks](/articles/highest-dividend-stocks/): The ultra-high-yield names — BDCs, mREITs, and closed-end funds paying 10-26% — and why most are risky.
+- [JEPQ Dividend History](/articles/jepq-dividend-history/): Every JEPQ monthly distribution since its 2022 launch, annual totals, and what the record shows about total return.
+- [NVDY Dividend History](/articles/nvdy-dividend-history/): YieldMax NVDA distribution history, the switch to weekly payouts, and why the 62% yield overstates the economics.
+- [Tariff Dividend Check](/articles/tariff-dividend-check/): Current status of the proposed tariff dividend check, reported amounts, and how to track any real federal payment.
+
 ## Trust & Legal
 - [About](/about): Editorial standards, methodology, and disclaimer.
 - [Contact](/contact): Email contacts for inquiries, corrections, and partnerships.
@@ -16,4 +27,4 @@
 ## Optional
 - Site: https://dividend01.com
 - Language: en
-- Updated: 2026-07-27
+- Updated: 2026-08-04
