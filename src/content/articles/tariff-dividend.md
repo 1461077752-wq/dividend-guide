@@ -6,6 +6,15 @@ modDate: 2026-07-30
 category: "Market News"
 tags: ["tariff dividend", "Trump", "tariff revenue", "dividend check"]
 image: "/images/articles/tariff-dividend.webp"
+dataAsOf: "2026-08-07"
+methodology: "Only enacted laws and official notices are treated as confirmed; reported amounts and proposals remain clearly labeled as unconfirmed."
+sources:
+  - name: "Congress.gov"
+    url: "https://www.congress.gov/"
+    accessed: 2026-08-07
+  - name: "U.S. Treasury: Press releases"
+    url: "https://home.treasury.gov/news/press-releases"
+    accessed: 2026-08-07
 draft: false
 ---
 

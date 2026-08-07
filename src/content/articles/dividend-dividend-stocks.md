@@ -6,6 +6,15 @@ modDate: 2026-08-04
 category: "Strategy"
 tags: ["dividend stocks", "stock screener", "dividend yield", "payout ratio", "dividend growth"]
 image: "/images/articles/dividend-dividend-stocks.webp"
+dataAsOf: "2026-08-07"
+methodology: "Screen thresholds are an editorial starting framework; current yields, payout ratios, and streaks must be rechecked against issuer filings before use."
+sources:
+  - name: "SEC EDGAR company filings"
+    url: "https://www.sec.gov/edgar/search/"
+    accessed: 2026-08-07
+  - name: "FINRA: Fundamental analysis"
+    url: "https://www.finra.org/investors/insights/fundamental-analysis"
+    accessed: 2026-08-07
 draft: false
 ---
 

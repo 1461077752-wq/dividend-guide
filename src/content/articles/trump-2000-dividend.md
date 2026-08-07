@@ -6,6 +6,15 @@ modDate: 2026-07-30
 category: "Market News"
 tags: ["Trump", "DOGE", "stimulus", "dividend check", "government savings"]
 image: "/images/articles/trump-2000-dividend.webp"
+dataAsOf: "2026-08-07"
+methodology: "The article distinguishes public proposals and media reports from enacted legislation or issued payments; no payment is treated as confirmed without an official notice."
+sources:
+  - name: "Congress.gov"
+    url: "https://www.congress.gov/"
+    accessed: 2026-08-07
+  - name: "U.S. Government Accountability Office"
+    url: "https://www.gao.gov/"
+    accessed: 2026-08-07
 draft: false
 ---
 

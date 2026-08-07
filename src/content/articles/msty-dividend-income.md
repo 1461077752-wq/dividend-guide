@@ -6,6 +6,12 @@ modDate: 2026-07-30
 category: "Stock Analysis"
 tags: ["MSTY", "YieldMax", "dividend income", "monthly income", "covered call"]
 image: "/images/articles/msty-dividend-income.webp"
+dataAsOf: "2026-08-07"
+methodology: "Income examples multiply shares or invested capital by stated distributions; they exclude taxes, fees, price changes, and future distribution uncertainty."
+sources:
+  - name: "YieldMax MSTY fund page"
+    url: "https://www.yieldmaxetfs.com/our-etfs/msty/"
+    accessed: 2026-08-07
 draft: false
 ---
 

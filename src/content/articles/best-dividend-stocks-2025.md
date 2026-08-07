@@ -6,6 +6,15 @@ modDate: 2026-08-04
 category: "Stock Analysis"
 tags: ["best dividend stocks", "Dividend Aristocrats", "high yield", "dividend growth", "2025"]
 image: "/images/articles/best-dividend-stocks-2025.webp"
+dataAsOf: "2026-08-07"
+methodology: "2025 total returns are treated as calendar-year price return plus reinvested distributions; yield and payout figures are point-in-time estimates and are not forecasts."
+sources:
+  - name: "S&P Dow Jones Indices: Dividend Aristocrats"
+    url: "https://www.spglobal.com/spdji/en/indices/strategy/sp-500-dividend-aristocrats/"
+    accessed: 2026-08-07
+  - name: "SEC EDGAR company filings"
+    url: "https://www.sec.gov/edgar/search/"
+    accessed: 2026-08-07
 draft: false
 ---
 

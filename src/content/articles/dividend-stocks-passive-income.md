@@ -6,6 +6,12 @@ modDate: 2026-07-30
 category: "Strategy"
 tags: ["passive income", "dividend stocks", "monthly income", "retirement income"]
 image: "/images/articles/dividend-stocks-passive-income.webp"
+dataAsOf: "2026-08-07"
+methodology: "Income examples multiply portfolio value by an assumed yield; they exclude taxes, fees, price changes, and dividend cuts unless stated otherwise."
+sources:
+  - name: "Investor.gov: Investing basics"
+    url: "https://www.investor.gov/introduction-investing"
+    accessed: 2026-08-07
 draft: false
 ---
 

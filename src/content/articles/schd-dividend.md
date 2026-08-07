@@ -6,6 +6,12 @@ modDate: 2026-07-30
 category: "Stock Analysis"
 tags: ["SCHD", "dividend ETF", "Schwab", "dividend yield"]
 image: "/images/articles/schd-dividend.webp"
+dataAsOf: "2026-08-07"
+methodology: "Yield and expense ratio use the latest Schwab fund disclosure; historical distribution statements are separated from forward estimates."
+sources:
+  - name: "Schwab Asset Management: SCHD"
+    url: "https://www.schwabassetmanagement.com/products/schd"
+    accessed: 2026-08-07
 draft: false
 ---
 

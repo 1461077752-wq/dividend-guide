@@ -6,6 +6,12 @@ modDate: 2026-07-30
 category: "Stock Analysis"
 tags: ["JEPQ", "JPMorgan", "premium income", "ETF", "covered call"]
 image: "/images/articles/jepq-dividend.webp"
+dataAsOf: "2026-08-07"
+methodology: "Distribution and yield figures use the latest J.P. Morgan fund disclosures available on the stated date; future payouts are not estimated."
+sources:
+  - name: "J.P. Morgan: JEPQ fund resources"
+    url: "https://am.jpmorgan.com/us/en/asset-management/adv/products/jpmorgan-nasdaq-equity-premium-income-etf-jepq/"
+    accessed: 2026-08-07
 draft: false
 ---
 

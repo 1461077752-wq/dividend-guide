@@ -6,6 +6,12 @@ modDate: 2026-07-30
 category: "Market News"
 tags: ["Alaska PFD", "dividend payment", "payment history", "Alaska"]
 image: "/images/articles/alaska-pfd-payment-history.webp"
+dataAsOf: "2026-08-07"
+methodology: "Annual payment amounts are transcribed from Alaska's published PFD history; supplemental payments are identified separately where the state reports them."
+sources:
+  - name: "Alaska Department of Revenue: PFD history"
+    url: "https://pfd.alaska.gov/Division-Info/History"
+    accessed: 2026-08-07
 draft: false
 ---
 

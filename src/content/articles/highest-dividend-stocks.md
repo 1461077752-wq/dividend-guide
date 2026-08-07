@@ -6,6 +6,15 @@ modDate: 2026-08-04
 category: "Stock Analysis"
 tags: ["highest dividend stocks", "BDC", "mREIT", "closed-end fund", "high yield", "return of capital"]
 image: "/images/articles/highest-dividend-stocks.webp"
+dataAsOf: "2026-08-07"
+methodology: "Yield figures are annualized from the stated distribution and price date; return of capital, leverage, and distribution changes are discussed separately from headline yield."
+sources:
+  - name: "SEC EDGAR company and fund filings"
+    url: "https://www.sec.gov/edgar/search/"
+    accessed: 2026-08-07
+  - name: "Investor.gov: Closed-end funds"
+    url: "https://www.investor.gov/introduction-investing/investing-basics/investment-products/closed-end-funds"
+    accessed: 2026-08-07
 draft: false
 ---
 

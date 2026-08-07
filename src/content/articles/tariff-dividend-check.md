@@ -6,6 +6,15 @@ modDate: 2026-08-04
 category: "Market News"
 tags: ["tariff dividend", "tariff check", "stimulus check", "dividend check", "IRS", "tracking"]
 image: "/images/articles/tariff-dividend-check.webp"
+dataAsOf: "2026-08-07"
+methodology: "The status is based on enacted legislation and official agency notices; proposals, media reports, and scams are labeled separately from confirmed payments."
+sources:
+  - name: "IRS: News and guidance"
+    url: "https://www.irs.gov/newsroom"
+    accessed: 2026-08-07
+  - name: "Congress.gov"
+    url: "https://www.congress.gov/"
+    accessed: 2026-08-07
 draft: false
 ---
 

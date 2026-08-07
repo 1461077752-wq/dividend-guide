@@ -6,6 +6,12 @@ modDate: 2026-07-30
 category: "Stock Analysis"
 tags: ["ULTY", "YieldMax", "covered call", "ETF", "high yield"]
 image: "/images/articles/ulty-dividend-history.webp"
+dataAsOf: "2026-08-07"
+methodology: "Distribution history is based on published YieldMax distributions; annualized yield is separated from realized total return and is not a forecast."
+sources:
+  - name: "YieldMax ULTY fund page"
+    url: "https://www.yieldmaxetfs.com/our-etfs/ulty/"
+    accessed: 2026-08-07
 draft: false
 ---
 

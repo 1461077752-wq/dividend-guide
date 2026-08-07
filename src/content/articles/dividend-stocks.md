@@ -6,6 +6,15 @@ modDate: 2026-07-30
 category: "Basics"
 tags: ["dividend stocks", "income investing", "dividend yield", "portfolio"]
 image: "/images/articles/dividend-stocks.webp"
+dataAsOf: "2026-08-07"
+methodology: "Definitions follow standard market usage; yield and payout examples are illustrative ranges, not current market averages or investment recommendations."
+sources:
+  - name: "Investor.gov: Dividends"
+    url: "https://www.investor.gov/introduction-investing/investing-basics/glossary/dividend"
+    accessed: 2026-08-07
+  - name: "SEC: Beginners' guide to financial statements"
+    url: "https://www.sec.gov/oiea/investor-alerts-and-bulletins/ib_financialstatements"
+    accessed: 2026-08-07
 draft: false
 ---
 

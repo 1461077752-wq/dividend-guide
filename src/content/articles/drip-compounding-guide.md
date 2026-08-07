@@ -4,6 +4,15 @@ description: "Learn how Dividend Reinvestment Plans (DRIPs) work, the math behin
 pubDate: 2026-02-10
 category: "Strategy"
 tags: ["DRIP", "compounding", "long-term investing"]
+dataAsOf: "2026-08-07"
+methodology: "Compounding examples use the stated starting balance, yield, dividend growth, contribution, and time assumptions; results are scenarios rather than forecasts."
+sources:
+  - name: "Investor.gov: Compound Interest Calculator"
+    url: "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+    accessed: 2026-08-07
+  - name: "FINRA: Dividend reinvestment plans"
+    url: "https://www.finra.org/investors/investing/investment-products/stocks/dividends"
+    accessed: 2026-08-07
 ---
 
 ## What Is a DRIP?

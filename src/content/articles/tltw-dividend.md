@@ -6,6 +6,15 @@ modDate: 2026-07-30
 category: "Stock Analysis"
 tags: ["TLTW", "Treasury", "covered call", "high yield", "bonds", "ETF"]
 image: "/images/articles/tltw-dividend.webp"
+dataAsOf: "2026-08-07"
+methodology: "Distribution rate and holdings use the latest iShares fund disclosure; Treasury yields are quoted for the stated date and are not monthly dividend promises."
+sources:
+  - name: "iShares: TLTW fund page"
+    url: "https://www.ishares.com/us/products/314082/ishares-20-year-treasury-bond-buywrite-strategy-etf"
+    accessed: 2026-08-07
+  - name: "U.S. Treasury: Daily Treasury Par Yield Curve Rates"
+    url: "https://home.treasury.gov/resource-center/data-chart-center/interest-rates"
+    accessed: 2026-08-07
 draft: false
 ---
 

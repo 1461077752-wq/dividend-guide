@@ -6,6 +6,15 @@ modDate: 2026-07-30
 category: "Basics"
 tags: ["dividend stocks", "beginners", "passive income", "SCHD", "JNJ"]
 image: "/images/articles/best-dividend-stocks-for-beginners.webp"
+dataAsOf: "2026-08-07"
+methodology: "Yield, expense ratio, and payout figures use the latest issuer or index disclosures available on the stated date; examples are illustrative and not recommendations."
+sources:
+  - name: "Schwab Asset Management: SCHD"
+    url: "https://www.schwabassetmanagement.com/products/schd"
+    accessed: 2026-08-07
+  - name: "S&P Dow Jones Indices: Dividend Aristocrats methodology"
+    url: "https://www.spglobal.com/spdji/en/indices/strategy/sp-500-dividend-aristocrats/"
+    accessed: 2026-08-07
 draft: false
 ---
 

@@ -6,6 +6,15 @@ modDate: 2026-08-04
 category: "Basics"
 tags: ["dividend yield", "dividend investing", "yield on cost", "total return"]
 image: "/images/articles/dividend-yield.webp"
+dataAsOf: "2026-08-07"
+methodology: "Dividend yield is annualized dividend per share divided by the stated share price; figures are point-in-time calculations and exclude taxes and fees."
+sources:
+  - name: "Investor.gov: Dividends"
+    url: "https://www.investor.gov/introduction-investing/investing-basics/glossary/dividend"
+    accessed: 2026-08-07
+  - name: "S&P Dow Jones Indices: S&P 500"
+    url: "https://www.spglobal.com/spdji/en/indices/equity/sp-500/"
+    accessed: 2026-08-07
 draft: false
 ---
 

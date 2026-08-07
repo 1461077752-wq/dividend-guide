@@ -6,6 +6,12 @@ modDate: 2026-07-30
 category: "Basics"
 tags: ["dividends", "passive income", "dividend income", "monthly income"]
 image: "/images/articles/dividends.webp"
+dataAsOf: "2026-08-07"
+methodology: "Income examples multiply invested capital by an assumed annual yield; monthly figures divide annual income by 12 and exclude taxes, fees, and changes in distributions."
+sources:
+  - name: "Investor.gov: Dividends"
+    url: "https://www.investor.gov/introduction-investing/investing-basics/glossary/dividend"
+    accessed: 2026-08-07
 draft: false
 ---
 

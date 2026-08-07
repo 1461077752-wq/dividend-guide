@@ -6,6 +6,12 @@ modDate: 2026-07-30
 category: "Basics"
 tags: ["dividend calculator", "dividend income", "yield calculator", "DRIP"]
 image: "/images/articles/dividend-calculator-guide.webp"
+dataAsOf: "2026-08-07"
+methodology: "Examples apply annual income = principal × yield; compounding examples state their contribution, yield, growth, and reinvestment assumptions and are not forecasts."
+sources:
+  - name: "Investor.gov: Compound Interest Calculator"
+    url: "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+    accessed: 2026-08-07
 draft: false
 ---
 

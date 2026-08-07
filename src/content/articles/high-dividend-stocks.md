@@ -6,6 +6,15 @@ modDate: 2026-08-04
 category: "Stock Analysis"
 tags: ["high dividend stocks", "high yield", "REIT", "MLP", "BDC", "dividend yield"]
 image: "/images/articles/high-dividend-stocks.webp"
+dataAsOf: "2026-08-07"
+methodology: "Yield and payout examples are point-in-time figures from issuer disclosures; sector ranges are descriptive and do not imply safety or future income."
+sources:
+  - name: "SEC EDGAR company filings"
+    url: "https://www.sec.gov/edgar/search/"
+    accessed: 2026-08-07
+  - name: "Investor.gov: Dividends"
+    url: "https://www.investor.gov/introduction-investing/investing-basics/glossary/dividend"
+    accessed: 2026-08-07
 draft: false
 ---
 
