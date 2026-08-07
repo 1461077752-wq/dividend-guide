@@ -11,6 +11,17 @@ const articles = defineCollection({
     category: z.string().default('General'),
     tags: z.array(z.string()).default([]),
     image: z.string().optional(),
+    author: z.string().default('Henry Zhou'),
+    authorRole: z.string().default('Independent Dividend Researcher'),
+    review: z.string().default('Facts, data sources, and calculations personally verified by the author'),
+    reviewDate: z.coerce.date().optional(),
+    dataAsOf: z.string().optional(),
+    methodology: z.string().optional(),
+    sources: z.array(z.object({
+      name: z.string(),
+      url: z.string().url(),
+      accessed: z.coerce.date().optional(),
+    })).default([]),
     draft: z.boolean().default(false),
   }),
 });

@@ -1,5 +1,5 @@
 ---
-title: "DRIP Compounding: How Reinvesting Dividends Builds Wealth"
+title: "DRIP Compounding: Reinvest Dividends to Build Wealth"
 description: "Learn how Dividend Reinvestment Plans (DRIPs) work, the math behind compounding, and why DRIP is one of the most powerful wealth-building strategies."
 pubDate: 2026-02-10
 category: "Strategy"

@@ -1,11 +1,18 @@
 ---
-title: "QQQI Dividend History: NEOS Nasdaq 100 High Income ETF Payouts"
+title: "QQQI Dividend History and ETF Payouts"
 description: "QQQI's complete distribution history since its January 2024 launch, how NEOS generates steady monthly payouts, and how the fund compares to JEPQ and QYLD."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Stock Analysis"
 tags: ["QQQI", "NEOS", "covered call", "ETF", "high yield", "Nasdaq-100"]
 image: "/images/articles/qqqi-dividend-history.webp"
+author: "Henry Zhou"
+dataAsOf: "2026-08-04"
+methodology: "Monthly totals use distributions reported by the fund issuer and are not projections of future payouts."
+sources:
+  - name: "NEOS QQQI fund page"
+    url: "https://neosfunds.com/qqqi/"
+    accessed: 2026-08-04
 draft: false
 ---
 

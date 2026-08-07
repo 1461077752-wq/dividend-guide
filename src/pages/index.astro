@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Dividend Guide: Learn to Build Passive Income with Dividends" description="Comprehensive dividend guide covering top dividend stocks, yield strategies, DRIP compounding, tax rules, and a free calculator to plan your passive income." canonical="https://dividend01.com/" schemaType="Article" pubDate="2026-01-15" modDate="2026-07-27">
+<BaseLayout title="Dividend Investing Guide: Stocks, Yield & Calculator" description="Complete dividend investing guide for 2026. Learn to pick stocks, use our free dividend calculator, and build reliable passive income. Start today." canonical="https://dividend01.com/" schemaType="WebPage" pubDate="2026-07-27" modDate="2026-08-07">
   <slot slot="title">Dividend Guide</slot>
   <slot slot="subtitle">A practical, step-by-step guide to dividend investing &mdash; learn how to pick dividend stocks, calculate yield, compound returns, and build a reliable passive income stream.</slot>
   <p style="font-size:.75rem;color:var(--text-muted);margin-bottom:20px">Sources: <a href="https://www.spglobal.com/spdji/en/research-insights/index-literacy/the-sp-500-dividend-aristocrats/" target="_blank" rel="noopener">S&amp;P Dow Jones Indices</a>, <a href="https://www.janushenderson.com/en-us/advisor/article/global-dividends-reach-record-high/" target="_blank" rel="noopener">Janus Henderson Global Dividend Index</a></p><section class="stats-bar"><div class="stat-card"><div class="stat-value">~2.8%</div><div class="stat-label">S&P 500 Avg Yield (2026)</div></div><div class="stat-card"><div class="stat-value">60%</div><div class="stat-label">S&P 500 Companies Pay Dividends</div></div><div class="stat-card"><div class="stat-value">~$1.8T</div><div class="stat-label">Global Dividend Payouts (2025)</div></div><div class="stat-card"><div class="stat-value">25+ yrs</div><div class="stat-label">Dividend Aristocrats</div></div></section>
@@ -31,35 +31,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <details class="faq-item"><summary>How much to invest to live off dividends?</summary><div class="faq-answer">At 4% yield, you need ~$1M for $40K/year. Use our <a href="/calculator">calculator</a> to run your numbers.</div></details>
   <details class="faq-item"><summary>Qualified vs non-qualified?</summary><div class="faq-answer"><strong>Qualified</strong> (US stocks held &gt;60 days): taxed at 0-20%. <strong>Non-qualified</strong> (REITs, foreign): taxed as ordinary income.</div></details>
 
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "Are dividends free money?",
-    "acceptedAnswer": { "@type": "Answer", "text": "No. When a company pays a $1 dividend, the stock price typically drops by approximately $1 on the ex-dividend date." }
-  }, {
-    "@type": "Question",
-    "name": "How much to invest to live off dividends?",
-    "acceptedAnswer": { "@type": "Answer", "text": "At 4% yield, you need approximately $1 million for $40,000 per year in dividend income." }
-  }, {
-    "@type": "Question",
-    "name": "Qualified vs non-qualified dividends?",
-    "acceptedAnswer": { "@type": "Answer", "text": "Qualified dividends (US stocks held over 60 days) are taxed at 0-20%. Non-qualified dividends (REITs, foreign stocks) are taxed as ordinary income." }
-  }]
-}</script>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Start Dividend Investing",
-  "description": "A five-step guide to building passive income through dividend stocks.",
-  "step": [
-    { "@type": "HowToStep", "position": 1, "name": "Open a brokerage account", "text": "Choose a low-cost broker (Fidelity, Schwab, Vanguard) with commission-free trades and DRIP support." },
-    { "@type": "HowToStep", "position": 2, "name": "Decide on a strategy", "text": "High yield or dividend growth? Review the dividend strategies to find your approach." },
-    { "@type": "HowToStep", "position": 3, "name": "Research dividend stocks", "text": "Look for yield of 2% or higher, payout ratio under 60%, and 5+ years of dividend growth." },
-    { "@type": "HowToStep", "position": 4, "name": "Enable DRIP and DCA", "text": "Turn on automatic dividend reinvestment and invest a fixed amount monthly." },
-    { "@type": "HowToStep", "position": 5, "name": "Monitor and rebalance", "text": "Review your portfolio annually, cut declining stocks, and reinvest into new opportunities." }
-  ]
-}</script>
   <div class="cta-box"><strong>Ready to start building passive income?</strong><p>Explore our curated resources and take the first step toward financial freedom.</p><div class="btn-group"><a href="/stocks" class="btn">Browse Stocks</a><a href="/calculator" class="btn">Try Calculator</a><a href="/strategy" class="btn btn-outline">Learn Strategies</a></div></div>
 </BaseLayout>

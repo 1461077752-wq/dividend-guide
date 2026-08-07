@@ -1,5 +1,5 @@
 ---
-title: "Tariff Dividend Check: Status, Eligibility, and How to Track It"
+title: "Tariff Dividend Check: Status and Eligibility"
 description: "Has the tariff dividend check been sent? Current 2026 status, reported amounts, eligibility details, and the official way to track any federal payment."
 pubDate: 2026-08-04
 modDate: 2026-08-04

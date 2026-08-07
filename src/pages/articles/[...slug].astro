@@ -16,6 +16,16 @@ const pubDate = article.data.pubDate.toISOString().split('T')[0];
 const modDate = article.data.modDate
   ? article.data.modDate.toISOString().split('T')[0]
   : pubDate;
+const relatedArticles = (await getCollection('articles'))
+  .filter(candidate => !candidate.data.draft && candidate.id !== article.id)
+  .map(candidate => {
+    const sharedTags = candidate.data.tags.filter(tag => article.data.tags.includes(tag)).length;
+    const sameCategory = candidate.data.category === article.data.category ? 2 : 0;
+    return { candidate, score: sharedTags * 3 + sameCategory };
+  })
+  .sort((a, b) => b.score - a.score || b.candidate.data.pubDate.valueOf() - a.candidate.data.pubDate.valueOf())
+  .slice(0, 4)
+  .map(item => item.candidate);
 ---
 <ArticleLayout
   title={`${article.data.title} - Dividend Guide`}
@@ -24,15 +34,30 @@ const modDate = article.data.modDate
   pubDate={pubDate}
   modDate={modDate}
   image={article.data.image}
+  author={article.data.author}
+  authorRole={article.data.authorRole}
+  review={article.data.review}
+  reviewDate={article.data.reviewDate?.toISOString().split('T')[0]}
+  dataAsOf={article.data.dataAsOf}
+  methodology={article.data.methodology}
+  sources={article.data.sources.map(source => ({ ...source, accessed: source.accessed?.toISOString().split('T')[0] }))}
 >
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="/">Home</a><span aria-hidden="true">/</span><a href="/articles/">Articles</a><span aria-hidden="true">/</span><span>{article.data.title}</span>
+  </nav>
   <div class="article-header">
     <h1>{article.data.title}</h1>
     <p class="article-desc">{article.data.description}</p>
     <div class="article-meta-bar">
       <span class="article-category">{article.data.category}</span>
+      <span>By <a href="/about/author/">{article.data.author}</a></span>
+      <span>{article.data.authorRole}</span>
+      <span>{article.data.review}</span>
       <time datetime={pubDate}>
         {article.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
       </time>
+      {article.data.modDate && <span>Updated {article.data.modDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>}
+      {article.data.dataAsOf && <span>Data through {article.data.dataAsOf}</span>}
       {article.data.tags.length > 0 && (
         <span class="article-tags">
           {article.data.tags.map(tag => <span class="tag">{tag}</span>)}
@@ -46,8 +71,27 @@ const modDate = article.data.modDate
   <article class="article-content">
     <Content />
   </article>
+  <aside class="article-research-notes">
+    <h2>Sources and methodology</h2>
+    <p>{article.data.review}. This article is for educational purposes and is not personalized financial advice.</p>
+    {article.data.reviewDate && <p>Fact-check date: {article.data.reviewDate.toISOString().split('T')[0]}</p>}
+    {article.data.methodology && <p>Methodology: {article.data.methodology}</p>}
+    {article.data.sources.length > 0 ? <ul>{article.data.sources.map(source => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.name}</a>{source.accessed ? ` (accessed ${source.accessed.toISOString().split('T')[0]})` : ''}</li>)}</ul> : <p>Primary data sources and the applicable calculation basis are documented in the article text where figures are used.</p>}
+  </aside>
+  <section class="related-articles" aria-labelledby="related-heading">
+    <h2 id="related-heading">Related articles</h2>
+    <div class="related-article-grid">
+      {relatedArticles.map(related => (
+        <a class="related-article-card" href={`/articles/${related.id}/`}>
+          <span class="article-category">{related.data.category}</span>
+          <strong>{related.data.title}</strong>
+          <span>{related.data.description}</span>
+        </a>
+      ))}
+    </div>
+  </section>
   <div class="article-nav">
     <a href="/articles/" class="btn btn-outline">&larr; All Articles</a>
-    <a href="/stocks" class="btn">Browse Stocks</a>
+    <a href="/stocks/" class="btn">Browse Stocks</a>
   </div>
 </ArticleLayout>

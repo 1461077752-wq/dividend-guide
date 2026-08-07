@@ -6,6 +6,13 @@ modDate: 2026-07-30
 category: "Stock Analysis"
 tags: ["SCHD", "dividend yield", "yield on cost", "dividend ETF"]
 image: "/images/articles/schd-dividend-yield.webp"
+author: "Henry Zhou"
+dataAsOf: "2026-07-30"
+methodology: "Yield is calculated from the stated annual distribution and the closing price on the cited date."
+sources:
+  - name: "Schwab SCHD fund documents"
+    url: "https://www.schwabassetmanagement.com/products/schd"
+    accessed: 2026-07-30
 draft: false
 ---
 

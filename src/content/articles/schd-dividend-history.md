@@ -1,11 +1,18 @@
 ---
-title: "SCHD Dividend History: 14 Years of Distributions, Split and All"
+title: "SCHD Dividend History and Payment Schedule"
 description: "Every SCHD annual dividend since 2011, the 2024 split explained, quarterly payment rhythm, and what 13 years of dividend growth really delivers."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Stock Analysis"
 tags: ["SCHD", "dividend ETF", "Schwab", "dividend history", "dividend growth"]
 image: "/images/articles/schd-dividend-history.webp"
+author: "Henry Zhou"
+dataAsOf: "2026-08-04"
+methodology: "Annual totals sum the fund's reported distributions and use split-adjusted values where applicable."
+sources:
+  - name: "Schwab SCHD fund documents"
+    url: "https://www.schwabassetmanagement.com/products/schd"
+    accessed: 2026-08-04
 draft: false
 ---
 

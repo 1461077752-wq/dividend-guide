@@ -7,6 +7,13 @@ export interface Props {
   pubDate?: string;
   modDate?: string;
   image?: string;
+  author?: string;
+  authorRole?: string;
+  review?: string;
+  reviewDate?: string;
+  dataAsOf?: string;
+  methodology?: string;
+  sources?: Array<{ name: string; url: string; accessed?: string }>;
 }
 const {
   title,
@@ -14,13 +21,31 @@ const {
   canonical,
   pubDate = new Date().toISOString().split('T')[0],
   modDate = new Date().toISOString().split('T')[0],
-  image
+  image,
+  author = 'Henry Zhou',
+  authorRole = 'Independent Dividend Researcher',
+  review = 'Facts, data sources, and calculations personally verified by the author',
+  reviewDate,
+  dataAsOf,
+  methodology,
+  sources = []
 } = Astro.props;
 const currentPath = Astro.url.pathname;
-const pageUrl = canonical || `https://dividend01.com${currentPath}`;
+const normalizeUrl = (value: string) => {
+  const parsed = new URL(value);
+  if (parsed.hostname === 'www.dividend01.com') parsed.hostname = 'dividend01.com';
+  if (parsed.pathname !== '/' && !parsed.pathname.endsWith('/')) parsed.pathname += '/';
+  return parsed.toString();
+};
+const pageUrl = normalizeUrl(canonical || `https://dividend01.com${currentPath}`);
 const ogImage = image
   ? (image.startsWith('http') ? image : `https://dividend01.com${image}`)
   : 'https://dividend01.com/images/og-default.jpg';
+const breadcrumbItems = [
+  { name: 'Home', url: 'https://dividend01.com/' },
+  { name: 'Articles', url: 'https://dividend01.com/articles/' },
+  { name: title.replace(/ - Dividend Guide$/, ''), url: pageUrl }
+];
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +54,8 @@ const ogImage = image
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
   <meta name="description" content={description}>
-  <meta name="author" content="Dividend Guide">
-  {canonical && <link rel="canonical" href={canonical}>}
+  <meta name="author" content={author}>
+  <link rel="canonical" href={pageUrl}>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,18 +75,31 @@ const ogImage = image
   <meta name="twitter:image" content={ogImage}>
 
   <!-- Schema.org -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": title,
-    "description": description,
-    "url": pageUrl,
-    "datePublished": pubDate,
-    "dateModified": modDate,
-    "image": ogImage,
-    "author": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividend01.com/about" },
-    "publisher": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividend01.com/about" }
-  })}></script>
+  <script type="application/ld+json" set:html={JSON.stringify([
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": title,
+      "description": description,
+      "url": pageUrl,
+      "datePublished": pubDate,
+      "dateModified": modDate,
+      "image": ogImage,
+      "author": { "@type": "Person", "name": author, "jobTitle": authorRole, "url": "https://dividend01.com/about/author/" },
+      "publisher": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividend01.com/about/" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbItems.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": item.name,
+        "item": item.url
+      }))
+    }
+  ])}></script>
 </head>
 <body>
   <script is:inline>if(location.hostname.includes('pages.dev')){location.replace('https://dividend01.com'+location.pathname+location.search)}</script>
@@ -74,9 +112,9 @@ const ogImage = image
       <nav class="article-topbar-nav">
         <a href="/">Guide</a>
         <a href="/articles/">Articles</a>
-        <a href="/stocks">Stocks</a>
-        <a href="/calculator">Calculator</a>
-        <a href="/strategy">Strategy</a>
+        <a href="/stocks/">Stocks</a>
+        <a href="/calculator/">Calculator</a>
+        <a href="/strategy/">Strategy</a>
       </nav>
     </div>
   </div>
@@ -85,10 +123,16 @@ const ogImage = image
     <div class="article-footer-inner">
       <p><strong>Dividend Guide</strong> &mdash; Educational content only. Not financial advice. Always do your own research before investing.</p>
       <nav class="article-footer-links">
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Terms</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/about/author/">Author</a>
+        <a href="/editorial-standards/">Editorial Standards</a>
+        <a href="/topics/dividend-investing-basics/">Basics</a>
+        <a href="/topics/dividend-stock-screening/">Screening</a>
+        <a href="/topics/high-yield-dividend-stocks/">High Yield</a>
+        <a href="/topics/dividend-etf-history/">ETF History</a>
       </nav>
     </div>
   </footer>

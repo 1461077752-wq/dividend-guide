@@ -1,11 +1,18 @@
 ---
-title: "NVDY Dividend History: YieldMax NVDA Option Income Distributions"
+title: "NVDY Dividend History and Distributions"
 description: "Complete NVDY distribution history since its May 2023 launch — monthly payouts, the 2025 switch to weekly, total return, and why the 62% yield misleads."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Stock Analysis"
 tags: ["NVDY", "YieldMax", "covered call", "ETF", "Nvidia", "high yield"]
 image: "/images/articles/nvdy-dividend-history.webp"
+author: "Henry Zhou"
+dataAsOf: "2026-08-04"
+methodology: "Distribution history is based on published fund distributions; yield figures are not treated as guaranteed income."
+sources:
+  - name: "YieldMax NVDY fund page"
+    url: "https://www.yieldmaxetfs.com/our-etfs/nvdy/"
+    accessed: 2026-08-04
 draft: false
 ---
 

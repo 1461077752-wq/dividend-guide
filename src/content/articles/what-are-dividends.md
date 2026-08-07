@@ -4,6 +4,12 @@ description: "Learn the fundamentals of dividends — how they work, why compani
 pubDate: 2026-01-15
 category: "Basics"
 tags: ["dividends", "beginner", "passive income"]
+author: "Henry Zhou"
+methodology: "Definitions and payment dates are based on standard issuer and market conventions; tax examples are illustrative only."
+sources:
+  - name: "Investor.gov: Dividends"
+    url: "https://www.investor.gov/introduction-investing/investing-basics/glossary/dividend"
+    accessed: 2026-08-07
 ---
 
 ## What Is a Dividend?

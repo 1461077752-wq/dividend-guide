@@ -8,6 +8,7 @@ export interface Props {
   modDate?: string;
   schemaType?: 'Article' | 'WebPage';
   image?: string;
+  noIndex?: boolean;
 }
 const {
   title,
@@ -16,37 +17,46 @@ const {
   pubDate = '2026-01-15',
   modDate = new Date().toISOString().split('T')[0],
   schemaType = 'WebPage',
-  image
+  image,
+  noIndex = false
 } = Astro.props;
 const currentPath = Astro.url.pathname;
-const pageUrl = canonical || `https://dividend01.com${currentPath}`;
 const currentYear = new Date().getFullYear();
 const navItems = [
   { href: '/', label: 'Guide', icon: 'home' },
-  { href: '/articles', label: 'Articles', icon: 'article' },
-  { href: '/stocks', label: 'Stocks', icon: 'chart' },
-  { href: '/calculator', label: 'Calculator', icon: 'calc' },
-  { href: '/strategy', label: 'Strategy', icon: 'activity' },
+  { href: '/articles/', label: 'Articles', icon: 'article' },
+  { href: '/stocks/', label: 'Stocks', icon: 'chart' },
+  { href: '/calculator/', label: 'Calculator', icon: 'calc' },
+  { href: '/strategy/', label: 'Strategy', icon: 'activity' },
 ];
 
 const pageNames: Record<string, string> = {
   '/': 'Dividend Guide',
-  '/articles': 'Articles',
-  '/stocks': 'Best Dividend Stocks',
-  '/calculator': 'Dividend Calculator',
-  '/strategy': 'Dividend Strategies',
-  '/about': 'About',
-  '/contact': 'Contact',
-  '/privacy': 'Privacy Policy',
-  '/terms': 'Terms of Use',
+  '/articles/': 'Articles',
+  '/stocks/': 'Best Dividend Stocks',
+  '/calculator/': 'Dividend Calculator',
+  '/strategy/': 'Dividend Strategies',
+  '/about/': 'About',
+  '/contact/': 'Contact',
+  '/privacy/': 'Privacy Policy',
+  '/terms/': 'Terms of Use',
+  '/about/author/': 'About the Author',
+  '/editorial-standards/': 'Editorial Standards',
 };
 
 const breadcrumbItems = currentPath === '/'
   ? [{ name: 'Home', path: '/' }]
   : [
       { name: 'Home', path: '/' },
-      { name: pageNames[currentPath] || title, path: currentPath }
+      { name: pageNames[currentPath] || title, path: currentPath.endsWith('/') ? currentPath : `${currentPath}/` }
     ];
+const normalizeUrl = (value: string) => {
+  const parsed = new URL(value);
+  if (parsed.hostname === 'www.dividend01.com') parsed.hostname = 'dividend01.com';
+  if (parsed.pathname !== '/' && !parsed.pathname.endsWith('/')) parsed.pathname += '/';
+  return parsed.toString();
+};
+const pageUrl = normalizeUrl(canonical || `https://dividend01.com${currentPath}`);
 const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
 ---
 <!DOCTYPE html>
@@ -66,8 +76,9 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
 
   <title>{title}</title>
   <meta name="description" content={description}>
-  <meta name="author" content="Dividend Guide">
-  {canonical && <link rel="canonical" href={canonical}>}
+  {noIndex && <meta name="robots" content="noindex, follow">}
+  <meta name="author" content="Henry Zhou">
+  <link rel="canonical" href={pageUrl}>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
   <!-- Font Preconnect -->
@@ -114,8 +125,8 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
       "url": pageUrl,
       "datePublished": pubDate,
       "dateModified": modDate,
-      "author": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividend01.com/about" },
-      "publisher": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividend01.com/about" }
+      "author": { "@type": "Person", "name": "Henry Zhou", "jobTitle": "Independent Dividend Researcher", "url": "https://dividend01.com/about/author/" },
+      "publisher": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividend01.com/about/" }
     },
     ...(currentPath !== '/' ? [{
       "@context": "https://schema.org",
@@ -124,7 +135,7 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
         "@type": "ListItem",
         "position": i + 1,
         "name": item.name,
-        "item": `https://dividend01.com${item.path}`
+        "item": normalizeUrl(`https://dividend01.com${item.path}`)
       }))
     }] : [])
   ])}></script>
@@ -132,13 +143,14 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
 <body>
   <script is:inline>if(location.hostname.includes('pages.dev')){location.replace('https://dividend01.com'+location.pathname+location.search)}</script>
   <header>
+    <span class="sr-only">Stock market charts and financial data visualisation</span>
     <div class="container">
       <h1><slot name="title">Dividend Guide</slot></h1>
       <p class="subtitle"><slot name="subtitle">{description}</slot></p>
-      <p class="byline">By <a href="/about">Dividend Guide</a> &middot; Updated <time datetime={currentYear + '-01-01'}>{currentYear}</time></p>
+      <p class="byline">By <a href="/about/author/">Henry Zhou</a> &middot; Independent Dividend Researcher &middot; Updated <time datetime={modDate}>{modDate}</time></p>
       <div class="hero-cta">
-        <a href="/stocks" class="btn">Browse Stocks</a>
-        <a href="/calculator" class="btn btn-outline">Try Calculator</a>
+        <a href="/stocks/" class="btn">Browse Stocks</a>
+        <a href="/calculator/" class="btn btn-outline">Try Calculator</a>
       </div>
     </div>
   </header>
@@ -162,12 +174,18 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
     <div class="container">
       <p><strong>Dividend Guide</strong> &mdash; Educational content only. Not financial advice. Always do your own research before investing.</p>
       <nav class="footer-links">
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/privacy">Privacy Policy</a>
-        <a href="/terms">Terms of Use</a>
+        <a href="/about/">About</a>
+        <a href="/about/author/">Author</a>
+        <a href="/editorial-standards/">Editorial Standards</a>
+        <a href="/topics/dividend-investing-basics/">Basics</a>
+        <a href="/topics/dividend-stock-screening/">Screening</a>
+        <a href="/topics/high-yield-dividend-stocks/">High Yield</a>
+        <a href="/topics/dividend-etf-history/">ETF History</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Use</a>
       </nav>
-      <p style="margin-top:16px;font-size:.75rem;opacity:.7">&copy; {currentYear} Dividend Guide. All rights reserved.</p>
+      <p style="margin-top:16px;font-size:.75rem;opacity:.7">&copy; {currentYear} Dividend Guide. All rights reserved. Hero image: <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a>.</p>
     </div>
   </footer>
 </body>

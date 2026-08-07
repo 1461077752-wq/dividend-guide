@@ -1,5 +1,5 @@
 ---
-title: "High Dividend Stocks: Best High-Yield Picks and the Risks"
+title: "High Dividend Stocks: Yield and Risk Guide"
 description: "The best high-yield dividend stocks by sector, why some pay 4-8% reliably, which ultra-high yields are traps, and how to avoid the dividend cuts."
 pubDate: 2026-08-04
 modDate: 2026-08-04

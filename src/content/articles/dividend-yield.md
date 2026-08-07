@@ -1,5 +1,5 @@
 ---
-title: "Dividend Yield Explained: What It Is, What's Good, and the Traps"
+title: "Dividend Yield Explained: Formula, Uses and Risks"
 description: "What dividend yield means, how to calculate it, what counts as a good yield, and why a high yield is often a warning sign rather than a bargain."
 pubDate: 2026-08-04
 modDate: 2026-08-04
