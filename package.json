@@ -5,9 +5,12 @@
   "engines": { "node": ">=22.12.0" },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/build-zh-site.mjs",
+    "build:english": "astro build",
+    "build:localized": "npm run build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "translate:articles": "node scripts/translate-articles.mjs"
   },
   "dependencies": { "astro": "^7.1.3" }
 }

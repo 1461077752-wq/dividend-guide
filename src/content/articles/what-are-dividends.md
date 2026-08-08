@@ -2,10 +2,12 @@
 title: "What Are Dividends? A Beginner's Guide"
 description: "Learn the fundamentals of dividends — how they work, why companies pay them, and how to evaluate dividend stocks for your portfolio."
 pubDate: 2026-01-15
+modDate: 2026-08-07
 category: "Basics"
 tags: ["dividends", "beginner", "passive income"]
 author: "Henry Zhou"
-methodology: "Definitions and payment dates are based on standard issuer and market conventions; tax examples are illustrative only."
+dataAsOf: "2026-08-07"
+methodology: "Definitions and payment dates are based on standard issuer and market conventions; metric formulas use the values stated in the article; tax examples and healthy-range examples are illustrative only."
 sources:
   - name: "Investor.gov: Dividends"
     url: "https://www.investor.gov/introduction-investing/investing-basics/glossary/dividend"
@@ -45,6 +47,14 @@ Understanding the dividend calendar is important:
 2. **Ex-Dividend Date** — You must own the stock *before* this date to receive the dividend.
 3. **Record Date** — The company identifies eligible shareholders.
 4. **Payment Date** — Cash is deposited into your brokerage account.
+
+## Data Notes
+
+- **dataAsOf:** 2026-08-07
+- **Original data sources:** Investor.gov's dividend glossary; dividend payment conventions and metric definitions are summarized from standard issuer and market practice.
+- **Statistical scope:** This is an educational overview, not a current market screen. The examples and metric ranges are illustrative and do not represent every company, sector, security, tax jurisdiction, or investor's situation.
+- **Data updated:** 2026-08-07
+- **Calculation method:** Dividend yield = annual dividend per share ÷ share price; payout ratio = dividends ÷ net income; dividend growth = year-over-year dividend per share change; free cash flow = operating cash flow − capital expenditures. No taxes, fees, or price changes are included unless stated otherwise.
 
 ## Common Misconceptions
 

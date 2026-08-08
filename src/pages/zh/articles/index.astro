@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="股息投资文章 - 股息投资指南" description="阅读股息、ETF、收益率和长期收入规划研究。" canonical="https://dividend01.com/zh/articles/" locale="zh" pageClass="article-index-page">
+  <slot slot="title">股息投资研究库</slot>
+  <slot slot="subtitle">从基础概念到数据方法，按主题阅读经过整理、持续更新的研究内容。</slot>
+  <div class="article-index-intro"><span>研究库</span><p>每篇文章都尽量说明数据来源、计算方法和适用边界，帮助你先理解问题，再判断数字。</p></div>
+  <section class="article-index-featured" aria-labelledby="featured-article-title">
+    <div><span class="article-index-kicker">精选研究 · 分配历史</span><h2 id="featured-article-title">SCHD 分配历史与支付节奏</h2><p>从 2011 年开始，梳理年度分配、2024 年拆分调整和季度支付节奏。</p></div>
+    <a class="article-index-arrow" href="/zh/articles/schd-dividend-history/" aria-label="阅读 SCHD 分配历史">阅读文章 <span aria-hidden="true">↗</span></a>
+  </section>
+  <div class="article-index-heading"><h2>按主题浏览</h2><span>4 篇入门研究</span></div>
+  <div class="article-index-grid">
+    <a class="article-index-card" href="/zh/articles/what-are-dividends/"><span class="article-index-number">01</span><div><h3>什么是股息？</h3><p>了解股息的来源、支付节奏和除息日。</p></div><span class="article-index-card-arrow">↗</span></a>
+    <a class="article-index-card" href="/zh/articles/schd-dividend-history/"><span class="article-index-number">02</span><div><h3>SCHD 分配历史</h3><p>查看年度分配、拆分调整和数据来源。</p></div><span class="article-index-card-arrow">↗</span></a>
+    <a class="article-index-card" href="/zh/articles/dividend-yield/"><span class="article-index-number">03</span><div><h3>如何理解股息收益率</h3><p>理解收益率、股价变化和可持续分配之间的关系。</p></div><span class="article-index-card-arrow">↗</span></a>
+    <a class="article-index-card" href="/zh/articles/drip-compounding-guide/"><span class="article-index-number">04</span><div><h3>股息再投资与复利</h3><p>了解再投资如何改变长期持仓和收入轨迹。</p></div><span class="article-index-card-arrow">↗</span></a>
+  </div>
+</BaseLayout>

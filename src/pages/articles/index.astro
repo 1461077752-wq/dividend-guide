@@ -6,22 +6,55 @@ const allArticles = await getCollection('articles');
 const articles = allArticles
   .filter(a => !a.data.draft)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const articleTranslations: Record<string, { title: string; description: string }> = {
+  'best-dividend-stocks-2025': { title: '2025 年最佳股息股票：年度回顾与精选', description: '回顾 2025 年表现最佳的股息股票，包括提高派息并交付收益的股息贵族和高收益股票。' },
+  'dividend-dividend-stocks': { title: '股息股票：如何一步步筛选优质标的', description: '了解如何用收益率、派息率和增长年限筛选股息股票，并识别收益率陷阱。' },
+  'dividend-yield': { title: '股息收益率：公式、用途与风险', description: '理解股息收益率的含义、计算方法、合理水平，以及高收益为何可能是风险信号。' },
+  'high-dividend-stocks': { title: '高股息股票：收益率与风险指南', description: '按行业了解高收益股息股票，识别高收益陷阱，并降低股息削减风险。' },
+  'highest-dividend-stocks': { title: '最高股息股票：数据与风险', description: '最高收益率股息股票——BDC、mREIT 和封闭式基金的收益率可达 10% 至 26%；了解收益率为何如此之高，以及为什么多数投资者最终会亏损。' },
+  'alaska-permanent-fund-dividend-stimulus-payment': { title: '阿拉斯加永久基金股息 2026：刺激金指南', description: '了解阿拉斯加永久基金股息的运作方式、2026 年金额、资格规则，以及是否会发放额外刺激金。' },
+  'alaska-pfd-payment-history': { title: '阿拉斯加永久基金股息支付：按年份完整回顾', description: '自 1982 年以来的每笔阿拉斯加 PFD 支付、公式变化，以及当前和未来支付的可能情况。' },
+  'best-dividend-stocks-for-beginners': { title: '2026 年适合新手的最佳股息股票', description: '寻找适合新手的股息股票？从 SCHD ETF 以及 JNJ、KO 等标的开始，查看收益率、派息率和 5000 美元案例。' },
+  'dividend-calculator-guide': { title: '股息计算器：如何预测股息收入', description: '学习使用股息计算器预测月度和年度收入，包含股息收益率公式、DRIP 复利和实际案例。' },
+  'dividend-stocks-passive-income': { title: '用股息股票建立被动收入：现实指南', description: '如何用股息股票建立被动收入，包括现实收益率、组合示例、月度收入预测和真正有效的策略。' },
+  'dividend-stocks': { title: '股息股票详解：收入投资者完整指南', description: '了解什么是股息股票、如何评估，以及如何建立能够产生可靠收入的投资组合，包含关键指标、案例和常见错误。' },
+  'dividends': { title: '靠股息能赚多少钱？', description: '用真实数字了解股息收入：1 万、5 万或 50 万美元的股息股票每月能产生多少收入，以及建立被动收入的计算方法。' },
+  'drip-compounding-guide': { title: 'DRIP 复利：再投资股息积累财富', description: '了解股息再投资计划的运作方式、复利计算，以及 DRIP 为什么是最有力的财富积累策略之一。' },
+  'jepq-dividend-history': { title: 'JEPQ 股息历史与月度派息', description: 'JEPQ 自 2022 年 5 月成立以来的完整月度分配历史，包括年度总额、月度区间、峰值与低谷月份及总回报。' },
+  'jepq-dividend': { title: 'JEPQ 股息：收益率、分配历史及是否值得投资', description: '了解 JEPQ 的月度分配、当前收益率、分配历史、纳斯达克溢价收益 ETF 的运作方式，以及它与其他收入基金的比较。' },
+  'msty-dividend-history': { title: 'MSTY 股息历史：YieldMax MSTR 期权收入 ETF 分配', description: 'MSTY 完整分配历史、YieldMax MSTR 期权收入策略 ETF 如何产生高收益，以及备兑看涨期权收入投资的风险。' },
+  'msty-dividend-income': { title: 'MSTY 股息：能派多少，能靠它生活吗？', description: 'MSTY 每月实际派息多少，不同组合规模对应的收入，以及备兑看涨期权 ETF 收入容易造成误判的关键风险。' },
+  'nvdy-dividend-history': { title: 'NVDY 股息历史与分配', description: 'NVDY 自 2023 年 5 月成立以来的完整分配历史、月度派息、2025 年改为每周派息、总回报，以及 62% 收益率为何具有误导性。' },
+  'qqqi-dividend-history': { title: 'QQQI 股息历史与 ETF 派息', description: 'QQQI 自 2024 年 1 月成立以来的完整分配历史、NEOS 如何产生稳定月度派息，以及它与 JEPQ、QYLD 的比较。' },
+  'schd-dividend-history': { title: 'SCHD 股息历史与派息时间表', description: 'SCHD 自 2011 年以来的每次年度股息、2024 年拆分说明、季度派息节奏，以及 13 年股息增长的实际结果。' },
+  'schd-dividend-yield': { title: 'SCHD 股息收益率：当前水平、历史与比较', description: 'SCHD 当前股息收益率、历史区间、成本收益率与市场收益率的区别，以及它与其他股息 ETF 的比较。' },
+  'schd-dividend': { title: 'SCHD 股息：收益率、历史与比较', description: '关于 SCHD 股息的一切：当前收益率、历史分配增长、派息方式，以及 Schwab 股息股票 ETF 与其他基金的比较。' },
+  'tariff-dividend-check': { title: '关税股息支票：发放状态与资格', description: '关税股息支票是否已经发放？查看 2026 年最新状态、已报道金额、资格详情以及追踪联邦支付的官方方式。' },
+  'tariff-dividend': { title: '关税股息：特朗普向纳税人返还关税收入的计划', description: '了解拟议中的关税股息、已报道的支票金额、关税收入如何为其提供资金，以及家庭是否应期待这笔支付。' },
+  'tltw-dividend': { title: '美国国债每月 12.2% 股息？TLTW ETF 解析', description: '为什么没有美国国债能每月支付 12.2%？了解产生这一数字的 TLTW 备兑看涨期权 ETF、运作方式和追逐债券基金高收益的风险。' },
+  'trump-2000-dividend': { title: '特朗普 2000 美元股息：DOGE 支票提案解析', description: '了解拟议中的特朗普股息支票、背后的 DOGE 节约计划、已报道金额、资格条件，以及投资者在期待这笔钱前应知道什么。' },
+  'tsly-dividend-history': { title: 'TSLY 股息历史与分配', description: 'TSLY 自 2022 年 11 月成立以来的完整分配历史、2023 年派息峰值、2025 年改为每周派息，以及约 109% 收益率为何具有误导性。' },
+  'ulty-dividend-history': { title: 'ULTY 股息历史：YieldMax Ultra 期权收入 ETF 分配', description: 'ULTY 分配历史、YieldMax Ultra 期权收入策略 ETF 的派息方式、高收益及这一激进备兑看涨期权基金的风险。' },
+  'voo-dividend': { title: 'VOO 股息：收益率、历史与比较', description: 'VOO 当前股息收益率、自 2012 年以来的年度股息历史、季度派息时间表，以及标普 500 ETF 的收入与 SCHD、VIG 的比较。' },
+  'what-are-dividends': { title: '什么是股息？新手指南', description: '学习股息基础知识：股息如何运作、公司为什么派息，以及如何为投资组合评估股息股票。' }
+};
+const formatDate = (date: Date, locale: string) => date.toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' });
 ---
 <ArticleLayout title="Articles - Dividend Guide" description="In-depth articles about dividend investing, strategies, stock analysis, and building passive income." canonical="https://dividend01.com/articles/">
   <div class="article-header">
-    <h1>Articles</h1>
-    <p class="article-desc">In-depth guides and analysis on dividend investing &mdash; from beginner basics to advanced strategies.</p>
+    <h1 data-article-i18n="articles.heading">Articles</h1>
+    <p class="article-desc" data-article-i18n="articles.description">In-depth guides and analysis on dividend investing &mdash; from beginner basics to advanced strategies.</p>
   </div>
   <div class="article-list">
     {articles.map(article => (
       <a href={`/articles/${article.id}/`} class="article-card">
         <div class="article-card-body">
-          <span class="article-category">{article.data.category}</span>
-          <h2>{article.data.title}</h2>
-          <p>{article.data.description}</p>
+          <span class="article-category" data-article-text-en={article.data.category} data-article-text-zh={article.data.category === 'Stock Analysis' ? '股票分析' : article.data.category === 'Basics' ? '基础知识' : article.data.category === 'Strategy' ? '策略' : article.data.category}>{article.data.category}</span>
+          <h2 data-article-text-en={article.data.title} data-article-text-zh={articleTranslations[article.id]?.title}>{article.data.title}</h2>
+          <p data-article-text-en={article.data.description} data-article-text-zh={articleTranslations[article.id]?.description}>{article.data.description}</p>
           <div class="article-meta">
             <time datetime={article.data.pubDate.toISOString()}>
-              {article.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              <span data-article-text-en={formatDate(article.data.pubDate, 'en-US')} data-article-text-zh={formatDate(article.data.pubDate, 'zh-CN')}>{formatDate(article.data.pubDate, 'en-US')}</span>
             </time>
             {article.data.tags.length > 0 && (
               <span class="article-tags">

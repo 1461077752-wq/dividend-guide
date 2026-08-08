@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="股息计算器 - 股息投资指南" description="计算股息收益率和预期年度收入。" canonical="https://dividend01.com/zh/calculator/" locale="zh">
+  <slot slot="title">股息计算器</slot>
+  <slot slot="subtitle">输入价格、持股数量和每股年度股息，快速估算现金收入。</slot>
+  <section class="calculator-panel">
+    <div class="calc-field"><label for="zh-price">股票价格（美元）</label><input id="zh-price" type="number" value="100" min="0" step="0.01"></div>
+    <div class="calc-field"><label for="zh-dividend">每股年度股息（美元）</label><input id="zh-dividend" type="number" value="4" min="0" step="0.01"></div>
+    <div class="calc-field"><label for="zh-shares">持有股数</label><input id="zh-shares" type="number" value="100" min="0" step="1"></div>
+    <button class="btn" id="zh-calculate" type="button">计算</button>
+    <div class="calc-result" aria-live="polite"><strong id="zh-yield">4.00%</strong><span>预估股息收益率</span><strong id="zh-income">$400.00</strong><span>预估年度收入</span></div>
+  </section>
+  <div class="tip-box"><strong>提示：</strong>这是教育用途的估算工具，不包含税费、价格变化或股息调整。</div>
+  <script is:inline>
+    const price = document.querySelector('#zh-price');
+    const dividend = document.querySelector('#zh-dividend');
+    const shares = document.querySelector('#zh-shares');
+    const calculate = () => { const p = Number(price.value) || 0; const d = Number(dividend.value) || 0; const s = Number(shares.value) || 0; document.querySelector('#zh-yield').textContent = p ? `${(d / p * 100).toFixed(2)}%` : '—'; document.querySelector('#zh-income').textContent = `$${(d * s).toFixed(2)}`; };
+    document.querySelector('#zh-calculate').addEventListener('click', calculate);
+  </script>
+</BaseLayout>

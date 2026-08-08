@@ -9,7 +9,10 @@ export interface Props {
   schemaType?: 'Article' | 'WebPage';
   image?: string;
   noIndex?: boolean;
+  locale?: 'en' | 'zh';
+  pageClass?: string;
 }
+const currentPath = Astro.url.pathname;
 const {
   title,
   description,
@@ -18,9 +21,16 @@ const {
   modDate = new Date().toISOString().split('T')[0],
   schemaType = 'WebPage',
   image,
-  noIndex = false
+  noIndex = false,
+  locale = currentPath.startsWith('/zh') ? 'zh' : 'en',
+  pageClass = ''
 } = Astro.props;
-const currentPath = Astro.url.pathname;
+const isNotFoundPage = currentPath === '/404/' || currentPath === '/404.html' || currentPath === '/zh/404/';
+const languageHref = isNotFoundPage
+  ? (locale === 'zh' ? '/404.html' : '/zh/404/')
+  : locale === 'zh'
+    ? (currentPath.replace(/^\/zh/, '') || '/')
+    : `/zh${currentPath === '/' ? '/' : currentPath}`;
 const currentYear = new Date().getFullYear();
 const navItems = [
   { href: '/', label: 'Guide', icon: 'home' },
@@ -29,6 +39,8 @@ const navItems = [
   { href: '/calculator/', label: 'Calculator', icon: 'calc' },
   { href: '/strategy/', label: 'Strategy', icon: 'activity' },
 ];
+// The English routes are canonical. Chinese is a presentation state, not a second site tree.
+const localizedNavItems = navItems;
 
 const pageNames: Record<string, string> = {
   '/': 'Dividend Guide',
@@ -60,7 +72,7 @@ const pageUrl = normalizeUrl(canonical || `https://dividend01.com${currentPath}`
 const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang={locale === 'zh' ? 'zh-CN' : 'en'}>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -140,53 +152,266 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
     }] : [])
   ])}></script>
 </head>
-<body>
+<body class:list={[{ 'home-page': currentPath === '/' || currentPath === '/zh/', 'locale-zh': locale === 'zh' }, pageClass]}>
   <script is:inline>if(location.hostname.includes('pages.dev')){location.replace('https://dividend01.com'+location.pathname+location.search)}</script>
-  <header>
+  <header class="site-header">
     <span class="sr-only">Stock market charts and financial data visualisation</span>
     <div class="container">
-      <h1><slot name="title">Dividend Guide</slot></h1>
-      <p class="subtitle"><slot name="subtitle">{description}</slot></p>
-      <p class="byline">By <a href="/about/author/">Henry Zhou</a> &middot; Independent Dividend Researcher &middot; Updated <time datetime={modDate}>{modDate}</time></p>
+      <h1 data-i18n={currentPath === '/' ? 'home.title' : undefined}><slot name="title">Dividend Guide</slot></h1>
+      <p class="subtitle" data-i18n={currentPath === '/' ? 'home.subtitle' : undefined}><slot name="subtitle">{description}</slot></p>
+      <p class="byline">{locale === 'zh' ? '作者：' : 'By '}<a href="/about/author/">Henry Zhou</a>{locale === 'zh' ? ' · 独立股息研究员 · 更新于 ' : ' · Independent Dividend Researcher · Updated '}<time datetime={modDate}>{modDate}</time></p>
       <div class="hero-cta">
-        <a href="/stocks/" class="btn">Browse Stocks</a>
-        <a href="/calculator/" class="btn btn-outline">Try Calculator</a>
+        <a href="/stocks/" class="btn">{locale === 'zh' ? '浏览股票' : 'Browse Stocks'}</a>
+        <a href="/calculator/" class="btn btn-outline">{locale === 'zh' ? '试用计算器' : 'Try Calculator'}</a>
       </div>
     </div>
   </header>
-  <nav>
+  <nav class="site-nav">
     <div class="container">
-      <a href="/" class="nav-brand">DG</a>
-      {navItems.map(item => (
+      <a href="/" class="nav-brand"><span class="nav-brand-mark">DG</span><span class="nav-brand-name">Dividend Guide</span></a>
+      {localizedNavItems.map(item => (
         <a href={item.href} class:list={[{ active: currentPath === item.href || (currentPath !== '/' && item.href !== '/' && currentPath.startsWith(item.href)) }]}>
           {item.icon === 'home' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>}
           {item.icon === 'article' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>}
           {item.icon === 'chart' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>}
           {item.icon === 'calc' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r="1"/><circle cx="12" cy="11" r="1"/><circle cx="16" cy="11" r="1"/><circle cx="8" cy="16" r="1"/><circle cx="12" cy="16" r="1"/><circle cx="16" cy="18" r="1"/></svg>}
           {item.icon === 'activity' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>}
-          {item.label}
+          <span data-i18n={locale === 'en' ? `nav.${item.icon}` : undefined}>{item.label}</span>
         </a>
       ))}
+      <div class="nav-actions">
+        <a class="nav-language" href={currentPath} data-language-toggle data-language-label aria-label={locale === 'zh' ? 'Switch to English' : '切换到中文'}>{locale === 'zh' ? 'EN' : '中文'}</a>
+        <a class="nav-cta" href="/stocks/">{locale === 'zh' ? '开始研究' : 'Explore research'}</a>
+      </div>
     </div>
   </nav>
   <main class="container"><slot /></main>
-  <footer>
-    <div class="container">
-      <p><strong>Dividend Guide</strong> &mdash; Educational content only. Not financial advice. Always do your own research before investing.</p>
-      <nav class="footer-links">
-        <a href="/about/">About</a>
-        <a href="/about/author/">Author</a>
-        <a href="/editorial-standards/">Editorial Standards</a>
-        <a href="/topics/dividend-investing-basics/">Basics</a>
-        <a href="/topics/dividend-stock-screening/">Screening</a>
-        <a href="/topics/high-yield-dividend-stocks/">High Yield</a>
-        <a href="/topics/dividend-etf-history/">ETF History</a>
-        <a href="/contact/">Contact</a>
-        <a href="/privacy/">Privacy Policy</a>
-        <a href="/terms/">Terms of Use</a>
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div class="footer-intro">
+        <a class="footer-brand" href="/" aria-label="Dividend Guide home"><span class="footer-brand-mark">DG</span><span>Dividend Guide</span></a>
+        <p>{locale === 'zh' ? '仅供教育参考，不构成投资建议。投资前请务必自行研究。' : 'Educational content only. Not financial advice. Always do your own research before investing.'}</p>
+        <a class="footer-author" href="/about/author/"><span>{locale === 'zh' ? '独立研究 ' : 'Independent research by '}</span>Henry Zhou <span aria-hidden="true">↗</span></a>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-group">
+          <h2>{locale === 'zh' ? '探索' : 'Learn'}</h2>
+          <a href="/topics/dividend-investing-basics/">{locale === 'zh' ? '基础知识' : 'Basics'}</a>
+          <a href="/topics/dividend-stock-screening/">{locale === 'zh' ? '股票筛选' : 'Screening'}</a>
+          <a href="/topics/high-yield-dividend-stocks/">{locale === 'zh' ? '高股息' : 'High Yield'}</a>
+          <a href="/topics/dividend-etf-history/">{locale === 'zh' ? 'ETF 历史' : 'ETF History'}</a>
+        </div>
+        <div class="footer-group">
+          <h2>{locale === 'zh' ? '关于' : 'About'}</h2>
+          <a href="/about/">{locale === 'zh' ? '关于指南' : 'About the guide'}</a>
+          <a href="/about/author/">{locale === 'zh' ? '作者' : 'Author'}</a>
+          <a href="/editorial-standards/">{locale === 'zh' ? '编辑标准' : 'Editorial Standards'}</a>
+          <a href="/contact/">{locale === 'zh' ? '联系' : 'Contact'}</a>
+        </div>
+        <div class="footer-group">
+          <h2>{locale === 'zh' ? '法律信息' : 'Legal'}</h2>
+          <a href="/privacy/">{locale === 'zh' ? '隐私政策' : 'Privacy Policy'}</a>
+          <a href="/terms/">{locale === 'zh' ? '使用条款' : 'Terms of Use'}</a>
+        </div>
       </nav>
-      <p style="margin-top:16px;font-size:.75rem;opacity:.7">&copy; {currentYear} Dividend Guide. All rights reserved. Hero image: <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a>.</p>
+      <div class="footer-bottom">
+        <span>&copy; {currentYear} Dividend Guide. {locale === 'zh' ? '保留所有权利。' : 'All rights reserved.'}</span>
+      </div>
     </div>
   </footer>
 </body>
+<script is:inline>
+  const languageCopy = {
+    zh: {
+      'home.title': '股息投资指南',
+      'home.subtitle': '一份实用的股息投资指南：学习如何挑选股息股票、计算收益率、复利增长，并建立可靠的被动收入。',
+      'home.whatIs': '什么是股息投资？',
+      'home.whatIsText': '股息投资是一种购买股票的策略，这些公司会定期将部分利润分配给股东。与成长型投资不同，股息投资更关注从持仓中获得稳定的现金收入。',
+      'home.quote': '过去 100 年里，股息约贡献了标普 500 总回报的 40%。将股息再投资，才是复利真正发挥作用的地方。',
+      'home.inGuide': '股息投资指南',
+      'home.dividends': '什么是股息？',
+      'home.dividendsText': '股息是公司向股东支付的现金，通常按季度发放。',
+      'home.metrics': '关键指标',
+      'home.howToStart': '如何开始',
+      'home.types': '股息股票的类型',
+      'home.risks': '风险',
+      'home.faq': '常见问题',
+      'byline.by': '作者：', 'byline.role': ' · 独立股息研究员 · 更新于 ',
+      'nav.home': '指南', 'nav.article': '文章', 'nav.chart': '股票', 'nav.calc': '计算器', 'nav.activity': '策略',
+      'cta.browseStocks': '浏览股票', 'cta.tryCalculator': '试用计算器',
+      'footer.disclaimer': '仅供教育参考，不构成投资建议。投资前请务必自行研究。', 'footer.byline': '独立研究',
+      'footer.learn': '探索', 'footer.aboutGroup': '关于', 'footer.legal': '法律信息', 'footer.heroCredit': '首图：',
+      'footer.about': '关于', 'footer.author': '作者', 'footer.standards': '编辑标准', 'footer.basics': '基础知识',
+      'footer.screening': '股票筛选', 'footer.highYield': '高股息', 'footer.etfHistory': 'ETF 历史', 'footer.contact': '联系',
+      'footer.privacy': '隐私政策', 'footer.terms': '使用条款', 'footer.copyright': '© 2026 Dividend Guide。保留所有权利。首图：'
+    }
+  };
+  Object.assign(languageCopy.zh, {
+    'home.sourceFirst': '来源优先', 'home.methodDisclosed': '方法透明', 'home.incomeNotReturn': '收入不等于回报',
+    'home.researchWorkspace': '研究工作台', 'home.workspaceTitle': '追踪高股息率背后的真实数据。', 'home.browseResearch': '浏览研究',
+    'home.topics': '主题', 'home.etfHistory': 'ETF 历史', 'home.incomeEtf': '收入型 ETF', 'home.coveredCall': '备兑看涨',
+    'home.stockScreening': '股票筛选', 'home.method': '方法', 'home.selectedResearch': '当前研究', 'home.reviewed': '已核查',
+    'home.schdHistory': 'SCHD 分配历史', 'home.annualDistribution': '2025 年度分配', 'home.historyTracked': '追踪历史',
+    'home.official': '官方数据', 'home.sourceType': '来源类型', 'home.sourceStatus': '来源状态',
+    'home.sourceDescription': '年度总额汇总已披露的分配数据；如适用，会标注拆分调整后的数值。', 'home.readMethodology': '阅读方法说明'
+  });
+  const siteTextCopy = {
+    'Sources:': '数据来源：',
+    'S&P Dow Jones Indices': '标普道琼斯指数',
+    'Janus Henderson Global Dividend Index': 'Janus Henderson 全球股息指数',
+    'S&P 500 Avg Yield (2026)': '标普 500 平均收益率（2026）',
+    'S&P 500 Companies Pay Dividends': '标普 500 成分股支付股息',
+    'Global Dividend Payouts (2025)': '全球股息总额（2025）',
+    'Dividend Aristocrats': '股息贵族',
+    'What Are Dividends?': '什么是股息？',
+    'Understand the basics — how dividends work, who pays them, and why they matter.': '了解基础知识：股息如何运作、谁会支付股息，以及股息为何重要。',
+    'Best Dividend Stocks': '最佳股息股票',
+    'Curated lists of top dividend stocks across sectors — Aristocrats, high yield, monthly payers.': '精选各行业优质股息股票：股息贵族、高股息股票和月度派息股票。',
+    'Dividend Calculator': '股息计算器',
+    'Free tool: calculate dividend yield, payout, DRIP growth, and annual income projections.': '免费工具：计算股息收益率、派息率、股息再投资增长和年度收入预估。',
+    'Dividend Strategies': '股息投资策略',
+    'Compare DRIP, dividend growth, high yield, and income-focused approaches side by side.': '对比股息再投资、股息增长、高股息和收入型投资策略。',
+    'Metric': '指标', 'What It Tells You': '指标含义', 'Formula': '计算公式',
+    'Dividend Yield': '股息收益率', 'Annual dividend as % of stock price': '年度股息占股价的比例', 'Annual Dividend ÷ Share Price': '年度股息 ÷ 股价',
+    'Payout Ratio': '派息率', '% of earnings paid as dividends': '利润中用于支付股息的比例', 'Dividends ÷ Net Income': '股息 ÷ 净利润',
+    'DPS Growth': '每股股息增长', 'YoY dividend growth': '股息同比增长', '(DPS1 − DPS0) ÷ DPS0': '（DPS1 − DPS0）÷ DPS0',
+    'Ex-Dividend Date': '除息日', 'Must own stock before this date': '必须在此日期前持有股票', 'Set by exchange': '由交易所设定',
+    'Payout Frequency': '派息频率', 'How often dividends are paid': '股息支付的频率', 'Quarterly / Monthly / Annual': '季度 / 月度 / 年度',
+    'Open a brokerage account': '开立证券账户', 'Choose a low-cost broker (Fidelity, Schwab, Vanguard) with commission-free trades and DRIP support.': '选择低成本券商（Fidelity、Schwab、Vanguard），确认支持免佣交易和股息再投资。',
+    'Decide on a strategy': '确定投资策略', 'High yield or dividend growth? Read our ': '选择高股息还是股息增长？阅读我们的', 'Strategy page': '策略页面',
+    'Research dividend stocks': '研究股息股票', 'Yield ≥ 2%, payout ratio < 60%, 5+ years growth. Start with our ': '收益率至少 2%、派息率低于 60%，并有 5 年以上增长记录。从我们的', 'stock list': '股票列表',
+    'Enable DRIP and DCA': '启用股息再投资和定投', 'Turn on automatic dividend reinvestment. Invest a fixed amount monthly.': '开启自动股息再投资，并每月投入固定金额。',
+    'Monitor and rebalance': '监控并再平衡', 'Review your portfolio annually. Cut declining stocks. Reinvest into new opportunities.': '每年检查投资组合，减少表现下滑的股票，并将资金投入新的机会。',
+    'Dividend Growth': '股息增长', 'Companies growing dividends ': '股息持续增长的公司，', ' annually. Lower current yield, rapid compounding.': '当前收益率较低，但复利增长速度快。',
+    'High Yield': '高股息', 'Yields of ': '收益率达到', ' — REITs, MLPs, BDCs. Watch for dividend sustainability.': '，常见于 REIT、MLP 和 BDC。需要关注股息的可持续性。',
+    'Monthly Payers': '月度派息股票', 'Stocks paying ': '每月支付股息的股票，', 'every month': '每个月', '. Great for cash-flow investors.': '，适合重视现金流的投资者。',
+    'Warning:': '警告：', 'A 10% yield might signal a company in distress. Always check payout ratio before chasing yield.': '10% 的收益率可能意味着公司陷入困境。追逐高收益前，请务必检查派息率。',
+    'Dividend cuts': '股息削减', 'Companies can reduce or eliminate dividends during downturns.': '公司可能在经济低迷期间削减或取消股息。',
+    'Interest rate sensitivity': '利率敏感性', 'Rising bond yields compete with dividend stocks.': '债券收益率上升会与股息股票形成竞争。',
+    'Sector concentration': '行业集中风险', 'Dividend payers cluster in utilities, financials, energy.': '支付股息的公司往往集中在公用事业、金融和能源行业。',
+    'Tax drag': '税务影响', 'Taxable accounts create annual tax liability even if you reinvest.': '应税账户即使将股息再投资，也可能产生年度税负。',
+    'Are dividends free money?': '股息是免费收入吗？', 'No. When a company pays a $1 dividend, the stock price typically drops by ~$1 on the ex-dividend date.': '不是。公司支付 1 美元股息后，股价通常会在除息日下跌约 1 美元。',
+    'How much to invest to live off dividends?': '靠股息生活需要投资多少钱？', 'At 4% yield, you need ~$1M for $40K/year. Use our ': '按 4% 收益率计算，要获得每年 4 万美元收入约需 100 万美元。使用我们的', 'calculator': '计算器', ' to run your numbers.': '来计算你的数据。',
+    'Qualified vs non-qualified?': '合格股息与非合格股息？', ' (US stocks held >60 days): taxed at 0-20%. ': '（持有美国股票超过 60 天）：税率为 0% 至 20%。', ' (REITs, foreign): taxed as ordinary income.': '（REIT 和外国股票）：按普通收入税率征税。',
+    'Qualified': '合格股息', 'Non-qualified': '非合格股息',
+    'Ready to start building passive income?': '准备开始建立被动收入了吗？', 'Explore our curated resources and take the first step toward financial freedom.': '探索精选资源，迈出实现财务自由的第一步。',
+    'Browse Stocks': '浏览股票', 'Try Calculator': '试用计算器', 'Learn Strategies': '了解投资策略'
+  };
+  const originalTextNodes = new WeakMap();
+  Object.assign(siteTextCopy, {
+    'Calculate dividend yield, annual income, and project compound growth with DRIP over the next 20 years.': '计算股息收益率和年度收入，并预测未来 20 年通过 DRIP 实现的复合增长。',
+    'Best Dividend Stocks': '最佳股息股票',
+    'Hand-picked dividend stocks across sectors — from reliable Aristocrats to high-yield REITs and monthly payers. Updated quarterly.': '精选各行业股息股票：从可靠的股息贵族，到高股息 REIT 和月度派息股票。每季度更新。',
+    'Dividend Aristocrats': '股息贵族',
+    'These S&P 500 companies have raised dividends every year for': '这些标普 500 公司已连续每年提高股息，持续',
+    'consecutive years': '年。',
+    'Ticker': '代码', 'Company': '公司', 'Sector': '行业', 'Yield': '收益率', 'Payout Ratio': '派息率', 'Div Growth Streak': '股息增长年数', 'Type': '类型',
+    'Healthcare': '医疗保健', 'Consumer Staples': '必需消费品', 'Consumer Discretionary': '非必需消费品', 'Industrials': '工业', 'Technology': '科技', 'Financials': '金融', 'Telecom': '电信', 'Energy (Midstream)': '能源（中游）', 'Real Estate (REIT)': '房地产（REIT）',
+    'High-Yield Dividend Stocks': '高股息股票', 'Monthly': '月度', 'Quarterly': '季度', 'Dividend Growth Stocks': '股息增长股票', '5yr Div CAGR': '5 年股息复合增长率', '25+ consecutive years': '连续 25 年以上', '62 yrs': '62 年', '68 yrs': '68 年', '52 yrs': '52 年', '60 yrs': '60 年', '31 yrs': '31 年', 'Medium': '中等',
+    'Pro tip:': '专业提示：', "Don't pick stocks by yield alone. A sustainable payout ratio (<60%), consistent dividend growth history, and strong free cash flow matter more.": '不要只看收益率选股。可持续的派息率（低于 60%）、稳定的股息增长记录和强劲的自由现金流更重要。',
+    'Dividend Yield & Annual Income': '股息收益率与年度收入', 'Stock Price ($)': '股票价格（美元）', 'Annual Dividend / Share ($)': '每股年度股息（美元）', 'Shares Owned': '持有股数', 'Calculate': '计算',
+    'DRIP Compound Growth Projection': '股息再投资复合增长预测', 'See how reinvesting dividends grows your position over time.': '查看股息再投资如何让你的持仓随时间增长。', 'Initial Investment ($)': '初始投资（美元）', 'Dividend Yield (%)': '股息收益率（%）', 'Annual Dividend Growth (%)': '年度股息增长率（%）', 'Years to Project': '预测年数', 'Project Growth': '预测增长',
+    'Income Goal Calculator': '收入目标计算器', 'How much capital do you need to reach your target annual dividend income?': '你需要多少本金才能达到目标年度股息收入？', 'Target Annual Income ($)': '目标年度收入（美元）', 'Expected Portfolio Yield (%)': '预期投资组合收益率（%）', 'Calculate Required Capital': '计算所需本金',
+    'Strategy Comparison': '策略比较', 'Strategy': '策略', 'Best For': '适合人群', 'Typical Yield': '典型收益率', 'Risk Level': '风险等级', 'Time Horizon': '投资期限', 'DRIP Compounding': '股息再投资复利', 'Long-term wealth builders': '长期财富积累者', 'Young investors, total return': '年轻投资者、追求总回报者', 'High Yield Income': '高股息收入', 'Retirees, income seekers': '退休人士、收入需求者', 'Dogs of the Dow': '道琼斯狗股策略', 'Value-oriented investors': '价值型投资者', 'Annual rotation': '年度轮换', 'Covered Call ETFs': '备兑看涨期权 ETF', 'Income in flat/sideways markets': '震荡市场中的收入', 'Medium-Low': '中低', 'Medium-High': '中高', 'Ongoing': '持续', 'Annual': '年度',
+    '1. DRIP Compounding': '1. 股息再投资复利', '2. Dividend Growth Investing': '2. 股息增长投资', '3. High-Yield Income': '3. 高股息收入', '4. Dogs of the Dow': '4. 道琼斯狗股策略', '5. Covered Call ETFs': '5. 备兑看涨期权 ETF', 'Which Strategy?': '如何选择策略？', 'Your Goal': '你的目标', 'Recommended Strategy': '推荐策略', 'Example Portfolio': '示例投资组合', 'Bottom line: consistency beats perfection.': '结论：坚持比完美更重要。', 'The best strategy is the one you can stick with for decades.': '最好的策略，就是你能坚持几十年的策略。', 'Run the Numbers': '计算数据'
+    , 'About Dividend Guide': '关于 Dividend Guide', 'Our mission is to make dividend investing accessible, data-driven, and transparent.': '我们的使命是让股息投资更易理解、更有数据依据且更加透明。', 'Who We Are': '关于我们', 'Editorial Standards': '编辑标准', 'Disclaimer': '免责声明',
+    'Dividend Guide is an independent educational resource for dividend investors. We publish curated stock lists, interactive calculators, and strategy comparisons to help you make informed decisions about building passive income through dividend-paying stocks.': 'Dividend Guide 是面向股息投资者的独立教育资源。我们发布精选股票列表、交互式计算器和策略比较，帮助你更好地了解如何通过支付股息的股票建立被动收入。',
+    'Our content is written and reviewed by the Dividend Guide Editorial Team. Each contributor is responsible for documenting data sources, calculation methods, and the date on which market figures were checked.': '我们的内容由 Dividend Guide 编辑团队撰写和审核。每位贡献者都负责记录数据来源、计算方法以及市场数据核查日期。',
+    'Data-driven:': '以数据为依据：', 'Transparent:': '透明：', 'No hype:': '不制造炒作：', 'Regular updates:': '定期更新：',
+    'All stock metrics and statistics are sourced from publicly available financial data providers including S&P Global, Morningstar, and SEC filings.': '所有股票指标和统计数据均来自公开可用的金融数据提供商，包括标普全球、Morningstar 和 SEC 文件。', 'Every factual claim is linked to its source. We clearly distinguish between verified data and editorial analysis.': '每项事实性表述都附有来源链接，并明确区分已验证数据和编辑分析。', 'We do not make buy/sell recommendations or provide personalized financial advice.': '我们不提供买卖建议或个性化财务建议。', 'Stock lists and market statistics are reviewed and updated quarterly.': '股票列表和市场统计数据每季度检查并更新。', 'Dividend Guide is for informational and educational purposes only. Nothing on this site constitutes financial advice. Past performance does not guarantee future results. Always conduct your own research and consult with a qualified financial advisor before making investment decisions.': 'Dividend Guide 的内容仅供信息和教育参考。本网站任何内容都不构成财务建议。过往表现不代表未来结果。做出投资决定前，请务必自行研究并咨询合格的财务顾问。',
+    'Contact Us': '联系我们', 'Questions, corrections, or partnership inquiries — we read every message.': '如有问题、勘误或合作咨询，我们会认真阅读每一条留言。', 'General Inquiries': '一般咨询', 'Partnerships & Media': '合作与媒体', 'Report an Issue': '报告问题', 'For questions about our content, data corrections, or general feedback, email us at': '如有内容问题、数据勘误或一般反馈，请发送邮件至', 'We typically respond within 2 business days.': '我们通常会在 2 个工作日内回复。', 'For partnership opportunities, media inquiries, or advertising, reach out at': '如需洽谈合作、媒体采访或广告事宜，请联系', 'If you find incorrect data, broken links, or have concerns about our content, please email': '如果你发现数据错误、链接失效或对内容有疑问，请发送邮件至', 'with the subject line "Correction" and include a link to the page in question.': '邮件主题请写“Correction”，并附上相关页面链接。',
+    'Privacy Policy': '隐私政策', 'Information We Collect': '我们收集的信息', 'Cookies': 'Cookie', 'Third-Party Services': '第三方服务', 'Contact': '联系', 'Last updated: July 27, 2026': '最后更新：2026 年 7 月 27 日', 'Dividend Guide is a static informational website. We do not require user accounts, collect personal information, or use tracking cookies for advertising purposes. We may use minimal analytics (such as anonymized page view counts) solely to improve our content.': 'Dividend Guide 是一个静态信息网站。我们不要求用户注册账户，不收集个人信息，也不使用广告跟踪 Cookie。我们可能仅使用最低限度的分析工具（例如匿名页面浏览量）来改进内容。', 'We do not use tracking cookies or advertising cookies. Any cookies set are functional in nature (e.g., calculator input preferences stored in your browser) and do not track you across sites.': '我们不使用跟踪 Cookie 或广告 Cookie。设置的任何 Cookie 都仅用于功能目的（例如在浏览器中保存计算器输入偏好），不会跨网站跟踪你。', 'We may link to external financial data providers and news sources. Once you leave Dividend Guide, those sites have their own privacy policies. We recommend reviewing them.': '我们可能会链接到外部金融数据提供商和新闻来源。离开 Dividend Guide 后，这些网站将适用各自的隐私政策，建议你自行查阅。', 'For privacy-related questions, contact us at': '如有隐私相关问题，请联系',
+    'Terms of Use': '使用条款', 'Acceptance of Terms': '接受条款', 'Educational Purpose Only': '仅限教育用途', 'No Guarantees': '不作保证', 'Intellectual Property': '知识产权', 'Limitation of Liability': '责任限制', 'By accessing Dividend Guide, you agree to these terms. If you do not agree, please do not use this site.': '访问 Dividend Guide 即表示你同意这些条款。如果不同意，请不要使用本网站。', 'All content on Dividend Guide is provided for informational and educational purposes only. Nothing on this site constitutes financial advice, investment recommendation, tax advice, or an offer to buy or sell securities.': 'Dividend Guide 的所有内容仅供信息和教育参考。本网站任何内容都不构成财务建议、投资建议、税务建议，也不构成买卖证券的要约。', 'While we strive for accuracy, we do not guarantee the completeness, timeliness, or accuracy of any information on this site. Stock data, yields, and market statistics change frequently.': '虽然我们力求准确，但不保证本网站任何信息的完整性、及时性或准确性。股票数据、收益率和市场统计数据会频繁变化。', 'All original content, including text, data compilations, and interactive tools, is the property of Dividend Guide. You may share and link to our content with proper attribution.': '所有原创内容，包括文字、数据汇编和交互式工具，均归 Dividend Guide 所有。你可以在适当注明出处的情况下分享和链接我们的内容。', 'Dividend Guide and its contributors shall not be liable for any losses or damages arising from the use of information on this site. Use at your own risk.': 'Dividend Guide 及其贡献者不对因使用本网站信息而产生的任何损失或损害负责。使用本网站的风险由你自行承担。',
+    'Editorial Standards': '编辑标准', 'How Dividend Guide researches, verifies, cites, and updates its content.': 'Dividend Guide 如何研究、验证、引用和更新内容。', 'Purpose': '目的', 'Authorship and Review': '作者与审核', 'Research Process': '研究流程', 'Data and Methodology': '数据与方法', 'Corrections and Updates': '勘误与更新', 'Disclosure': '披露声明', 'Dividend Guide is an independent educational resource about dividend stocks, ETFs, distributions, yield, and long-term income planning. The goal is to explain data clearly, not to provide personalized investment advice.': 'Dividend Guide 是关于股息股票、ETF、分配、收益率和长期收入规划的独立教育资源。我们的目标是清晰解释数据，而不是提供个性化投资建议。', 'Articles are written by': '文章由', 'Independent Dividend Researcher. Facts, data sources, and calculations are personally verified by the author before publication and after material updates.': '独立股息研究员撰写。事实、数据来源和计算结果会在发布前及重大更新后由作者亲自核验。', 'Define the topic, date range, and intended calculation.': '确定主题、日期范围和预期计算内容。', 'Record source URLs, access dates, data cutoff dates, and statistical assumptions.': '记录来源网址、访问日期、数据截止日期和统计假设。', 'Separate reported figures from derived calculations and clearly label estimates.': '区分报告中的数字和推导计算，并清楚标注估算值。', 'Review the article for factual consistency, source accuracy, and financial disclaimers.': '检查文章的事实一致性、来源准确性和财务免责声明。', 'If you find an error, email': '如果你发现错误，请发送邮件至', 'with the page URL and supporting source. Material corrections are reflected in the article’s updated date and, where useful, in an editorial note.': '并附上页面网址和支持性来源。重大勘误会反映在文章更新日期中，并在适当情况下添加编辑说明。', 'Dividend Guide is not a broker, investment adviser, tax adviser, or fund issuer. Content is for education only. Past performance does not guarantee future results, and readers should verify current data and seek qualified advice for their own circumstances.': 'Dividend Guide 不是券商、投资顾问、税务顾问或基金发行方。内容仅供教育参考。过往表现不代表未来结果，读者应核实当前数据，并根据自身情况寻求专业建议。'
+  });
+  Object.assign(siteTextCopy, {
+    'Compare five proven dividend investing strategies. Whether building for retirement income or long-term compound growth, find the approach that matches your timeline and goals.': '比较五种经过验证的股息投资策略。无论是为退休收入做准备，还是追求长期复利增长，都可以找到符合你时间规划和目标的方法。',
+    'DRIP (Dividend Reinvestment Plan) automatically reinvests dividends to buy more shares — which then generate more dividends.': 'DRIP（股息再投资计划）会自动将股息再投资来购买更多股票，而这些股票又会产生更多股息。',
+    'Buy dividend-paying stocks or ETFs.': '买入支付股息的股票或 ETF。',
+    'Enable automatic dividend reinvestment.': '启用自动股息再投资。',
+    'Contribute additional capital monthly (DCA).': '每月投入额外资金进行定投。',
+    'Let compounding work over 15-30 years.': '让复利在 15 至 30 年间发挥作用。',
+    'Focuses on companies with': '重点关注',
+    'low current yields but high dividend growth rates': '当前收益率较低但股息增长率较高的公司',
+    '. Classic picks: Microsoft, Visa, Apple.': '。典型标的包括 Microsoft、Visa 和 Apple。',
+    'Dividend growth rate ≥ 10% annually over 5 years': '连续 5 年年度股息增长率达到 10% 以上',
+    'Payout ratio < 40%': '派息率低于 40%',
+    'Strong free cash flow and wide economic moat': '自由现金流强劲，并拥有宽阔的经济护城河',
+    'Targets maximum current income via REITs, MLPs, BDCs — yielding 5-10%+.': '通过 REIT、MLP 和 BDC 追求最高当前收入，收益率通常为 5% 至 10% 以上。',
+    'Yields above 8% are rarely sustainable. Always verify payout ratio and free cash flow coverage.': '超过 8% 的收益率很少能够持续。务必核查派息率和自由现金流覆盖情况。',
+    ' (Realty Income O) — must distribute 90% of taxable income.': '（Realty Income，代码 O）——必须分配 90% 的应税收入。',
+    ' (Main Street Capital MAIN) — lend to mid-size companies.': '（Main Street Capital，代码 MAIN）——向中型企业提供贷款。',
+    ' (Enterprise Products EPD) — energy infrastructure.': '（Enterprise Products，代码 EPD）——从事能源基础设施业务。',
+    'Buy the 10 highest-yielding Dow stocks each January, hold for one year, rebalance. The theory: high yield in the Dow signals undervaluation.': '每年 1 月买入道琼斯指数中收益率最高的 10 只股票，持有一年后再平衡。其理论是：道琼斯成分股的高收益率可能代表估值偏低。',
+    'Current Dogs typically:': '当前常见的狗股包括：',
+    'ETFs like JEPI sell call options against their portfolio, pushing yields to 7-12% with monthly payouts.': 'JEPI 等 ETF 通过对投资组合卖出看涨期权，将收益率推高至 7% 至 12%，并按月派息。',
+    'Pros:': '优点：', 'Very high monthly income. Lower volatility.': '每月收入很高，波动率较低。',
+    'Cons:': '缺点：', 'Capped upside in bull markets. Ordinary income tax treatment.': '牛市中的上涨空间受限，并按普通收入计税。',
+    'Building wealth in 20s-30s': '20 至 30 岁阶段积累财富', 'Dividend Growth + DRIP': '股息增长 + DRIP', '70% VTI, 20% SCHD, 10% growth stocks': '70% VTI、20% SCHD、10% 增长型股票',
+    'Approaching retirement (50s)': '接近退休（50 岁左右）', 'Blend Growth + Income': '增长与收入结合', '40% SCHD, 30% div growth, 20% high yield, 10% bonds': '40% SCHD、30% 股息增长、20% 高股息、10% 债券',
+    'In retirement, need income': '退休后需要收入', 'High Yield + Covered Calls': '高股息 + 备兑看涨期权', '30% JEPI, 30% REITs/BDCs, 20% Aristocrats, 20% bonds': '30% JEPI、30% REIT/BDC、20% 股息贵族、20% 债券',
+    'Hands-off, annual rebalance': '不想频繁管理，每年再平衡', '10 Dow stocks, equal weight, rebalance Jan 1': '10 只道琼斯股票等权配置，1 月 1 日再平衡',
+    'Explore research': '开始研究', 'By': '作者：', '· Independent Dividend Researcher · Updated': '· 独立股息研究员 · 更新于',
+    '$10,000 in S&P 500 in 1960: ~$1.2M if you spent dividends, over $5M if you reinvested them.': '1960 年投入标普 500 的 1 万美元：如果花掉股息约为 120 万美元，如果再投资则超过 500 万美元。',
+    'Step 1:': '第 1 步：', 'Step 2:': '第 2 步：', 'Step 3:': '第 3 步：', 'Step 4:': '第 4 步：',
+    '(Realty Income O) — must distribute 90% of taxable income.': '（Realty Income，代码 O）——必须分配 90% 的应税收入。',
+    '(Main Street Capital MAIN) — lend to mid-size companies.': '（Main Street Capital，代码 MAIN）——向中型企业提供贷款。',
+    '(Enterprise Products EPD) — energy infrastructure.': '（Enterprise Products，代码 EPD）——从事能源基础设施业务。',
+    '15+ yrs': '15+ 年', '10+ yrs': '10+ 年', 'Educational content only. Not financial advice. Always do your own research before investing.': '内容仅供教育参考，不构成投资建议。投资前请务必自行研究。',
+    'Independent research by Henry Zhou ↗': '独立研究 Henry Zhou ↗', 'Independent research by': '独立研究', 'Learn': '探索', 'Basics': '基础知识', 'Screening': '股票筛选', 'ETF History': 'ETF 历史', 'About': '关于', 'About the guide': '关于指南', 'Author': '作者', 'Legal': '法律信息', 'All rights reserved.': '保留所有权利。', '© 2026 Dividend Guide. All rights reserved.': '© 2026 Dividend Guide。保留所有权利。'
+  });
+  const translateHomeText = (language) => {
+    const root = document.body;
+    if (!root) return;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    let node;
+    while ((node = walker.nextNode())) {
+      if (node.parentElement && node.parentElement.closest('[data-i18n], script, style')) continue;
+      if (!originalTextNodes.has(node)) originalTextNodes.set(node, node.nodeValue);
+      const original = originalTextNodes.get(node);
+      if (language === 'en') {
+        node.nodeValue = original;
+        continue;
+      }
+      const trimmed = original.trim();
+      const translated = siteTextCopy[trimmed];
+      if (translated) node.nodeValue = original.replace(trimmed, translated);
+    }
+  };
+  const applyLanguage = (language) => {
+    document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+    document.querySelector('[data-language-label]').textContent = language === 'zh' ? 'EN' : '中文';
+    document.querySelector('[data-language-toggle]').setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切换到中文');
+    document.querySelectorAll('[data-i18n]').forEach((element) => {
+      const key = element.dataset.i18n;
+      const value = language === 'zh' ? languageCopy.zh[key] : element.dataset.i18nEn;
+      if (value) element.textContent = value;
+    });
+    document.querySelectorAll('[data-i18n-en]').forEach((element) => {
+      if (language === 'en') element.textContent = element.dataset.i18nEn;
+    });
+    translateHomeText(language);
+    localStorage.setItem('dividend-guide-language', language);
+  };
+  const languageToggle = document.querySelector('[data-language-toggle]');
+  if (languageToggle) {
+    document.querySelectorAll('[data-i18n]').forEach((element) => {
+      element.dataset.i18nEn = element.textContent;
+    });
+    languageToggle.addEventListener('click', (event) => {
+      event.preventDefault();
+      const next = document.documentElement.lang === 'zh-CN' ? 'en' : 'zh';
+      applyLanguage(next);
+    });
+    applyLanguage(localStorage.getItem('dividend-guide-language') || (document.documentElement.lang === 'zh-CN' ? 'zh' : 'en'));
+  }
+</script>
+<script is:inline>
+  const floatingNav = document.querySelector('.site-nav');
+  if (floatingNav) {
+    const syncFloatingNav = () => floatingNav.classList.toggle('is-scrolled', window.scrollY > 24);
+    syncFloatingNav();
+    window.addEventListener('scroll', syncFloatingNav, { passive: true });
+  }
+</script>
 </html>

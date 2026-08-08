@@ -20,6 +20,11 @@
 - [TSLY Dividend History](/articles/tsly-dividend-history/): YieldMax TSLA distribution history, the 2023 payout peak, the switch to weekly, and why the ~109% yield misleads.
 - [VOO Dividend](/articles/voo-dividend/): VOO's current yield, annual dividend history since 2012, quarterly schedule, and how the S&P 500 ETF compares to SCHD and VIG.
 - [Best Dividend Stocks 2025](/articles/best-dividend-stocks-2025/): The top dividend stocks of 2025 ranked — Aristocrats and high-yield picks with yields, streaks, and total returns.
+- [JEPI Dividend](/articles/jepi-dividend/): JEPI's monthly distributions, current ~8% yield, history since 2020, and how JPMorgan's S&P 500 premium income ETF compares to JEPQ.
+- [SPYI Dividend History](/articles/spyi-dividend-history/): Complete SPYI distribution history since 2022 — monthly payouts, the Section 1256 tax advantage, and how it compares to JEPI and QQQI.
+- [QQQI Dividend](/articles/qqqi-dividend/): QQQI's ~14% yield explained — how the NEOS Nasdaq 100 High Income ETF generates income, the tax advantages, risks, and whether it's worth it.
+- [Trump Tariff Dividend](/articles/trump-tariff-dividend/): The $2,000 per person tariff dividend proposal vs. the DOGE dividend — funding, feasibility, and why neither has been paid.
+- [ULTY Dividend](/articles/ulty-dividend/): ULTY's ~106% yield evaluated — the real ~60% run-rate, heavy return of capital, and why total return is roughly flat.
 
 ## Trust & Legal
 - [About](/about): Editorial standards, methodology, and disclaimer.

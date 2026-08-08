@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="页面未找到 - 股息投资指南"
+  description="你访问的页面不存在或已被移动。"
+  noIndex
+  locale="zh"
+>
+  <slot slot="title">404 — 页面未找到</slot>
+  <slot slot="subtitle">你访问的页面不存在，或已经被移动。</slot>
+  <p>你可以从以下页面继续浏览：</p>
+  <div class="card-grid">
+    <a href="/zh/" class="card"><div class="card-icon"><span aria-hidden="true">⌂</span></div><h3>股息投资指南</h3><p>从这里开始，了解股息投资基础知识。</p></a>
+    <a href="/zh/stocks/" class="card"><div class="card-icon"><span aria-hidden="true">▥</span></div><h3>最佳股息股票</h3><p>浏览精选股息股票和分类列表。</p></a>
+    <a href="/zh/calculator/" class="card"><div class="card-icon"><span aria-hidden="true">▣</span></div><h3>股息计算器</h3><p>计算收益率、再投资增长和预期收入。</p></a>
+    <a href="/zh/strategy/" class="card"><div class="card-icon"><span aria-hidden="true">⌁</span></div><h3>股息投资策略</h3><p>比较不同的股息投资方法。</p></a>
+  </div>
+</BaseLayout>

@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="股息投资策略 - 股息投资指南" description="比较股息再投资、增长、高股息和备兑看涨策略。" canonical="https://dividend01.com/zh/strategy/" locale="zh">
+  <slot slot="title">股息投资策略</slot>
+  <slot slot="subtitle">先明确目标，再理解不同策略的收益来源、风险和适用场景。</slot>
+  <div class="card-grid">
+    <article class="card"><h3>股息再投资</h3><p>将现金股息买回资产，长期依靠持仓数量增长形成复利。</p><p><strong>适合：</strong>长期积累财富。</p></article>
+    <article class="card"><h3>股息增长</h3><p>选择具有稳定业务和提高分配能力的公司，关注长期增长。</p><p><strong>适合：</strong>不急于获得最高当前收益率的投资者。</p></article>
+    <article class="card"><h3>高股息收入</h3><p>通过较高分配获得现金流，同时承担更高的削减和估值风险。</p><p><strong>适合：</strong>需要收入且愿意持续复核资产质量的人。</p></article>
+    <article class="card"><h3>备兑看涨 ETF</h3><p>用期权权利金增加分配，但可能牺牲部分上涨空间。</p><p><strong>适合：</strong>理解期权机制和收益来源的投资者。</p></article>
+  </div>
+  <div class="tip-box"><strong>核心原则：</strong>策略不是收益保证。最重要的是理解现金流从哪里来，以及在市场下跌时能否坚持。</div>
+</BaseLayout>

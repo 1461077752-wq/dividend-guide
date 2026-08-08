@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="股息投资研究指南：股票、收益率与计算器"
+  description="用清晰的数据来源、可复核的方法和风险说明，学习股息投资。"
+  canonical="https://dividend01.com/zh/"
+  schemaType="WebPage"
+  pubDate="2026-07-27"
+  modDate="2026-08-07"
+  locale="zh"
+>
+  <slot slot="title">不追热点的股息投资研究。</slot>
+  <slot slot="subtitle">来源透明、方法可复核，并为长期收入投资者说明真实风险。</slot>
+
+  <div class="home-trust-strip" aria-label="研究原则">
+    <span><strong>01</strong> 来源优先</span>
+    <span><strong>02</strong> 方法透明</span>
+    <span><strong>03</strong> 收入不等于回报</span>
+  </div>
+
+  <section class="research-workspace" aria-labelledby="workspace-title">
+    <div class="workspace-head">
+      <div>
+        <span class="section-kicker">研究工作台</span>
+        <h2 id="workspace-title">追踪高股息率背后的真实数据。</h2>
+      </div>
+      <a href="/zh/articles/" class="workspace-link">浏览研究 <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="workspace-grid">
+      <div class="workspace-sidebar">
+        <span class="workspace-label">主题</span>
+        <a class="workspace-topic active" href="/articles/schd-dividend-history/">SCHD <small>ETF 历史</small></a>
+        <a class="workspace-topic" href="/articles/jepq-dividend-history/">JEPQ <small>收入型 ETF</small></a>
+        <a class="workspace-topic" href="/articles/nvdy-dividend-history/">NVDY <small>备兑看涨</small></a>
+        <a class="workspace-topic" href="/topics/dividend-stock-screening/">股票筛选 <small>方法</small></a>
+      </div>
+      <div class="workspace-data">
+        <div class="workspace-data-head"><span class="workspace-label">当前研究</span><span class="workspace-status"><i></i> 已核查</span></div>
+        <h3>SCHD 分配历史</h3>
+        <div class="workspace-metrics">
+          <span><b>$1.05</b><small>2025 年度分配</small></span>
+          <span><b>2011–2026</b><small>追踪历史</small></span>
+          <span><b>官方</b><small>来源类型</small></span>
+        </div>
+        <div class="workspace-bars" aria-label="年度分配趋势示意"><i style="height:34%"></i><i style="height:45%"></i><i style="height:52%"></i><i style="height:59%"></i><i style="height:68%"></i><i style="height:78%"></i><i style="height:88%"></i></div>
+      </div>
+      <div class="workspace-source">
+        <span class="workspace-label">来源状态</span>
+        <strong>Schwab Asset Management</strong>
+        <p>年度总额汇总已披露的分配数据；如适用，会标注拆分调整后的数值。</p>
+        <a href="/articles/schd-dividend-history/">阅读方法说明 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-bar" aria-label="关键数据">
+    <div class="stat-card"><div class="stat-value">约 2.8%</div><div class="stat-label">标普 500 平均收益率（2026）</div></div>
+    <div class="stat-card"><div class="stat-value">60%</div><div class="stat-label">标普 500 成分股支付股息</div></div>
+    <div class="stat-card"><div class="stat-value">约 $1.8T</div><div class="stat-label">全球股息总额（2025）</div></div>
+    <div class="stat-card"><div class="stat-value">25+ 年</div><div class="stat-label">股息贵族</div></div>
+  </section>
+
+  <h2>什么是股息投资？</h2>
+  <p>股息投资是一种购买股票的策略，这些公司会定期将部分利润分配给股东。与成长型投资不同，股息投资更关注从持仓中获得稳定的现金收入。</p>
+  <blockquote>过去 100 年里，股息约贡献了标普 500 总回报的 40%。将股息再投资，才是复利真正发挥作用的地方。</blockquote>
+
+  <h2>股息投资指南</h2>
+  <div class="card-grid">
+    <a href="/articles/what-are-dividends/" class="card"><div class="card-icon"><span aria-hidden="true">i</span></div><h3>什么是股息？</h3><p>了解股息如何运作、谁会支付股息，以及它为什么重要。</p></a>
+    <a href="/zh/stocks/" class="card"><div class="card-icon"><span aria-hidden="true">▥</span></div><h3>最佳股息股票</h3><p>浏览股息贵族、高股息股票和月度派息股票。</p></a>
+    <a href="/zh/calculator/" class="card"><div class="card-icon"><span aria-hidden="true">▣</span></div><h3>股息计算器</h3><p>计算收益率、派息率、股息再投资增长和年度收入。</p></a>
+    <a href="/zh/strategy/" class="card"><div class="card-icon"><span aria-hidden="true">⌁</span></div><h3>股息投资策略</h3><p>比较股息再投资、股息增长、高股息和收入型策略。</p></a>
+  </div>
+
+  <h2>风险</h2>
+  <div class="tip-box"><strong>提示：</strong>10% 的收益率可能意味着公司正面临压力。追逐高收益前，请先检查派息率和现金流。</div>
+
+  <h2>常见问题</h2>
+  <details class="faq-item" open><summary>股息是免费收入吗？</summary><div class="faq-answer">不是。公司支付 1 美元股息后，股价通常会在除息日下跌约 1 美元。</div></details>
+  <details class="faq-item"><summary>靠股息生活需要投资多少钱？</summary><div class="faq-answer">按 4% 收益率计算，每年获得 4 万美元收入约需要 100 万美元本金。</div></details>
+
+  <div class="cta-box"><strong>准备开始建立被动收入了吗？</strong><p>探索精选资源，迈出实现财务自由的第一步。</p><div class="btn-group"><a href="/zh/stocks/" class="btn">浏览股票</a><a href="/zh/calculator/" class="btn">试用计算器</a><a href="/zh/strategy/" class="btn btn-outline">了解投资策略</a></div></div>
+</BaseLayout>

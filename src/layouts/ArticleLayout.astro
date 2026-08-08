@@ -14,6 +14,7 @@ export interface Props {
   dataAsOf?: string;
   methodology?: string;
   sources?: Array<{ name: string; url: string; accessed?: string }>;
+  locale?: 'en' | 'zh';
 }
 const {
   title,
@@ -28,7 +29,8 @@ const {
   reviewDate,
   dataAsOf,
   methodology,
-  sources = []
+  sources = [],
+  locale = 'en'
 } = Astro.props;
 const currentPath = Astro.url.pathname;
 const normalizeUrl = (value: string) => {
@@ -48,7 +50,7 @@ const breadcrumbItems = [
 ];
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang={locale === 'zh' ? 'zh-CN' : 'en'}>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -110,31 +112,83 @@ const breadcrumbItems = [
         <span class="article-topbar-name">Dividend Guide</span>
       </a>
       <nav class="article-topbar-nav">
-        <a href="/">Guide</a>
-        <a href="/articles/">Articles</a>
-        <a href="/stocks/">Stocks</a>
-        <a href="/calculator/">Calculator</a>
-        <a href="/strategy/">Strategy</a>
+        <a href="/" class:list={[{ active: currentPath === '/' }]} data-article-i18n="nav.guide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>{locale === 'zh' ? '指南' : 'Guide'}</a>
+        <a href="/articles/" class:list={[{ active: currentPath.startsWith('/articles/') }]} data-article-i18n="nav.articles"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>{locale === 'zh' ? '文章' : 'Articles'}</a>
+        <a href="/stocks/" class:list={[{ active: currentPath.startsWith('/stocks/') }]} data-article-i18n="nav.stocks"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>{locale === 'zh' ? '股票' : 'Stocks'}</a>
+        <a href="/calculator/" class:list={[{ active: currentPath.startsWith('/calculator/') }]} data-article-i18n="nav.calculator"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r="1"/><circle cx="12" cy="11" r="1"/><circle cx="16" cy="11" r="1"/></svg>{locale === 'zh' ? '计算器' : 'Calculator'}</a>
+        <a href="/strategy/" class:list={[{ active: currentPath.startsWith('/strategy/') }]} data-article-i18n="nav.strategy"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>{locale === 'zh' ? '策略' : 'Strategy'}</a>
+        <a class="article-language-switcher" href={currentPath} data-article-language-toggle aria-label={locale === 'zh' ? 'Switch to English' : '切换到中文'}>{locale === 'zh' ? 'EN' : '中文'}</a>
+        <a class="article-nav-cta nav-cta" href="/stocks/">{locale === 'zh' ? '开始研究' : 'Explore research'}</a>
       </nav>
     </div>
   </div>
   <main class="article-main"><slot /></main>
   <footer class="article-footer">
     <div class="article-footer-inner">
-      <p><strong>Dividend Guide</strong> &mdash; Educational content only. Not financial advice. Always do your own research before investing.</p>
+      <p><strong>Dividend Guide</strong> <span data-article-i18n="footer.disclaimer">{locale === 'zh' ? '— 仅供教育参考，不构成投资建议。投资前请务必自行研究。' : '— Educational content only. Not financial advice. Always do your own research before investing.'}</span></p>
       <nav class="article-footer-links">
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
-        <a href="/privacy/">Privacy</a>
-        <a href="/terms/">Terms</a>
-        <a href="/about/author/">Author</a>
-        <a href="/editorial-standards/">Editorial Standards</a>
-        <a href="/topics/dividend-investing-basics/">Basics</a>
-        <a href="/topics/dividend-stock-screening/">Screening</a>
-        <a href="/topics/high-yield-dividend-stocks/">High Yield</a>
-        <a href="/topics/dividend-etf-history/">ETF History</a>
+        <a href="/about/" data-article-i18n="footer.about">{locale === 'zh' ? '关于' : 'About'}</a>
+        <a href="/contact/" data-article-i18n="footer.contact">{locale === 'zh' ? '联系' : 'Contact'}</a>
+        <a href="/privacy/" data-article-i18n="footer.privacy">{locale === 'zh' ? '隐私政策' : 'Privacy'}</a>
+        <a href="/terms/" data-article-i18n="footer.terms">{locale === 'zh' ? '使用条款' : 'Terms'}</a>
+        <a href="/about/author/" data-article-i18n="footer.author">{locale === 'zh' ? '作者' : 'Author'}</a>
+        <a href="/editorial-standards/" data-article-i18n="footer.editorial">{locale === 'zh' ? '编辑标准' : 'Editorial Standards'}</a>
+        <a href="/topics/dividend-investing-basics/" data-article-i18n="footer.basics">{locale === 'zh' ? '基础知识' : 'Basics'}</a>
+        <a href="/topics/dividend-stock-screening/" data-article-i18n="footer.screening">{locale === 'zh' ? '股票筛选' : 'Screening'}</a>
+        <a href="/topics/high-yield-dividend-stocks/" data-article-i18n="footer.highYield">{locale === 'zh' ? '高股息' : 'High Yield'}</a>
+        <a href="/topics/dividend-etf-history/" data-article-i18n="footer.etfHistory">{locale === 'zh' ? 'ETF 历史' : 'ETF History'}</a>
       </nav>
     </div>
   </footer>
+<script is:inline>
+  const articleLanguageCopy = {
+    'nav.guide': ['Guide', '指南'], 'nav.articles': ['Articles', '文章'], 'nav.stocks': ['Stocks', '股票'],
+    'nav.calculator': ['Calculator', '计算器'], 'nav.strategy': ['Strategy', '策略'],
+    'footer.disclaimer': ['— Educational content only. Not financial advice. Always do your own research before investing.', '— 仅供教育参考，不构成投资建议。投资前请务必自行研究。'],
+    'footer.about': ['About', '关于'], 'footer.contact': ['Contact', '联系'], 'footer.privacy': ['Privacy', '隐私政策'],
+    'footer.terms': ['Terms', '使用条款'], 'footer.author': ['Author', '作者'], 'footer.editorial': ['Editorial Standards', '编辑标准'],
+    'footer.basics': ['Basics', '基础知识'], 'footer.screening': ['Screening', '股票筛选'], 'footer.highYield': ['High Yield', '高股息'],
+    'footer.etfHistory': ['ETF History', 'ETF 历史'], 'articles.heading': ['Articles', '股息投资文章'],
+    'articles.description': ['In-depth guides and analysis on dividend investing — from beginner basics to advanced strategies.', '从基础概念到数据方法，按主题阅读经过整理的研究内容。']
+  };
+  const articleApplyLanguage = (language) => {
+    document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+    document.querySelectorAll('[data-article-body="en"]').forEach((element) => {
+      element.hidden = language === 'zh' && document.querySelector('[data-article-body="zh"]') !== null;
+    });
+    document.querySelectorAll('[data-article-body="zh"]').forEach((element) => {
+      element.hidden = language !== 'zh';
+    });
+    document.querySelectorAll('[data-article-i18n]').forEach((element) => {
+      const pair = articleLanguageCopy[element.dataset.articleI18n];
+      if (pair) element.textContent = pair[language === 'zh' ? 1 : 0];
+    });
+    document.querySelectorAll('[data-article-text-en]').forEach((element) => {
+      const translated = element.dataset.articleTextZh;
+      element.textContent = language === 'zh' && translated ? translated : element.dataset.articleTextEn;
+    });
+    const toggle = document.querySelector('[data-article-language-toggle]');
+    if (toggle) {
+      toggle.textContent = language === 'zh' ? 'EN' : '中文';
+      toggle.setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切换到中文');
+    }
+    localStorage.setItem('dividend-guide-language', language);
+  };
+  const articleToggle = document.querySelector('[data-article-language-toggle]');
+  if (articleToggle) {
+    articleToggle.addEventListener('click', (event) => {
+      event.preventDefault();
+      articleApplyLanguage(document.documentElement.lang === 'zh-CN' ? 'en' : 'zh');
+    });
+    articleApplyLanguage(localStorage.getItem('dividend-guide-language') || (document.documentElement.lang === 'zh-CN' ? 'zh' : 'en'));
+  }
+</script>
+<style is:global>
+  .article-topbar-nav .article-nav-cta {
+    height: auto !important;
+    min-height: 0 !important;
+    align-self: center !important;
+  }
+</style>
 </body>
 </html>

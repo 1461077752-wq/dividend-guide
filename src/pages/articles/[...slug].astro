@@ -4,14 +4,25 @@ import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
+  const translations = await getCollection('articleTranslations');
+  const translationById = new Map(translations.map(item => [item.id, item]));
   return articles.map(article => ({
     params: { slug: article.id },
-    props: { article },
+    props: { article, translation: translationById.get(article.id) },
   }));
 }
 
-const { article } = Astro.props;
+const { article, translation } = Astro.props;
+const articleTranslations: Record<string, { title: string; description: string }> = {
+  'best-dividend-stocks-2025': { title: '2025 年最佳股息股票：年度回顾与精选', description: '回顾 2025 年表现最佳的股息股票，包括提高派息并交付收益的股息贵族和高收益股票。' },
+  'dividend-dividend-stocks': { title: '股息股票：如何一步步筛选优质标的', description: '了解如何用收益率、派息率和增长年限筛选股息股票，并识别收益率陷阱。' },
+  'dividend-yield': { title: '股息收益率：公式、用途与风险', description: '理解股息收益率的含义、计算方法、合理水平，以及高收益为何可能是风险信号。' },
+  'high-dividend-stocks': { title: '高股息股票：收益率与风险指南', description: '按行业了解高收益股息股票，识别高收益陷阱，并降低股息削减风险。' },
+  'highest-dividend-stocks': { title: '最高股息股票：数据与风险', description: '最高收益率股息股票——BDC、mREIT 和封闭式基金的收益率可达 10% 至 26%；了解收益率为何如此之高，以及为什么多数投资者最终会亏损。' }
+};
+const articleTranslation = articleTranslations[article.id];
 const { Content } = await render(article);
+const { Content: ZhContent } = translation ? await render(translation) : { Content: null };
 const pubDate = article.data.pubDate.toISOString().split('T')[0];
 const modDate = article.data.modDate
   ? article.data.modDate.toISOString().split('T')[0]
@@ -43,11 +54,11 @@ const relatedArticles = (await getCollection('articles'))
   sources={article.data.sources.map(source => ({ ...source, accessed: source.accessed?.toISOString().split('T')[0] }))}
 >
   <nav class="breadcrumbs" aria-label="Breadcrumb">
-    <a href="/">Home</a><span aria-hidden="true">/</span><a href="/articles/">Articles</a><span aria-hidden="true">/</span><span>{article.data.title}</span>
+    <a href="/">Home</a><span aria-hidden="true">/</span><a href="/articles/">Articles</a><span aria-hidden="true">/</span><span data-article-text-en={article.data.title} data-article-text-zh={articleTranslation?.title}>{article.data.title}</span>
   </nav>
   <div class="article-header">
-    <h1>{article.data.title}</h1>
-    <p class="article-desc">{article.data.description}</p>
+    <h1 data-article-text-en={article.data.title} data-article-text-zh={articleTranslation?.title}>{article.data.title}</h1>
+    <p class="article-desc" data-article-text-en={article.data.description} data-article-text-zh={articleTranslation?.description}>{article.data.description}</p>
     <div class="article-meta-bar">
       <span class="article-category">{article.data.category}</span>
       <span>By <a href="/about/author/">{article.data.author}</a></span>
@@ -68,9 +79,10 @@ const relatedArticles = (await getCollection('articles'))
       <img src={article.data.image} alt={article.data.title} class="article-cover" loading="eager">
     )}
   </div>
-  <article class="article-content">
+  <article class="article-content article-content-en" data-article-body="en">
     <Content />
   </article>
+  {ZhContent && <article class="article-content article-content-zh" data-article-body="zh"><ZhContent /></article>}
   <aside class="article-research-notes">
     <h2>Sources and methodology</h2>
     <p>{article.data.review}. This article is for educational purposes and is not personalized financial advice.</p>

@@ -26,4 +26,12 @@ const articles = defineCollection({
   }),
 });
 
-export const collections = { articles };
+const articleTranslations = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/translations/zh/articles' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+});
+
+export const collections = { articles, articleTranslations };
