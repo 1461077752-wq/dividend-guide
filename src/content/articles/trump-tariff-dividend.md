@@ -138,4 +138,4 @@ For reliable income that doesn't hinge on congressional votes, browse our [best 
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Policy proposals are subject to change and may never be enacted. Beware of scams claiming to offer tariff dividend checks. Consult a qualified financial advisor before making financial decisions.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies policy information against contemporaneous reporting and government publications, and clearly distinguishes proposals from enacted payments.*
+*Henry Zhou personally checks policy information against contemporaneous reporting and government publications, and clearly distinguishes proposals from enacted payments.*

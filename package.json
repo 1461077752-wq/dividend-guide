@@ -5,12 +5,14 @@
   "engines": { "node": ">=22.12.0" },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/build-zh-site.mjs",
+    "build": "astro build && node scripts/build-zh-site.mjs && node scripts/generate-sitemap.mjs && node scripts/validate-seo-build.mjs",
     "build:english": "astro build",
     "build:localized": "npm run build",
     "preview": "astro preview",
+    "data:update": "node scripts/update-market-data.mjs",
     "astro": "astro",
-    "translate:articles": "node scripts/translate-articles.mjs"
+    "translate:articles": "node scripts/translate-articles.mjs",
+    "seo:validate": "node scripts/validate-seo-build.mjs"
   },
   "dependencies": { "astro": "^7.1.3" }
 }

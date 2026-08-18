@@ -18,13 +18,15 @@ sources:
 draft: false
 ---
 
-High dividend stocks are typically defined as those yielding **4–8%** — roughly double to triple the S&P 500's ~1.5% average. Today the yield clusters live in five sectors: **telecom (VZ ~6.0%), tobacco (MO ~6.2%), MLPs (ET ~6.7%), REITs (O ~5.1%), and mature staples (KHC ~6.1%)**. But not all high yields are equal — the 4–8% band contains both reliable payers and stocks that have cut dividends, and anything above 8% moves into a riskier category entirely.
+High dividend stocks are typically defined as those yielding **4–8%**, but a high yield is not the same as a high total return or a safe income stream. The first question is not “which ticker pays the most?” but “what cash flow or industry metric supports the distribution, and when was it measured?” Yield can rise because a payout increased, but it can also rise because the share price fell after the market identified a business problem.
 
 <!-- Cover image: Rising green financial chart with stacked coins, representing high-yield dividend stock returns -->
 
 This guide explains where high yields come from, which sectors produce them reliably, the names investors actually hold, and the structural difference between a sustainable 6% and a dangerous 10%.
 
 ## High Dividend Stocks at a Glance
+
+Use this table as a dated research starting point, not a recommendation. The figures below need to be rechecked against issuer filings before any investment decision.
 
 | Ticker | Company | Yield | Sector | Payout Ratio | Streak / Note |
 |--------|---------|-------|--------|--------------|---------------|
@@ -164,4 +166,4 @@ Model your high-yield income with the [Dividend Calculator](/calculator), compar
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Dividend payments are not guaranteed and can be reduced or eliminated, as historical dividend cuts demonstrate. Consult a qualified financial advisor before making investment decisions.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies yield and payout data against company SEC filings, REIT/BDC disclosures, and independent dividend data sources.*
+*Henry Zhou personally checks yield and payout data against company SEC filings, REIT/BDC disclosures, and independent dividend data sources.*

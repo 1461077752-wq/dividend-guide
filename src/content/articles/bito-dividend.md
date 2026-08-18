@@ -131,4 +131,4 @@ If you want bitcoin exposure, BITO has a role as a speculative satellite. If you
 
 *Last updated: 2026-08-10. This article is for informational and educational purposes only and does not constitute financial advice. Distributions are not guaranteed, cryptocurrency is highly volatile, and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies fund data against ProShares disclosures, SEC filings, and independent ETF data sources.*
+*Henry Zhou personally checks fund data against ProShares disclosures, SEC filings, and independent ETF data sources.*

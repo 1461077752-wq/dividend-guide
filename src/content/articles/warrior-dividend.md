@@ -120,4 +120,4 @@ The warrior dividend path is not fast. It is not exciting. It is a method for tu
 
 *Last updated: 2026-08-10. This article is for informational and educational purposes only and does not constitute financial advice. Dividends are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies data against SEC filings, company investor relations materials, and S&P Dow Jones Indices data before publication.*
+*Henry Zhou personally checks data against SEC filings, company investor relations materials, and S&P Dow Jones Indices data before publication.*

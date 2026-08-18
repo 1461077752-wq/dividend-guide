@@ -184,4 +184,4 @@ Once you've screened a candidate list, project the income with the [Dividend Cal
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Dividend payments are not guaranteed and can be reduced or eliminated. Screening criteria are guidelines, not guarantees. Consult a qualified financial advisor before making investment decisions.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies screening data against company SEC filings, S&P Dow Jones Indices methodology, and independent dividend data sources.*
+*Henry Zhou personally checks screening data against company SEC filings, S&P Dow Jones Indices methodology, and independent dividend data sources.*

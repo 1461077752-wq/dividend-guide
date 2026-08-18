@@ -1,0 +1,73 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const translations = await getCollection('articleTranslations');
+  const articles = await getCollection('articles');
+  const articleById = new Map(articles.map(article => [article.id, article]));
+  return translations
+    .filter(translation => articleById.has(translation.id))
+    .map(translation => ({
+      params: { slug: translation.id },
+      props: { translation, article: articleById.get(translation.id) },
+    }));
+}
+
+const { translation, article } = Astro.props;
+const { Content } = await render(translation);
+const englishArticle = article;
+const pubDate = englishArticle.data.pubDate.toISOString().split('T')[0];
+const modDate = (englishArticle.data.modDate || englishArticle.data.pubDate).toISOString().split('T')[0];
+const reviewDate = (englishArticle.data.reviewDate || englishArticle.data.modDate || englishArticle.data.pubDate).toISOString().split('T')[0];
+const relatedArticles = (await getCollection('articleTranslations'))
+  .filter(candidate => candidate.id !== translation.id)
+  .slice(0, 3);
+---
+<ArticleLayout
+  title={`${translation.data.title} - 股息投资指南`}
+  description={translation.data.description}
+  canonical={`https://dividend01.com/zh/articles/${translation.id}/`}
+  pubDate={pubDate}
+  modDate={modDate}
+  image={englishArticle.data.image}
+  author={englishArticle.data.author}
+  authorRole="独立股息研究员"
+  review="事实、数据来源和计算由作者核验"
+  reviewDate={reviewDate}
+  dataAsOf={englishArticle.data.dataAsOf}
+  methodology={englishArticle.data.methodology}
+  sources={englishArticle.data.sources.map(source => ({ ...source, accessed: source.accessed?.toISOString().split('T')[0] }))}
+  locale="zh"
+>
+  <nav class="breadcrumbs" aria-label="面包屑导航">
+    <a href="/zh/">首页</a><span aria-hidden="true">/</span><a href="/zh/articles/">文章</a><span aria-hidden="true">/</span><span>{translation.data.title}</span>
+  </nav>
+  <div class="article-header">
+    <h1>{translation.data.title}</h1>
+    <p class="article-desc">{translation.data.description}</p>
+    <div class="article-meta-bar">
+      <span class="article-category">{englishArticle.data.category}</span>
+      <span>作者：<a href="/zh/about/author/">{englishArticle.data.author}</a></span>
+      <span>独立股息研究员</span>
+      <span>事实核验日期：{reviewDate}</span>
+      {englishArticle.data.dataAsOf && <span>数据截至：{englishArticle.data.dataAsOf}</span>}
+    </div>
+    {englishArticle.data.image && <img src={englishArticle.data.image} alt={translation.data.title} class="article-cover" loading="eager">}
+  </div>
+  <article class="article-content article-content-zh"><Content /></article>
+  <aside class="article-research-notes">
+    <h2>来源与方法</h2>
+    <p>本文仅用于教育参考，不构成个性化投资建议。数据日期、计算口径和主要来源沿用对应英文研究页面。</p>
+    <p>事实核验日期：{reviewDate}</p>
+    {englishArticle.data.methodology && <p>方法：{englishArticle.data.methodology}</p>}
+    {englishArticle.data.sources.length > 0 && <ul>{englishArticle.data.sources.map(source => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.name}</a>{source.accessed ? `（访问日期：${source.accessed.toISOString().split('T')[0]}）` : ''}</li>)}</ul>}
+  </aside>
+  <section class="related-articles" aria-labelledby="related-heading">
+    <h2 id="related-heading">相关文章</h2>
+    <div class="related-article-grid">
+      {relatedArticles.map(related => <a class="related-article-card" href={`/zh/articles/${related.id}/`}><strong>{related.data.title}</strong><span>{related.data.description}</span></a>)}
+    </div>
+  </section>
+  <div class="article-nav"><a href="/zh/articles/" class="btn btn-outline">&larr; 返回文章</a><a href="/zh/stocks/" class="btn">浏览股票</a></div>
+</ArticleLayout>

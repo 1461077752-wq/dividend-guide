@@ -146,4 +146,4 @@ Compare QQQI against [best dividend stocks](/stocks), review where premium-incom
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Distributions are not guaranteed, and past performance does not predict future results. QQQI is a relatively new fund with a short operating history. Consult a qualified financial advisor before investing.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies distribution data against NEOS fund disclosures, SEC filings, and independent ETF data sources.*
+*Henry Zhou personally checks distribution data against NEOS fund disclosures, SEC filings, and independent ETF data sources.*

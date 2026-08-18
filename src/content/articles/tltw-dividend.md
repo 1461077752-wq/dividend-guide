@@ -141,4 +141,4 @@ If you see a "12% Treasury dividend" claim, it's almost certainly a covered-call
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Fund yields and distributions are not guaranteed and fluctuate with market conditions. Consult a qualified financial advisor before investing.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies fund data against iShares disclosures, SEC filings, and Treasury yield data.*
+*Henry Zhou personally checks fund data against iShares disclosures, SEC filings, and Treasury yield data.*

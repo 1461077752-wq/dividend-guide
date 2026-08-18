@@ -166,4 +166,4 @@ VOO belongs on any [best dividend stocks](/stocks) list as the growth anchor, an
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Dividends are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies dividend data against Vanguard fund disclosures, SEC filings, and independent dividend history sources.*
+*Henry Zhou personally checks dividend data against Vanguard fund disclosures, SEC filings, and independent dividend history sources.*

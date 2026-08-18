@@ -124,4 +124,4 @@ Use our [Dividend Calculator](/calculator) to project how investing your annual 
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Tax information is based on general IRS guidelines — consult a tax professional for your specific situation. PFD amounts are subject to change based on Alaska legislative decisions and fund performance.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies all data against Alaska Department of Revenue publications, IRS publications, and state legislative records.*
+*Henry Zhou personally checks all data against Alaska Department of Revenue publications, IRS publications, and state legislative records.*

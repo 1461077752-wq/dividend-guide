@@ -131,4 +131,4 @@ The best dividend ETF is the one you can hold for a decade without second-guessi
 
 *Last updated: 2026-08-10. This article is for informational and educational purposes only and does not constitute financial advice. Dividends are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies fund data against issuer disclosures, SEC filings, and independent ETF data sources.*
+*Henry Zhou personally checks fund data against issuer disclosures, SEC filings, and independent ETF data sources.*

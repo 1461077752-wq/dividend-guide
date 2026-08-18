@@ -121,4 +121,4 @@ Use the [Dividend Calculator](/calculator) to project SCHD's income at different
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Yields and distributions are not guaranteed and fluctuate with market conditions. Consult a qualified financial advisor before investing.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies yield data against Schwab fund disclosures, SEC filings, and NASDAQ.com.*
+*Henry Zhou personally checks yield data against Schwab fund disclosures, SEC filings, and NASDAQ.com.*

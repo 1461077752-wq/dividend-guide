@@ -212,4 +212,4 @@ Compare JEPQ against [best dividend stocks](/stocks), see where premium income f
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Distributions are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies distribution data against JPMorgan fund disclosures, SEC filings, and independent ETF data sources.*
+*Henry Zhou personally checks distribution data against JPMorgan fund disclosures, SEC filings, and independent ETF data sources.*

@@ -146,4 +146,4 @@ For planning, treat the PFD as **variable bonus income**, not guaranteed. Unders
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. PFD amounts are subject to change based on fund performance and legislative decisions. Verify current amounts at [pfd.alaska.gov](https://pfd.alaska.gov/).*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies payment data against Alaska Department of Revenue publications and state records.*
+*Henry Zhou personally checks payment data against Alaska Department of Revenue publications and state records.*

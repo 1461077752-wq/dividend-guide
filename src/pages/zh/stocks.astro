@@ -1,16 +1,29 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import marketData from '../../data/market-data.json';
+
+const records = marketData.records;
+const refreshed = new Date(marketData.refreshedAt);
+const refreshedLabel = refreshed.toLocaleString('zh-CN', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Asia/Shanghai' });
+const groups = [
+  { key: 'aristocrat', title: '股息贵族', description: '连续多年提高股息的成熟公司，重点观察盈利质量和估值。' },
+  { key: 'high-yield', title: '高股息股票', description: '高收益率需要结合派息率、负债水平和现金流一起判断。' },
+  { key: 'growth', title: '股息增长股票', description: '当前收益率可能不高，但公司具备持续提高分配的能力。' },
+];
+const money = (value) => value == null ? '—' : `$${value.toFixed(2)}`;
+const yieldLabel = (record) => record.price && record.annualDividend ? `${(record.annualDividend / record.price * 100).toFixed(2)}%` : '—';
 ---
-<BaseLayout title="最佳股息股票 - 股息投资指南" description="按股息增长、收益率和稳定性了解精选股票。" canonical="https://dividend01.com/zh/stocks/" locale="zh">
+<BaseLayout title="最佳股息股票 - 股息投资指南" description="按最新市场价格、过去 12 个月股息率、派息率和股息增长记录了解精选股票。" canonical="https://dividend01.com/zh/stocks/" locale="zh" modDate="2026-08-18">
   <slot slot="title">最佳股息股票</slot>
-  <slot slot="subtitle">用收益率、派息率和股息增长记录，建立自己的研究清单。</slot>
-  <div class="page-intro"><p>下面的分类用于学习和比较，不构成买卖建议。股息率会随股价变化，请同时查看现金流和业务质量。</p></div>
-  <div class="card-grid">
-    <article class="card"><div class="card-icon"><span aria-hidden="true">◆</span></div><h3>股息贵族</h3><p>连续多年提高股息的成熟公司，重点观察盈利质量和估值。</p></article>
-    <article class="card"><div class="card-icon"><span aria-hidden="true">↗</span></div><h3>股息增长</h3><p>当前收益率可能不高，但公司具备持续提高分配的能力。</p></article>
-    <article class="card"><div class="card-icon"><span aria-hidden="true">%</span></div><h3>高股息</h3><p>高收益率需要结合派息率、负债水平和现金流一起判断。</p></article>
-    <article class="card"><div class="card-icon"><span aria-hidden="true">◷</span></div><h3>月度派息</h3><p>适合研究现金流节奏，但不能只根据派息频率做决定。</p></article>
-  </div>
-  <h2>研究时重点查看</h2>
-  <div class="table-wrapper"><table class="data-table"><thead><tr><th>指标</th><th>它说明什么</th><th>需要留意</th></tr></thead><tbody><tr><td><strong>股息收益率</strong></td><td>年度股息占股价的比例</td><td>异常升高可能来自股价下跌</td></tr><tr><td><strong>派息率</strong></td><td>利润中用于支付股息的比例</td><td>过高时安全边际较小</td></tr><tr><td><strong>股息增长</strong></td><td>公司提高分配的历史</td><td>过去增长不代表未来一定持续</td></tr></tbody></table></div>
+  <slot slot="subtitle">用最新价格、过去 12 个月股息率、派息率和股息增长记录，建立自己的研究清单。</slot>
+  <div class="page-intro"><p><strong>行情更新时间：</strong>{refreshedLabel}（北京时间） · 数据源：<a href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance</a>。价格可能存在延迟；股息和派息率仅用于研究，请以发行方披露为准。</p></div>
+  {groups.map((group) => <>
+    <h2>{group.title}</h2>
+    <p>{group.description}</p>
+    <div class="table-wrapper"><table class="data-table"><thead><tr><th>代码</th><th>公司</th><th>行业</th><th>最新价</th><th>近 12 个月股息率</th><th>派息率</th><th>增长 / 频率</th></tr></thead><tbody>
+      {records.filter((record) => record.category === group.key).map((record) => <tr><td><strong>{record.symbol}</strong></td><td>{record.company}</td><td>{record.sector}</td><td>{money(record.price)}</td><td class="positive">{yieldLabel(record)}</td><td>{record.payoutRatio}%</td><td>{record.secondary}</td></tr>)}
+    </tbody></table></div>
+  </>)}
+  <p class="home-sources">近 12 个月股息率 = 过去 365 天现金分配 ÷ 最新市场价格，不代表未来分配预测。</p>
+  <div class="tip-box"><strong>研究提醒：</strong>不要只根据收益率选股。可持续的派息率、稳定的股息增长记录和强劲的自由现金流更重要。</div>
 </BaseLayout>

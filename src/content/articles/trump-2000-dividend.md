@@ -155,4 +155,4 @@ The "Trump $2,000 dividend" is a widely discussed but **unenacted proposal**. Th
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Government payment proposals are subject to change and may never be enacted. Always verify current information from official government sources before making decisions.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies policy information against contemporaneous reporting and government publications, and clearly distinguishes proposals from enacted law.*
+*Henry Zhou personally checks policy information against contemporaneous reporting and government publications, and clearly distinguishes proposals from enacted law.*

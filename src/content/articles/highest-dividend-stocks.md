@@ -167,4 +167,4 @@ Model your realistic income with the [Dividend Calculator](/calculator), compare
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Ultra-high-yield securities involve significant risks, including dividend cuts and loss of principal. Past performance does not predict future results. Consult a qualified financial advisor before making investment decisions.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies yield and distribution data against company filings, fund disclosures, and independent market data sources.*
+*Henry Zhou personally checks yield and distribution data against company filings, fund disclosures, and independent market data sources.*

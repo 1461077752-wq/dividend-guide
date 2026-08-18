@@ -141,4 +141,4 @@ Use the [Dividend Calculator](/calculator) to project your income timeline, brow
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Dividends are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before making investment decisions.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies all data against SEC filings, S&P Dow Jones Indices data, and company investor relations materials.*
+*Henry Zhou personally checks all data against SEC filings, S&P Dow Jones Indices data, and company investor relations materials.*

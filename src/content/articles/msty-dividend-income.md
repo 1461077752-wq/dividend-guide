@@ -122,4 +122,4 @@ Read the full [MSTY distribution history](/articles/msty-dividend-history/) to s
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. MSTY is a high-risk investment. Distributions are not guaranteed, and past distributions do not predict future payouts. Consult a qualified financial advisor before investing.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies distribution data against YieldMax fund disclosures and SEC filings.*
+*Henry Zhou personally checks distribution data against YieldMax fund disclosures and SEC filings.*

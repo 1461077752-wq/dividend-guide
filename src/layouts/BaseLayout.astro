@@ -11,6 +11,7 @@ export interface Props {
   noIndex?: boolean;
   locale?: 'en' | 'zh';
   pageClass?: string;
+  alternates?: Array<{ hreflang: 'en' | 'zh-CN' | 'x-default'; href: string }>;
 }
 const currentPath = Astro.url.pathname;
 const {
@@ -23,14 +24,18 @@ const {
   image,
   noIndex = false,
   locale = currentPath.startsWith('/zh') ? 'zh' : 'en',
-  pageClass = ''
+  pageClass = '',
+  alternates
 } = Astro.props;
 const isNotFoundPage = currentPath === '/404/' || currentPath === '/404.html' || currentPath === '/zh/404/';
+const englishPath = currentPath.replace(/^\/zh(?=\/|$)/, '') || '/';
+const englishUrl = `https://dividend01.com${englishPath}`;
+const chineseUrl = `https://dividend01.com/zh${englishPath === '/' ? '/' : englishPath}`;
 const languageHref = isNotFoundPage
   ? (locale === 'zh' ? '/404.html' : '/zh/404/')
   : locale === 'zh'
-    ? (currentPath.replace(/^\/zh/, '') || '/')
-    : `/zh${currentPath === '/' ? '/' : currentPath}`;
+    ? englishPath
+    : `/zh${englishPath === '/' ? '/' : englishPath}`;
 const currentYear = new Date().getFullYear();
 const navItems = [
   { href: '/', label: 'Guide', icon: 'home' },
@@ -39,8 +44,10 @@ const navItems = [
   { href: '/calculator/', label: 'Calculator', icon: 'calc' },
   { href: '/strategy/', label: 'Strategy', icon: 'activity' },
 ];
-// The English routes are canonical. Chinese is a presentation state, not a second site tree.
-const localizedNavItems = navItems;
+const localizedNavItems = locale === 'zh'
+  ? navItems.map(item => ({ ...item, href: item.href === '/' ? '/zh/' : `/zh${item.href}` }))
+  : navItems;
+const localizedPath = (path: string) => locale === 'zh' ? (path === '/' ? '/zh/' : `/zh${path}`) : path;
 
 const pageNames: Record<string, string> = {
   '/': 'Dividend Guide',
@@ -70,6 +77,11 @@ const normalizeUrl = (value: string) => {
 };
 const pageUrl = normalizeUrl(canonical || `https://dividend01.com${currentPath}`);
 const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
+const alternateLinks = alternates || (isNotFoundPage ? [] : [
+  { hreflang: 'en' as const, href: englishUrl },
+  { hreflang: 'zh-CN' as const, href: chineseUrl },
+  { hreflang: 'x-default' as const, href: englishUrl }
+]);
 ---
 <!DOCTYPE html>
 <html lang={locale === 'zh' ? 'zh-CN' : 'en'}>
@@ -77,20 +89,12 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B14JQ24JCL"></script>
-  <script is:inline>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-B14JQ24JCL');
-  </script>
-
   <title>{title}</title>
   <meta name="description" content={description}>
   {noIndex && <meta name="robots" content="noindex, follow">}
   <meta name="author" content="Henry Zhou">
   <link rel="canonical" href={pageUrl}>
+  {alternateLinks.map(alternate => <link rel="alternate" hreflang={alternate.hreflang} href={alternate.href}>)}
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
   <!-- Font Preconnect -->
@@ -102,6 +106,8 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
   <meta property="og:description" content={description}>
   <meta property="og:type" content="website">
   <meta property="og:url" content={pageUrl}>
+  <meta property="og:locale" content={locale === 'zh' ? 'zh_CN' : 'en_US'}>
+  <meta property="og:locale:alternate" content={locale === 'zh' ? 'en_US' : 'zh_CN'}>
   <meta property="og:site_name" content="Dividend Guide">
   <meta property="og:image" content={ogImage}>
   <meta name="twitter:card" content="summary_large_image">
@@ -135,6 +141,7 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
       "headline": title,
       "description": description,
       "url": pageUrl,
+      "inLanguage": locale === 'zh' ? 'zh-CN' : 'en',
       "datePublished": pubDate,
       "dateModified": modDate,
       "author": { "@type": "Person", "name": "Henry Zhou", "jobTitle": "Independent Dividend Researcher", "url": "https://dividend01.com/about/author/" },
@@ -147,28 +154,33 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
         "@type": "ListItem",
         "position": i + 1,
         "name": item.name,
-        "item": normalizeUrl(`https://dividend01.com${item.path}`)
+        "item": normalizeUrl(`https://dividend01.com${locale === 'zh' && item.path !== '/' ? `/zh${item.path}` : item.path}`)
       }))
     }] : [])
   ])}></script>
 </head>
 <body class:list={[{ 'home-page': currentPath === '/' || currentPath === '/zh/', 'locale-zh': locale === 'zh' }, pageClass]}>
   <script is:inline>if(location.hostname.includes('pages.dev')){location.replace('https://dividend01.com'+location.pathname+location.search)}</script>
+  <aside id="analytics-consent" hidden aria-label="Analytics preferences">
+    <p>{locale === 'zh' ? '我们使用匿名分析来改进内容。你可以接受或拒绝。' : 'We use optional analytics to improve the site. You can accept or decline.'}</p>
+    <button type="button" data-analytics-accept>{locale === 'zh' ? '接受分析' : 'Accept analytics'}</button>
+    <button type="button" data-analytics-decline>{locale === 'zh' ? '拒绝' : 'Decline'}</button>
+  </aside>
   <header class="site-header">
     <span class="sr-only">Stock market charts and financial data visualisation</span>
     <div class="container">
       <h1 data-i18n={currentPath === '/' ? 'home.title' : undefined}><slot name="title">Dividend Guide</slot></h1>
       <p class="subtitle" data-i18n={currentPath === '/' ? 'home.subtitle' : undefined}><slot name="subtitle">{description}</slot></p>
-      <p class="byline">{locale === 'zh' ? '作者：' : 'By '}<a href="/about/author/">Henry Zhou</a>{locale === 'zh' ? ' · 独立股息研究员 · 更新于 ' : ' · Independent Dividend Researcher · Updated '}<time datetime={modDate}>{modDate}</time></p>
+      <p class="byline">{locale === 'zh' ? '作者：' : 'By '}<a href={localizedPath('/about/author/')}>Henry Zhou</a>{locale === 'zh' ? ' · 独立股息研究员 · 更新于 ' : ' · Independent Dividend Researcher · Updated '}<time datetime={modDate}>{modDate}</time></p>
       <div class="hero-cta">
-        <a href="/stocks/" class="btn">{locale === 'zh' ? '浏览股票' : 'Browse Stocks'}</a>
-        <a href="/calculator/" class="btn btn-outline">{locale === 'zh' ? '试用计算器' : 'Try Calculator'}</a>
+        <a href={localizedPath('/stocks/')} class="btn">{locale === 'zh' ? '浏览股票' : 'Browse Stocks'}</a>
+        <a href={localizedPath('/calculator/')} class="btn btn-outline">{locale === 'zh' ? '试用计算器' : 'Try Calculator'}</a>
       </div>
     </div>
   </header>
   <nav class="site-nav">
     <div class="container">
-      <a href="/" class="nav-brand"><span class="nav-brand-mark">DG</span><span class="nav-brand-name">Dividend Guide</span></a>
+      <a href={localizedPath('/')} class="nav-brand"><span class="nav-brand-mark">DG</span><span class="nav-brand-name">Dividend Guide</span></a>
       {localizedNavItems.map(item => (
         <a href={item.href} class:list={[{ active: currentPath === item.href || (currentPath !== '/' && item.href !== '/' && currentPath.startsWith(item.href)) }]}>
           {item.icon === 'home' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>}
@@ -180,8 +192,8 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
         </a>
       ))}
       <div class="nav-actions">
-        <a class="nav-language" href={currentPath} data-language-toggle data-language-label aria-label={locale === 'zh' ? 'Switch to English' : '切换到中文'}>{locale === 'zh' ? 'EN' : '中文'}</a>
-        <a class="nav-cta" href="/stocks/">{locale === 'zh' ? '开始研究' : 'Explore research'}</a>
+        <a class="nav-language" href={languageHref} aria-label={locale === 'zh' ? 'Switch to English' : '切换到中文'}>{locale === 'zh' ? 'EN' : '中文'}</a>
+        <a class="nav-cta" href={localizedPath('/stocks/')}>{locale === 'zh' ? '开始研究' : 'Explore research'}</a>
       </div>
     </div>
   </nav>
@@ -189,29 +201,29 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
   <footer class="site-footer">
     <div class="container footer-shell">
       <div class="footer-intro">
-        <a class="footer-brand" href="/" aria-label="Dividend Guide home"><span class="footer-brand-mark">DG</span><span>Dividend Guide</span></a>
+        <a class="footer-brand" href={localizedPath('/')} aria-label="Dividend Guide home"><span class="footer-brand-mark">DG</span><span>Dividend Guide</span></a>
         <p>{locale === 'zh' ? '仅供教育参考，不构成投资建议。投资前请务必自行研究。' : 'Educational content only. Not financial advice. Always do your own research before investing.'}</p>
-        <a class="footer-author" href="/about/author/"><span>{locale === 'zh' ? '独立研究 ' : 'Independent research by '}</span>Henry Zhou <span aria-hidden="true">↗</span></a>
+        <a class="footer-author" href={localizedPath('/about/author/')}><span>{locale === 'zh' ? '独立研究 ' : 'Independent research by '}</span>Henry Zhou <span aria-hidden="true">↗</span></a>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <div class="footer-group">
           <h2>{locale === 'zh' ? '探索' : 'Learn'}</h2>
-          <a href="/topics/dividend-investing-basics/">{locale === 'zh' ? '基础知识' : 'Basics'}</a>
-          <a href="/topics/dividend-stock-screening/">{locale === 'zh' ? '股票筛选' : 'Screening'}</a>
-          <a href="/topics/high-yield-dividend-stocks/">{locale === 'zh' ? '高股息' : 'High Yield'}</a>
-          <a href="/topics/dividend-etf-history/">{locale === 'zh' ? 'ETF 历史' : 'ETF History'}</a>
+          <a href={localizedPath('/topics/dividend-investing-basics/')}>{locale === 'zh' ? '基础知识' : 'Basics'}</a>
+          <a href={localizedPath('/topics/dividend-stock-screening/')}>{locale === 'zh' ? '股票筛选' : 'Screening'}</a>
+          <a href={localizedPath('/topics/high-yield-dividend-stocks/')}>{locale === 'zh' ? '高股息' : 'High Yield'}</a>
+          <a href={localizedPath('/topics/dividend-etf-history/')}>{locale === 'zh' ? 'ETF 历史' : 'ETF History'}</a>
         </div>
         <div class="footer-group">
           <h2>{locale === 'zh' ? '关于' : 'About'}</h2>
-          <a href="/about/">{locale === 'zh' ? '关于指南' : 'About the guide'}</a>
-          <a href="/about/author/">{locale === 'zh' ? '作者' : 'Author'}</a>
-          <a href="/editorial-standards/">{locale === 'zh' ? '编辑标准' : 'Editorial Standards'}</a>
-          <a href="/contact/">{locale === 'zh' ? '联系' : 'Contact'}</a>
+          <a href={localizedPath('/about/')}>{locale === 'zh' ? '关于指南' : 'About the guide'}</a>
+          <a href={localizedPath('/about/author/')}>{locale === 'zh' ? '作者' : 'Author'}</a>
+          <a href={localizedPath('/editorial-standards/')}>{locale === 'zh' ? '编辑标准' : 'Editorial Standards'}</a>
+          <a href={localizedPath('/contact/')}>{locale === 'zh' ? '联系' : 'Contact'}</a>
         </div>
         <div class="footer-group">
           <h2>{locale === 'zh' ? '法律信息' : 'Legal'}</h2>
-          <a href="/privacy/">{locale === 'zh' ? '隐私政策' : 'Privacy Policy'}</a>
-          <a href="/terms/">{locale === 'zh' ? '使用条款' : 'Terms of Use'}</a>
+          <a href={localizedPath('/privacy/')}>{locale === 'zh' ? '隐私政策' : 'Privacy Policy'}</a>
+          <a href={localizedPath('/terms/')}>{locale === 'zh' ? '使用条款' : 'Terms of Use'}</a>
         </div>
       </nav>
       <div class="footer-bottom">
@@ -393,18 +405,37 @@ const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
     translateHomeText(language);
     localStorage.setItem('dividend-guide-language', language);
   };
-  const languageToggle = document.querySelector('[data-language-toggle]');
-  if (languageToggle) {
-    document.querySelectorAll('[data-i18n]').forEach((element) => {
-      element.dataset.i18nEn = element.textContent;
+  // Locale switching is a normal link to an indexable /zh/ URL.
+</script>
+<script is:inline>
+  (() => {
+    const consentKey = 'dividend-guide-analytics-consent';
+    const banner = document.getElementById('analytics-consent');
+    const loadAnalytics = () => {
+      if (window.__dividendAnalyticsLoaded) return;
+      window.__dividendAnalyticsLoaded = true;
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-B14JQ24JCL';
+      document.head.appendChild(script);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-B14JQ24JCL', { anonymize_ip: true });
+    };
+    const saved = localStorage.getItem(consentKey);
+    if (saved === 'accepted') loadAnalytics();
+    if (!saved && banner) banner.hidden = false;
+    banner?.querySelector('[data-analytics-accept]')?.addEventListener('click', () => {
+      localStorage.setItem(consentKey, 'accepted');
+      banner.hidden = true;
+      loadAnalytics();
     });
-    languageToggle.addEventListener('click', (event) => {
-      event.preventDefault();
-      const next = document.documentElement.lang === 'zh-CN' ? 'en' : 'zh';
-      applyLanguage(next);
+    banner?.querySelector('[data-analytics-decline]')?.addEventListener('click', () => {
+      localStorage.setItem(consentKey, 'declined');
+      banner.hidden = true;
     });
-    applyLanguage(localStorage.getItem('dividend-guide-language') || (document.documentElement.lang === 'zh-CN' ? 'zh' : 'en'));
-  }
+  })();
 </script>
 <script is:inline>
   const floatingNav = document.querySelector('.site-nav');

@@ -152,4 +152,4 @@ Then learn the fundamentals in our [dividend basics guide](/articles/what-are-di
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. All calculator outputs are estimates and do not guarantee future results. Consult a qualified financial advisor before making investment decisions.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies all data and formulas against SEC filings, S&P Dow Jones Indices data, and standard financial literature.*
+*Henry Zhou personally checks all data and formulas against SEC filings, S&P Dow Jones Indices data, and standard financial literature.*

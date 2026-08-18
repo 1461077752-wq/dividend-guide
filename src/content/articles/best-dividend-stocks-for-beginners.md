@@ -132,4 +132,4 @@ Use our [Dividend Calculator](/calculator) to see how your monthly contributions
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Past dividend performance does not guarantee future results. Always conduct your own research and consult with a qualified financial advisor before making investment decisions.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies all data against SEC filings, company investor relations materials, and S&P Dow Jones Indices data before publication.*
+*Henry Zhou personally checks all data against SEC filings, company investor relations materials, and S&P Dow Jones Indices data before publication.*

@@ -1,15 +1,29 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import marketData from '../data/market-data.json';
+
+const records = marketData.records;
+const refreshed = new Date(marketData.refreshedAt);
+const refreshedLabel = refreshed.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'America/New_York' });
+const groups = [
+  { key: 'aristocrat', title: 'Dividend Aristocrats', description: 'These S&P 500 companies have raised dividends every year for 25+ consecutive years.' },
+  { key: 'high-yield', title: 'High-Yield Dividend Stocks', description: 'Higher income can come with higher risk. Check coverage, debt, and cash flow before comparing yields.' },
+  { key: 'growth', title: 'Dividend Growth Stocks', description: 'Lower current yields can be paired with faster dividend growth and stronger reinvestment potential.' },
+];
+const money = (value) => value == null ? '—' : `$${value.toFixed(2)}`;
+const yieldLabel = (record) => record.price && record.annualDividend ? `${(record.annualDividend / record.price * 100).toFixed(2)}%` : '—';
 ---
-<BaseLayout title="Best Dividend Stocks 2026: Aristocrats &amp; High Yield" description="Curated list of top dividend stocks in 2026: Dividend Aristocrats, high-yield REITs, monthly payers, and growth stocks with key metrics and payout ratios." canonical="https://dividend01.com/stocks/" schemaType="WebPage" pubDate="2026-07-27" modDate="2026-08-07">
+<BaseLayout title="Best Dividend Stocks 2026: Aristocrats &amp; High Yield" description="Curated list of dividend stocks with refreshed market prices, trailing annual dividend rates, payout ratios, and dividend growth context." canonical="https://dividend01.com/stocks/" schemaType="WebPage" pubDate="2026-07-27" modDate="2026-08-18">
   <slot slot="title">Best Dividend Stocks</slot>
-  <slot slot="subtitle">Hand-picked dividend stocks across sectors &mdash; from reliable Aristocrats to high-yield REITs and monthly payers. Updated quarterly.</slot>
-  <h2>Dividend Aristocrats</h2>
-  <p>These S&P 500 companies have raised dividends every year for <strong>25+ consecutive years</strong>.</p>
-  <div class="table-wrapper"><table class="data-table"><thead><tr><th>Ticker</th><th>Company</th><th>Sector</th><th>Yield</th><th>Payout Ratio</th><th>Div Growth Streak</th></tr></thead><tbody><tr><td><strong>JNJ</strong></td><td>Johnson &amp; Johnson</td><td>Healthcare</td><td class="positive">3.3%</td><td>45%</td><td>62 yrs</td></tr><tr><td><strong>PG</strong></td><td>Procter &amp; Gamble</td><td>Consumer Staples</td><td class="positive">2.5%</td><td>60%</td><td>68 yrs</td></tr><tr><td><strong>KO</strong></td><td>Coca-Cola</td><td>Consumer Staples</td><td class="positive">3.1%</td><td>72%</td><td>62 yrs</td></tr><tr><td><strong>PEP</strong></td><td>PepsiCo</td><td>Consumer Staples</td><td class="positive">2.9%</td><td>64%</td><td>52 yrs</td></tr><tr><td><strong>LOW</strong></td><td>Lowe's</td><td>Consumer Discretionary</td><td class="positive">2.0%</td><td>35%</td><td>60 yrs</td></tr><tr><td><strong>ABBV</strong></td><td>AbbVie</td><td>Healthcare</td><td class="positive">3.8%</td><td>48%</td><td>52 yrs</td></tr><tr><td><strong>CAT</strong></td><td>Caterpillar</td><td>Industrials</td><td class="positive">2.1%</td><td>28%</td><td>31 yrs</td></tr></tbody></table></div>
-  <h2>High-Yield Dividend Stocks</h2>
-  <div class="table-wrapper"><table class="data-table"><thead><tr><th>Ticker</th><th>Company</th><th>Sector</th><th>Yield</th><th>Payout Ratio</th><th>Type</th></tr></thead><tbody><tr><td><strong>O</strong></td><td>Realty Income</td><td>Real Estate (REIT)</td><td class="positive">5.8%</td><td>76%</td><td>Monthly</td></tr><tr><td><strong>VZ</strong></td><td>Verizon</td><td>Telecom</td><td class="positive">6.7%</td><td>58%</td><td>Quarterly</td></tr><tr><td><strong>MO</strong></td><td>Altria</td><td>Consumer Staples</td><td class="positive">8.1%</td><td>78%</td><td>Quarterly</td></tr><tr><td><strong>ENB</strong></td><td>Enbridge</td><td>Energy (Midstream)</td><td class="positive">7.1%</td><td>65%</td><td>Quarterly</td></tr><tr><td><strong>EPD</strong></td><td>Enterprise Products</td><td>Energy (Midstream)</td><td class="positive">7.4%</td><td>63%</td><td>Quarterly</td></tr></tbody></table></div>
-  <h2>Dividend Growth Stocks</h2>
-  <div class="table-wrapper"><table class="data-table"><thead><tr><th>Ticker</th><th>Company</th><th>Sector</th><th>Yield</th><th>5yr Div CAGR</th><th>Payout Ratio</th></tr></thead><tbody><tr><td><strong>MSFT</strong></td><td>Microsoft</td><td>Technology</td><td class="positive">0.8%</td><td class="positive">10.2%</td><td>25%</td></tr><tr><td><strong>AAPL</strong></td><td>Apple</td><td>Technology</td><td class="positive">0.5%</td><td class="positive">5.8%</td><td>15%</td></tr><tr><td><strong>V</strong></td><td>Visa</td><td>Financials</td><td class="positive">0.8%</td><td class="positive">15.4%</td><td>21%</td></tr><tr><td><strong>MA</strong></td><td>Mastercard</td><td>Financials</td><td class="positive">0.6%</td><td class="positive">16.2%</td><td>18%</td></tr><tr><td><strong>COST</strong></td><td>Costco</td><td>Consumer Staples</td><td class="positive">0.5%</td><td class="positive">12.1%</td><td>26%</td></tr><tr><td><strong>UNH</strong></td><td>UnitedHealth</td><td>Healthcare</td><td class="positive">1.5%</td><td class="positive">15.8%</td><td>30%</td></tr></tbody></table></div>
-  <div class="tip-box"><strong>Pro tip:</strong> Don't pick stocks by yield alone. A sustainable payout ratio (&lt;60%), consistent dividend growth history, and strong free cash flow matter more.</div>
+  <slot slot="subtitle">A research list with refreshed market prices and trailing 12-month dividend rates. It is not a buy or sell recommendation.</slot>
+  <div class="page-intro"><p><strong>Market data refreshed:</strong> {refreshedLabel} ET · Source: <a href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance</a>. Prices may be delayed; dividend and payout figures are research estimates and should be verified with the issuer.</p></div>
+  {groups.map((group) => <>
+    <h2>{group.title}</h2>
+    <p>{group.description}</p>
+    <div class="table-wrapper"><table class="data-table"><thead><tr><th>Ticker</th><th>Company</th><th>Sector</th><th>Price</th><th>TTM Yield</th><th>Payout Ratio</th><th>Growth / Frequency</th></tr></thead><tbody>
+      {records.filter((record) => record.category === group.key).map((record) => <tr><td><strong>{record.symbol}</strong></td><td>{record.company}</td><td>{record.sector}</td><td>{money(record.price)}</td><td class="positive">{yieldLabel(record)}</td><td>{record.payoutRatio}%</td><td>{record.secondary}</td></tr>)}
+    </tbody></table></div>
+  </>)}
+  <p class="home-sources">TTM yield = trailing 12-month cash distributions ÷ latest market price. This calculation does not forecast future distributions.</p>
+  <div class="tip-box"><strong>Research reminder:</strong> Don't pick stocks by yield alone. A sustainable payout ratio, consistent dividend growth history, and strong free cash flow matter more.</div>
 </BaseLayout>

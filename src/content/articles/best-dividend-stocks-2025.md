@@ -155,4 +155,4 @@ Model your income with the [Dividend Calculator](/calculator), compare candidate
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Dividend payments are not guaranteed and can be reduced or eliminated. Past performance does not predict future results. Consult a qualified financial advisor before making investment decisions.*
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies dividend data against company SEC filings, S&P Dow Jones Indices data, and independent dividend history sources.*
+*Henry Zhou personally checks dividend data against company SEC filings, S&P Dow Jones Indices data, and independent dividend history sources.*

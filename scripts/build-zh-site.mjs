@@ -9,9 +9,7 @@ const cacheFile = path.join(cacheDir, 'site.json');
 const apiKey = process.env.OPENAI_API_KEY;
 const model = process.env.OPENAI_MODEL || 'gpt-5-mini';
 
-if (!apiKey) {
-  throw new Error('Missing OPENAI_API_KEY. The localized build requires an OpenAI API key.');
-}
+if (!apiKey) console.warn('OPENAI_API_KEY not set; using native Astro locale pages and skipping API-generated fallback pages.');
 
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
 const walk = async (directory) => {
@@ -30,6 +28,47 @@ const restoreProtected = html => html.replace(/<!--ZH_PROTECTED_([^>]+?)-->/g, (
 const isTranslatable = text => /[A-Za-z]{2,}/.test(text) && !/^\s*[\d$%+.,:/#?=&()\-]+\s*$/.test(text);
 const keyFor = text => hash(text.trim());
 const keepWhitespace = (original, translated) => original.replace(original.trim(), translated.trim());
+
+const localizeInternalUrl = value => {
+  if (!value || !value.startsWith('https://dividend01.com/')) return value;
+  const parsed = new URL(value);
+  if (parsed.pathname === '/' || parsed.pathname.startsWith('/zh/')) {
+    if (parsed.pathname.startsWith('/zh/')) return value;
+    parsed.pathname = `/zh${parsed.pathname}`;
+    return parsed.toString();
+  }
+  parsed.pathname = `/zh${parsed.pathname}`;
+  return parsed.toString();
+};
+
+const rewriteJsonLd = html => html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi, (match, json) => {
+  try {
+    const value = JSON.parse(json);
+    const visit = item => {
+      if (Array.isArray(item)) return item.map(visit);
+      if (!item || typeof item !== 'object') return typeof item === 'string' ? localizeInternalUrl(item) : item;
+      return Object.fromEntries(Object.entries(item).map(([key, child]) => [key, key === 'url' || key === '@id' || key === 'item' || key === 'mainEntityOfPage' ? visit(child) : visit(child)]));
+    };
+    const localized = visit(value);
+    return `<script type="application/ld+json">${JSON.stringify(localized)}</script>`;
+  } catch (error) {
+    throw new Error(`Unable to parse JSON-LD while localizing ${error.message}`);
+  }
+});
+
+const rewriteLocalizedMetadata = (html, relative) => {
+  const englishPath = `/${relative.replace(/\\/g, '/').replace(/index\.html$/, '')}`.replace(/\/+/g, '/');
+  const englishUrl = `https://dividend01.com${englishPath === '//' ? '/' : englishPath}`;
+  const chineseUrl = localizeInternalUrl(englishUrl);
+  let localized = html
+    .replace(/<html\s+lang="[^"]*"/i, '<html lang="zh-CN"')
+    .replace(/(<link\s+rel="canonical"\s+href=")[^"]+/i, `$1${chineseUrl}`)
+    .replace(/(<meta\s+property="og:url"\s+content=")[^"]+/i, `$1${chineseUrl}`)
+    .replace(/(<meta\s+property="og:locale"\s+content=")[^"]+/i, '$1zh_CN')
+    .replace(/(<meta\s+property="og:locale:alternate"\s+content=")[^"]+/i, '$1en_US');
+  localized = rewriteJsonLd(localized);
+  return localized;
+};
 
 const translateBatch = async (items) => {
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -65,11 +104,13 @@ for (const file of htmlFiles) {
 }
 
 const missing = [...required.entries()].filter(([id]) => !existingCache[id]);
-for (let index = 0; index < missing.length; index += 60) {
-  const batch = missing.slice(index, index + 60).map(([id, text]) => ({ id, text }));
-  const translated = await translateBatch(batch);
-  for (const item of translated) existingCache[item.id] = item.text;
-  console.log(`Translated ${Math.min(index + batch.length, missing.length)}/${missing.length} text segments`);
+if (apiKey) {
+  for (let index = 0; index < missing.length; index += 60) {
+    const batch = missing.slice(index, index + 60).map(([id, text]) => ({ id, text }));
+    const translated = await translateBatch(batch);
+    for (const item of translated) existingCache[item.id] = item.text;
+    console.log(`Translated ${Math.min(index + batch.length, missing.length)}/${missing.length} text segments`);
+  }
 }
 await fs.mkdir(cacheDir, { recursive: true });
 await fs.writeFile(cacheFile, JSON.stringify(existingCache, null, 2) + '\n', 'utf8');
@@ -77,20 +118,23 @@ await fs.writeFile(cacheFile, JSON.stringify(existingCache, null, 2) + '\n', 'ut
 for (const page of sourcePages) {
   const relativeDir = path.dirname(page.relative);
   const output = path.join(distDir, 'zh', relativeDir, path.basename(page.relative));
+  if (!apiKey || await fs.access(output).then(() => true).catch(() => false)) continue;
   let localized = stripProtected(page.html).replace(/>([^<>]+)</g, (match, text) => {
     if (!isTranslatable(text)) return match;
     const translated = existingCache[keyFor(text)];
     return translated ? `>${keepWhitespace(text, translated)}<` : match;
   });
-  localized = localized.replace(/<html\s+lang="[^"]*"/i, '<html lang="zh-CN"');
+  localized = restoreProtected(localized);
+  localized = rewriteLocalizedMetadata(localized, page.relative);
   localized = localized.replace(/href="\/(?!zh\/|\/|#|mailto:)/g, 'href="/zh/');
   localized = localized.replace(/href="\/"/g, 'href="/zh/"');
+  localized = localized.replace(/class="nav-language" href="[^"]*"/g, `class="nav-language" href="/${page.relative.replace(/\\/g, '/').replace(/index\.html$/, '')}"`);
   localized = localized.replace(/class="language-switcher" href="[^"]*"/g, `class="language-switcher" href="/${page.relative.replace(/\\/g, '/').replace(/index\.html$/, '')}"`);
   localized = localized.replace(/(<a class="language-switcher"[^>]*>)[^<]*(<\/a>)/g, '$1EN$2');
   localized = localized.replace(/class="article-language-switcher" href="[^"]*"/g, `class="article-language-switcher" href="/${page.relative.replace(/\\/g, '/').replace(/index\.html$/, '')}"`);
   localized = localized.replace(/(<a class="article-language-switcher"[^>]*>)[^<]*(<\/a>)/g, '$1EN$2');
   await fs.mkdir(path.dirname(output), { recursive: true });
-  await fs.writeFile(output, restoreProtected(localized), 'utf8');
+  await fs.writeFile(output, localized, 'utf8');
 }
 
 console.log(`Created ${sourcePages.length} Chinese pages under dist/zh/`);

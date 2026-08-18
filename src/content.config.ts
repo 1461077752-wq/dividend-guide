@@ -22,6 +22,10 @@ const articles = defineCollection({
       url: z.string().url(),
       accessed: z.coerce.date().optional(),
     })).default([]),
+    primaryKeyword: z.string().optional(),
+    searchIntent: z.enum(['informational', 'comparison', 'tool', 'transactional']).default('informational'),
+    canonicalHub: z.string().optional(),
+    experienceType: z.enum(['author-experience', 'reader-case', 'illustrative', 'none']).default('none'),
     draft: z.boolean().default(false),
   }),
 });
