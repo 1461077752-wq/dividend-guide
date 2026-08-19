@@ -25,6 +25,10 @@
 - [QQQI Dividend](/articles/qqqi-dividend/): QQQI's ~14% yield explained — how the NEOS Nasdaq 100 High Income ETF generates income, the tax advantages, risks, and whether it's worth it.
 - [Trump Tariff Dividend](/articles/trump-tariff-dividend/): The $2,000 per person tariff dividend proposal vs. the DOGE dividend — funding, feasibility, and why neither has been paid.
 - [ULTY Dividend](/articles/ulty-dividend/): ULTY's ~106% yield evaluated — the real ~60% run-rate, heavy return of capital, and why total return is roughly flat.
+- [Ford (F) Dividends](/articles/dividends-for-ford/): Ford Motor's current $0.15 quarterly payout, ~4.1% yield, 5-year recovery, payout-ratio swings, and how it compares with GM, Toyota, and Honda.
+- [福特（F）股息详解](/zh/articles/dividends-for-ford/): 福特汽车股息的历史、收益率与双层股息结构，以及与通用、丰田、本田的对比。
+- [Dividend vs. Divisor](/articles/divisor-and-dividend/): The difference between a dividend (payout or number divided) and a divisor (index scaling factor), with investing examples.
+- [Divisor 与 Dividend 区别](/zh/articles/divisor-and-dividend/): 厘清 dividend 与 divisor 在数学与投资中的不同角色，并配以读者实例。
 
 ## Trust & Legal
 - [About](/about): Editorial standards, methodology, and disclaimer.
