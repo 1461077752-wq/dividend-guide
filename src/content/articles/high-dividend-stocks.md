@@ -1,11 +1,15 @@
 ---
-title: "High Dividend Stocks: Yield and Risk Guide"
-description: "The best high-yield dividend stocks by sector, why some pay 4-8% reliably, which ultra-high yields are traps, and how to avoid the dividend cuts."
+title: "High Dividend Stocks: 4%–8% Yield and Risk Guide"
+description: "Compare high dividend stocks by yield, payout coverage and sector risk. Learn how to evaluate sustainable income and identify potential yield traps."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Stock Analysis"
 tags: ["high dividend stocks", "high yield", "REIT", "MLP", "BDC", "dividend yield"]
 image: "/images/articles/high-dividend-stocks.webp"
+primaryKeyword: "high dividend stocks"
+searchIntent: "comparison"
+canonicalHub: "/topics/high-yield-dividend-stocks/"
+experienceType: "illustrative"
 dataAsOf: "2026-08-07"
 methodology: "Yield and payout examples are point-in-time figures from issuer disclosures; sector ranges are descriptive and do not imply safety or future income."
 sources:
@@ -117,17 +121,18 @@ If individual high-yield stocks feel risky, high-yield ETFs spread the exposure:
 
 The yield gap between VYM (2.2%) and SPYD (4.1%) shows that "high dividend" is a spectrum: VYM holds big steady payers like a dividend tilt on the broad market; SPYD deliberately buys the *highest-yielding* S&P 500 members, which means more energy, REITs, and utilities — and more sector concentration. High-yield ETFs reduce single-stock risk but keep sector risk.
 
-## A Real High-Yield Investor's Story
+## Illustrative High-Yield Investor's Story
 
 > "I got into high-yield investing after retiring early, chasing a 7-8% income number. My first lesson was AT&T — I owned it when they cut the dividend 46% in 2022. My second lesson was Kinder Morgan in 2015, when I was down 60% in price and got the dividend cut too. I finally built the portfolio I should have started with: half in a quality dividend ETF, and the rest split between VZ, O, and ET, sized small enough that a cut wouldn't hurt. The blended yield is about 5%, but it's *survivable* yield — and that's the whole difference."
-> — *Anonymous retired investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Portfolio Approach | Yield Before | What Happened |
 |-------------------|-------------|---------------|
 | Chased 7-8% single names | 7-8% | AT&T cut, Kinder Morgan cut |
 | ETF core + high-yield satellites | ~5% | Survivable, diversified |
 
-*Illustrative investor scenario based on anonymous reader survey responses. Individual results vary.*
+*Illustrative scenario based on the figures and assumptions stated above. Individual results vary.*
 
 ## High Dividend Stock Questions, Answered
 

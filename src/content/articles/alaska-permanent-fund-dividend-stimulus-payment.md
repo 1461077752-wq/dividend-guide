@@ -15,6 +15,7 @@ sources:
   - name: "Alaska Permanent Fund Corporation"
     url: "https://www.apfc.org/"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -67,7 +68,7 @@ These supplemental payments are not guaranteed. They depend on:
 
 As of mid-2026, Alaska's oil revenue projections remain volatile, making future supplemental payments uncertain.
 
-## A Real Resident's Experience
+## Illustrative Resident's Experience
 
 > "I've lived in Anchorage my whole life and have gotten the PFD every year since I turned 18. In 2022, the $3,284 payment was a lifesaver — fuel was $5.50 a gallon and my heating bill had doubled. I put the whole check toward winter expenses. The hardest year was 2016 when the payment was only $1,022 and there was no supplement. You can't rely on it like a salary, but when it comes, it makes a real difference."
 > — *Sarah M., Anchorage, Alaska (longtime PFD recipient)*

@@ -1,11 +1,15 @@
 ---
-title: "SCHD Dividend: Yield, History, and How It Compares"
-description: "Everything about the SCHD dividend — current yield, historical distribution growth, how it pays, and how Schwab's Dividend Equity ETF compares to other dividend funds."
+title: "SCHD Dividend: Current Yield, Growth and Risks"
+description: "Review SCHD's current dividend yield, quarterly payments, growth record, fund design, and key risks before comparing it with other dividend ETFs."
 pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Stock Analysis"
 tags: ["SCHD", "dividend ETF", "Schwab", "dividend yield"]
 image: "/images/articles/schd-dividend.webp"
+primaryKeyword: "SCHD dividend"
+searchIntent: "informational"
+canonicalHub: "/topics/dividend-etf-history/"
+experienceType: "illustrative"
 dataAsOf: "2026-08-07"
 methodology: "Yield and expense ratio use the latest Schwab fund disclosure; historical distribution statements are separated from forward estimates."
 sources:
@@ -76,10 +80,11 @@ The result: 100 dividend-paying companies that score well on quality and yield �
 
 **Why SCHD often wins for dividend growth investors:** It combines a competitive yield (3.4%) with a strict quality screen — the only fund in the list built specifically around dividend growth plus financial health.
 
-## A Real SCHD Investor's Story
+## Illustrative SCHD Investor's Story
 
 > "I've been buying SCHD since 2019. My cost basis is around $52 a share, so my personal yield on cost is over 5% now — the market price yield is 3.4%, but I'm earning more relative to what I paid. Each quarterly dividend has gone up every single time. The most useful habit was checking my per-share distribution each quarter instead of the account balance — watching the income number grow is what kept me disciplined through 2022."
-> — *Anonymous SCHD investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Quarter | SCHD Distribution/Share |
 |---------|------------------------|

@@ -1,5 +1,5 @@
 ---
-title: "The Tariff Dividend: Trump's Plan to Send Tariff Revenue to Taxpayers"
+title: "Tariff Dividend: Proposal, Funding and Payment Status"
 description: "What the proposed tariff dividend is, reported check amounts, how tariff revenue would fund it, and whether households should expect a payment."
 pubDate: 2026-07-30
 modDate: 2026-07-30
@@ -15,6 +15,7 @@ sources:
   - name: "U.S. Treasury: Press releases"
     url: "https://home.treasury.gov/news/press-releases"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -69,7 +70,8 @@ Economists note tariffs function as a **tax on consumption** — importers pass 
 4. **Distribution mechanics are undefined** — no agency is tasked with payments
 
 > "When tariff dividend checks were in the news, a friend asked if I was planning around the $2,000. I told him the same thing I learned from the DOGE dividend stories: until there's a bill, a check number, and a date, it's just headlines. We budget on income we've actually earned."
-> — *Anonymous household, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 ## Tariff Dividend vs. Real Dividends
 

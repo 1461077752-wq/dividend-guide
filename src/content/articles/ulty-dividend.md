@@ -1,11 +1,12 @@
 ---
-title: "ULTY Dividend: 106% Yield, Total Return Reality, and Should You Buy?"
+title: "ULTY Dividend: Yield, Total Return and Key Risks"
 description: "ULTY's dividend evaluated — the ~106% trailing yield vs the ~60% real run-rate, heavy return of capital, and why total return is roughly flat."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Stock Analysis"
 tags: ["ULTY", "YieldMax", "covered call", "ETF", "high yield", "return of capital"]
 image: "/images/articles/ulty-dividend.webp"
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -95,10 +96,11 @@ This decline is intentional: in December 2025, YieldMax announced "strategic upd
 
 ULTY sits in the middle of the YieldMax family: not as extreme as MSTY (whose ~244% yield came with a −68% year), but still showing the core covered-call pattern — **a triple-digit advertised yield with flat-to-negative total return.** The funds that actually delivered positive since-inception returns (YMAX +14%) did so through enormous early payouts, not through sustainable income.
 
-## A Real ULTY Investor's Evaluation
+## Illustrative ULTY Investor's Evaluation
 
 > "I bought ULTY in April 2024 after seeing the 60%+ yield, putting in $25,000. The weekly checks — after they switched from monthly — averaged around $350-400 for the first year. But by 2025 I noticed my account value was drifting down every single month. When I finally compared distributions received to account value, I was basically flat, and that was the best-case version. I learned to look at total return instead of yield, and I realized the yield was mostly my own capital being returned. I've since moved most of the money into a diversified income ETF that actually grows. ULTY taught me the difference between income and a refund."
-> — *Anonymous ULTY investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Investor's Measure | Advertised Yield | What They Got |
 |--------------------|-----------------|---------------|

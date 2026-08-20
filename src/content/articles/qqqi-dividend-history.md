@@ -13,6 +13,7 @@ sources:
   - name: "NEOS QQQI fund page"
     url: "https://neosfunds.com/qqqi/"
     accessed: 2026-08-04
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -94,10 +95,11 @@ Here is the critical question for any covered-call fund: does the price hold up?
 
 JEPQ, the [largest Nasdaq premium income fund](/articles/jepq-dividend/), is the direct competitor. Its 0.35% expense ratio is half of QQQI's, but JEPQ's ELN structure means its distributions are taxed mostly as ordinary income, while QQQI's NDX index options qualify for the 60/40 rate. QYLD, the oldest of the three, has a longer record but a well-documented history of price erosion since its 2013 launch.
 
-## A Real QQQI Investor's Experience
+## Illustrative QQQI Investor's Experience
 
 > "I started with JEPQ in 2023, then added QQQI in early 2025 when I learned about the 60/40 tax treatment. With $48,000 in QQQI the monthly checks have been remarkably steady — $490 to $560 almost every month. The April 2025 dip to about $470 rattled me, and I almost sold. But I checked the NAV and it had barely moved, so I held. After 18 months my yield on cost is right around 15% and the share price is actually up a couple dollars from where I bought. The steady payouts are what keep me in it."
-> — *Anonymous QQQI investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Period | QQQI Distribution Yield | Approx. Total Return |
 |--------|------------------------|---------------------|

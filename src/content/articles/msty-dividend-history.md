@@ -1,11 +1,15 @@
 ---
-title: "MSTY Dividend History: YieldMax MSTR Option Income ETF Distributions"
-description: "Complete history of MSTY distributions, how the YieldMax MSTR Option Income Strategy ETF pays its high yields, and the risks of covered-call income investing."
+title: "MSTY Dividend History: Payments and Risks"
+description: "Review MSTY's distribution history, how its MSTR option-income strategy funds payments, and why headline yield differs from sustainable total return."
 pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Stock Analysis"
 tags: ["MSTY", "YieldMax", "covered call", "ETF", "high yield", "MSTR"]
 image: "/images/articles/msty-dividend-history.webp"
+primaryKeyword: "MSTY dividend history"
+searchIntent: "informational"
+canonicalHub: "/topics/dividend-etf-history/"
+experienceType: "illustrative"
 dataAsOf: "2026-08-07"
 methodology: "Distribution history is based on published YieldMax distributions; annualized yield is separated from realized total return and is not treated as guaranteed income."
 sources:
@@ -86,10 +90,11 @@ This is the core distinction: **a covered-call ETF's distributions are not "divi
 | Total return focus | Moderate-to-low | Higher over long term |
 | Sustainable | No — depends on volatility | Generally yes |
 
-## A Real Investor's Experience
+## Illustrative Investor's Experience
 
 > "I put $25,000 into MSTY in mid-2024 after seeing the December 2023 TSLY (a similar YieldMax fund) returns online. For three months the monthly checks were incredible — $800, $1,200, $1,500. But my share price kept dropping. When I did the math at the end of the year, my total return was only about 9% — not the '50% yield' I'd been told. I still hold it for monthly income, but I cap it at 10% of my portfolio and reinvest elsewhere."
-> — *Anonymous YieldMax investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Month | MSTY Distribution | Share Price Change | Net Effect |
 |-------|------------------|-------------------|-----------|

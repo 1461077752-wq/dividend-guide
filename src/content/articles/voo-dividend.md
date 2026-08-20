@@ -13,6 +13,7 @@ sources:
   - name: "Vanguard VOO fund profile"
     url: "https://investor.vanguard.com/investment-products/etfs/profile/voo"
     accessed: 2026-08-04
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -113,10 +114,11 @@ The yield trade-off has a powerful flip side: **VOO's total return is what most 
 
 The classic portfolio answer is **both**: VOO for market-wide growth, SCHD for income. A 60/40 split gives you the S&P 500's upside plus a meaningful dividend stream. See our [dividend strategies](/strategy) guide for how to combine them.
 
-## A Real VOO Investor's Experience
+## Illustrative VOO Investor's Experience
 
 > "I've held VOO since 2017 and never thought of it as a dividend stock — I bought it for market exposure. But when I started tracking my annual income, I noticed the quarterly dividends had quietly grown from about $40 on my position in 2017 to over $90 in 2025. The yield stayed around 1%, but the dollar amount kept rising because the dividend per share grew and my shares grew. It's not going to fund my retirement on its own, but it's a real income stream that requires zero effort. I pair it with SCHD for income and keep VOO as the growth core."
-> — *Anonymous VOO investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Year | Approx. Quarterly Dividend | Annual Income on ~$25k Position |
 |------|---------------------------|-------------------------------|

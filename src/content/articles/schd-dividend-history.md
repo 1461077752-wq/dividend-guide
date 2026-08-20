@@ -1,11 +1,15 @@
 ---
-title: "SCHD Dividend History and Payment Schedule"
-description: "Every SCHD annual dividend since 2011, the 2024 split explained, quarterly payment rhythm, and what 13 years of dividend growth really delivers."
+title: "SCHD Dividend History: Payments Since 2011"
+description: "See SCHD's split-adjusted annual and quarterly dividend history since 2011, including its payment schedule, 2024 stock split, and growth record."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Stock Analysis"
 tags: ["SCHD", "dividend ETF", "Schwab", "dividend history", "dividend growth"]
 image: "/images/articles/schd-dividend-history.webp"
+primaryKeyword: "SCHD dividend history"
+searchIntent: "informational"
+canonicalHub: "/topics/dividend-etf-history/"
+experienceType: "illustrative"
 author: "Henry Zhou"
 dataAsOf: "2026-08-04"
 methodology: "Annual totals sum the fund's reported distributions and use split-adjusted values where applicable."
@@ -112,10 +116,11 @@ SCHD's growth record is best understood by compounding. Here's what the history 
 
 The practical takeaway: the same $10,000 buys about **4x more annual income** if invested in 2012 versus today, purely because of dividend growth. The growth engine is why SCHD is often paired with higher-yield holdings.
 
-## A Real SCHD Holder's Experience Through the Years
+## Illustrative SCHD Holder's Experience Through the Years
 
 > "I've held SCHD since 2014, originally buying at what works out to about $11 split-adjusted. In the early years the quarterly checks were tiny — $40 or so on my $5,000 starter position. The 2022 bear market was the real test: my account was down 12% and I was tempted to sell and chase a money-market yield. I didn't. By 2025 the same position paid over $450 a year, and the reinvested dividends had bought me extra shares the whole way through. The dividend history is the only reason I stayed."
-> — *Anonymous SCHD investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Year | Annual Dividend/Share | Investor Income on ~454 Shares |
 |------|----------------------|------------------------------|

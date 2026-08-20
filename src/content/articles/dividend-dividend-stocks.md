@@ -15,6 +15,7 @@ sources:
   - name: "FINRA: Fundamental analysis"
     url: "https://www.finra.org/investors/insights/fundamental-analysis"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -119,10 +120,11 @@ A screen that returns ten banks isn't a portfolio — it's a bet. Apply a sector
 
 A diversified dividend portfolio of these six sectors behaves very differently from a concentrated one — when energy dips, staples still pay.
 
-## A Real Investor's Screening Experience
+## Illustrative Investor's Screening Experience
 
 > "I started by chasing yields and got burned — bought a 9% 'dividend stock' in 2021 that cut its payout to 2% two years later. After that I built a checklist exactly like this: yield under 6%, payout under 80%, at least 10 years of increases, and cash flow that covers the dividend. It's boring, but every name that passes has kept paying. I screen once a quarter with Finviz, spend maybe 20 minutes, and only research the 3-4 stocks that make it through. The screen is what stops me from buying something stupid on impulse."
-> — *Anonymous dividend investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Screen Step | Investor's Filter | Outcome |
 |------------|-------------------|---------|
@@ -132,7 +134,7 @@ A diversified dividend portfolio of these six sectors behaves very differently f
 | Cash flow | Dividend covered | Confirms sustainability |
 | Diversify | Max 25% per sector | Prevents concentration |
 
-*Illustrative investor scenario based on anonymous reader survey responses. Individual results vary.*
+*Illustrative scenario based on the figures and assumptions stated above. Individual results vary.*
 
 ## Dividend Stocks vs. Letting a Fund Screen for You
 

@@ -13,6 +13,7 @@ sources:
   - name: "YieldMax TSLY fund page"
     url: "https://www.yieldmaxetfs.com/our-etfs/tsly/"
     accessed: 2026-08-04
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -145,10 +146,11 @@ Over three years, TSLY's total return has been essentially **zero** — all the 
 
 The contrast with NVDY is the clearest lesson: NVDY's underlying (Nvidia) rose ~7x, so even with capped upside, its huge distributions produced a strong ~56% annualized return. TSLY's underlying (Tesla) was choppier relative to TSLY's payout base, and the result was a ~6% annualized return despite a triple-digit "yield." The difference is entirely the behavior of the underlying stock. See our [NVDY history breakdown](/articles/nvdy-dividend-history/) and [MSTY distribution history](/articles/msty-dividend-history/) for the full comparisons.
 
-## A Real TSLY Investor's Experience
+## Illustrative TSLY Investor's Experience
 
 > "I bought TSLY in early 2023 when the monthly checks were $1.80-2.10 and it felt like free money — $500-600 a month on my $28,000 position. I held through 2024 and 2025 as the payouts shrank and the share price slowly bled. The weekly switch in October 2025 made it easier to ignore, since each check was small. Then I finally looked at the account: I'd collected maybe $14,000 in distributions but my shares were worth about 40% less than I paid. The income was real, but it was largely my own capital coming back. I sold in mid-2026 and put the money into a diversified premium-income fund instead."
-> — *Anonymous TSLY investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Year | Investor's Approx. Monthly Income | TSLY Price Trend |
 |------|----------------------------------|-----------------|

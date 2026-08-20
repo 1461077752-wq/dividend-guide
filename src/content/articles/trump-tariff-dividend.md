@@ -1,11 +1,12 @@
 ---
-title: "Trump Tariff Dividend: The $2,000 Check Proposal vs. the DOGE Dividend"
+title: "Trump Tariff Dividend: $2,000 Proposal Status"
 description: "Trump's tariff dividend proposal explained — the reported $2,000 per person check, how it compares to the DOGE dividend, and why neither has been paid."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Market News"
 tags: ["Trump", "tariff dividend", "DOGE dividend", "dividend check", "tariff revenue"]
 image: "/images/articles/trump-tariff-dividend.webp"
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -87,17 +88,18 @@ Scammers are actively exploiting this topic. Fake "$2,000 tariff refund" message
 
 If a federal household payment is ever created, you won't need to "claim" it through a link — it will be deposited or mailed automatically and tracked through an official IRS tool.
 
-## A Real Household's Perspective
+## Illustrative Household's Perspective
 
 > "I watched both the DOGE dividend and the tariff dividend stories cycle through the news, and I fell for the first one — in early 2025 I genuinely thought a $5,000 check was coming and did some spending planning around it. When nothing arrived, I made a rule: no budget decision based on a headline number. When the tariff dividend came up in late 2025 with the $2,000 figure, I treated it the same way — interesting to watch, but not money until there's a bill and a date. That rule has saved me from two letdowns already."
-> — *Anonymous household, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Proposal | Reported Amount | Did a Check Arrive? |
 |----------|-----------------|---------------------|
 | DOGE dividend (2025) | $5,000 / $2,000 | No |
 | Tariff dividend (2025-26) | $2,000+ | No |
 
-*Illustrative household perspective based on anonymous reader survey responses.*
+*Illustrative household scenario based on the assumptions stated above; not a reader testimonial.*
 
 ## Trump Tariff Dividend Questions, Answered
 

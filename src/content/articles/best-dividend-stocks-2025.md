@@ -15,6 +15,7 @@ sources:
   - name: "SEC EDGAR company filings"
     url: "https://www.sec.gov/edgar/search/"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -101,10 +102,11 @@ The consensus across expert lists ([Morningstar](https://www.morningstar.com/), 
 
 Morningstar's framing is the sharpest: it screens its dividend list for **economic moats and undervalued 4-5 star stocks**, explicitly noting that "the juiciest yields are often illusory." A 6% yield on a company with a shrinking moat is worse than a 2.5% yield on a company raising its dividend for 60 years.
 
-## A Real Dividend Investor's 2025 Experience
+## Illustrative Dividend Investor's 2025 Experience
 
 > "I entered 2025 with a portfolio of about half Aristocrats and half high-yielders — roughly $60,000 in JNJ, KO, ABBV, VZ, and O. The year was a pleasant surprise: JNJ and ABBV both ran hard on healthcare strength, so my quality names delivered big price gains on top of their dividend raises. VZ and O kept paying reliably through the tariff scare in April. By year-end my total return was around 18%, and every one of my ten holdings had raised its dividend. The only stinker was my PG position, which fell 13% despite the raise — it reminded me that dividend quality and stock price aren't the same thing."
-> — *Anonymous dividend investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Position | 2025 Dividend Raise | 2025 Total Return |
 |----------|--------------------|-------------------|

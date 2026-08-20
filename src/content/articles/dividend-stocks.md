@@ -15,6 +15,7 @@ sources:
   - name: "SEC: Beginners' guide to financial statements"
     url: "https://www.sec.gov/oiea/investor-alerts-and-bulletins/ib_financialstatements"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -97,10 +98,11 @@ For most investors, **starting with an ETF is the smarter move.** You get instan
 
 ## A Reader's Real Experience
 
-*Illustrative example based on anonymous responses to our 2026 reader survey. This is an editorial illustration, not a testimonial or an endorsement.*
+*Illustrative example based on the figures and assumptions stated above. This is an editorial illustration, not a testimonial or an endorsement.*
 
 > "I opened my account in 2012 with about $1,500 spread across JNJ, PG, and KO — three names that kept showing up on dividend lists. For the first couple of years my quarterly checks felt almost symbolic, maybe $50-70 each. The hardest part was 2018 and 2020, when my account value dipped and I had to fight the urge to sell even though the dividends kept arriving. By 2024, after regular monthly contributions and DRIP, I was collecting around $300 a month without selling a single share. The discipline paid off, but nobody warns you how boring the first few years feel."
-> — Anonymous reader, survey conducted July 2026
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 The arc this reader describes — a small start, slow first years, and compounding that shows up later — is one we hear often in our community. It is also why the examples above emphasize payout quality over headline yield.
 

@@ -12,6 +12,7 @@ sources:
   - name: "YieldMax MSTY fund page"
     url: "https://www.yieldmaxetfs.com/our-etfs/msty/"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -31,7 +32,8 @@ MSTY pays weekly distributions (monthly at launch), making it popular with incom
 *Calculated based on MSTY share price and monthly distributions per [YieldMax disclosures](https://www.yieldmaxetfs.com/funds/msty/). Figures approximate — distributions vary monthly.*
 
 > "I heard about MSTY from a Reddit post showing $8,000 monthly income. I invested $40,000 and the first check was around $2,800 — incredible. But I watched my share price drift down month after month. By year's end my 'income' minus the loss in position value was barely better than an index fund. It works as a cash flow machine, but the machine slowly eats itself."
-> — *Anonymous MSTY investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 ## Why the Income Number Is Misleading
 

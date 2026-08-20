@@ -1,11 +1,15 @@
 ---
-title: "NVDY Dividend History and Distributions"
-description: "Complete NVDY distribution history since its May 2023 launch — monthly payouts, the 2025 switch to weekly, total return, and why the 62% yield misleads."
+title: "NVDY Dividend History: Weekly Distributions"
+description: "Review NVDY's distribution history since 2023, its switch from monthly to weekly payments, and why headline yield must be compared with total return."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Stock Analysis"
 tags: ["NVDY", "YieldMax", "covered call", "ETF", "Nvidia", "high yield"]
 image: "/images/articles/nvdy-dividend-history.webp"
+primaryKeyword: "NVDY dividend history"
+searchIntent: "informational"
+canonicalHub: "/topics/dividend-etf-history/"
+experienceType: "illustrative"
 author: "Henry Zhou"
 dataAsOf: "2026-08-04"
 methodology: "Distribution history is based on published fund distributions; yield figures are not treated as guaranteed income."
@@ -130,10 +134,11 @@ NVDY is often compared to MSTY (the MicroStrategy version), and the contrast exp
 
 The difference is the underlying. Nvidia has been a strong, rising company — so even with capped upside, NVDY holders collected massive income while NVDA appreciated. MicroStrategy's collapse hammered MSTY harder than its distributions could offset. This is the single most important screen when buying a YieldMax fund: **the income only helps if the underlying doesn't collapse** (see our [MSTY distribution history](/articles/msty-dividend-history/) for the cautionary side).
 
-## A Real NVDY Investor's Experience
+## Illustrative NVDY Investor's Experience
 
 > "I bought NVDY in June 2024 right before the split, attracted by those $2.50 monthly payouts. The income was fantastic at first — about $600 a month on my $28,000 position. What nobody told me was how fast the share price would fall as those 'yield' payments turned out to be largely return of capital. By late 2025 my shares were down over 40%, and the monthly checks had shrunk to around $150. I finally did the math: my total return was actually positive because of the huge 2024 distributions, but it was nowhere near the 60% yield I thought I was getting. I keep a small position now but treat the yield as marketing, not math."
-> — *Anonymous NVDY investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Year | Investor's Approx. Monthly Income | NVDY Price Trend |
 |------|----------------------------------|-----------------|

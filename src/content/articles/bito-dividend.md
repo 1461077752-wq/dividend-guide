@@ -1,11 +1,13 @@
 ---
-title: "BITO Dividend: Why the Yield Is Misleading (and What the Distributions Actually Are)"
-description: "BITO's monthly distributions explained — what the ~46% yield really represents, the 2024–2025 payout history, and why 2026 payouts collapsed to nearly zero."
+title: "BITO Dividend: Payout History and Key Risks"
+description: "See BITO's monthly distribution history, why its trailing yield can mislead, and how futures gains, price declines, and payout volatility affect returns."
 pubDate: 2026-08-10
 modDate: 2026-08-10
 category: "Stock Analysis"
 tags: ["BITO", "ProShares", "bitcoin", "futures ETF", "distribution", "high yield"]
-image: "/images/articles/bito-dividend.webp"
+primaryKeyword: "BITO dividend"
+searchIntent: "informational"
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -85,7 +87,8 @@ BITO is not a bad product if you want leveraged exposure to bitcoin futures with
 ## One BITO Investor's Experience
 
 > "I bought 500 shares of BITO in early 2024, when bitcoin was ripping. That year the fund paid me over $7,000 in distributions — 500 shares times the $14.03 total. I genuinely thought I'd found a machine that printed income while giving me crypto upside. Then 2026 happened: my monthly check fell from hundreds of dollars to about five bucks, and the share price dropped from the low $20s to under $9. I was collecting 'income' while my principal shrank by more than half. The distribution wasn't a dividend — it was the fund paying me back my own gains, and the yield on the screen was telling me the opposite."
-> — *Anonymous BITO investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Period | Distribution/share | Approx. income on 500 shares |
 |--------|-------------------|------------------------------|

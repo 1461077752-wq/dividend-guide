@@ -5,6 +5,7 @@ const root = process.cwd();
 const distDir = path.join(root, 'dist');
 const baseUrl = 'https://dividend01.com';
 const errors = [];
+const warnings = [];
 
 const walk = async directory => {
   const entries = await fs.readdir(directory, { withFileTypes: true });
@@ -19,6 +20,17 @@ const walk = async directory => {
 
 const attr = (html, tag, name) => html.match(new RegExp(`<${tag}[^>]*\\s${name}="([^"]+)"`, 'i'))?.[1];
 const links = html => [...html.matchAll(/<link\s+rel="alternate"\s+hreflang="([^"]+)"\s+href="([^"]+)"/gi)].map(match => ({ lang: match[1], href: match[2] }));
+const routeForFile = file => {
+  const relative = path.relative(distDir, file).replace(/\\/g, '/');
+  if (relative === 'index.html') return '/';
+  return `/${relative.replace(/\/index\.html$/, '/').replace(/\.html$/, '/')}`;
+};
+const normalizeInternalRoute = href => {
+  const pathname = href.split('#')[0].split('?')[0];
+  if (!pathname || pathname === '/') return '/';
+  if (/\.[a-z0-9]+$/i.test(pathname)) return pathname;
+  return pathname.endsWith('/') ? pathname : `${pathname}/`;
+};
 const files = await walk(distDir);
 const pages = [];
 
@@ -34,9 +46,12 @@ for (const file of files) {
   if (noindex) continue;
   if (!title) errors.push(`${relative}: missing title`);
   if (!description) errors.push(`${relative}: missing meta description`);
+  if (!relative.startsWith('zh/') && title?.length > 65) warnings.push(`${relative}: title is ${title.length} characters`);
+  if (!relative.startsWith('zh/') && description && (description.length < 110 || description.length > 165)) warnings.push(`${relative}: description is ${description.length} characters`);
   if (h1Count !== 1) errors.push(`${relative}: expected one H1, found ${h1Count}`);
   if (!canonical || !canonical.startsWith(baseUrl) || canonical.includes('pages.dev')) errors.push(`${relative}: invalid canonical`);
   if (/(pages\.dev|localhost)/i.test(head)) errors.push(`${relative}: preview hostname leaked into metadata`);
+  if (/(Content Review Board|reader survey|reader panel)/i.test(html)) errors.push(`${relative}: unverified editorial or testimonial claim`);
   for (const script of head.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
     try { JSON.parse(script[1]); } catch { errors.push(`${relative}: invalid JSON-LD`); }
   }
@@ -48,7 +63,36 @@ for (const file of files) {
   for (const required of ['en', 'zh-CN', 'x-default']) {
     if (!alternateLinks.some(link => link.lang === required)) errors.push(`${relative}: missing hreflang ${required}`);
   }
-  pages.push({ relative, canonical, alternateLinks });
+  pages.push({ file, relative, route: routeForFile(file), html, title, canonical, alternateLinks });
+}
+
+const duplicateValues = (field, label) => {
+  const grouped = new Map();
+  for (const page of pages) grouped.set(page[field], [...(grouped.get(page[field]) || []), page.relative]);
+  for (const [value, matches] of grouped) {
+    if (value && matches.length > 1) errors.push(`duplicate ${label}: ${value} (${matches.join(', ')})`);
+  }
+};
+duplicateValues('canonical', 'canonical');
+duplicateValues('title', 'title');
+
+const routes = new Set(pages.map(page => page.route));
+for (const page of pages) {
+  for (const match of page.html.matchAll(/\shref="([^"]+)"/gi)) {
+    const href = match[1];
+    if (!href.startsWith('/') || href.startsWith('//')) continue;
+    const route = normalizeInternalRoute(href);
+    if (/\.[a-z0-9]+$/i.test(route)) {
+      const asset = path.join(distDir, route.replace(/^\//, ''));
+      try { await fs.access(asset); } catch { errors.push(`${page.relative}: missing linked asset ${route}`); }
+    } else if (!routes.has(route) && route !== '/404/') {
+      errors.push(`${page.relative}: broken internal link ${route}`);
+    }
+  }
+  for (const match of page.html.matchAll(/(?:src|content)="(https:\/\/dividend01\.com)?(\/images\/[^"]+)"/gi)) {
+    const asset = path.join(distDir, match[2].replace(/^\//, ''));
+    try { await fs.access(asset); } catch { errors.push(`${page.relative}: missing image ${match[2]}`); }
+  }
 }
 
 const sitemap = await fs.readFile(path.join(distDir, 'sitemap.xml'), 'utf8').catch(() => '');
@@ -64,5 +108,10 @@ if (errors.length) {
   console.error(`SEO validation failed with ${errors.length} error(s):`);
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
+}
+if (warnings.length) {
+  console.warn(`SEO validation passed with ${warnings.length} recommendation(s):`);
+  for (const warning of warnings.slice(0, 20)) console.warn(`- ${warning}`);
+  if (warnings.length > 20) console.warn(`- …and ${warnings.length - 20} more`);
 }
 console.log(`SEO validation passed for ${pages.length} indexable HTML pages.`);

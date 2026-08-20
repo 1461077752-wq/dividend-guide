@@ -15,6 +15,7 @@ sources:
   - name: "U.S. Treasury: Daily Treasury Par Yield Curve Rates"
     url: "https://home.treasury.gov/resource-center/data-chart-center/interest-rates"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -75,10 +76,11 @@ When market volatility spikes, option premiums increase, so TLTW's yield rises. 
 
 **4. Capped upside.** The covered calls limit how much TLTW can gain if bond prices rally.
 
-## A Real Investor's Experience
+## Illustrative Investor's Experience
 
 > "I bought TLTW in late 2023 chasing the ~12% yield. The monthly checks were $700-900 on a $90,000 position — real money. But in 2024-2025 when rates stayed elevated, my share price kept sliding and the distributions shrank as volatility calmed. Between the lower checks and the price drop, my actual return over a year was around 3%, not 12%. It's not the 'safe Treasury income' the ads make it sound like."
-> — *Anonymous TLTW investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Period | Advertised Yield | Typical Realistic Outcome |
 |--------|-----------------|--------------------------|

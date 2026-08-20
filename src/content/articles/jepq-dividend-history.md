@@ -13,6 +13,7 @@ sources:
   - name: "J.P. Morgan JEPI and JEPQ fund resources"
     url: "https://am.jpmorgan.com/us/en/asset-management/adv/products/jpmorgan-nasdaq-equity-premium-income-etf-jepq/"
     accessed: 2026-08-04
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -159,10 +160,11 @@ In both cases, JEPQ fell substantially — but not as much as the unhedged Nasda
 
 JEPQ's combination — the longest track record among the modern "buy-write" Nasdaq funds, a competitive yield, price stability, and the lowest expense ratio of the three — is why it remains the most popular premium-income ETF. QQQI offers more yield and better tax treatment but charges double the fee and has half the history. We cover QQQI's record in [our QQQI history breakdown](/articles/qqqi-dividend-history/).
 
-## A Real JEPQ Investor's Experience
+## Illustrative JEPQ Investor's Experience
 
 > "I've held JEPQ since early 2023 and the monthly distributions have been my most reliable income stream. On my $60,000 position the checks run about $480-540 a month now, up from around $400 when I started — the distribution has grown every year. The scary part was April 2025 when the price dropped almost 25% in a few weeks; I considered selling but the monthly payout never stopped, and the price recovered by year-end. Looking back, the distributions alone have paid me back over 20% of my original investment in under three years."
-> — *Anonymous JEPQ investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Year | Investor's Approx. Monthly Income | Annual Total |
 |------|----------------------------------|--------------|

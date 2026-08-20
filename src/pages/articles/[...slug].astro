@@ -40,9 +40,18 @@ const relatedArticles = (await getCollection('articles'))
   .sort((a, b) => b.score - a.score || b.candidate.data.pubDate.valueOf() - a.candidate.data.pubDate.valueOf())
   .slice(0, 4)
   .map(item => item.candidate);
+const topicGuides: Record<string, Array<{ href: string; label: string; description: string }>> = {
+  'schd-dividend': [
+    { href: '/articles/schd-dividend/', label: 'SCHD overview', description: 'Current distribution, fund design, and key risks' },
+    { href: '/articles/schd-dividend-history/', label: 'SCHD dividend history', description: 'Split-adjusted annual and quarterly payments' },
+    { href: '/articles/schd-dividend-yield/', label: 'SCHD yield', description: 'Current yield, historical range, and ETF comparison' },
+  ],
+};
+const topicGuideKey = article.id.startsWith('schd-dividend') ? 'schd-dividend' : '';
+const topicGuide = topicGuides[topicGuideKey];
 ---
 <ArticleLayout
-  title={`${article.data.title} - Dividend Guide`}
+  title={article.data.title}
   description={article.data.description}
   canonical={`https://dividend01.com/articles/${article.id}/`}
   pubDate={pubDate}
@@ -83,6 +92,16 @@ const relatedArticles = (await getCollection('articles'))
       <img src={article.data.image} alt={article.data.title} class="article-cover" loading="eager">
     )}
   </div>
+  {topicGuide && (
+    <aside class="article-research-notes" aria-labelledby="topic-guide-heading">
+      <h2 id="topic-guide-heading">Choose the right SCHD research page</h2>
+      <ul>
+        {topicGuide.map(item => (
+          <li><a href={item.href} aria-current={item.href === `/articles/${article.id}/` ? 'page' : undefined}>{item.label}</a>: {item.description}</li>
+        ))}
+      </ul>
+    </aside>
+  )}
   <article class="article-content article-content-en" data-article-body="en">
     <Content />
   </article>

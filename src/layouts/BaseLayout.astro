@@ -76,7 +76,7 @@ const normalizeUrl = (value: string) => {
   return parsed.toString();
 };
 const pageUrl = normalizeUrl(canonical || `https://dividend01.com${currentPath}`);
-const ogImage = image || 'https://dividend01.com/images/og-default.jpg';
+const ogImage = image || 'https://dividend01.com/images/dividend-hero.jpg';
 const alternateLinks = alternates || (isNotFoundPage ? [] : [
   { hreflang: 'en' as const, href: englishUrl },
   { hreflang: 'zh-CN' as const, href: chineseUrl },
@@ -123,10 +123,7 @@ const alternateLinks = alternates || (isNotFoundPage ? [] : [
       "name": "Dividend Guide",
       "url": "https://dividend01.com",
       "description": "A practical, step-by-step guide to dividend investing.",
-      "sameAs": [
-        "https://twitter.com/dividendguide",
-        "https://github.com/dividendguide"
-      ]
+      "logo": "https://dividend01.com/favicon.svg"
     },
     {
       "@context": "https://schema.org",

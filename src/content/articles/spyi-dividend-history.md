@@ -6,6 +6,7 @@ modDate: 2026-08-04
 category: "Stock Analysis"
 tags: ["SPYI", "NEOS", "covered call", "ETF", "high yield", "S&P 500", "1256"]
 image: "/images/articles/spyi-dividend-history.webp"
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -97,10 +98,11 @@ This is the combination that makes SPYI attractive: **JEPI's S&P 500 exposure, b
 
 SPYI is the middle ground investors often overlook: **JEPI's S&P 500 index with QQQI's tax-advantaged engine.** It yields ~11.6% (well above JEPI's ~8%) and carries the 60/40 tax treatment that ELN-based JEPI lacks. Compared to QQQI, it trades a lower yield (~12% vs ~14%) for the stability of the broader S&P 500 index.
 
-## A Real SPYI Investor's Experience
+## Illustrative SPYI Investor's Experience
 
 > "I chose SPYI over JEPI in 2023 after learning about the 1256 tax treatment — I hold it in a taxable account, so the 60/40 rates were the deciding factor. With $60,000 invested, the monthly checks have been almost boringly consistent — $550 to $600 almost every month. The April 2025 tariff selloff scared me for a week, but the distribution barely dipped and the price recovered. After three years my yield on cost is around 12% and the total return has beaten what I'd have gotten from JEPI in the same period, mostly because of the tax savings."
-> — *Anonymous SPYI investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Period | SPYI Distribution Yield | Approx. Total Return |
 |--------|------------------------|---------------------|
