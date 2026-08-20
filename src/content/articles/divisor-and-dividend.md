@@ -1,6 +1,6 @@
 ---
 title: "Dividend vs. Divisor: What Each Term Means in Math and Investing"
-description: "Clarify the difference between a dividend (the payout you receive, or the number being divided) and a divisor (the number you divide by, or an index's scaling factor) — with investing examples."
+description: "Learn how dividend and divisor differ in math and investing, with examples covering division problems, shareholder payouts and stock-index calculations."
 pubDate: 2026-08-19
 modDate: 2026-08-19
 category: "Basics"
@@ -124,6 +124,6 @@ S&P Dow Jones Indices publishes index-math methodology documents describing exac
 
 Understanding the dividend/divisor distinction helps you read both math problems and financial ratios correctly. To go further, read [what are dividends](/articles/what-are-dividends/) for the payout basics, explore [dividend yield](/articles/dividend-yield/) to see how price acts as the divisor in your return, and browse our [strategy](/strategy) section for putting it all together.
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies all data against SEC filings, company investor relations materials, and S&P Dow Jones Indices data before publication.*
+*Research note: the author checked the cited figures against SEC filings, company investor relations materials, and S&P Dow Jones Indices data before publication.*
 
 *Last updated: 2026-08-19. This article is for informational purposes only and does not constitute financial advice. Past dividend performance does not guarantee future results. Always consult a financial advisor before making investment decisions.*

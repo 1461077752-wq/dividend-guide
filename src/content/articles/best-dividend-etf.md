@@ -1,11 +1,14 @@
 ---
-title: "Best Dividend ETFs in 2026: SCHD, VYM, VIG, and High-Yield Picks Compared"
-description: "The best dividend ETFs of 2026 compared — SCHD, VYM, VIG, DGRO, HDV, and JEPI by yield, dividend growth, fees, and holdings, matched to your income goal."
+title: "Best Dividend ETFs for 2026: Six Funds Compared"
+description: "Compare six dividend ETFs for 2026 by yield, fees, diversification, dividend growth and income strategy, including SCHD, VYM, VIG and JEPI."
 pubDate: 2026-08-10
 modDate: 2026-08-10
 category: "Stock Analysis"
 tags: ["dividend ETF", "SCHD", "VYM", "VIG", "JEPI", "HDV", "DGRO", "passive income"]
-image: "/images/articles/best-dividend-etf.webp"
+primaryKeyword: "best dividend ETFs"
+searchIntent: "comparison"
+canonicalHub: "/topics/dividend-etf-history/"
+experienceType: "illustrative"
 draft: false
 ---
 

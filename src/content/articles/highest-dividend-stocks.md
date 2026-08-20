@@ -15,6 +15,7 @@ sources:
   - name: "Investor.gov: Closed-end funds"
     url: "https://www.investor.gov/introduction-investing/investing-basics/investment-products/closed-end-funds"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -104,17 +105,18 @@ The most extreme advertised yields come from covered-call ETFs. These are distri
 
 MSTY is the extreme: a 249% trailing yield because its price fell from a $99 high to ~$12.50 while the weekly payouts continued. The [dividend history](/articles/msty-dividend-history/) tells the real story — and NVDY, which we cover separately in [our NVDY analysis](/articles/nvdy-dividend-history/), is the rare case where the underlying (Nvidia) rallied enough to deliver positive total return despite capped upside.
 
-## A Real Ultra-High-Yield Investor's Regret
+## Illustrative Ultra-High-Yield Investor's Regret
 
 > "In 2023 I put $30,000 into a closed-end fund advertising a 20% yield — it seemed like free money next to my 3% dividend stocks. Two years later the distribution had been cut twice, the share price was down 55%, and even with everything reinvested I was down about 30% overall. The '20% yield' was mostly return of capital — they were paying me my own money back and calling it income. I sold, took the loss, and put the rest into SCHD and a couple of BDCs that actually cover their payouts. Lesson learned: if a yield looks too good to be true, it's usually your capital being returned to you in disguise."
-> — *Anonymous investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Investor's Move | Advertised Yield | Real Result |
 |----------------|-----------------|-------------|
 | Bought 20% CEF | 20% | −30% total return over 2 years |
 | Rebuilt with SCHD + covered BDCs | ~5% | Sustainable income |
 
-*Illustrative investor scenario based on anonymous reader survey responses. Individual results vary.*
+*Illustrative scenario based on the figures and assumptions stated above. Individual results vary.*
 
 ## How to Screen "Highest Dividend" Stocks Safely
 

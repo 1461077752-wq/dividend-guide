@@ -23,9 +23,10 @@ const reviewDate = (englishArticle.data.reviewDate || englishArticle.data.modDat
 const relatedArticles = (await getCollection('articleTranslations'))
   .filter(candidate => candidate.id !== translation.id)
   .slice(0, 3);
+const isSchdGuide = translation.id.startsWith('schd-dividend');
 ---
 <ArticleLayout
-  title={`${translation.data.title} - 股息投资指南`}
+  title={translation.data.title}
   description={translation.data.description}
   canonical={`https://dividend01.com/zh/articles/${translation.id}/`}
   pubDate={pubDate}
@@ -55,6 +56,16 @@ const relatedArticles = (await getCollection('articleTranslations'))
     </div>
     {englishArticle.data.image && <img src={englishArticle.data.image} alt={translation.data.title} class="article-cover" loading="eager">}
   </div>
+  {isSchdGuide && (
+    <aside class="article-research-notes" aria-labelledby="topic-guide-heading">
+      <h2 id="topic-guide-heading">选择对应的 SCHD 研究页面</h2>
+      <ul>
+        <li><a href="/zh/articles/schd-dividend/">SCHD 总览</a>：当前派息、基金机制与主要风险</li>
+        <li><a href="/zh/articles/schd-dividend-history/">SCHD 派息历史</a>：拆股调整后的年度与季度派息</li>
+        <li><a href="/zh/articles/schd-dividend-yield/">SCHD 收益率</a>：当前收益率、历史区间与 ETF 对比</li>
+      </ul>
+    </aside>
+  )}
   <article class="article-content article-content-zh"><Content /></article>
   <aside class="article-research-notes">
     <h2>来源与方法</h2>

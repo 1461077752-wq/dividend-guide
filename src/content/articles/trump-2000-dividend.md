@@ -1,6 +1,6 @@
 ---
 title: "Trump's $2,000 Dividend: The DOGE Check Proposal, Explained"
-description: "What the proposed Trump dividend checks are, the DOGE savings plan behind them, reported amounts, eligibility, and what investors should know before counting on them."
+description: "Learn what the proposed Trump dividend check is, how DOGE savings were meant to fund it, who might qualify, and why no payment should be assumed."
 pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Market News"
@@ -15,6 +15,7 @@ sources:
   - name: "U.S. Government Accountability Office"
     url: "https://www.gao.gov/"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -104,7 +105,8 @@ A prudent approach is to treat any potential payment as a **windfall, not income
 ## A Household Perspective
 
 > "When the $5,000 dividend was all over the news in February 2025, my wife and I started planning a $3,800 anniversary vacation around it — before any bill had even been introduced. We quickly learned that's the wrong move. Nothing was actually passed, and we were reminded of the COVID rounds: our first $1,200 stimulus check arrived only after months of negotiation, and only because a law had been signed. By mid-2026 we stopped following the headlines altogether. The lesson: only plan around money that's already in your bank account."
-> — *Anonymous household, Dividend Guide reader survey (collected May 2026; household reported no dividend income planned from the proposal)*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 ## Common Questions About the Proposed $2,000 Dividend
 

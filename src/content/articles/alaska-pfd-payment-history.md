@@ -12,6 +12,7 @@ sources:
   - name: "Alaska Department of Revenue: PFD history"
     url: "https://pfd.alaska.gov/Division-Info/History"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -92,7 +93,8 @@ Because it's an average of five years, the PFD smooths out year-to-year volatili
 ## A Long-Time Recipient's Perspective
 
 > "I've received every PFD since 1990, so I've seen the full range — from the $331 checks in the 80s to the $3,284 in 2022. I always tell younger Alaskans: never count the money before it's paid. In 2016 the Legislature cut the formula and payments dropped by half overnight. I use the check as a bonus, not a salary — invest a chunk and only spend what's left."
-> — *Anonymous Alaskan, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Decade | Typical Payment | Trend |
 |--------|----------------|-------|

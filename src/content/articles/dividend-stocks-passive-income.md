@@ -12,6 +12,7 @@ sources:
   - name: "Investor.gov: Investing basics"
     url: "https://www.investor.gov/introduction-investing"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -59,10 +60,11 @@ Here's a realistic $100,000 passive income portfolio:
 
 **The key:** this portfolio earns ~$258/month today. With 6% dividend growth and reinvestment, that same portfolio projects to ~$500/month in 10 years and ~$1,000/month in 20 years — without adding a dollar.
 
-## A Real Passive Income Story
+## Illustrative Passive Income Story
 
 > "I set a goal in 2015 to reach $1,000/month in dividends by the time I retired. I started with $15,000 and added $500 monthly, reinvesting every check. By 2020 I was at $260/month. By 2024, $680/month. I crossed $1,000/month in early 2026 — it took 11 years, but the income is now mine forever. The hardest part was staying invested through 2022 when everything dropped 15%+. Keeping the monthly contributions automatic is the only reason I made it."
-> — *Anonymous reader, Dividend Guide passive income survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Year | Portfolio Value | Monthly Dividend Income |
 |------|----------------|----------------------|

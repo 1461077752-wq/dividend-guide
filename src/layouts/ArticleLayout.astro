@@ -49,7 +49,7 @@ const normalizeUrl = (value: string) => {
 const pageUrl = normalizeUrl(canonical || `https://dividend01.com${currentPath}`);
 const ogImage = image
   ? (image.startsWith('http') ? image : `https://dividend01.com${image}`)
-  : 'https://dividend01.com/images/og-default.jpg';
+  : 'https://dividend01.com/images/dividend-hero.jpg';
 const breadcrumbItems = [
   { name: 'Home', url: locale === 'zh' ? 'https://dividend01.com/zh/' : 'https://dividend01.com/' },
   { name: 'Articles', url: locale === 'zh' ? 'https://dividend01.com/zh/articles/' : 'https://dividend01.com/articles/' },

@@ -15,6 +15,7 @@ sources:
   - name: "S&P Dow Jones Indices: S&P 500"
     url: "https://www.spglobal.com/spdji/en/indices/equity/sp-500/"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -105,17 +106,18 @@ The textbook warning case is a company whose price collapses while it clings to 
 
 The screen that catches this: check the **payout ratio** (dividends ÷ earnings). Under 60% is comfortable, 60–80% deserves scrutiny, above 80% is a warning — and over 100% is almost never sustainable per [Investopedia's payout ratio guide](https://www.investopedia.com/terms/d/dividendpayoutratio.asp). A high yield plus a high payout ratio is a trap dressed as a bargain.
 
-## A Real Investor's Yield Lesson
+## Illustrative Investor's Yield Lesson
 
 > "When I started, I sorted my brokerage screen by dividend yield and bought the biggest numbers — a 9% telecom and a 7% oil company. Within two years one cut its dividend and the other's share price had fallen 30%, so my 'yield' was imaginary. I finally learned to flip the question: instead of 'how much do they pay?' I ask 'can they keep paying?' Now I target 2-4% yields with 20+ year growth streaks, and my actual income is more stable than when I chased double the yield."
-> — *Anonymous dividend investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Investor's Approach | Starting Yield | Result |
 |--------------------|----------------|--------|
 | Chased 7-9% yields | 9% | Dividend cut, price fell |
 | Switched to 2-4% growth | 3% | Income grew, fewer surprises |
 
-*Illustrative investor scenario based on anonymous reader survey responses. Individual results vary.*
+*Illustrative scenario based on the figures and assumptions stated above. Individual results vary.*
 
 The lesson isn't "low yield is better" — it's that yield must be evaluated **together with** payout ratio, dividend growth, and price stability. A high yield with a falling price is often high risk wearing a high yield.
 

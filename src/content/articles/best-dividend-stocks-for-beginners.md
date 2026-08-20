@@ -15,6 +15,7 @@ sources:
   - name: "S&P Dow Jones Indices: Dividend Aristocrats methodology"
     url: "https://www.spglobal.com/spdji/en/indices/strategy/sp-500-dividend-aristocrats/"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -51,7 +52,7 @@ Not all dividend stocks are beginner-friendly. The best options share three trai
 - **Payout ratio** tells you how much of a company's earnings go to dividends — lower is safer.
 - **Dividend growth streak** tells you how many consecutive years the payout has increased. 25+ years earns the Dividend Aristocrat title.
 
-## A Real Beginner's Portfolio: $5,000 Starting in 2020
+## Illustrative Beginner's Portfolio: $5,000 Starting in 2020
 
 Here is the single most useful example on this page — a realistic projection of what happens when a new investor puts **$5,000** into SCHD in January 2020 and adds **$200 per month**. Notice how dividend income nearly doubles every two years even during volatile markets.
 
@@ -70,7 +71,8 @@ Here is the single most useful example on this page — a realistic projection o
 > **The key takeaway:** by 2026, that original $5,000 plus monthly contributions of $200 produced an estimated $1,080 per year in passive income — without touching the principal. Run your own numbers with our [Dividend Calculator](/calculator) to see what your monthly budget could become.
 
 > "I started with $5,000 in SCHD during the COVID crash in 2020. The first year I only got about $210 in dividends — felt almost pointless. But by year three, the monthly contributions and reinvestments started to snowball. Now in 2026 my dividends cover my phone bill every month without touching the principal. The hardest part was not panic-selling in 2022 when the portfolio dropped 19%."
-> — *Anonymous investor survey, Dividend Guide reader panel*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 ## Key Metrics Every Beginner Must Understand
 

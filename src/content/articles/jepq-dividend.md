@@ -1,11 +1,15 @@
 ---
-title: "JEPQ Dividend: Yield, Distribution History, and Is It Worth It?"
-description: "JEPQ's monthly distributions, current yield, distribution history, how the Nasdaq Premium Income ETF works, and how it compares to other income funds."
+title: "JEPQ Dividend: Monthly Income, Yield and Risks"
+description: "Review JEPQ's monthly distributions, current yield, ELN option-income strategy and key trade-offs before comparing it with other income ETFs."
 pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Stock Analysis"
 tags: ["JEPQ", "JPMorgan", "premium income", "ETF", "covered call"]
 image: "/images/articles/jepq-dividend.webp"
+primaryKeyword: "JEPQ dividend"
+searchIntent: "informational"
+canonicalHub: "/topics/dividend-etf-history/"
+experienceType: "illustrative"
 dataAsOf: "2026-08-07"
 methodology: "Distribution and yield figures use the latest J.P. Morgan fund disclosures available on the stated date; future payouts are not estimated."
 sources:
@@ -58,10 +62,11 @@ JEPQ pays monthly. Distributions have been relatively stable compared to single-
 
 Both use the same premium income strategy, but JEPQ holds growth-heavy Nasdaq stocks. JEPQ's distributions are typically higher because Nasdaq-100 stocks are more volatile, generating more option premium.
 
-## A Real JEPQ Investor's Experience
+## Illustrative JEPQ Investor's Experience
 
 > "I split my income portfolio between JEPQ and JEPI in 2023. The monthly checks from JEPQ averaged $400-500 on $60,000 invested — noticeably higher than JEPI. What surprised me was how well the price held up; it didn't crater like some of the YieldMax funds I'd read about. My total return over two years was around 15% including the distributions. It's become my favorite for growth-plus-income."
-> — *Anonymous JEPQ investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Period | JEPQ Yield | Approx. Total Return |
 |--------|-----------|---------------------|

@@ -1,11 +1,15 @@
 ---
-title: "SCHD Dividend Yield: Current Rate, History, and How It Compares"
-description: "SCHD's current dividend yield, historical yield range, yield on cost vs market yield, and how it compares to other dividend ETFs."
+title: "SCHD Dividend Yield: History and ETF Comparison"
+description: "Compare SCHD's current dividend yield with its historical range and competing ETFs, and learn how market yield differs from yield on cost."
 pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Stock Analysis"
 tags: ["SCHD", "dividend yield", "yield on cost", "dividend ETF"]
 image: "/images/articles/schd-dividend-yield.webp"
+primaryKeyword: "SCHD dividend yield"
+searchIntent: "comparison"
+canonicalHub: "/topics/dividend-etf-history/"
+experienceType: "illustrative"
 author: "Henry Zhou"
 dataAsOf: "2026-07-30"
 methodology: "Yield is calculated from the stated annual distribution and the closing price on the cited date."
@@ -77,10 +81,11 @@ SCHD's yield has moved in a band as its price and dividend have both grown:
 
 *Approximate historical yields per market data. Yield rises when price falls, and falls when price rises — the same dividend pays a different percentage.*
 
-## A Real SCHD Investor's Perspective
+## Illustrative SCHD Investor's Perspective
 
 > "People ask me why I'd pick a 3.4% yield when there are 6%+ funds out there. I've held SCHD since 2017, so my yield on cost is over 6% now. The higher-yield funds I tried kept cutting or their share price kept sliding. SCHD has raised its dividend every single year since launch and my cost basis keeps dropping relative to the income. Slow and steady wins this race."
-> — *Anonymous SCHD investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 ## Common SCHD Yield Questions
 

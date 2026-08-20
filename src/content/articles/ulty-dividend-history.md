@@ -1,5 +1,5 @@
 ---
-title: "ULTY Dividend History: YieldMax Ultra Option Income ETF Distributions"
+title: "ULTY Dividend History: Distributions and Risks"
 description: "ULTY distribution history, how the YieldMax Ultra Option Income Strategy ETF pays, its high yield, and the risks of this aggressive covered-call fund."
 pubDate: 2026-07-30
 modDate: 2026-07-30
@@ -12,6 +12,7 @@ sources:
   - name: "YieldMax ULTY fund page"
     url: "https://www.yieldmaxetfs.com/our-etfs/ulty/"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -56,10 +57,11 @@ Per [SEC fund disclosure standards](https://www.sec.gov/), investors should dist
 
 **The core problem:** ULTY pays high distributions but the share price has trended down since its 2024 launch. When you divide a large distribution by a shrinking price, the "yield" balloons — even though investors may be losing money on a total-return basis.
 
-## A Real ULTY Investor's Experience
+## Illustrative ULTY Investor's Experience
 
 > "ULTY looked amazing in 2024 — I saw a 50%+ yield and put in $30,000. For nine months the monthly payments averaged $400-600, which felt great. Then I finally looked at my total account value: it was barely above $24,000. The distributions had been returning my own capital back to me. I learned the hard way that with these funds, yield is not total return."
-> — *Anonymous YieldMax investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Period | Distributions Received | Share Price Change | Approx. Net Effect |
 |--------|----------------------|-------------------|-------------------|

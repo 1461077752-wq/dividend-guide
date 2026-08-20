@@ -12,6 +12,7 @@ sources:
   - name: "Investor.gov: Dividends"
     url: "https://www.investor.gov/introduction-investing/investing-basics/glossary/dividend"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -61,10 +62,11 @@ Most new investors overestimate how fast dividend income grows. Here's a realist
 
 Notice the key insight: after 30 years, only $180,000 of your own money was contributed, but the portfolio is worth $510,000. **Compounding — not contributions — does the heavy lifting in the later years.**
 
-## A Real Dividend Income Story: $300 to $900 Per Month in 8 Years
+## Illustrative Dividend Income Story: $300 to $900 Per Month in 8 Years
 
 > "I started seriously in 2018 with $20,000 in SCHD and JNJ. For the first two years, my dividends were $60-80 a month — honestly depressing. But I kept adding $300 monthly and reinvesting every check. By 2023 I was pulling $380/month. In 2026, I'm collecting about $900 a month from a portfolio worth $245,000. The hardest part was 2022 — watching the account drop 14% while I kept buying. Staying consistent through that year is why I'm here now."
-> — *Anonymous reader, Dividend Guide portfolio survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 > **The takeaway:** consistent $300 monthly contributions plus full dividend reinvestment turned a $20,000 start into a $245,000 portfolio paying $900/month — even while the account dropped 14% in 2022.
 

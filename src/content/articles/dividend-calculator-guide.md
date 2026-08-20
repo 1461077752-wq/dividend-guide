@@ -12,6 +12,7 @@ sources:
   - name: "Investor.gov: Compound Interest Calculator"
     url: "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
     accessed: 2026-08-07
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -89,7 +90,8 @@ Here's what a dividend calculator outputs for a realistic scenario:
 **The key takeaway:** after 30 years, only $154,000 came from your own contributions ($10,000 + $400×360 months). The remaining $541,000 came from compounding. Your income grew from $0 to $2,540/month.
 
 > "I started using a dividend calculator in 2019 when my portfolio was only $23,000. Running the projections monthly is what made me actually commit to the $450 auto-transfer. Five years later the calculator said I'd be around $150/month in dividends — I was at $138, so close it almost felt scripted. The single most useful number was yield on cost, because it showed my SCHD stake effectively yielding 6% against what I originally paid."
-> — *Anonymous Dividend Guide reader, calculator user survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 ## How to Use the Dividend Guide Calculator
 

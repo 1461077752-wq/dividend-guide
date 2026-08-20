@@ -1,11 +1,12 @@
 ---
-title: "QQQI Dividend: Yield, Is It Worth It, and What to Know Before Buying"
+title: "QQQI Dividend: Yield, Tax Treatment and Risks"
 description: "QQQI's ~14% dividend yield explained — how the NEOS Nasdaq 100 High Income ETF generates income, the tax advantages, risks, and whether it's worth it."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Stock Analysis"
 tags: ["QQQI", "NEOS", "high yield", "covered call", "ETF", "dividend income"]
 image: "/images/articles/qqqi-dividend.webp"
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -83,10 +84,11 @@ QQQI fell in 2025's volatility (the April 2025 distribution dipped to ~$0.53/sha
 
 The decision framework: **QQQI for the highest income with Nasdaq growth exposure, JEPQ for balance with a lower fee, SPYI for S&P 500 stability with the same tax advantage.** Our [SPYI history](/articles/spyi-dividend-history/) and [JEPQ history](/articles/jepq-dividend-history/) cover the alternatives.
 
-## A Real QQQI Investor's Decision Process
+## Illustrative QQQI Investor's Decision Process
 
 > "Before I bought QQQI I almost went with JEPQ because it was cheaper and more established. What changed my mind was the tax math: my tax bracket makes ordinary-income distributions brutal, and QQQI's 60/40 treatment plus return of capital means more of the 14% stays mine. I put $40,000 in — the monthly checks have been $430-470, and at tax time the hit was much smaller than my JEPQ holdings. My one rule is I keep it capped at 10% of my portfolio because it's still a covered-call fund and I don't trust a 14% yield through a full bear market."
-> — *Anonymous QQQI investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Investor's Check | QQQI | JEPQ (alternative) |
 |------------------|------|-------------------|

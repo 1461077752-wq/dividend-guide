@@ -1,12 +1,15 @@
 ---
-title: "Ford (F) Dividends: History, Yield, and What the 2026 Payout Really Means"
-description: "A data-driven look at Ford Motor (F) dividends — current $0.15 quarterly payout, ~4.1% yield, 5-year growth, payout-ratio swings, and how it compares with GM, Toyota, and Honda."
+title: "Ford Dividend: 2026 Yield, History and Risks"
+description: "Review Ford's 2026 dividend, quarterly payment history, yield, payout coverage and cyclical risks, with source dates and comparisons to major automakers."
 pubDate: 2026-08-19
 modDate: 2026-08-19
 category: "Stock Analysis"
 tags: ["Ford", "F", "dividend history", "dividend yield", "auto stocks"]
 author: "Henry Zhou"
 authorRole: "Independent Dividend Researcher"
+primaryKeyword: "Ford dividend"
+searchIntent: "informational"
+experienceType: "none"
 review: "Facts, data sources, and calculations personally verified by the author"
 reviewDate: 2026-08-19
 dataAsOf: "2026-08-19"
@@ -156,6 +159,6 @@ Ford's own [Investor Relations](https://shareholder.ford.com/Information/stock/d
 
 Ford offers a moderate, cyclical yield backed by a two-layer dividend structure. Before adding it to an income portfolio, check the [dividend yield](/articles/dividend-yield/) explainer to see how price moves change your real return, browse our [stock list](/stocks) for comparisons, and run your numbers through the [dividend calculator](/calculator).
 
-*Reviewed by the Dividend Guide Content Review Board. Our editorial process verifies all data against SEC filings, company investor relations materials, and S&P Dow Jones Indices data before publication.*
+*Research note: the author checked the cited figures against SEC filings, company investor relations materials, and S&P Dow Jones Indices data before publication.*
 
 *Last updated: 2026-08-19. This article is for informational purposes only and does not constitute financial advice. Past dividend performance does not guarantee future results. Always consult a financial advisor before making investment decisions.*

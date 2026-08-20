@@ -1,11 +1,11 @@
 ---
-title: "Warrior Dividend: The Strategy Behind Building a Dividend Income Battle Plan"
-description: "Warrior dividend strategy explained: the screening checklist, core-satellite structure, DRIP discipline, and real investor scenarios for building reliable passive income."
+title: "Warrior Dividend Strategy: Portfolio Checklist"
+description: "Use the Warrior Dividend framework to screen holdings, define a core-satellite allocation, apply DRIP rules and model a disciplined income portfolio."
 pubDate: 2026-08-10
 modDate: 2026-08-10
 category: "Strategy"
 tags: ["warrior dividend", "dividend strategy", "passive income", "DRIP", "dividend growth", "high yield"]
-image: "/images/articles/warrior-dividend.webp"
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -64,12 +64,13 @@ One structural rule matters: keep the satellites small. High-yield names such as
 
 The warrior approach sits between pure dividend growth and pure high yield: it accepts a mid-range yield today to get both current income and future income growth. Full detail on the five core dividend strategies — including DRIP, growth, high yield, Dogs of the Dow, and covered calls — is in our [dividend strategies guide](/strategy).
 
-## A Real Dividend Warrior's Portfolio
+## Illustrative Dividend Warrior's Portfolio
 
 Here is a representative scenario drawn from the way experienced dividend investors describe their early years — built around a starting lump sum, regular contributions, and a single bad habit that had to be broken.
 
 > "I started in March 2020, right at the bottom of the COVID crash. I put $20,000 into SCHD, KO, and O, then committed to $400 a month. The first full year I collected about $610 in dividends and honestly considered selling — watching the account barely move while friends bragged about Tesla felt pointless. What kept me in was a spreadsheet. Every quarter I wrote down the dividend income, not the account value. By 2025 the annual dividends had crossed $1,600, and the shares I bought during the 2022 bear market are the ones paying the most today. My one rule I never broke: never turn DRIP off just because the market is down."
-> — *Anonymous dividend warrior, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Year | Annual dividend income | Cumulative dividends |
 |------|----------------------|---------------------|

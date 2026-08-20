@@ -6,6 +6,7 @@ modDate: 2026-08-04
 category: "Stock Analysis"
 tags: ["JEPI", "JPMorgan", "premium income", "ETF", "covered call", "S&P 500"]
 image: "/images/articles/jepi-dividend.webp"
+experienceType: "illustrative"
 draft: false
 ---
 
@@ -91,10 +92,11 @@ JEPQ pays more (~11% vs ~8%) because Nasdaq-100 options carry richer premiums, b
 
 SPYI is the tax-efficient challenger: it uses exchange-traded SPX index options with Section 1256 treatment (60/40 tax rates) instead of ELNs, which lets it yield ~11.6% versus JEPI's ~8% — and its distributions are largely classified as return of capital rather than ordinary income. See [our SPYI dividend history](/articles/spyi-dividend-history/) for the full record.
 
-## A Real JEPI Investor's Experience
+## Illustrative JEPI Investor's Experience
 
 > "I put JEPI in my taxable account in 2022 thinking the 8% monthly income was a no-brainer — $350-400 a month on my $55,000 position. What I didn't factor in was taxes: most of the distributions came through as ordinary income, so a big chunk went to the IRS. I later moved the core of the position into my IRA where the tax hit doesn't matter, and kept a smaller slice in the taxable account. The income itself has been rock steady — even in 2022's chaos the checks never stopped — but the tax bill was the lesson I wish I'd learned before I bought."
-> — *Anonymous JEPI investor, Dividend Guide reader survey*
+
+> *Illustrative scenario based on the article assumptions; not a reader testimonial.*
 
 | Year | Approx. Monthly Income on $55k | Notes |
 |------|-------------------------------|-------|
