@@ -48,7 +48,7 @@
 
 1. 中文文章输出到 `/zh/articles/{slug}/`，每个 URL 返回完整中文主体内容。
 2. 中文页面的 `<html lang>` 设为 `zh-CN`。
-3. 中文页面 canonical 指向自身，例如：`https://dividend01.com/zh/articles/schd-dividend/`。
+3. 中文页面 canonical 指向自身，例如：`https://www.dividend01.com/zh/articles/schd-dividend/`。
 4. 英文与中文页面互相输出 hreflang：
 
    - 英文：`en`、`zh-CN`、`x-default`

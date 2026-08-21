@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && node scripts/build-zh-site.mjs && node scripts/generate-sitemap.mjs && node scripts/validate-seo-build.mjs",
-    "build:english": "astro build",
+    "build:english": "astro build && node scripts/generate-sitemap.mjs && node scripts/validate-seo-build.mjs",
     "build:localized": "npm run build",
     "preview": "astro preview",
     "data:update": "node scripts/update-market-data.mjs",

@@ -80,16 +80,16 @@
 对于英文路径 `/{path}/`：
 
 ```text
-英文 URL：https://dividend01.com/{path}/
-中文 URL：https://dividend01.com/zh/{path}/
-x-default：https://dividend01.com/{path}/
+英文 URL：https://www.dividend01.com/{path}/
+中文 URL：https://www.dividend01.com/zh/{path}/
+x-default：https://www.dividend01.com/{path}/
 ```
 
 首页对应关系：
 
 ```text
-英文：https://dividend01.com/
-中文：https://dividend01.com/zh/
+英文：https://www.dividend01.com/
+中文：https://www.dividend01.com/zh/
 ```
 
 规则：
@@ -120,10 +120,10 @@ interface SeoLocaleProps {
 页面 `<head>` 输出示例：
 
 ```html
-<link rel="canonical" href="https://dividend01.com/zh/articles/what-are-dividends/">
-<link rel="alternate" hreflang="en" href="https://dividend01.com/articles/what-are-dividends/">
-<link rel="alternate" hreflang="zh-CN" href="https://dividend01.com/zh/articles/what-are-dividends/">
-<link rel="alternate" hreflang="x-default" href="https://dividend01.com/articles/what-are-dividends/">
+<link rel="canonical" href="https://www.dividend01.com/zh/articles/what-are-dividends/">
+<link rel="alternate" hreflang="en" href="https://www.dividend01.com/articles/what-are-dividends/">
+<link rel="alternate" hreflang="zh-CN" href="https://www.dividend01.com/zh/articles/what-are-dividends/">
+<link rel="alternate" hreflang="x-default" href="https://www.dividend01.com/articles/what-are-dividends/">
 ```
 
 ### 中文构建脚本修改
