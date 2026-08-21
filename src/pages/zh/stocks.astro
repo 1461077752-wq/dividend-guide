@@ -13,7 +13,7 @@ const groups = [
 const money = (value) => value == null ? '—' : `$${value.toFixed(2)}`;
 const yieldLabel = (record) => record.price && record.annualDividend ? `${(record.annualDividend / record.price * 100).toFixed(2)}%` : '—';
 ---
-<BaseLayout title="最佳股息股票 - 股息投资指南" description="按最新市场价格、过去 12 个月股息率、派息率和股息增长记录了解精选股票。" canonical="https://www.dividend01.com/zh/stocks/" locale="zh" modDate="2026-08-18">
+<BaseLayout title="最佳股息股票 - 股息投资指南" description="按最新市场价格、过去 12 个月股息率、派息率和股息增长记录了解精选股票。" canonical="https://dividend01.com/zh/stocks/" locale="zh" modDate="2026-08-18">
   <slot slot="title">最佳股息股票</slot>
   <slot slot="subtitle">用最新价格、过去 12 个月股息率、派息率和股息增长记录，建立自己的研究清单。</slot>
   <div class="page-intro"><p><strong>行情更新时间：</strong>{refreshedLabel}（北京时间） · 数据源：<a href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance</a>。价格可能存在延迟；股息和派息率仅用于研究，请以发行方披露为准。</p></div>

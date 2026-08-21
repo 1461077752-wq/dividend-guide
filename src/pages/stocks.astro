@@ -13,7 +13,7 @@ const groups = [
 const money = (value) => value == null ? '—' : `$${value.toFixed(2)}`;
 const yieldLabel = (record) => record.price && record.annualDividend ? `${(record.annualDividend / record.price * 100).toFixed(2)}%` : '—';
 ---
-<BaseLayout title="Best Dividend Stocks 2026: Aristocrats &amp; High Yield" description="Curated list of dividend stocks with refreshed market prices, trailing annual dividend rates, payout ratios, and dividend growth context." canonical="https://www.dividend01.com/stocks/" schemaType="WebPage" pubDate="2026-07-27" modDate="2026-08-18">
+<BaseLayout title="Best Dividend Stocks 2026: Aristocrats &amp; High Yield" description="Curated list of dividend stocks with refreshed market prices, trailing annual dividend rates, payout ratios, and dividend growth context." canonical="https://dividend01.com/stocks/" schemaType="WebPage" pubDate="2026-07-27" modDate="2026-08-18">
   <slot slot="title">Best Dividend Stocks</slot>
   <slot slot="subtitle">A research list with refreshed market prices and trailing 12-month dividend rates. It is not a buy or sell recommendation.</slot>
   <div class="page-intro"><p><strong>Market data refreshed:</strong> {refreshedLabel} ET · Source: <a href="https://finance.yahoo.com/" target="_blank" rel="noopener">Yahoo Finance</a>. Prices may be delayed; dividend and payout figures are research estimates and should be verified with the issuer.</p></div>

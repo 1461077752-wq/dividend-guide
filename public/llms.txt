@@ -41,6 +41,6 @@
 - [Terms of Use](/terms): Usage terms and liability limitations.
 
 ## Optional
-- Site: https://www.dividend01.com
+- Site: https://dividend01.com
 - Language: en
 - Updated: 2026-08-04

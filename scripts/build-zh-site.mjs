@@ -30,7 +30,7 @@ const keyFor = text => hash(text.trim());
 const keepWhitespace = (original, translated) => original.replace(original.trim(), translated.trim());
 
 const localizeInternalUrl = value => {
-  if (!value || !value.startsWith('https://www.dividend01.com/')) return value;
+  if (!value || !value.startsWith('https://dividend01.com/')) return value;
   const parsed = new URL(value);
   if (parsed.pathname === '/' || parsed.pathname.startsWith('/zh/')) {
     if (parsed.pathname.startsWith('/zh/')) return value;
@@ -58,7 +58,7 @@ const rewriteJsonLd = html => html.replace(/<script type="application\/ld\+json"
 
 const rewriteLocalizedMetadata = (html, relative) => {
   const englishPath = `/${relative.replace(/\\/g, '/').replace(/index\.html$/, '')}`.replace(/\/+/g, '/');
-  const englishUrl = `https://www.dividend01.com${englishPath === '//' ? '/' : englishPath}`;
+  const englishUrl = `https://dividend01.com${englishPath === '//' ? '/' : englishPath}`;
   const chineseUrl = localizeInternalUrl(englishUrl);
   let localized = html
     .replace(/<html\s+lang="[^"]*"/i, '<html lang="zh-CN"')
