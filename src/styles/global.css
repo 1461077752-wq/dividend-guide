@@ -1198,12 +1198,6 @@ html[lang='zh-CN'] .article-topbar-nav .article-language-switcher:hover {
   background: linear-gradient(to right, #3657a8 0 50%, #fff 50% 100%) !important;
 }
 
-/* Temporarily hide language controls while bilingual content is being finalized. */
-.nav-language,
-.article-language-switcher {
-  display: none !important;
-}
-
 /* Keep wide research tables and article navigation inside the mobile viewport. */
 @media (max-width: 720px) {
   .article-topbar-inner {
