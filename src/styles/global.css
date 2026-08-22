@@ -1204,13 +1204,6 @@ html[lang='zh-CN'] .article-topbar-nav .article-language-switcher:hover {
   display: none !important;
 }
 
-/* Each locale URL must expose one language body only. The English and Chinese
-   article bodies are both rendered for static builds so hreflang pages can
-   share one template; keep the non-active body out of the visible page. */
-.article-content-zh { display: none; }
-html[lang='zh-CN'] .article-content-en { display: none; }
-html[lang='zh-CN'] .article-content-zh { display: block; }
-
 /* Keep wide research tables and article navigation inside the mobile viewport. */
 @media (max-width: 720px) {
   .article-topbar-inner {

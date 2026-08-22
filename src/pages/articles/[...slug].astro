@@ -4,15 +4,13 @@ import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
-  const translations = await getCollection('articleTranslations');
-  const translationById = new Map(translations.map(item => [item.id, item]));
   return articles.map(article => ({
     params: { slug: article.id },
-    props: { article, translation: translationById.get(article.id) },
+    props: { article },
   }));
 }
 
-const { article, translation } = Astro.props;
+const { article } = Astro.props;
 const articleTranslations: Record<string, { title: string; description: string }> = {
   'best-dividend-stocks-2025': { title: '2025 年最佳股息股票：年度回顾与精选', description: '回顾 2025 年表现最佳的股息股票，包括提高派息并交付收益的股息贵族和高收益股票。' },
   'dividend-dividend-stocks': { title: '股息股票：如何一步步筛选优质标的', description: '了解如何用收益率、派息率和增长年限筛选股息股票，并识别收益率陷阱。' },
@@ -22,7 +20,6 @@ const articleTranslations: Record<string, { title: string; description: string }
 };
 const articleTranslation = articleTranslations[article.id];
 const { Content } = await render(article);
-const { Content: ZhContent } = translation ? await render(translation) : { Content: null };
 const pubDate = article.data.pubDate.toISOString().split('T')[0];
 const modDate = article.data.modDate
   ? article.data.modDate.toISOString().split('T')[0]
@@ -102,10 +99,9 @@ const topicGuide = topicGuides[topicGuideKey];
       </ul>
     </aside>
   )}
-  <article class="article-content article-content-en" data-article-body="en">
+  <article class="article-content article-content-en">
     <Content />
   </article>
-  {ZhContent && <article class="article-content article-content-zh" data-article-body="zh"><ZhContent /></article>}
   <aside class="article-research-notes">
     <h2>Sources and methodology</h2>
     <p>{article.data.review}. This article is for educational purposes and is not personalized financial advice.</p>
