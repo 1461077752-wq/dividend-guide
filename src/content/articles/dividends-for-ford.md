@@ -124,7 +124,7 @@ His accumulated dividends, reinvested, looked roughly like this:
 | 2024 | $0.78 | ~358 | $279 |
 | 2026 (TTM) | $0.60 | ~360 | $216 |
 
-The lesson he stresses: a cyclical dividend is a **cash-flow story**, not a fixed coupon. Use our [dividend calculator](/calculator) to model your own reinvestment path, and compare Ford with other names on our [stock list](/stocks).
+The lesson he stresses: a cyclical dividend is a **cash-flow story**, not a fixed coupon. Use our [dividend calculator](/calculator/) to model your own reinvestment path, and compare Ford with other names on our [stock list](/stocks/).
 
 ## Is Ford's Dividend Safe?
 
@@ -157,7 +157,7 @@ Ford's own [Investor Relations](https://shareholder.ford.com/Information/stock/d
 
 ## What to Do Next
 
-Ford offers a moderate, cyclical yield backed by a two-layer dividend structure. Before adding it to an income portfolio, check the [dividend yield](/articles/dividend-yield/) explainer to see how price moves change your real return, browse our [stock list](/stocks) for comparisons, and run your numbers through the [dividend calculator](/calculator).
+Ford offers a moderate, cyclical yield backed by a two-layer dividend structure. Before adding it to an income portfolio, check the [dividend yield](/articles/dividend-yield/) explainer to see how price moves change your real return, browse our [stock list](/stocks/) for comparisons, and run your numbers through the [dividend calculator](/calculator/).
 
 *Research note: the author checked the cited figures against SEC filings, company investor relations materials, and S&P Dow Jones Indices data before publication.*
 

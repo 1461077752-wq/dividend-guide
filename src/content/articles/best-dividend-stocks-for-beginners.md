@@ -68,7 +68,7 @@ Here is the single most useful example on this page — a realistic projection o
 
 *Dividend income estimates based on SCHD historical distribution growth of approximately 10-12% annually ([source: NASDAQ.com dividend history](https://www.nasdaq.com/market-activity/etfs/schd/dividend-history)).*
 
-> **The key takeaway:** by 2026, that original $5,000 plus monthly contributions of $200 produced an estimated $1,080 per year in passive income — without touching the principal. Run your own numbers with our [Dividend Calculator](/calculator) to see what your monthly budget could become.
+> **The key takeaway:** by 2026, that original $5,000 plus monthly contributions of $200 produced an estimated $1,080 per year in passive income — without touching the principal. Run your own numbers with our [Dividend Calculator](/calculator/) to see what your monthly budget could become.
 
 > "I started with $5,000 in SCHD during the COVID crash in 2020. The first year I only got about $210 in dividends — felt almost pointless. But by year three, the monthly contributions and reinvestments started to snowball. Now in 2026 my dividends cover my phone bill every month without touching the principal. The hardest part was not panic-selling in 2022 when the portfolio dropped 19%."
 
@@ -130,7 +130,7 @@ The path is straightforward:
 4. **Set up monthly contributions** — even $100/month compounds significantly over 20 years
 5. **Ignore short-term price drops** and keep reinvesting
 
-Use our [Dividend Calculator](/calculator) to see how your monthly contributions grow over time. Browse our curated [list of best dividend stocks](/stocks) for ideas beyond the basics. For a deeper comparison of income vs. growth strategies, read our [Dividend Strategies guide](/strategy).
+Use our [Dividend Calculator](/calculator/) to see how your monthly contributions grow over time. Browse our curated [list of best dividend stocks](/stocks/) for ideas beyond the basics. For a deeper comparison of income vs. growth strategies, read our [Dividend Strategies guide](/strategy/).
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Past dividend performance does not guarantee future results. Always conduct your own research and consult with a qualified financial advisor before making investment decisions.*
 

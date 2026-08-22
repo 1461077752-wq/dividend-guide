@@ -146,7 +146,7 @@ If this process feels like work, that's because it is — which is exactly why m
 | VYM | ~2.2% | Broad high-dividend universe |
 | SPYD | ~4.1% | Top-80 highest yielders |
 
-SPYD's higher yield illustrates the trade-off: it's built by chasing yield, so it holds more stressed payers. SCHD's construction is the screening approach in fund form. If you're deciding between individual stocks and a fund, our [dividend strategies](/strategy) guide compares the approaches in depth.
+SPYD's higher yield illustrates the trade-off: it's built by chasing yield, so it holds more stressed payers. SCHD's construction is the screening approach in fund form. If you're deciding between individual stocks and a fund, our [dividend strategies](/strategy/) guide compares the approaches in depth.
 
 ## Common Screening Questions
 
@@ -182,7 +182,7 @@ Yield = annual dividend ÷ share price (what you earn on your money). Payout rat
 4. **Keep a shortlist** — 10-15 names across 5-6 sectors beats 50 names in one sector
 5. **Re-screen quarterly** — dividend health changes, so your list should too
 
-Once you've screened a candidate list, project the income with the [Dividend Calculator](/calculator), compare your picks against our curated [best dividend stocks](/stocks), and read the [dividend basics guide](/articles/what-are-dividends/) if you're still building fundamentals. For how the screening concept scales to a full plan, see our [dividend strategies](/strategy) guide.
+Once you've screened a candidate list, project the income with the [Dividend Calculator](/calculator/), compare your picks against our curated [best dividend stocks](/stocks/), and read the [dividend basics guide](/articles/what-are-dividends/) if you're still building fundamentals. For how the screening concept scales to a full plan, see our [dividend strategies](/strategy/) guide.
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Dividend payments are not guaranteed and can be reduced or eliminated. Screening criteria are guidelines, not guarantees. Consult a qualified financial advisor before making investment decisions.*
 

@@ -122,7 +122,7 @@ S&P Dow Jones Indices publishes index-math methodology documents describing exac
 
 ## What to Do Next
 
-Understanding the dividend/divisor distinction helps you read both math problems and financial ratios correctly. To go further, read [what are dividends](/articles/what-are-dividends/) for the payout basics, explore [dividend yield](/articles/dividend-yield/) to see how price acts as the divisor in your return, and browse our [strategy](/strategy) section for putting it all together.
+Understanding the dividend/divisor distinction helps you read both math problems and financial ratios correctly. To go further, read [what are dividends](/articles/what-are-dividends/) for the payout basics, explore [dividend yield](/articles/dividend-yield/) to see how price acts as the divisor in your return, and browse our [strategy](/strategy/) section for putting it all together.
 
 *Research note: the author checked the cited figures against SEC filings, company investor relations materials, and S&P Dow Jones Indices data before publication.*
 

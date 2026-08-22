@@ -112,7 +112,7 @@ The yield trade-off has a powerful flip side: **VOO's total return is what most 
 
 *Comparison based on [StockAnalysis.com](https://stockanalysis.com/etf/voo/) data, August 2026.*
 
-The classic portfolio answer is **both**: VOO for market-wide growth, SCHD for income. A 60/40 split gives you the S&P 500's upside plus a meaningful dividend stream. See our [dividend strategies](/strategy) guide for how to combine them.
+The classic portfolio answer is **both**: VOO for market-wide growth, SCHD for income. A 60/40 split gives you the S&P 500's upside plus a meaningful dividend stream. See our [dividend strategies](/strategy/) guide for how to combine them.
 
 ## Illustrative VOO Investor's Experience
 
@@ -162,9 +162,9 @@ VOO's dividend history tells a clear story: **a low but steadily growing yield o
 1. **Use VOO for growth, not income** — its 1% yield is a bonus, not the goal
 2. **Pair it with an income fund** — VOO + SCHD gives market growth plus a 3%+ dividend stream
 3. **Reinvest the dividends** — VOO's quarterly payments compound into more shares over time
-4. **Model the income** — use the [Dividend Calculator](/calculator) to project what VOO's ~5.9% dividend growth does over 10-20 years
+4. **Model the income** — use the [Dividend Calculator](/calculator/) to project what VOO's ~5.9% dividend growth does over 10-20 years
 
-VOO belongs on any [best dividend stocks](/stocks) list as the growth anchor, and our [dividend strategies](/strategy) guide covers how to blend it with income holdings. For the income side of the portfolio, read [SCHD's dividend history](/articles/schd-dividend-history/) or [dividend yield explained](/articles/dividend-yield/) first.
+VOO belongs on any [best dividend stocks](/stocks/) list as the growth anchor, and our [dividend strategies](/strategy/) guide covers how to blend it with income holdings. For the income side of the portfolio, read [SCHD's dividend history](/articles/schd-dividend-history/) or [dividend yield explained](/articles/dividend-yield/) first.
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Dividends are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 

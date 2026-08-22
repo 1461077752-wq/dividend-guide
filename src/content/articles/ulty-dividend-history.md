@@ -100,7 +100,7 @@ The annualized distribution yield is often quoted at 40-70%+, but this is mislea
 Both are YieldMax covered-call ETFs. MSTY concentrates on a single stock (MSTR); ULTY holds a basket of many high-volatility stocks. ULTY's distributions are typically lower but more stable; MSTY's swing more with MSTR volatility.
 
 ### Should I buy ULTY for passive income?
-Only as a small, speculative allocation for investors who understand the risks. For core passive income, sustainable dividend stocks are far safer — see our [best dividend stocks](/stocks).
+Only as a small, speculative allocation for investors who understand the risks. For core passive income, sustainable dividend stocks are far safer — see our [best dividend stocks](/stocks/).
 
 ### How is ULTY taxed?
 Distributions are generally taxed as ordinary income (some may be return of capital). Per [IRS rules for Form 1099-DIV](https://www.irs.gov/forms-pubs/about-form-1099-div), distribution character appears on Form 1099-DIV. ULTY is typically better held in tax-advantaged accounts.
@@ -117,7 +117,7 @@ ULTY delivers frequent, high-advertised income but carries serious capital erosi
 3. **Hold in tax-advantaged accounts** — distributions are tax-inefficient
 4. **Verify current data** — distribution history changes with market conditions
 
-Compare ULTY to sustainable income options in our [best dividend stocks](/stocks), model realistic returns with the [Dividend Calculator](/calculator), and read our [dividend strategies](/strategy) guide to see where covered-call funds fit. New to the concept? Start with [dividend basics](/articles/what-are-dividends/). For current distribution amounts, always check the [official YieldMax ULTY page](https://www.yieldmaxetfs.com/funds/ulty/).
+Compare ULTY to sustainable income options in our [best dividend stocks](/stocks/), model realistic returns with the [Dividend Calculator](/calculator/), and read our [dividend strategies](/strategy/) guide to see where covered-call funds fit. New to the concept? Start with [dividend basics](/articles/what-are-dividends/). For current distribution amounts, always check the [official YieldMax ULTY page](https://www.yieldmaxetfs.com/funds/ulty/).
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. ULTY is a high-risk investment. Distributions are not guaranteed, and past distributions do not predict future payouts. Consult a qualified financial advisor before investing.*
 

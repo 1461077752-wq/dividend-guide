@@ -146,9 +146,9 @@ SPYI's distribution history shows what happens when you combine **JEPI's index w
 1. **Verify the payouts yourself** — check [NEOS's distribution page](https://neosfunds.com/spyi/) monthly
 2. **Understand the tax advantage** — 60/40 rates + ROC classification make SPYI better for taxable accounts than JEPI
 3. **Keep it as a satellite** — the 0.68% fee is high; size SPYI alongside a low-cost core
-4. **Watch total return, not just yield** — model the income with [our Dividend Calculator](/calculator)
+4. **Watch total return, not just yield** — model the income with [our Dividend Calculator](/calculator/)
 
-Compare SPYI against [best dividend stocks](/stocks), review where premium-income funds fit in our [dividend strategies](/strategy) guide, and start with [dividend basics](/articles/what-are-dividends/) if you're new. JEPI holders weighing the swap can read our [JEPI breakdown](/articles/jepi-dividend/).
+Compare SPYI against [best dividend stocks](/stocks/), review where premium-income funds fit in our [dividend strategies](/strategy/) guide, and start with [dividend basics](/articles/what-are-dividends/) if you're new. JEPI holders weighing the swap can read our [JEPI breakdown](/articles/jepi-dividend/).
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Distributions are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 

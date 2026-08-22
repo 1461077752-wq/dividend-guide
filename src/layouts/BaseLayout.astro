@@ -29,8 +29,8 @@ const {
 } = Astro.props;
 const isNotFoundPage = currentPath === '/404/' || currentPath === '/404.html' || currentPath === '/zh/404/';
 const englishPath = currentPath.replace(/^\/zh(?=\/|$)/, '') || '/';
-const englishUrl = `https://dividend01.com${englishPath}`;
-const chineseUrl = `https://dividend01.com/zh${englishPath === '/' ? '/' : englishPath}`;
+const englishUrl = `https://www.dividend01.com${englishPath}`;
+const chineseUrl = `https://www.dividend01.com/zh${englishPath === '/' ? '/' : englishPath}`;
 const languageHref = isNotFoundPage
   ? (locale === 'zh' ? '/404.html' : '/zh/404/')
   : locale === 'zh'
@@ -71,12 +71,12 @@ const breadcrumbItems = currentPath === '/'
     ];
 const normalizeUrl = (value: string) => {
   const parsed = new URL(value);
-  if (parsed.hostname === 'www.dividend01.com') parsed.hostname = 'dividend01.com';
+  if (parsed.hostname === 'dividend01.com') parsed.hostname = 'www.dividend01.com';
   if (parsed.pathname !== '/' && !parsed.pathname.endsWith('/')) parsed.pathname += '/';
   return parsed.toString();
 };
-const pageUrl = normalizeUrl(canonical || `https://dividend01.com${currentPath}`);
-const ogImage = image || 'https://dividend01.com/images/dividend-hero.jpg';
+const pageUrl = normalizeUrl(canonical || `https://www.dividend01.com${currentPath}`);
+const ogImage = image || 'https://www.dividend01.com/images/dividend-hero.jpg';
 const alternateLinks = alternates || (isNotFoundPage ? [] : [
   { hreflang: 'en' as const, href: englishUrl },
   { hreflang: 'zh-CN' as const, href: chineseUrl },
@@ -121,15 +121,15 @@ const alternateLinks = alternates || (isNotFoundPage ? [] : [
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Dividend Guide",
-      "url": "https://dividend01.com",
+      "url": "https://www.dividend01.com",
       "description": "A practical, step-by-step guide to dividend investing.",
-      "logo": "https://dividend01.com/favicon.svg"
+      "logo": "https://www.dividend01.com/favicon.svg"
     },
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Dividend Guide",
-      "url": "https://dividend01.com",
+      "url": "https://www.dividend01.com",
       "description": "A practical, step-by-step guide to dividend investing."
     },
     {
@@ -141,8 +141,8 @@ const alternateLinks = alternates || (isNotFoundPage ? [] : [
       "inLanguage": locale === 'zh' ? 'zh-CN' : 'en',
       "datePublished": pubDate,
       "dateModified": modDate,
-      "author": { "@type": "Person", "name": "Henry Zhou", "jobTitle": "Independent Dividend Researcher", "url": "https://dividend01.com/about/author/" },
-      "publisher": { "@type": "Organization", "name": "Dividend Guide", "url": "https://dividend01.com/about/" }
+      "author": { "@type": "Person", "name": "Henry Zhou", "jobTitle": "Independent Dividend Researcher", "url": "https://www.dividend01.com/about/author/" },
+      "publisher": { "@type": "Organization", "name": "Dividend Guide", "url": "https://www.dividend01.com/about/" }
     },
     ...(currentPath !== '/' ? [{
       "@context": "https://schema.org",
@@ -151,13 +151,13 @@ const alternateLinks = alternates || (isNotFoundPage ? [] : [
         "@type": "ListItem",
         "position": i + 1,
         "name": item.name,
-        "item": normalizeUrl(`https://dividend01.com${locale === 'zh' && item.path !== '/' ? `/zh${item.path}` : item.path}`)
+        "item": normalizeUrl(`https://www.dividend01.com${locale === 'zh' && item.path !== '/' ? `/zh${item.path}` : item.path}`)
       }))
     }] : [])
   ])}></script>
 </head>
 <body class:list={[{ 'home-page': currentPath === '/' || currentPath === '/zh/', 'locale-zh': locale === 'zh' }, pageClass]}>
-  <script is:inline>if(location.hostname.includes('pages.dev')){location.replace('https://dividend01.com'+location.pathname+location.search)}</script>
+  <script is:inline>if(location.hostname.includes('pages.dev')){location.replace('https://www.dividend01.com'+location.pathname+location.search)}</script>
   <aside id="analytics-consent" hidden aria-label="Analytics preferences">
     <p>{locale === 'zh' ? '我们使用匿名分析来改进内容。你可以接受或拒绝。' : 'We use optional analytics to improve the site. You can accept or decline.'}</p>
     <button type="button" data-analytics-accept>{locale === 'zh' ? '接受分析' : 'Accept analytics'}</button>

@@ -134,7 +134,7 @@ SCHD is a strong core holding for dividend investors because it delivers:
 3. **Low cost** — 0.06% expense ratio
 4. **Tax efficiency** — mostly qualified dividends
 
-Pair SCHD with a broad market fund (like VTI) for balance. Use the [Dividend Calculator](/calculator) to project SCHD's compounding, browse [best dividend stocks](/stocks) for individual picks to complement it, and read our [dividend strategies](/strategy) guide to see how SCHD fits a growth-and-income plan. New to dividends? Start with [dividend basics](/articles/what-are-dividends/).
+Pair SCHD with a broad market fund (like VTI) for balance. Use the [Dividend Calculator](/calculator/) to project SCHD's compounding, browse [best dividend stocks](/stocks/) for individual picks to complement it, and read our [dividend strategies](/strategy/) guide to see how SCHD fits a growth-and-income plan. New to dividends? Start with [dividend basics](/articles/what-are-dividends/).
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Distributions are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 

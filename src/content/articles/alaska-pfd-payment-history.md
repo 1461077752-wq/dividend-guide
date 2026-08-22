@@ -139,7 +139,7 @@ The PFD's 40+ year history shows:
 3. **Supplements are one-time** — don't budget around them
 4. **The fund is durable** — payments have never been skipped
 
-For planning, treat the PFD as **variable bonus income**, not guaranteed. Understand the [Alaska PFD program](/articles/alaska-permanent-fund-dividend-stimulus-payment/) in detail, and if you receive payments, consider investing them for growth. Use the [Dividend Calculator](/calculator) to project what investing your PFD annually could build over time, and browse [best dividend stocks](/stocks) for investment ideas.
+For planning, treat the PFD as **variable bonus income**, not guaranteed. Understand the [Alaska PFD program](/articles/alaska-permanent-fund-dividend-stimulus-payment/) in detail, and if you receive payments, consider investing them for growth. Use the [Dividend Calculator](/calculator/) to project what investing your PFD annually could build over time, and browse [best dividend stocks](/stocks/) for investment ideas.
 
 **If you're an Alaskan recipient, three practical steps:**
 1. **Verify your amount** — check the current year's PFD at the [official PFD site](https://pfd.alaska.gov/) before budgeting

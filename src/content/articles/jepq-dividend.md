@@ -126,7 +126,7 @@ JEPQ is a **solid middle-ground income investment**: meaningful monthly income (
 3. **Tax note** — hold in tax-advantaged accounts
 4. **Pair with quality** — combine with SCHD/Aristocrats for balance
 
-Compare JEPQ against [best dividend stocks](/stocks), model your income with the [Dividend Calculator](/calculator), and see where premium income funds fit in our [dividend strategies](/strategy) guide. New to dividends? Start with [dividend basics](/articles/what-are-dividends/).
+Compare JEPQ against [best dividend stocks](/stocks/), model your income with the [Dividend Calculator](/calculator/), and see where premium income funds fit in our [dividend strategies](/strategy/) guide. New to dividends? Start with [dividend basics](/articles/what-are-dividends/).
 
 **If you're considering JEPQ, three steps before you buy:**
 1. **Decide on the income/growth split** — JEPQ's Nasdaq tilt means growth plus income, not pure income

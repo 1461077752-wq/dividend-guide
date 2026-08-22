@@ -102,7 +102,7 @@ S&P Dow Jones Indices 发布了指数数学的方法论文档，详细说明了 
 
 ## 下一步该做什么
 
-理解 dividend 与 divisor 的区别，能帮你同时读懂数学题和财务比率。想进一步了解，请读[什么是股息](/zh/articles/what-are-dividends/)掌握派息基础，浏览[股息收益率](/zh/articles/dividend-yield/)看价格如何充当你回报中的 divisor，并到[策略](/zh/strategy)板块把知识串起来。
+理解 dividend 与 divisor 的区别，能帮你同时读懂数学题和财务比率。想进一步了解，请读[什么是股息](/zh/articles/what-are-dividends/)掌握派息基础，浏览[股息收益率](/zh/articles/dividend-yield/)看价格如何充当你回报中的 divisor，并到[策略](/zh/strategy/)板块把知识串起来。
 
 *研究说明：作者依据文中列出的 SEC 备案、公司投资者关系材料与指数编制方资料核对数据。*
 

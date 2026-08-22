@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const root = process.cwd();
 const distDir = path.join(root, 'dist');
-const baseUrl = 'https://dividend01.com';
+const baseUrl = 'https://www.dividend01.com';
 const errors = [];
 const warnings = [];
 
@@ -49,7 +49,11 @@ for (const file of files) {
   if (!relative.startsWith('zh/') && title?.length > 65) warnings.push(`${relative}: title is ${title.length} characters`);
   if (!relative.startsWith('zh/') && description && (description.length < 110 || description.length > 165)) warnings.push(`${relative}: description is ${description.length} characters`);
   if (h1Count !== 1) errors.push(`${relative}: expected one H1, found ${h1Count}`);
-  if (!canonical || !canonical.startsWith(baseUrl) || canonical.includes('pages.dev')) errors.push(`${relative}: invalid canonical`);
+  let canonicalUrl;
+  try { canonicalUrl = new URL(canonical); } catch {}
+  if (!canonicalUrl || canonicalUrl.origin !== baseUrl || canonicalUrl.pathname.includes('//') || !canonicalUrl.pathname.endsWith('/') || canonicalUrl.search || canonicalUrl.hash) {
+    errors.push(`${relative}: canonical must use ${baseUrl} and end with /`);
+  }
   if (/(pages\.dev|localhost)/i.test(head)) errors.push(`${relative}: preview hostname leaked into metadata`);
   if (/(Content Review Board|reader survey|reader panel)/i.test(html)) errors.push(`${relative}: unverified editorial or testimonial claim`);
   for (const script of head.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
@@ -62,6 +66,13 @@ for (const file of files) {
   const alternateLinks = links(html);
   for (const required of ['en', 'zh-CN', 'x-default']) {
     if (!alternateLinks.some(link => link.lang === required)) errors.push(`${relative}: missing hreflang ${required}`);
+  }
+  for (const link of alternateLinks) {
+    let alternateUrl;
+    try { alternateUrl = new URL(link.href); } catch {}
+    if (!alternateUrl || alternateUrl.origin !== baseUrl || !alternateUrl.pathname.endsWith('/')) {
+      errors.push(`${relative}: hreflang must use ${baseUrl} and end with /: ${link.href}`);
+    }
   }
   pages.push({ file, relative, route: routeForFile(file), html, title, canonical, alternateLinks });
 }
@@ -81,6 +92,10 @@ for (const page of pages) {
   for (const match of page.html.matchAll(/\shref="([^"]+)"/gi)) {
     const href = match[1];
     if (!href.startsWith('/') || href.startsWith('//')) continue;
+    const internalPath = href.split('#')[0].split('?')[0];
+    if (internalPath !== '/' && !/\.[a-z0-9]+$/i.test(internalPath) && !internalPath.endsWith('/')) {
+      errors.push(`${page.relative}: internal page link must end with /: ${href}`);
+    }
     const route = normalizeInternalRoute(href);
     if (/\.[a-z0-9]+$/i.test(route)) {
       const asset = path.join(distDir, route.replace(/^\//, ''));

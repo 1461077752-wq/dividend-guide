@@ -158,7 +158,7 @@ Because [REITs must distribute at least 90% of taxable income](https://www.reit.
 Some can. VZ has raised for 21 years, O for 135 straight months, ET for 19 consecutive quarters. Others — KHC, T — are flat or recovering from cuts. High yield and dividend growth are not mutually exclusive, but the trade-off is real.
 
 ### Should I buy individual high-yield stocks or an ETF?
-Most investors are better off with a **core ETF plus a few high-yield satellites**. High-yield ETFs like SPYD diversify away single-stock cut risk, while individual picks let you target yield precisely. Weigh both against your [dividend strategies](/strategy) plan.
+Most investors are better off with a **core ETF plus a few high-yield satellites**. High-yield ETFs like SPYD diversify away single-stock cut risk, while individual picks let you target yield precisely. Weigh both against your [dividend strategies](/strategy/) plan.
 
 ## How to Own High-Yield Stocks Without Getting Burned
 
@@ -167,7 +167,7 @@ Most investors are better off with a **core ETF plus a few high-yield satellites
 3. **Watch payout ratio trends** — a payout ratio creeping above 80% (operating company) is the warning sign that precedes cuts
 4. **Favor structural payers you understand** — REITs and MLPs yield high for legal reasons; make sure you accept their tax treatment
 
-Model your high-yield income with the [Dividend Calculator](/calculator), compare candidates against our [best dividend stocks](/stocks) list, and understand how a 6% yield behaves in a full plan via our [dividend strategies](/strategy) guide. New to yields? Read [dividend yield explained](/articles/dividend-yield/) first.
+Model your high-yield income with the [Dividend Calculator](/calculator/), compare candidates against our [best dividend stocks](/stocks/) list, and understand how a 6% yield behaves in a full plan via our [dividend strategies](/strategy/) guide. New to yields? Read [dividend yield explained](/articles/dividend-yield/) first.
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Dividend payments are not guaranteed and can be reduced or eliminated, as historical dividend cuts demonstrate. Consult a qualified financial advisor before making investment decisions.*
 

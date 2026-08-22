@@ -99,7 +99,7 @@ Per [SEC 10-K filings](https://www.sec.gov), many high-yield stocks maintain pay
 **Roughly $300,000 at a 4% yield ($300,000 × 4% ÷ 12 = $1,000/month) — or $400,000 at 3%.** There is no realistic way to reach $1,000/month with a small account; it takes significant capital or decades of compounding.
 
 ### Can I live off dividends?
-**Yes, but only with substantial assets.** To replace a $50,000 annual salary at a 4% dividend yield, you need about $1.25 million invested. The [Dividend Calculator](/calculator) can model your specific numbers.
+**Yes, but only with substantial assets.** To replace a $50,000 annual salary at a 4% dividend yield, you need about $1.25 million invested. The [Dividend Calculator](/calculator/) can model your specific numbers.
 
 ### What's a realistic dividend yield?
 **2-5% is the realistic, sustainable range.** Yields above 8% usually signal a falling stock price or an unsustainable payout — not a windfall.
@@ -127,7 +127,7 @@ Per [SEC 10-K filings](https://www.sec.gov), many high-yield stocks maintain pay
 4. **Focus on sustainable yields** — 3-4% with real growth beats 8% that gets cut
 5. **Diversify** — a core ETF (SCHD) plus 5-10 quality individual stocks
 
-Use the [Dividend Calculator](/calculator) to project your own monthly income timeline, browse [best dividend stocks](/stocks) for quality candidates, and compare [dividend strategies](/strategy) to find your approach. Learn the fundamentals in our [dividend basics guide](/articles/what-are-dividends/).
+Use the [Dividend Calculator](/calculator/) to project your own monthly income timeline, browse [best dividend stocks](/stocks/) for quality candidates, and compare [dividend strategies](/strategy/) to find your approach. Learn the fundamentals in our [dividend basics guide](/articles/what-are-dividends/).
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Past performance does not guarantee future results. All projections are estimates. Consult a qualified financial advisor before making investment decisions.*
 

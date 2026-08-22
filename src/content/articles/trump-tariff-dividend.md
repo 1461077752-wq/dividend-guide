@@ -136,7 +136,7 @@ The Trump tariff dividend is a **proposal built on a math problem**: a headline 
 3. **Watch official trackers only** — IRS tools, never third-party "claim your check" links
 4. **Build income you control** — real dividend stocks pay regardless of political proposals
 
-For reliable income that doesn't hinge on congressional votes, browse our [best dividend stocks](/stocks), project your own payouts with the [Dividend Calculator](/calculator), and compare [dividend strategies](/strategy) that work regardless of policy headlines. To understand the full tariff dividend proposal, read [our tariff dividend explainer](/articles/tariff-dividend/); for the DOGE check proposal, see [the Trump $2,000 dividend](/articles/trump-2000-dividend/).
+For reliable income that doesn't hinge on congressional votes, browse our [best dividend stocks](/stocks/), project your own payouts with the [Dividend Calculator](/calculator/), and compare [dividend strategies](/strategy/) that work regardless of policy headlines. To understand the full tariff dividend proposal, read [our tariff dividend explainer](/articles/tariff-dividend/); for the DOGE check proposal, see [the Trump $2,000 dividend](/articles/trump-2000-dividend/).
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Policy proposals are subject to change and may never be enacted. Beware of scams claiming to offer tariff dividend checks. Consult a qualified financial advisor before making financial decisions.*
 

@@ -182,9 +182,9 @@ SCHD's dividend history is a textbook example of why **growth beats starting yie
 1. **Judge by the annual total, not one quarter** — a single quarterly dip can look alarming; the calendar-year total has grown every year
 2. **Reinvest to compound the growth** — the history works hardest when dividends buy more shares
 3. **Watch the split-adjusted numbers** — any table showing SCHD's 2024 dividend "falling" is showing pre-split values; the income never dropped
-4. **Model your own income** — use the [Dividend Calculator](/calculator) to project what SCHD's ~11% growth does to a lump sum or monthly contribution over 10-20 years
+4. **Model your own income** — use the [Dividend Calculator](/calculator/) to project what SCHD's ~11% growth does to a lump sum or monthly contribution over 10-20 years
 
-SCHD is a core candidate in our [best dividend stocks](/stocks) list, and you can compare it to other strategies in our [dividend strategies](/strategy) guide. If you're just starting, begin with [dividend basics](/articles/what-are-dividends/).
+SCHD is a core candidate in our [best dividend stocks](/stocks/) list, and you can compare it to other strategies in our [dividend strategies](/strategy/) guide. If you're just starting, begin with [dividend basics](/articles/what-are-dividends/).
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Dividends are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 

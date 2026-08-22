@@ -125,7 +125,7 @@ This is the core distinction: **a covered-call ETF's distributions are not "divi
 **Approximately 0.99%** — higher than most dividend ETFs (SCHD is 0.06%).
 
 ### Should I buy MSTY or SCHD?
-**For sustainable, growing income, SCHD. For aggressive short-term income with high risk and share erosion, MSTY.** Most investors should not build their core portfolio around covered-call ETFs like MSTY. If you're weighing the two, our [SCHD dividend history breakdown](/articles/schd-dividend) covers the other side of that comparison.
+**For sustainable, growing income, SCHD. For aggressive short-term income with high risk and share erosion, MSTY.** Most investors should not build their core portfolio around covered-call ETFs like MSTY. If you're weighing the two, our [SCHD dividend history breakdown](/articles/schd-dividend/) covers the other side of that comparison.
 
 ### How is MSTY taxed?
 **Generally as ordinary income** (some portions may be return of capital). This makes MSTY tax-inefficient for taxable accounts — it's often better held in an IRA or 401(k). Per [IRS rules](https://www.irs.gov), distribution character is reported on [Form 1099-DIV](https://www.irs.gov).
@@ -150,7 +150,7 @@ MSTY's distribution history shows why "yield" alone is a dangerous metric. A 50-
 3. **Use it as a satellite, not a core** — cap MSTY at 5-10% of holdings
 4. **Tax-efficiency matters** — hold in tax-advantaged accounts
 
-Compare MSTY against [best dividend stocks](/stocks) like SCHD before committing. Use the [Dividend Calculator](/calculator) to model realistic total returns, and read our [dividend strategies](/strategy) guide to understand where (if anywhere) covered-call funds fit.
+Compare MSTY against [best dividend stocks](/stocks/) like SCHD before committing. Use the [Dividend Calculator](/calculator/) to model realistic total returns, and read our [dividend strategies](/strategy/) guide to understand where (if anywhere) covered-call funds fit.
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. ETF distributions are not guaranteed and past distributions do not predict future payouts. MSTY is a high-risk strategy. Consult a qualified financial advisor before investing.*
 

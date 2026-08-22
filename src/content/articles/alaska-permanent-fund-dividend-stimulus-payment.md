@@ -121,7 +121,7 @@ Yes. The [Alaska Department of Revenue](https://pfd.alaska.gov) provides an onli
 
 The Alaska PFD is a unique source of annual income that can supplement your savings, cover seasonal expenses, or be invested for long-term growth. Some Alaska residents use their PFD to fund a Roth IRA or contribute to a 529 college savings plan. A family of four receiving roughly $6,600 per year could invest that amount in a diversified dividend ETF like SCHD and accumulate over $150,000 in 20 years assuming a 3.4% yield with dividend reinvestment — turning a state resource payment into a self-sustaining passive income stream.
 
-Use our [Dividend Calculator](/calculator) to project how investing your annual PFD in dividend stocks could grow over 10, 20, or 30 years. Browse [best dividend stocks](/stocks) to consider where to put your PFD to work, and compare [dividend strategies](/strategy) to find the right approach for your goals.
+Use our [Dividend Calculator](/calculator/) to project how investing your annual PFD in dividend stocks could grow over 10, 20, or 30 years. Browse [best dividend stocks](/stocks/) to consider where to put your PFD to work, and compare [dividend strategies](/strategy/) to find the right approach for your goals.
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Tax information is based on general IRS guidelines — consult a tax professional for your specific situation. PFD amounts are subject to change based on Alaska legislative decisions and fund performance.*
 

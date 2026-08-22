@@ -183,7 +183,7 @@ NVDY's distribution history is a masterclass in the difference between **yield a
 3. **Watch the underlying** — NVDY works because NVDA rose; MSTY shows what happens when it doesn't
 4. **Size it as a satellite** — cap single-stock covered-call funds at a small slice of your portfolio
 
-Model realistic NVDY income with the [Dividend Calculator](/calculator), compare it against sustainable options in [best dividend stocks](/stocks), and see where (if anywhere) covered-call funds fit in our [dividend strategies](/strategy) guide. Compare the structure against [JEPQ's distribution history](/articles/jepq-dividend-history/) and [QQQI's record](/articles/qqqi-dividend-history/) — the diversified premium-income funds offer far steadier payouts than single-stock YieldMax funds.
+Model realistic NVDY income with the [Dividend Calculator](/calculator/), compare it against sustainable options in [best dividend stocks](/stocks/), and see where (if anywhere) covered-call funds fit in our [dividend strategies](/strategy/) guide. Compare the structure against [JEPQ's distribution history](/articles/jepq-dividend-history/) and [QQQI's record](/articles/qqqi-dividend-history/) — the diversified premium-income funds offer far steadier payouts than single-stock YieldMax funds.
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Distributions are not guaranteed and past performance does not predict future results. NVDY is a high-risk strategy with significant capital erosion risk. Consult a qualified financial advisor before investing.*
 

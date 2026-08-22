@@ -120,10 +120,10 @@ Yes, with substantial assets. To replace a $50,000 salary at 4%, you need ~$1.25
 Yes, financially — you earn without active work. But building the portfolio requires upfront effort: research, contributions, and patience. "Passive" describes the income, not the journey.
 
 ### Do I need to reinvest dividends for passive income?
-If you're still building wealth, yes — reinvestment multiplies long-term income. If you're retired and need the cash, take it. Our [dividend strategies](/strategy) guide covers both phases.
+If you're still building wealth, yes — reinvestment multiplies long-term income. If you're retired and need the cash, take it. Our [dividend strategies](/strategy/) guide covers both phases.
 
 ### What are the best dividend stocks for passive income?
-Quality names with decades of growth: JNJ, PG, KO, plus core ETFs like SCHD. For high yield, O (monthly) and VZ. See our [best dividend stocks](/stocks) for the full list.
+Quality names with decades of growth: JNJ, PG, KO, plus core ETFs like SCHD. For high yield, O (monthly) and VZ. See our [best dividend stocks](/stocks/) for the full list.
 
 ### How are dividends taxed?
 Qualified dividends: 0-20% capital gains rates. Non-qualified: ordinary income. Per [IRS Publication 550](https://www.irs.gov/publications/p550), your 1099-DIV shows the breakdown.
@@ -139,7 +139,7 @@ Typically 5-10 years of consistent contributions and reinvestment before income 
 4. **Contribute monthly** — automate it, $200-500 is enough
 5. **Track the income, not the price** — watch your monthly dividend grow
 
-Use the [Dividend Calculator](/calculator) to project your income timeline, browse [best dividend stocks](/stocks) for candidates, and read our [dividend strategies](/strategy) guide to match the approach to your phase of life. Start with the fundamentals in [dividend basics](/articles/what-are-dividends/).
+Use the [Dividend Calculator](/calculator/) to project your income timeline, browse [best dividend stocks](/stocks/) for candidates, and read our [dividend strategies](/strategy/) guide to match the approach to your phase of life. Start with the fundamentals in [dividend basics](/articles/what-are-dividends/).
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Dividends are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before making investment decisions.*
 

@@ -208,9 +208,9 @@ JEPQ's distribution history tells a rare story in the premium-income space: **an
 1. **Expect volatility-driven payouts** — the monthly amount will swing with the market; budget on the low end
 2. **Check the tax treatment** — ordinary income means JEPQ belongs in tax-advantaged accounts
 3. **Pair it with quality** — combine JEPQ's income with a dividend-growth core like SCHD
-4. **Model the income** — use the [Dividend Calculator](/calculator) to project what a growing ~11% distribution delivers
+4. **Model the income** — use the [Dividend Calculator](/calculator/) to project what a growing ~11% distribution delivers
 
-Compare JEPQ against [best dividend stocks](/stocks), see where premium income fits in our [dividend strategies](/strategy) guide, and start with [dividend basics](/articles/what-are-dividends/) if you're new. JEPQ investors weighing alternatives should also review [QQQI's distribution history](/articles/qqqi-dividend-history/).
+Compare JEPQ against [best dividend stocks](/stocks/), see where premium income fits in our [dividend strategies](/strategy/) guide, and start with [dividend basics](/articles/what-are-dividends/) if you're new. JEPQ investors weighing alternatives should also review [QQQI's distribution history](/articles/qqqi-dividend-history/).
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Distributions are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 

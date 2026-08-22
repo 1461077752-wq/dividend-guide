@@ -145,7 +145,7 @@ ULTY's dividend is a case study in why **yield is not return**. The ~106% traili
 3. **Watch the run-rate decline** — payouts are ~35% lower than January, and YieldMax warns they may fall further
 4. **Cap it as a satellite** — at 5% or less of a portfolio, for income traders who accept the capital erosion
 
-Model realistic ULTY income with the [Dividend Calculator](/calculator), compare sustainable income options in [best dividend stocks](/stocks), and see where (if anywhere) covered-call funds fit in our [dividend strategies](/strategy) guide. For the complete payout record, read [our ULTY distribution history](/articles/ulty-dividend-history/). New to the high-yield trap concept? Start with [dividend yield explained](/articles/dividend-yield/) or [the highest dividend stocks risk guide](/articles/highest-dividend-stocks/).
+Model realistic ULTY income with the [Dividend Calculator](/calculator/), compare sustainable income options in [best dividend stocks](/stocks/), and see where (if anywhere) covered-call funds fit in our [dividend strategies](/strategy/) guide. For the complete payout record, read [our ULTY distribution history](/articles/ulty-dividend-history/). New to the high-yield trap concept? Start with [dividend yield explained](/articles/dividend-yield/) or [the highest dividend stocks risk guide](/articles/highest-dividend-stocks/).
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Distributions are not guaranteed and past performance does not predict future results. ULTY is a high-risk strategy with significant capital erosion risk. Consult a qualified financial advisor before investing.*
 

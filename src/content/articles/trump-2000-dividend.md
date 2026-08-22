@@ -153,7 +153,7 @@ The "Trump $2,000 dividend" is a widely discussed but **unenacted proposal**. Th
 2. **Focus on real, growing income** — dividend stocks and ETFs that pay regardless of politics
 3. **If a check ever arrives**, treat it as a windfall — save, invest, or pay down debt
 
-**Start with what you control.** Browse our [best dividend stocks](/stocks) to see real, paying opportunities today, use the [Dividend Calculator](/calculator) to project your own income, and compare approaches in our [dividend strategies](/strategy) guide. Then understand why the [Alaska PFD](/articles/alaska-permanent-fund-dividend-stimulus-payment/) — a real, rule-based payment — is structurally different from a political proposal.
+**Start with what you control.** Browse our [best dividend stocks](/stocks/) to see real, paying opportunities today, use the [Dividend Calculator](/calculator/) to project your own income, and compare approaches in our [dividend strategies](/strategy/) guide. Then understand why the [Alaska PFD](/articles/alaska-permanent-fund-dividend-stimulus-payment/) — a real, rule-based payment — is structurally different from a political proposal.
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Government payment proposals are subject to change and may never be enacted. Always verify current information from official government sources before making decisions.*
 

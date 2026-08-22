@@ -150,7 +150,7 @@ The tariff dividend check is a **headline, not a payment**. After nine months of
 3. **Watch the official trackers** — IRS Get My Payment / Where's My Refund, never third-party sites
 4. **Build income you control** — quality dividend stocks and real investment income don't depend on political proposals
 
-For reliable, growing income that doesn't hinge on congressional votes, browse our [best dividend stocks](/stocks), project your own payouts with the [Dividend Calculator](/calculator), and compare [dividend strategies](/strategy) that work regardless of policy headlines. To understand the tariff dividend proposal itself (not just the check status), read our [full tariff dividend explainer](/articles/tariff-dividend/).
+For reliable, growing income that doesn't hinge on congressional votes, browse our [best dividend stocks](/stocks/), project your own payouts with the [Dividend Calculator](/calculator/), and compare [dividend strategies](/strategy/) that work regardless of policy headlines. To understand the tariff dividend proposal itself (not just the check status), read our [full tariff dividend explainer](/articles/tariff-dividend/).
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Policy proposals are subject to change and may never be enacted. Beware of scams claiming to offer tariff dividend checks. Verify current information from official government sources before making financial decisions.*
 

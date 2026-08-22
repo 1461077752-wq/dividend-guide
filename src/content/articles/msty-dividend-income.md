@@ -74,7 +74,7 @@ Technically yes — the cash flow can be substantial. But it's not the same as l
 2. **Your capital erodes** — living off distributions while the position shrinks is spending your own wealth
 3. **Total return is what matters** — if you spend 100% of distributions, your position declines over time
 
-For reliable income, a diversified dividend portfolio (SCHD + quality Aristocrats) is far safer. See our [dividend strategies](/strategy) guide for a full comparison.
+For reliable income, a diversified dividend portfolio (SCHD + quality Aristocrats) is far safer. See our [dividend strategies](/strategy/) guide for a full comparison.
 
 ## Questions About MSTY Income
 
@@ -100,7 +100,7 @@ Most distributions are taxed as ordinary income (some portions may be return of 
 The annualized distribution yield varies wildly — often 30-80%+ based on recent distributions. This is not a sustainable yield; it reflects the fund's high-risk options strategy.
 
 ### Should I buy MSTY for passive income?
-Only as a small, speculative allocation (5-10% max) for investors who understand the risks. For core passive income, focus on sustainable dividend stocks — see our [best dividend stocks](/stocks) list.
+Only as a small, speculative allocation (5-10% max) for investors who understand the risks. For core passive income, focus on sustainable dividend stocks — see our [best dividend stocks](/stocks/) list.
 
 ## The Bottom Line on MSTY Income
 
@@ -120,7 +120,7 @@ MSTY delivers dramatic monthly cash flow but at the cost of principal erosion an
 | Total return vs. yield | Yield overstates return | Closer alignment |
 | Best suited for | Speculative satellite (5-10%) | Core holdings |
 
-Read the full [MSTY distribution history](/articles/msty-dividend-history/) to see the monthly payouts since launch. Compare against sustainable options in our [best dividend stocks](/stocks), project realistic income with the [Dividend Calculator](/calculator), and see where covered-call funds fit in our [dividend strategies](/strategy) guide.
+Read the full [MSTY distribution history](/articles/msty-dividend-history/) to see the monthly payouts since launch. Compare against sustainable options in our [best dividend stocks](/stocks/), project realistic income with the [Dividend Calculator](/calculator/), and see where covered-call funds fit in our [dividend strategies](/strategy/) guide.
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. MSTY is a high-risk investment. Distributions are not guaranteed, and past distributions do not predict future payouts. Consult a qualified financial advisor before investing.*
 

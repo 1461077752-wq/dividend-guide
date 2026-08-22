@@ -98,7 +98,7 @@ A 5% yield can produce a negative total return if the stock falls 15%. Conversel
 
 *Yield on cost using approximate historical purchase prices and current annual dividends per [StockAnalysis.com](https://stockanalysis.com/) data. Illustrative — actual purchase prices vary.*
 
-This is why patient dividend investors talk about their "income growing" even when market yields stay flat. The market yield is what a new buyer gets; yield on cost is what you earn. Our [dividend strategies](/strategy) guide covers how this shifts your thinking from price to income.
+This is why patient dividend investors talk about their "income growing" even when market yields stay flat. The market yield is what a new buyer gets; yield on cost is what you earn. Our [dividend strategies](/strategy/) guide covers how this shifts your thinking from price to income.
 
 ## The High-Yield Trap, With a Real Example
 
@@ -152,9 +152,9 @@ Your annual dividend divided by your original purchase price. It rises every yea
 1. **Treat yield as a screen, not a destination** — use a 2–6% band to find candidates, then check payout ratio and growth streak
 2. **Never buy yield alone** — pair it with payout ratio, dividend history, and cash flow coverage
 3. **Understand which yield you're looking at** — market yield vs. yield on cost are different numbers with different stories
-4. **Model the income** — use the [Dividend Calculator](/calculator) to project what a realistic yield compounds to over your holding period
+4. **Model the income** — use the [Dividend Calculator](/calculator/) to project what a realistic yield compounds to over your holding period
 
-Compare dividend-paying options in our [best dividend stocks](/stocks) list, read the [dividend basics guide](/articles/what-are-dividends/) for the full foundation, and see our [dividend strategies](/strategy) guide for how yield fits into a complete plan.
+Compare dividend-paying options in our [best dividend stocks](/stocks/) list, read the [dividend basics guide](/articles/what-are-dividends/) for the full foundation, and see our [dividend strategies](/strategy/) guide for how yield fits into a complete plan.
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Dividend yields and payments are not guaranteed and fluctuate with market conditions. Consult a qualified financial advisor before making investment decisions.*
 

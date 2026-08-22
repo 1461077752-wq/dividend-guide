@@ -102,7 +102,7 @@ Assume an investor put **$10,000** into QDTE at **$29.81** and received the eigh
 
 > “I liked seeing cash every Friday, but the smallest week was almost half the biggest one. I stopped budgeting from the highest payout and started comparing my account value plus distributions with a plain Nasdaq-100 position.”
 
-This is an illustrative scenario, not a testimonial. It ignores taxes, price changes, reinvestment and trading costs. Use our [Dividend Calculator](/calculator) for cash-flow scenarios, then separately compare total return over the same dates.
+This is an illustrative scenario, not a testimonial. It ignores taxes, price changes, reinvestment and trading costs. Use our [Dividend Calculator](/calculator/) for cash-flow scenarios, then separately compare total return over the same dates.
 
 ## QDTE Versus Other Option-Income Funds
 
@@ -148,7 +148,7 @@ No. Roundhill identifies QDTE as actively managed. Its portfolio implements a da
 
 ## How to Read the Next QDTE Payment
 
-Treat the next weekly amount as one observation, not an annual income promise. Record the distribution, NAV change, ROC estimate and total return together. If you cannot explain why those four numbers differ, the position is probably more complex than your income plan needs. Compare alternatives in our [dividend strategies guide](/strategy) and [stock research](/stocks) before deciding where it belongs.
+Treat the next weekly amount as one observation, not an annual income promise. Record the distribution, NAV change, ROC estimate and total return together. If you cannot explain why those four numbers differ, the position is probably more complex than your income plan needs. Compare alternatives in our [dividend strategies guide](/strategy/) and [stock research](/stocks/) before deciding where it belongs.
 
 *Henry Zhou personally verified the fund structure and distribution data against issuer disclosures and SEC filings before publication.*
 

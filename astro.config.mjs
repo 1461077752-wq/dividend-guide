@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 export default defineConfig({
-  site: 'https://dividend01.com',
+  site: 'https://www.dividend01.com',
   trailingSlash: 'always',
   markdown: {
     shikiConfig: {

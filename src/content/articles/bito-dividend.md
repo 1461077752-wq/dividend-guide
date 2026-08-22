@@ -130,7 +130,7 @@ Yes. In the first seven months of 2026 the fund paid roughly **$0.07 per share t
 
 BITO is a bitcoin futures ETF that pays out realized gains monthly — and that payout is often repackaged as a giant "dividend yield" on financial sites. The ~46% trailing yield is a distorted number: it averages past gains over a collapsing price. The 2024–2025 payout boom ($14.03 then $9.52 per share) and the 2026 bust (~$0.07) tell the real story.
 
-If you want bitcoin exposure, BITO has a role as a speculative satellite. If you want income, it is the wrong tool — pair it instead with funds whose distributions come from real earnings. Run your own scenario through our [Dividend Calculator](/calculator), compare quality payers on our [best dividend stocks](/stocks) list, and if you're chasing a similar-looking yield elsewhere, read our [high dividend stocks](/articles/high-dividend-stocks/) guide before buying.
+If you want bitcoin exposure, BITO has a role as a speculative satellite. If you want income, it is the wrong tool — pair it instead with funds whose distributions come from real earnings. Run your own scenario through our [Dividend Calculator](/calculator/), compare quality payers on our [best dividend stocks](/stocks/) list, and if you're chasing a similar-looking yield elsewhere, read our [high dividend stocks](/articles/high-dividend-stocks/) guide before buying.
 
 *Last updated: 2026-08-10. This article is for informational and educational purposes only and does not constitute financial advice. Distributions are not guaranteed, cryptocurrency is highly volatile, and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 

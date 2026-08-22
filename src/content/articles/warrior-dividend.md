@@ -62,7 +62,7 @@ One structural rule matters: keep the satellites small. High-yield names such as
 | Dogs of the Dow | Yield + value | 3–5% | Rules-based investors |
 | Covered call | Options income | 7–12% | Income investors tolerant of capped upside |
 
-The warrior approach sits between pure dividend growth and pure high yield: it accepts a mid-range yield today to get both current income and future income growth. Full detail on the five core dividend strategies — including DRIP, growth, high yield, Dogs of the Dow, and covered calls — is in our [dividend strategies guide](/strategy).
+The warrior approach sits between pure dividend growth and pure high yield: it accepts a mid-range yield today to get both current income and future income growth. Full detail on the five core dividend strategies — including DRIP, growth, high yield, Dogs of the Dow, and covered calls — is in our [dividend strategies guide](/strategy/).
 
 ## Illustrative Dividend Warrior's Portfolio
 
@@ -103,21 +103,21 @@ Most aim for **15–30 positions**. Fewer than 10 concentrates risk in single co
 Rarely. A sustained 10%+ yield on an equity usually means the market expects a cut. Legitimate exceptions are some REITs, BDCs, and closed-end funds, but those require reading the payout mechanics carefully — see our [highest dividend stocks guide](/articles/highest-dividend-stocks/).
 
 ### Do I have to reinvest dividends?
-Not always. If you need the income for living expenses, take the cash. But reinvestment is what makes the "warrior" strategy work: during the accumulation phase, leaving DRIP on is the single highest-impact habit. Use our [Dividend Calculator](/calculator) to model how much faster reinvestment grows your income.
+Not always. If you need the income for living expenses, take the cash. But reinvestment is what makes the "warrior" strategy work: during the accumulation phase, leaving DRIP on is the single highest-impact habit. Use our [Dividend Calculator](/calculator/) to model how much faster reinvestment grows your income.
 
 ### What's the biggest mistake dividend warriors make?
 Chasing yield. The most common failure is buying a 9% yield without checking the payout ratio, then watching the dividend get cut. The second most common is selling everything in a bear market, which locks in losses and resets the compounding clock.
 
 ## How to Start Your Warrior Dividend Journey
 
-1. **Set your income goal first.** Decide how much monthly dividend income you want, then work backwards with the [Dividend Calculator](/calculator) to find the portfolio size needed.
+1. **Set your income goal first.** Decide how much monthly dividend income you want, then work backwards with the [Dividend Calculator](/calculator/) to find the portfolio size needed.
 2. **Build the core.** Start with SCHD, VIG, or VYM as a foundation, then add 5–10 individual dividend growers you understand.
 3. **Add income satellites.** Add monthly payers or higher-yield names (O, JEPI) at 30–40% of the portfolio.
 4. **Run every purchase through the five-point checklist.** Payout ratio under 70%, growing dividend history, real cash-flow coverage.
 5. **Track income, not price.** Update a quarterly dividend income sheet. Rebalance only when a position drifts 5%+ out of its target weight.
 6. **Never turn off DRIP in the accumulation phase.**
 
-The warrior dividend path is not fast. It is not exciting. It is a method for turning a modest, consistent effort into income that shows up every quarter — in bull markets and bear markets alike. If you want the full menu of approaches, start with our [dividend strategies](/strategy) comparison, then screen your candidates against our [best dividend stocks](/stocks) list.
+The warrior dividend path is not fast. It is not exciting. It is a method for turning a modest, consistent effort into income that shows up every quarter — in bull markets and bear markets alike. If you want the full menu of approaches, start with our [dividend strategies](/strategy/) comparison, then screen your candidates against our [best dividend stocks](/stocks/) list.
 
 *Last updated: 2026-08-10. This article is for informational and educational purposes only and does not constitute financial advice. Dividends are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 

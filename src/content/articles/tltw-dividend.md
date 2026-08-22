@@ -139,7 +139,7 @@ The "12.2% monthly dividend on US treasuries" claim is a **misleading headline**
 3. **Duration risk is real** — long bonds can lose 20-30% when rates rise
 4. **"Yield" isn't "return"** — price changes matter
 
-If you see a "12% Treasury dividend" claim, it's almost certainly a covered-call ETF with hidden risks. Before acting, check the current 30-year Treasury yield at [Treasury.gov](https://home.treasury.gov/) and the fund's actual distribution history on the [iShares TLTW page](https://www.ishares.com/us/products/329118/). For sustainable income, stick with quality dividend stocks and appropriate bond allocations. Browse our [best dividend stocks](/stocks), use the [Dividend Calculator](/calculator) to model realistic returns, and read our [dividend strategies](/strategy) guide.
+If you see a "12% Treasury dividend" claim, it's almost certainly a covered-call ETF with hidden risks. Before acting, check the current 30-year Treasury yield at [Treasury.gov](https://home.treasury.gov/) and the fund's actual distribution history on the [iShares TLTW page](https://www.ishares.com/us/products/329118/). For sustainable income, stick with quality dividend stocks and appropriate bond allocations. Browse our [best dividend stocks](/stocks/), use the [Dividend Calculator](/calculator/) to model realistic returns, and read our [dividend strategies](/strategy/) guide.
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Fund yields and distributions are not guaranteed and fluctuate with market conditions. Consult a qualified financial advisor before investing.*
 

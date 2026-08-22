@@ -165,7 +165,7 @@ The highest dividend stocks in the market are BDCs, mREITs, and closed-end funds
 3. **Compare every ultra-high yield against its total return and NAV trend**
 4. **Build income on sustainable 2-5% yielders, then add risk deliberately**
 
-Model your realistic income with the [Dividend Calculator](/calculator), compare sustainable options in our [best dividend stocks](/stocks) list, and understand where (if anywhere) high-yield vehicles fit in our [dividend strategies](/strategy) guide. Start with [dividend yield explained](/articles/dividend-yield/) if you're new to the metric itself.
+Model your realistic income with the [Dividend Calculator](/calculator/), compare sustainable options in our [best dividend stocks](/stocks/) list, and understand where (if anywhere) high-yield vehicles fit in our [dividend strategies](/strategy/) guide. Start with [dividend yield explained](/articles/dividend-yield/) if you're new to the metric itself.
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Ultra-high-yield securities involve significant risks, including dividend cuts and loss of principal. Past performance does not predict future results. Consult a qualified financial advisor before making investment decisions.*
 

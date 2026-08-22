@@ -126,11 +126,11 @@ One or two is usually enough. SCHD + VYM, or SCHD + JEPI, covers most goals. Add
 1. **Pick a core by your horizon.** Under 10 years: SCHD or VYM. Over 10 years and reinvesting: VIG or DGRO.
 2. **Add an income satellite only if you need cash now.** JEPI (monthly, ~7.5%) or HDV (~3.8%).
 3. **Keep fees under 0.10% on the core.** At 0.06%, SCHD, VYM, and VIG all qualify.
-4. **Turn on DRIP.** Model the compounding difference with our [Dividend Calculator](/calculator).
+4. **Turn on DRIP.** Model the compounding difference with our [Dividend Calculator](/calculator/).
 5. **Rebalance once a year.** Trim what drifted up, add to what drifted down — don't buy more of whatever is up.
-6. **Screen individual stocks against the same logic.** The [best dividend stocks](/stocks) list and [dividend screening guide](/articles/dividend-dividend-stocks/) apply the same quality screens to single names.
+6. **Screen individual stocks against the same logic.** The [best dividend stocks](/stocks/) list and [dividend screening guide](/articles/dividend-dividend-stocks/) apply the same quality screens to single names.
 
-The best dividend ETF is the one you can hold for a decade without second-guessing. For most people that's SCHD or VYM in the core, with a high-yield satellite only if current income is the priority. Compare strategies and yield math across our [dividend strategies](/strategy) guide, and if you're starting from zero, begin with [dividend basics](/articles/what-are-dividends/).
+The best dividend ETF is the one you can hold for a decade without second-guessing. For most people that's SCHD or VYM in the core, with a high-yield satellite only if current income is the priority. Compare strategies and yield math across our [dividend strategies](/strategy/) guide, and if you're starting from zero, begin with [dividend basics](/articles/what-are-dividends/).
 
 *Last updated: 2026-08-10. This article is for informational and educational purposes only and does not constitute financial advice. Dividends are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 

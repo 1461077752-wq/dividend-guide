@@ -140,7 +140,7 @@ The arc this reader describes — a small start, slow first years, and compoundi
 4. **Enable DRIP** so dividends automatically reinvest
 5. **Contribute monthly** and ignore short-term noise
 
-Use the [Dividend Calculator](/calculator) to project your income, browse our curated [best dividend stocks](/stocks), and compare [dividend strategies](/strategy) to match your goals. New to the concept? Start with our [dividend basics guide](/articles/what-are-dividends/).
+Use the [Dividend Calculator](/calculator/) to project your income, browse our curated [best dividend stocks](/stocks/), and compare [dividend strategies](/strategy/) to match your goals. New to the concept? Start with our [dividend basics guide](/articles/what-are-dividends/).
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Dividend payments are not guaranteed and can be reduced or eliminated. Consult a qualified financial advisor before making investment decisions.*
 

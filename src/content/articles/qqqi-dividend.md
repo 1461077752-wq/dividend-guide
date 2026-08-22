@@ -132,9 +132,9 @@ QQQI is worth consideration for investors who want **high monthly income with ta
 1. **Compare after-tax, not headline yield** — the 60/40 treatment is QQQI's real edge over ELN-based rivals
 2. **Size it as a satellite** — cap at 10-20% of your portfolio until it survives a full bear market
 3. **Prefer taxable accounts** — the tax advantage is wasted in an IRA
-4. **Verify monthly payouts** — check [NEOS's distribution page](https://neosfunds.com/qqqi/) and model the income with [our Dividend Calculator](/calculator)
+4. **Verify monthly payouts** — check [NEOS's distribution page](https://neosfunds.com/qqqi/) and model the income with [our Dividend Calculator](/calculator/)
 
-Compare QQQI against [best dividend stocks](/stocks), see where premium-income funds fit in our [dividend strategies](/strategy) guide, and start with [dividend basics](/articles/what-are-dividends/). For the complete payout history, read [our QQQI dividend history](/articles/qqqi-dividend-history/).
+Compare QQQI against [best dividend stocks](/stocks/), see where premium-income funds fit in our [dividend strategies](/strategy/) guide, and start with [dividend basics](/articles/what-are-dividends/). For the complete payout history, read [our QQQI dividend history](/articles/qqqi-dividend-history/).
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Distributions are not guaranteed and past performance does not predict future results. QQQI is a relatively new fund with a short operating history. Consult a qualified financial advisor before investing.*
 

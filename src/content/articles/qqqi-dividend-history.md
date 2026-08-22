@@ -142,9 +142,9 @@ QQQI's short distribution history shows something rare in the covered-call space
 1. **Verify the payouts yourself** — check [NEOS's distribution page](https://neosfunds.com/qqqi/) monthly rather than trusting any one table
 2. **Tax advantage is real** — the 60/40 rate and ROC classification make QQQI better suited to taxable accounts than JEPQ
 3. **Keep it as a satellite** — at 2.6 years old, QQQI has no bear-market record; pair it with a quality dividend core like SCHD
-4. **Watch total return, not just yield** — model the income against [our Dividend Calculator](/calculator) to see what a realistic end-of-year total looks like
+4. **Watch total return, not just yield** — model the income against [our Dividend Calculator](/calculator/) to see what a realistic end-of-year total looks like
 
-Compare QQQI against [best dividend stocks](/stocks), review where premium-income funds fit in our [dividend strategies](/strategy) guide, and start with [dividend basics](/articles/what-are-dividends/) if you're new. JEPQ holders weighing the swap can read our full [JEPQ breakdown](/articles/jepq-dividend/).
+Compare QQQI against [best dividend stocks](/stocks/), review where premium-income funds fit in our [dividend strategies](/strategy/) guide, and start with [dividend basics](/articles/what-are-dividends/) if you're new. JEPQ holders weighing the swap can read our full [JEPQ breakdown](/articles/jepq-dividend/).
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Distributions are not guaranteed, and past performance does not predict future results. QQQI is a relatively new fund with a short operating history. Consult a qualified financial advisor before investing.*
 

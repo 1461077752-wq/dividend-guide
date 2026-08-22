@@ -141,7 +141,7 @@ JEPI is the **defensive income** standard: an ~8% yield with monthly payments, l
 3. **Tax note** — hold in an IRA/401(k); distributions are mostly ordinary income
 4. **Pair with growth** — combine with SCHD or JEPQ for balance
 
-Compare JEPI against [best dividend stocks](/stocks), model the income with the [Dividend Calculator](/calculator), and see where premium-income funds fit in our [dividend strategies](/strategy) guide. New to dividends? Start with [dividend basics](/articles/what-are-dividends/).
+Compare JEPI against [best dividend stocks](/stocks/), model the income with the [Dividend Calculator](/calculator/), and see where premium-income funds fit in our [dividend strategies](/strategy/) guide. New to dividends? Start with [dividend basics](/articles/what-are-dividends/).
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Distributions are not guaranteed and past performance does not predict future results. Consult a qualified financial advisor before investing.*
 

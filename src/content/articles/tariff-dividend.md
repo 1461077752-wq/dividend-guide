@@ -120,7 +120,7 @@ The tariff dividend is a **proposal, not a program**. As of July 2026, no legisl
 3. **Understand the trade-offs** — tariffs raise consumer prices, which can offset any future dividend
 4. **Verify, don't assume** — check USTR and Treasury publications before trusting any "dividend check" claim online
 
-For reliable, growing income that doesn't depend on political headlines, browse our [best dividend stocks](/stocks) and use the [Dividend Calculator](/calculator) to project your own dividend income. Compare approaches in our [dividend strategies](/strategy) guide.
+For reliable, growing income that doesn't depend on political headlines, browse our [best dividend stocks](/stocks/) and use the [Dividend Calculator](/calculator/) to project your own dividend income. Compare approaches in our [dividend strategies](/strategy/) guide.
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Policy proposals are subject to change and may never be enacted. Verify current information from official government sources before making financial decisions.*
 

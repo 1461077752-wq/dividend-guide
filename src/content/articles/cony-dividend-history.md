@@ -99,13 +99,13 @@ Consider an illustrative investor who puts **$10,000** into CONY at **$19.04**, 
 
 > “The weekly deposits felt like a paycheck, but after the first month I stopped calling them profit. I began recording distributions and ending account value separately because a large ROC estimate meant some of the cash could simply be my capital coming back.”
 
-This is an illustrative calculation, not a reader testimonial. It holds the share count constant, ignores reinvestment and taxes, and does not estimate the ending market value. The practical lesson is to track **cash received + current position value − original capital**, not cash alone. Our [Dividend Calculator](/calculator) can model income, but total return still requires price data.
+This is an illustrative calculation, not a reader testimonial. It holds the share count constant, ignores reinvestment and taxes, and does not estimate the ending market value. The practical lesson is to track **cash received + current position value − original capital**, not cash alone. Our [Dividend Calculator](/calculator/) can model income, but total return still requires price data.
 
 ## Where CONY Fits—and Where It Does Not
 
 CONY may suit an experienced investor who understands options, accepts COIN-linked volatility, and treats the position as a limited satellite allocation. It is not a substitute for a diversified income portfolio or a bond coupon. Compare its concentration with [NVDY's distribution history](/articles/nvdy-dividend-history/) and the diversified approach in [JEPQ's history](/articles/jepq-dividend-history/).
 
-Before using the fund, decide whether you want current cash or long-term participation in COIN. A covered-call structure can lag badly during a sharp rally. Review broader [dividend strategies](/strategy) and compare more conventional choices in our [dividend stock research](/stocks).
+Before using the fund, decide whether you want current cash or long-term participation in COIN. A covered-call structure can lag badly during a sharp rally. Review broader [dividend strategies](/strategy/) and compare more conventional choices in our [dividend stock research](/stocks/).
 
 ## Questions Investors Ask About CONY
 

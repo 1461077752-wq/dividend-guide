@@ -196,7 +196,7 @@ TSLY's distribution history is the clearest possible demonstration that **advert
 3. **Know the underlying is everything** — TSLY's capped calls work only if TSLA doesn't stall or fall
 4. **Check the split-adjusted history** — TSLY's 1-for-5 reverse split scrambles old payout figures on data sites
 
-Model realistic TSLY income with the [Dividend Calculator](/calculator), compare sustainable alternatives in [best dividend stocks](/stocks), and see where (if anywhere) covered-call funds fit in our [dividend strategies](/strategy) guide. Compare TSLY against the diversified premium-income funds — [JEPQ's distribution history](/articles/jepq-dividend-history/) and [QQQI's record](/articles/qqqi-dividend-history/) — which offer far steadier payouts than single-stock YieldMax funds.
+Model realistic TSLY income with the [Dividend Calculator](/calculator/), compare sustainable alternatives in [best dividend stocks](/stocks/), and see where (if anywhere) covered-call funds fit in our [dividend strategies](/strategy/) guide. Compare TSLY against the diversified premium-income funds — [JEPQ's distribution history](/articles/jepq-dividend-history/) and [QQQI's record](/articles/qqqi-dividend-history/) — which offer far steadier payouts than single-stock YieldMax funds.
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Distributions are not guaranteed and past performance does not predict future results. TSLY is a high-risk strategy with significant capital erosion risk. Consult a qualified financial advisor before investing.*
 

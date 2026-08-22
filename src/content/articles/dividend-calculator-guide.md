@@ -50,7 +50,7 @@ If you bought [SCHD](https://www.schwabassetmanagement.com/products/schd) at $52
 
 ## Advanced Calculator Features
 
-Basic math only tells you the present. The best dividend calculators — including ours at [Dividend Guide](/calculator) — model the future with these four features:
+Basic math only tells you the present. The best dividend calculators — including ours at [Dividend Guide](/calculator/) — model the future with these four features:
 
 ### 1. Dividend Growth
 Most quality dividend stocks raise payouts 5-10% annually. JNJ has grown its dividend for 62 consecutive years. Adding a 6% growth assumption to your calculator shows how income accelerates over time.
@@ -95,7 +95,7 @@ Here's what a dividend calculator outputs for a realistic scenario:
 
 ## How to Use the Dividend Guide Calculator
 
-Our free [Dividend Calculator](/calculator) walks through three scenarios:
+Our free [Dividend Calculator](/calculator/) walks through three scenarios:
 
 1. **Yield Calculator** — input a stock price and annual dividend to get yield
 2. **DRIP Growth Projection** — model reinvestment over any time horizon
@@ -146,8 +146,8 @@ Most don't by default. Qualified dividends are taxed at 0-20% (capital gains rat
 
 Here's a 3-step way to get moving today:
 
-1. **Run your numbers** — use the [Dividend Calculator](/calculator) to model your portfolio and income goal (free, under a minute)
-2. **Find the candidates** — browse [best dividend stocks](/stocks) and compare [dividend strategies](/strategy) against your goals
+1. **Run your numbers** — use the [Dividend Calculator](/calculator/) to model your portfolio and income goal (free, under a minute)
+2. **Find the candidates** — browse [best dividend stocks](/stocks/) and compare [dividend strategies](/strategy/) against your goals
 3. **Commit to a plan** — set an automatic monthly contribution, enable DRIP, and revisit the calculator quarterly
 
 Then learn the fundamentals in our [dividend basics guide](/articles/what-are-dividends/).

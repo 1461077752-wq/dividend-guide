@@ -73,6 +73,6 @@ This 4x difference illustrates the power of dividend compounding over long perio
 
 ## Next Steps
 
-- Use the [Dividend Calculator](/calculator) to project your own DRIP growth
-- Browse our [Best Dividend Stocks](/stocks) for DRIP candidates
-- Read more about [Dividend Strategies](/strategy)
+- Use the [Dividend Calculator](/calculator/) to project your own DRIP growth
+- Browse our [Best Dividend Stocks](/stocks/) for DRIP candidates
+- Read more about [Dividend Strategies](/strategy/)

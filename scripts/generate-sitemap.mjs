@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const root = process.cwd();
 const distDir = path.join(root, 'dist');
-const baseUrl = 'https://dividend01.com';
+const baseUrl = 'https://www.dividend01.com';
 
 const walk = async directory => {
   const entries = await fs.readdir(directory, { withFileTypes: true });

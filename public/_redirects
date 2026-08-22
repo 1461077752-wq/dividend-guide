@@ -1,2 +1,2 @@
-# Canonical host: keep one hostname so Google does not index both www and apex.
-https://www.dividend01.com/* https://dividend01.com/:splat 301!
+# Cloudflare Pages `_redirects` only supports path-level redirects.
+# Configure apex -> www and trailing-slash redirects in Cloudflare Redirect Rules.

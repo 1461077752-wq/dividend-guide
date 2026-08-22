@@ -90,7 +90,7 @@ One of the oldest dividend strategies — buying the 10 highest-yielding Dow sto
 
 *Per [Dogs of the Dow 2025 results](https://www.dogsofthedow.com/dogs2025p.htm), August 2026.*
 
-The Dogs beat the Dow by about 2 points and the Small Dogs beat it by over 5 — a strong rebound after a weak 2024. The strategy's appeal is its simplicity: buy the highest-yielders, rebalance yearly, collect the income. Its weakness is concentration: PG, one of the 2025 Dogs, fell 13%. It's one of the five strategies we compare in our [dividend strategies](/strategy) guide.
+The Dogs beat the Dow by about 2 points and the Small Dogs beat it by over 5 — a strong rebound after a weak 2024. The strategy's appeal is its simplicity: buy the highest-yielders, rebalance yearly, collect the income. Its weakness is concentration: PG, one of the 2025 Dogs, fell 13%. It's one of the five strategies we compare in our [dividend strategies](/strategy/) guide.
 
 ## Quality vs. High Yield: The Right Balance
 
@@ -153,7 +153,7 @@ The 2025 dividend stock landscape rewards one approach above all: **own the grow
 3. **Screen, don't chase** — payout ratio under ~70% and a 10+ year streak beat any headline yield
 4. **Reinvest and hold** — 2025 showed the total return comes from quality held over time, not from timing
 
-Model your income with the [Dividend Calculator](/calculator), compare candidates in our curated [best dividend stocks](/stocks) list, and read the [dividend strategies](/strategy) guide to see which approach fits your goals. New to dividends? Start with [dividend basics](/articles/what-are-dividends/) or [dividend yield explained](/articles/dividend-yield/).
+Model your income with the [Dividend Calculator](/calculator/), compare candidates in our curated [best dividend stocks](/stocks/) list, and read the [dividend strategies](/strategy/) guide to see which approach fits your goals. New to dividends? Start with [dividend basics](/articles/what-are-dividends/) or [dividend yield explained](/articles/dividend-yield/).
 
 *Last updated: 2026-08-04. This article is for informational and educational purposes only and does not constitute financial advice. Dividend payments are not guaranteed and can be reduced or eliminated. Past performance does not predict future results. Consult a qualified financial advisor before making investment decisions.*
 

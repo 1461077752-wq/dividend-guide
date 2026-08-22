@@ -66,6 +66,6 @@ However, dividends become powerful when **reinvested**. Over long periods, reinv
 
 ## Next Steps
 
-- Explore our [Best Dividend Stocks](/stocks) for curated picks
-- Use the [Dividend Calculator](/calculator) to project your returns
-- Compare [Dividend Strategies](/strategy) to find your approach
+- Explore our [Best Dividend Stocks](/stocks/) for curated picks
+- Use the [Dividend Calculator](/calculator/) to project your returns
+- Compare [Dividend Strategies](/strategy/) to find your approach

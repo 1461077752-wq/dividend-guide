@@ -111,7 +111,7 @@ Yes. SCHD's underlying companies have strong payout ratios and the index screens
 Quarterly — typically March, June, September, and December.
 
 ### Should I choose SCHD for its yield or something higher?
-If you want sustainable growing income with reasonable yield, SCHD. If you only chase the highest number, you may sacrifice quality and stability. See our [dividend strategies](/strategy) guide for the full comparison.
+If you want sustainable growing income with reasonable yield, SCHD. If you only chase the highest number, you may sacrifice quality and stability. See our [dividend strategies](/strategy/) guide for the full comparison.
 
 ## The Bottom Line on SCHD's Yield
 
@@ -122,7 +122,7 @@ SCHD's ~3.4% yield isn't the highest available — and that's the point. It comb
 2. **Buy early, hold long** — yield on cost climbs every year SCHD raises its dividend
 3. **Pair it with growth** — SCHD alone is income; combine with a broad market fund for total return
 
-Use the [Dividend Calculator](/calculator) to project SCHD's income at different yields. Read the full [SCHD dividend history](/articles/schd-dividend/), browse [best dividend stocks](/stocks) for complementary picks, and review [dividend strategies](/strategy) to see how SCHD fits your plan.
+Use the [Dividend Calculator](/calculator/) to project SCHD's income at different yields. Read the full [SCHD dividend history](/articles/schd-dividend/), browse [best dividend stocks](/stocks/) for complementary picks, and review [dividend strategies](/strategy/) to see how SCHD fits your plan.
 
 *Last updated: 2026-07-30. This article is for informational and educational purposes only and does not constitute financial advice. Yields and distributions are not guaranteed and fluctuate with market conditions. Consult a qualified financial advisor before investing.*
 
