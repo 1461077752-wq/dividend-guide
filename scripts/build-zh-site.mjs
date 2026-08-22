@@ -6,6 +6,7 @@ const root = process.cwd();
 const distDir = path.join(root, 'dist');
 const cacheDir = path.join(root, 'src', 'content', 'translations', 'zh');
 const cacheFile = path.join(cacheDir, 'site.json');
+const baseUrl = 'https://www.dividend01.com';
 const apiKey = process.env.OPENAI_API_KEY;
 const model = process.env.OPENAI_MODEL || 'gpt-5-mini';
 
@@ -128,10 +129,12 @@ for (const page of sourcePages) {
   localized = rewriteLocalizedMetadata(localized, page.relative);
   localized = localized.replace(/href="\/(?!zh\/|\/|#|mailto:)/g, 'href="/zh/');
   localized = localized.replace(/href="\/"/g, 'href="/zh/"');
-  localized = localized.replace(/class="nav-language" href="[^"]*"/g, `class="nav-language" href="/${page.relative.replace(/\\/g, '/').replace(/index\.html$/, '')}"`);
-  localized = localized.replace(/class="language-switcher" href="[^"]*"/g, `class="language-switcher" href="/${page.relative.replace(/\\/g, '/').replace(/index\.html$/, '')}"`);
+  const englishPath = `/${page.relative.replace(/\\/g, '/').replace(/index\.html$/, '')}`;
+  const englishUrl = `${baseUrl}${englishPath}`;
+  localized = localized.replace(/class="nav-language" href="[^"]*"/g, `class="nav-language" href="${englishUrl}"`);
+  localized = localized.replace(/class="language-switcher" href="[^"]*"/g, `class="language-switcher" href="${englishUrl}"`);
   localized = localized.replace(/(<a class="language-switcher"[^>]*>)[^<]*(<\/a>)/g, '$1EN$2');
-  localized = localized.replace(/class="article-language-switcher" href="[^"]*"/g, `class="article-language-switcher" href="/${page.relative.replace(/\\/g, '/').replace(/index\.html$/, '')}"`);
+  localized = localized.replace(/class="article-language-switcher" href="[^"]*"/g, `class="article-language-switcher" href="${englishUrl}"`);
   localized = localized.replace(/(<a class="article-language-switcher"[^>]*>)[^<]*(<\/a>)/g, '$1EN$2');
   await fs.mkdir(path.dirname(output), { recursive: true });
   await fs.writeFile(output, localized, 'utf8');

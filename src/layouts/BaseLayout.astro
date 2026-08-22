@@ -32,10 +32,10 @@ const englishPath = currentPath.replace(/^\/zh(?=\/|$)/, '') || '/';
 const englishUrl = `https://www.dividend01.com${englishPath}`;
 const chineseUrl = `https://www.dividend01.com/zh${englishPath === '/' ? '/' : englishPath}`;
 const languageHref = isNotFoundPage
-  ? (locale === 'zh' ? '/404.html' : '/zh/404/')
+  ? (locale === 'zh' ? 'https://www.dividend01.com/404.html' : 'https://www.dividend01.com/zh/404/')
   : locale === 'zh'
-    ? englishPath
-    : `/zh${englishPath === '/' ? '/' : englishPath}`;
+    ? englishUrl
+    : chineseUrl;
 const currentYear = new Date().getFullYear();
 const navItems = [
   { href: '/', label: 'Guide', icon: 'home' },

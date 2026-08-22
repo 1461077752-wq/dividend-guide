@@ -44,6 +44,9 @@ for (const file of files) {
   const h1Count = (html.match(/<h1\b/gi) || []).length;
   const noindex = /<meta\s+name="robots"\s+content="[^"]*noindex/i.test(html);
   if (noindex) continue;
+  if (/https:\/\/https|https\/\/dividend01\.com|https:\/\/dividend01\.com/i.test(html)) {
+    errors.push(`${relative}: malformed or non-www site URL found`);
+  }
   if (!title) errors.push(`${relative}: missing title`);
   if (!description) errors.push(`${relative}: missing meta description`);
   if (!relative.startsWith('zh/') && title?.length > 65) warnings.push(`${relative}: title is ${title.length} characters`);
@@ -89,6 +92,17 @@ duplicateValues('title', 'title');
 
 const routes = new Set(pages.map(page => page.route));
 for (const page of pages) {
+  const languageAnchor = [...page.html.matchAll(/<a\b[^>]*>/gi)].find(match => /class="[^"]*(?:nav-language|article-language-switcher)[^"]*"/i.test(match[0]));
+  const languageHref = languageAnchor?.[0].match(/\shref="([^"]+)"/i)?.[1];
+  const englishRoute = page.route.replace(/^\/zh(?=\/|$)/, '') || '/';
+  const pairedRoute = page.route.startsWith('/zh/')
+    ? englishRoute
+    : `/zh${page.route === '/' ? '/' : page.route}`;
+  const expectedLanguageHref = `${baseUrl}${pairedRoute}`;
+  if (!languageHref) errors.push(`${page.relative}: missing language switch link`);
+  else if (languageHref !== expectedLanguageHref) {
+    errors.push(`${page.relative}: language switch must be ${expectedLanguageHref}, found ${languageHref}`);
+  }
   for (const match of page.html.matchAll(/\shref="([^"]+)"/gi)) {
     const href = match[1];
     if (!href.startsWith('/') || href.startsWith('//')) continue;
@@ -104,7 +118,7 @@ for (const page of pages) {
       errors.push(`${page.relative}: broken internal link ${route}`);
     }
   }
-  for (const match of page.html.matchAll(/(?:src|content)="(https:\/\/dividend01\.com)?(\/images\/[^"]+)"/gi)) {
+  for (const match of page.html.matchAll(/(?:src|content)="(https:\/\/www\.dividend01\.com)?(\/images\/[^"]+)"/gi)) {
     const asset = path.join(distDir, match[2].replace(/^\//, ''));
     try { await fs.access(asset); } catch { errors.push(`${page.relative}: missing image ${match[2]}`); }
   }

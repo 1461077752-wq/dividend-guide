@@ -38,7 +38,7 @@ const currentPath = Astro.url.pathname;
 const englishPath = currentPath.replace(/^\/zh(?=\/|$)/, '') || '/';
 const englishUrl = `https://www.dividend01.com${englishPath}`;
 const chineseUrl = `https://www.dividend01.com/zh${englishPath === '/' ? '/' : englishPath}`;
-const languageHref = locale === 'zh' ? englishPath : `/zh${englishPath === '/' ? '/' : englishPath}`;
+const languageHref = locale === 'zh' ? englishUrl : chineseUrl;
 const localizedPath = (path: string) => locale === 'zh' ? (path === '/' ? '/zh/' : `/zh${path}`) : path;
 const normalizeUrl = (value: string) => {
   const parsed = new URL(value);
