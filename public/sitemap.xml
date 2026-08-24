@@ -139,6 +139,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dividend01.com/articles/jepi-dividend/" />
   </url>
   <url>
+    <loc>https://www.dividend01.com/articles/jepq-dividend-date/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dividend01.com/articles/jepq-dividend-date/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.dividend01.com/zh/articles/jepq-dividend-date/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dividend01.com/articles/jepq-dividend-date/" />
+  </url>
+  <url>
     <loc>https://www.dividend01.com/articles/jepq-dividend-history/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.dividend01.com/articles/jepq-dividend-history/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.dividend01.com/zh/articles/jepq-dividend-history/" />
@@ -167,6 +173,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.dividend01.com/articles/nvdy-dividend-history/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.dividend01.com/zh/articles/nvdy-dividend-history/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dividend01.com/articles/nvdy-dividend-history/" />
+  </url>
+  <url>
+    <loc>https://www.dividend01.com/articles/nvidia-dividend/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dividend01.com/articles/nvidia-dividend/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.dividend01.com/zh/articles/nvidia-dividend/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dividend01.com/articles/nvidia-dividend/" />
   </url>
   <url>
     <loc>https://www.dividend01.com/articles/qdte-dividend-history/</loc>
@@ -481,6 +493,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dividend01.com/articles/jepi-dividend/" />
   </url>
   <url>
+    <loc>https://www.dividend01.com/zh/articles/jepq-dividend-date/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dividend01.com/articles/jepq-dividend-date/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.dividend01.com/zh/articles/jepq-dividend-date/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dividend01.com/articles/jepq-dividend-date/" />
+  </url>
+  <url>
     <loc>https://www.dividend01.com/zh/articles/jepq-dividend-history/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.dividend01.com/articles/jepq-dividend-history/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.dividend01.com/zh/articles/jepq-dividend-history/" />
@@ -509,6 +527,12 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.dividend01.com/articles/nvdy-dividend-history/" />
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.dividend01.com/zh/articles/nvdy-dividend-history/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dividend01.com/articles/nvdy-dividend-history/" />
+  </url>
+  <url>
+    <loc>https://www.dividend01.com/zh/articles/nvidia-dividend/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dividend01.com/articles/nvidia-dividend/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.dividend01.com/zh/articles/nvidia-dividend/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.dividend01.com/articles/nvidia-dividend/" />
   </url>
   <url>
     <loc>https://www.dividend01.com/zh/articles/qdte-dividend-history/</loc>

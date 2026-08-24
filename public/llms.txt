@@ -8,6 +8,10 @@
 - [Dividend Strategies](/strategy): Comparison of five strategies — DRIP, growth, high yield, Dogs of the Dow, covered calls.
 
 ## Articles
+- [NVIDIA Dividend: 2026 Increase, Yield and Dates](/articles/nvidia-dividend/): NVIDIA's new $0.25 quarterly dividend, split-adjusted history, yield math and implications for NVDA shareholders.
+- [英伟达股息：2026 年上调、收益率与派息日期](/zh/articles/nvidia-dividend/): 解释英伟达每股 0.25 美元季度股息、拆股调整历史、收益率算法和投资者实际现金收入。
+- [JEPQ Dividend Dates 2026](/articles/jepq-dividend-date/): The complete 2026 JEPQ ex-dividend, record and payment calendar with paid amounts and the next scheduled date.
+- [JEPQ 股息日期：2026 年除息与到账日历](/zh/articles/jepq-dividend-date/): 汇总 JEPQ 2026 年除息日、登记日、支付日、已付金额与下一次计划日期。
 - [CONY Dividend History](/articles/cony-dividend-history/): CONY's move to weekly payments, reverse-split context, return of capital, and the risks behind its headline distribution rate.
 - [CONY 分红历史](/zh/articles/cony-dividend-history/): 梳理 CONY 从月度到每周派息的历史，解释反向拆股、资本返还和高分配率背后的风险。
 - [QDTE Dividend History](/articles/qdte-dividend-history/): QDTE's weekly payment record, 0DTE covered-call mechanics, return-of-capital risk, and implications for total return.
@@ -43,4 +47,4 @@
 ## Optional
 - Site: https://www.dividend01.com
 - Language: en
-- Updated: 2026-08-04
+- Updated: 2026-08-24

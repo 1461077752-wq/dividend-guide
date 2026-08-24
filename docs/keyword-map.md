@@ -16,11 +16,16 @@
 | `/articles/schd-dividend/` | 查询分配与收益率 | SCHD dividend | informational | ETF 历史 | 查看 SCHD 历史 |
 | `/articles/schd-dividend-history/` | 查询历史支付 | SCHD dividend history | informational | ETF 历史 | 查看基金方法 |
 | `/articles/schd-dividend-yield/` | 理解收益率比较 | SCHD dividend yield | comparison | ETF 历史 | 比较其他 ETF |
+| `/articles/nvidia-dividend/` | 查询 NVDA 当前派息、收益率与上调背景 | NVIDIA dividend | informational | 基础知识 | 使用股息计算器 |
+| `/articles/jepq-dividend/` | 理解 JEPQ 分配、收益率与策略结构 | JEPQ dividend | informational | ETF 历史 | 查看历史支付 |
+| `/articles/jepq-dividend-history/` | 查询 JEPQ 历史分配金额 | JEPQ dividend history | informational | ETF 历史 | 查看当前日期日历 |
+| `/articles/jepq-dividend-date/` | 查询下一次除息、登记与到账日期 | JEPQ dividend date | informational | ETF 历史 | 计算持仓现金流 |
 
 ## 不能重复争夺的组合
 
 - `high dividend stocks` 负责风险和可持续性框架；`highest dividend stocks` 负责带数据日期的当前清单。
 - `SCHD dividend` 负责总览；`SCHD dividend history` 负责历史；`SCHD dividend yield` 负责收益率与同类比较。
+- `JEPQ dividend` 负责产品总览；`JEPQ dividend history` 负责历史金额；`JEPQ dividend date` 负责未来日历和到账时间。
 - `what are dividends` 负责定义；`dividend yield` 负责公式与风险；`dividend-dividend-stocks` 负责筛选流程。
 - `/stocks/` 是工具入口，不复制造一篇“最佳股票”编辑文章。
 
