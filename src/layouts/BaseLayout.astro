@@ -151,7 +151,7 @@ const alternateLinks = alternates || (isNotFoundPage ? [] : [
         "@type": "ListItem",
         "position": i + 1,
         "name": item.name,
-        "item": normalizeUrl(`https://www.dividend01.com${locale === 'zh' && item.path !== '/' ? `/zh${item.path}` : item.path}`)
+        "item": normalizeUrl(`https://www.dividend01.com${item.path}`)
       }))
     }] : [])
   ])}></script>

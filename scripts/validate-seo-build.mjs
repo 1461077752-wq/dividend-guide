@@ -47,6 +47,9 @@ for (const file of files) {
   if (/https:\/\/https|https\/\/dividend01\.com|https:\/\/dividend01\.com/i.test(html)) {
     errors.push(`${relative}: malformed or non-www site URL found`);
   }
+  if (/https:\/\/www\.dividend01\.com\/zh\/zh(?:\/|["'<])/i.test(html)) {
+    errors.push(`${relative}: repeated /zh/ prefix found`);
+  }
   if (!title) errors.push(`${relative}: missing title`);
   if (!description) errors.push(`${relative}: missing meta description`);
   if (!relative.startsWith('zh/') && title?.length > 65) warnings.push(`${relative}: title is ${title.length} characters`);
