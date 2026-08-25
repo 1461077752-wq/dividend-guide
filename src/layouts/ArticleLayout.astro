@@ -36,16 +36,16 @@ const {
 } = Astro.props;
 const currentPath = Astro.url.pathname;
 const englishPath = currentPath.replace(/^\/zh(?=\/|$)/, '') || '/';
-const englishUrl = `https://www.dividend01.com${englishPath}`;
-const chineseUrl = `https://www.dividend01.com/zh${englishPath === '/' ? '/' : englishPath}`;
-const languageHref = locale === 'zh' ? englishUrl : chineseUrl;
-const localizedPath = (path: string) => locale === 'zh' ? (path === '/' ? '/zh/' : `/zh${path}`) : path;
 const normalizeUrl = (value: string) => {
   const parsed = new URL(value);
   if (parsed.hostname === 'dividend01.com') parsed.hostname = 'www.dividend01.com';
   if (parsed.pathname !== '/' && !parsed.pathname.endsWith('/')) parsed.pathname += '/';
   return parsed.toString();
 };
+const englishUrl = normalizeUrl(`https://www.dividend01.com${englishPath}`);
+const chineseUrl = normalizeUrl(`https://www.dividend01.com/zh${englishPath === '/' ? '/' : englishPath}`);
+const languageHref = locale === 'zh' ? englishUrl : chineseUrl;
+const localizedPath = (path: string) => locale === 'zh' ? (path === '/' ? '/zh/' : `/zh${path}`) : path;
 const pageUrl = normalizeUrl(canonical || `https://www.dividend01.com${currentPath}`);
 const ogImage = image
   ? (image.startsWith('http') ? image : `https://www.dividend01.com${image}`)

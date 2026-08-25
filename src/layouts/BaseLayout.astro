@@ -29,13 +29,6 @@ const {
 } = Astro.props;
 const isNotFoundPage = currentPath === '/404/' || currentPath === '/404.html' || currentPath === '/zh/404/';
 const englishPath = currentPath.replace(/^\/zh(?=\/|$)/, '') || '/';
-const englishUrl = `https://www.dividend01.com${englishPath}`;
-const chineseUrl = `https://www.dividend01.com/zh${englishPath === '/' ? '/' : englishPath}`;
-const languageHref = isNotFoundPage
-  ? (locale === 'zh' ? 'https://www.dividend01.com/404.html' : 'https://www.dividend01.com/zh/404/')
-  : locale === 'zh'
-    ? englishUrl
-    : chineseUrl;
 const currentYear = new Date().getFullYear();
 const navItems = [
   { href: '/', label: 'Guide', icon: 'home' },
@@ -75,6 +68,13 @@ const normalizeUrl = (value: string) => {
   if (parsed.pathname !== '/' && !parsed.pathname.endsWith('/')) parsed.pathname += '/';
   return parsed.toString();
 };
+const englishUrl = normalizeUrl(`https://www.dividend01.com${englishPath}`);
+const chineseUrl = normalizeUrl(`https://www.dividend01.com/zh${englishPath === '/' ? '/' : englishPath}`);
+const languageHref = isNotFoundPage
+  ? (locale === 'zh' ? 'https://www.dividend01.com/404.html' : 'https://www.dividend01.com/zh/404/')
+  : locale === 'zh'
+    ? englishUrl
+    : chineseUrl;
 const pageUrl = normalizeUrl(canonical || `https://www.dividend01.com${currentPath}`);
 const ogImage = image || 'https://www.dividend01.com/images/dividend-hero.jpg';
 const alternateLinks = alternates || (isNotFoundPage ? [] : [
