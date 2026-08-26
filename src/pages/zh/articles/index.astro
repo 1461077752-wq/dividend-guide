@@ -1,19 +1,64 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const translations = await getCollection('articleTranslations');
+const articleById = new Map((await getCollection('articles'))
+  .filter(article => !article.data.draft)
+  .map(article => [article.id, article]));
+const translatedArticles = translations
+  .flatMap(translation => {
+    const article = articleById.get(translation.id);
+    return article ? [{ translation, article }] : [];
+  })
+  .sort((a, b) => b.article.data.pubDate.valueOf() - a.article.data.pubDate.valueOf());
+
+const topicOrder = ['ETF 分配与期权收入', '基础知识与投资方法', '高股息与股票研究', '政策与特别主题'];
+const topicFor = (entry: typeof translatedArticles[number]) => {
+  const { id, data } = entry.article;
+  if (/(schd|jep[qi]|nvdy|qdte|qqqi|msty|spyi|ulty|tsly|cony|bito|tltw|voo)/.test(id)) return 'ETF 分配与期权收入';
+  if (/(tariff|trump|alaska|warrior)/.test(id)) return '政策与特别主题';
+  if (data.category === 'Basics' || /(dividend-yield|dividend-calculator|drip|dividends|divisor)/.test(id)) return '基础知识与投资方法';
+  return '高股息与股票研究';
+};
+const topicDescriptions: Record<string, string> = {
+  'ETF 分配与期权收入': '查看分配历史、收益来源、费用和净值风险。',
+  '基础知识与投资方法': '从股息定义、收益率到筛选与再投资方法。',
+  '高股息与股票研究': '比较股票、ETF 和收入策略，不只看收益率。',
+  '政策与特别主题': '追踪政策提案、特别派付与市场热点的事实状态。',
+};
+const articlesByTopic = Map.groupBy(translatedArticles, topicFor);
+const featured = translatedArticles.find(entry => entry.article.id === 'schd-dividend-history') || translatedArticles[0];
 ---
+
 <BaseLayout title="股息投资文章 - 股息投资指南" description="阅读股息、ETF、收益率和长期收入规划研究。" canonical="https://www.dividend01.com/zh/articles/" locale="zh" pageClass="article-index-page">
   <slot slot="title">股息投资研究库</slot>
   <slot slot="subtitle">从基础概念到数据方法，按主题阅读经过整理、持续更新的研究内容。</slot>
-  <div class="article-index-intro"><span>研究库</span><p>每篇文章都尽量说明数据来源、计算方法和适用边界，帮助你先理解问题，再判断数字。</p></div>
-  <section class="article-index-featured" aria-labelledby="featured-article-title">
-    <div><span class="article-index-kicker">精选研究 · 分配历史</span><h2 id="featured-article-title">SCHD 分配历史与支付节奏</h2><p>从 2011 年开始，梳理年度分配、2024 年拆分调整和季度支付节奏。</p></div>
-    <a class="article-index-arrow" href="/zh/articles/schd-dividend-history/" aria-label="阅读 SCHD 分配历史">阅读文章 <span aria-hidden="true">↗</span></a>
-  </section>
-  <div class="article-index-heading"><h2>按主题浏览</h2><span>4 篇入门研究</span></div>
-  <div class="article-index-grid">
-    <a class="article-index-card" href="/zh/articles/what-are-dividends/"><span class="article-index-number">01</span><div><h3>什么是股息？</h3><p>了解股息的来源、支付节奏和除息日。</p></div><span class="article-index-card-arrow">↗</span></a>
-    <a class="article-index-card" href="/zh/articles/schd-dividend-history/"><span class="article-index-number">02</span><div><h3>SCHD 分配历史</h3><p>查看年度分配、拆分调整和数据来源。</p></div><span class="article-index-card-arrow">↗</span></a>
-    <a class="article-index-card" href="/zh/articles/dividend-yield/"><span class="article-index-number">03</span><div><h3>如何理解股息收益率</h3><p>理解收益率、股价变化和可持续分配之间的关系。</p></div><span class="article-index-card-arrow">↗</span></a>
-    <a class="article-index-card" href="/zh/articles/drip-compounding-guide/"><span class="article-index-number">04</span><div><h3>股息再投资与复利</h3><p>了解再投资如何改变长期持仓和收入轨迹。</p></div><span class="article-index-card-arrow">↗</span></a>
-  </div>
+  <div class="article-index-intro"><span>研究库</span><p>每篇文章说明数据来源、计算方法和适用边界，帮助你先理解问题，再判断数字。</p></div>
+
+  {featured && (
+    <section class="article-index-featured" aria-labelledby="featured-article-title">
+      <div><span class="article-index-kicker">精选研究 · {topicFor(featured)}</span><h2 id="featured-article-title">{featured.translation.data.title}</h2><p>{featured.translation.data.description}</p></div>
+      <a class="article-index-arrow" href={`/zh/articles/${featured.translation.id}/`} aria-label={`阅读 ${featured.translation.data.title}`}>阅读文章 <span aria-hidden="true">↗</span></a>
+    </section>
+  )}
+
+  {topicOrder.map(topic => {
+    const articles = articlesByTopic.get(topic) || [];
+    if (!articles.length) return null;
+    return (
+      <section class="article-index-topic" aria-labelledby={`topic-${topic}`}>
+        <div class="article-index-heading"><div><span class="article-index-kicker">{topic}</span><h2 id={`topic-${topic}`}>{topic}</h2><p>{topicDescriptions[topic]}</p></div><span>{articles.length} 篇研究</span></div>
+        <div class="article-index-grid">
+          {articles.map((entry, index) => (
+            <a class="article-index-card" href={`/zh/articles/${entry.translation.id}/`}>
+              <span class="article-index-number">{String(index + 1).padStart(2, '0')}</span>
+              <div><h3>{entry.translation.data.title}</h3><p>{entry.translation.data.description}</p></div>
+              <span class="article-index-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    );
+  })}
 </BaseLayout>

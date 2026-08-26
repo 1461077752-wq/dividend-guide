@@ -1,5 +1,4 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&display=swap');
 
 :root {
   --primary: #162B49;
@@ -638,6 +637,9 @@ main h3 { color: var(--text); }
 .article-index-heading { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 18px; }
 .article-index-heading h2 { margin: 0; color: #14233c; font-size: 1.45rem; }
 .article-index-heading span { color: #8a97aa; font-size: .8rem; }
+.article-index-heading > div > .article-index-kicker { display: block; margin-bottom: 8px; }
+.article-index-heading p { max-width: 620px; margin: 8px 0 0; color: #71809a; font-size: .92rem; line-height: 1.55; }
+.article-index-topic { margin-top: 52px; }
 .article-index-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .article-index-card { display: grid; grid-template-columns: 34px 1fr 20px; gap: 16px; align-items: start; padding: 22px; border: 1px solid #dfe6f0; border-radius: 14px; background: #fff; color: inherit; text-decoration: none; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
 .article-index-card:hover { transform: translateY(-3px); border-color: #9eb3dc; box-shadow: 0 12px 26px rgba(25,48,86,.07); }

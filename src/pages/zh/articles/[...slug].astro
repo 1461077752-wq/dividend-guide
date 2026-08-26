@@ -20,9 +20,22 @@ const englishArticle = article;
 const pubDate = englishArticle.data.pubDate.toISOString().split('T')[0];
 const modDate = (englishArticle.data.modDate || englishArticle.data.pubDate).toISOString().split('T')[0];
 const reviewDate = (englishArticle.data.reviewDate || englishArticle.data.modDate || englishArticle.data.pubDate).toISOString().split('T')[0];
+const articleById = new Map((await getCollection('articles'))
+  .filter(candidate => !candidate.data.draft)
+  .map(candidate => [candidate.id, candidate]));
 const relatedArticles = (await getCollection('articleTranslations'))
-  .filter(candidate => candidate.id !== translation.id)
-  .slice(0, 3);
+  .flatMap(candidate => {
+    const candidateArticle = articleById.get(candidate.id);
+    return candidateArticle && candidate.id !== translation.id ? [{ candidate, candidateArticle }] : [];
+  })
+  .map(({ candidate, candidateArticle }) => {
+    const sharedTags = candidateArticle.data.tags.filter(tag => englishArticle.data.tags.includes(tag)).length;
+    const sameCategory = candidateArticle.data.category === englishArticle.data.category ? 2 : 0;
+    return { candidate, score: sharedTags * 3 + sameCategory, pubDate: candidateArticle.data.pubDate };
+  })
+  .sort((a, b) => b.score - a.score || b.pubDate.valueOf() - a.pubDate.valueOf())
+  .slice(0, 4)
+  .map(entry => entry.candidate);
 const isSchdGuide = translation.id.startsWith('schd-dividend');
 ---
 <ArticleLayout

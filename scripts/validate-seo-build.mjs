@@ -94,6 +94,7 @@ duplicateValues('canonical', 'canonical');
 duplicateValues('title', 'title');
 
 const routes = new Set(pages.map(page => page.route));
+const inboundLinks = new Map([...routes].map(route => [route, 0]));
 for (const page of pages) {
   const languageAnchor = [...page.html.matchAll(/<a\b[^>]*>/gi)].find(match => /class="[^"]*(?:nav-language|article-language-switcher)[^"]*"/i.test(match[0]));
   const languageHref = languageAnchor?.[0].match(/\shref="([^"]+)"/i)?.[1];
@@ -119,12 +120,21 @@ for (const page of pages) {
       try { await fs.access(asset); } catch { errors.push(`${page.relative}: missing linked asset ${route}`); }
     } else if (!routes.has(route) && route !== '/404/') {
       errors.push(`${page.relative}: broken internal link ${route}`);
+    } else if (routes.has(route) && route !== page.route) {
+      inboundLinks.set(route, (inboundLinks.get(route) || 0) + 1);
     }
   }
   for (const match of page.html.matchAll(/(?:src|content)="(https:\/\/www\.dividend01\.com)?(\/images\/[^"]+)"/gi)) {
     const asset = path.join(distDir, match[2].replace(/^\//, ''));
     try { await fs.access(asset); } catch { errors.push(`${page.relative}: missing image ${match[2]}`); }
   }
+}
+
+for (const page of pages) {
+  if (!/^\/(?:zh\/)?articles\/[^/]+\/$/.test(page.route)) continue;
+  const inboundCount = inboundLinks.get(page.route) || 0;
+  if (inboundCount === 0) errors.push(`${page.relative}: article has no internal inbound links`);
+  else if (inboundCount < 3) warnings.push(`${page.relative}: article has only ${inboundCount} internal inbound link(s)`);
 }
 
 const sitemap = await fs.readFile(path.join(distDir, 'sitemap.xml'), 'utf8').catch(() => '');

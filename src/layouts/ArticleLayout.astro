@@ -51,8 +51,8 @@ const ogImage = image
   ? (image.startsWith('http') ? image : `https://www.dividend01.com${image}`)
   : 'https://www.dividend01.com/images/dividend-hero.jpg';
 const breadcrumbItems = [
-  { name: 'Home', url: locale === 'zh' ? 'https://www.dividend01.com/zh/' : 'https://www.dividend01.com/' },
-  { name: 'Articles', url: locale === 'zh' ? 'https://www.dividend01.com/zh/articles/' : 'https://www.dividend01.com/articles/' },
+  { name: locale === 'zh' ? '首页' : 'Home', url: locale === 'zh' ? 'https://www.dividend01.com/zh/' : 'https://www.dividend01.com/' },
+  { name: locale === 'zh' ? '文章' : 'Articles', url: locale === 'zh' ? 'https://www.dividend01.com/zh/articles/' : 'https://www.dividend01.com/articles/' },
   { name: title.replace(/ - Dividend Guide$/, ''), url: pageUrl }
 ];
 const alternateLinks = alternates || [
@@ -74,6 +74,7 @@ const alternateLinks = alternates || [
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&display=swap">
 
   <!-- Open Graph -->
   <meta property="og:title" content={title}>
