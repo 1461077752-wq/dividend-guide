@@ -1,9 +1,12 @@
 ---
 title: "SPYI Dividend History: NEOS S&P 500 High Income Distributions"
+primaryKeyword: "SPYI dividend history"
 description: "Complete SPYI distribution history since its August 2022 launch — monthly payouts, the Section 1256 tax advantage, and how it compares to JEPI and QQQI."
 pubDate: 2026-08-04
 modDate: 2026-08-04
+dataAsOf: "2026-08-27"
 category: "Stock Analysis"
+canonicalHub: "/topics/dividend-etf-history/"
 tags: ["SPYI", "NEOS", "covered call", "ETF", "high yield", "S&P 500", "1256"]
 image: "/images/articles/spyi-dividend-history.webp"
 experienceType: "illustrative"

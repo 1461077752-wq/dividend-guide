@@ -1,9 +1,12 @@
 ---
 title: "JEPI Dividend: Yield, History, and How It Compares"
+primaryKeyword: "JEPI dividend"
 description: "JEPI's monthly distributions, current ~8% yield, distribution history since 2020, and how JPMorgan's S&P 500 premium income ETF compares to JEPQ."
 pubDate: 2026-08-04
 modDate: 2026-08-04
+dataAsOf: "2026-08-27"
 category: "Stock Analysis"
+canonicalHub: "/topics/dividend-etf-history/"
 tags: ["JEPI", "JPMorgan", "premium income", "ETF", "covered call", "S&P 500"]
 image: "/images/articles/jepi-dividend.webp"
 experienceType: "illustrative"

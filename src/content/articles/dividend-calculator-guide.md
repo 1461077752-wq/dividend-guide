@@ -1,9 +1,11 @@
 ---
-title: "Dividend Calculator: How to Project Your Dividend Income"
-description: "Learn how to use a dividend calculator to project monthly and annual income. Includes the dividend yield formula, DRIP compounding, and real examples."
+title: "Dividend Calculator Guide 2026: Project Income, DRIP & Yield"
+primaryKeyword: "dividend calculator guide"
+description: "Learn to project dividend income with our calculator: model DRIP compounding, yield on cost and monthly payouts. Step-by-step with examples."
 pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Basics"
+canonicalHub: "/topics/dividend-investing-basics/"
 tags: ["dividend calculator", "dividend income", "yield calculator", "DRIP"]
 image: "/images/articles/dividend-calculator-guide.webp"
 dataAsOf: "2026-08-07"

@@ -1,5 +1,6 @@
 ---
 title: "Dividend vs. Divisor: What Each Term Means in Math and Investing"
+primaryKeyword: "divisor vs dividend"
 description: "Learn how dividend and divisor differ in math and investing, with examples covering division problems, shareholder payouts and stock-index calculations."
 pubDate: 2026-08-19
 modDate: 2026-08-19

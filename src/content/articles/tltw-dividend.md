@@ -4,6 +4,7 @@ description: "Why no US Treasury pays 12.2% monthly — the TLTW covered-call ET
 pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Stock Analysis"
+canonicalHub: "/topics/dividend-etf-history/"
 tags: ["TLTW", "Treasury", "covered call", "high yield", "bonds", "ETF"]
 image: "/images/articles/tltw-dividend.webp"
 dataAsOf: "2026-08-07"

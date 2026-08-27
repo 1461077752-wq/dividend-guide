@@ -43,14 +43,17 @@ const localizeInternalUrl = value => {
 };
 
 const rewriteJsonLd = html => html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi, (match, json) => {
-  try {
-    const value = JSON.parse(json);
-    const visit = item => {
+    try {
+      const value = JSON.parse(json);
+      const cleaned = Array.isArray(value)
+        ? value.filter(item => !(item && item['@type'] === 'FAQPage'))
+        : value;
+      const visit = item => {
       if (Array.isArray(item)) return item.map(visit);
       if (!item || typeof item !== 'object') return typeof item === 'string' ? localizeInternalUrl(item) : item;
       return Object.fromEntries(Object.entries(item).map(([key, child]) => [key, key === 'url' || key === '@id' || key === 'item' || key === 'mainEntityOfPage' ? visit(child) : visit(child)]));
     };
-    const localized = visit(value);
+    const localized = visit(cleaned);
     return `<script type="application/ld+json">${JSON.stringify(localized)}</script>`;
   } catch (error) {
     throw new Error(`Unable to parse JSON-LD while localizing ${error.message}`);

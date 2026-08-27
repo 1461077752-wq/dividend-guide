@@ -4,6 +4,7 @@ description: "VOO's current dividend yield, annual dividend history since 2012, 
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Stock Analysis"
+canonicalHub: "/topics/dividend-etf-history/"
 tags: ["VOO", "Vanguard", "S&P 500", "ETF", "dividend yield", "index fund"]
 image: "/images/articles/voo-dividend.webp"
 author: "Henry Zhou"

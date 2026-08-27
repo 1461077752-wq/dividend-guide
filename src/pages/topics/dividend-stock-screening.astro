@@ -1,15 +1,123 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Dividend Stock Screening | Dividend Guide" description="Learn how to screen dividend stocks using yield, payout coverage, cash flow, dividend growth and sector-specific measures before researching a company." canonical="https://www.dividend01.com/topics/dividend-stock-screening/" schemaType="WebPage" pubDate="2026-08-07" modDate="2026-08-07">
+<BaseLayout title="Dividend Stock Screening: 5-Metric Checklist | Dividend Guide" description="Learn how to screen dividend stocks using yield, payout ratio, free cash flow coverage, dividend growth streak and business quality — and avoid yield traps." canonical="https://www.dividend01.com/topics/dividend-stock-screening/" schemaType="WebPage" pubDate="2026-08-07" modDate="2026-08-27">
   <slot slot="title">Dividend Stock Screening</slot>
-  <slot slot="subtitle">A practical framework for separating durable dividend payers from yield traps.</slot>
-  <p>Use several measures together rather than relying on yield alone. Start with the screening guide, then compare high-yield risks, passive-income expectations, and the stock library.</p>
+  <slot slot="subtitle">A practical five-metric framework for separating durable dividend payers from yield traps.</slot>
+
+  <p>Screening dividend stocks is not the same as picking high-yield names. A screen that returns "yield above 6%" will give you REITs, MLPs, BDCs, distressed utilities, leveraged banks, and a handful of structurally sound businesses — with no way to tell them apart without a second pass. The framework below adds four more filters (payout ratio, free cash flow coverage, growth streak, business quality) so that only candidates with both attractive yield <em>and</em> sustainable mechanics make it through. Run all five together, not in isolation.</p>
+
+  <h2>Reading path by experience</h2>
+  <ul>
+    <li><strong>Beginner</strong> — read the five-metric table below, then <a href="/articles/dividend-dividend-stocks/">How to Screen Dividend Stocks</a> for a worked example.</li>
+    <li><strong>Intermediate</strong> — read the data-source comparison, then open the <a href="/calculator/">Calculator</a> to size positions.</li>
+    <li><strong>Advanced</strong> — read the "Sectors that need different rules" section for REITs/BDCs/MLPs/foreign stocks.</li>
+  </ul>
+
+  <h2>The five-metric checklist</h2>
+  <p>Apply these five checks in order. A name that fails any one of them is rarely worth the time to investigate further; a name that passes all five is rare enough to deserve a deeper look at the actual financials.</p>
+  <ol>
+    <li><strong>Yield sanity</strong> — is the yield too high to be believable?</li>
+    <li><strong>Payout ratio</strong> — can the company afford the dividend out of current earnings?</li>
+    <li><strong>Free cash flow coverage</strong> — can the company afford the dividend out of cash?</li>
+    <li><strong>Dividend history</strong> — has management raised (or at least held) the dividend through past downturns?</li>
+    <li><strong>Business quality</strong> — is the underlying business durable and the balance sheet investment-grade?</li>
+  </ol>
+
+  <h3>Metric 1: Yield sanity</h3>
+  <p>Yield is the starting filter, not the deciding one. For diversified equities, a yield above 8% almost always signals either a sector with structural reasons to pay high (REITs, MLPs, BDCs) or a stock whose price has fallen faster than the dividend. The market uses high yield as a warning sign for a reason.</p>
+  <table class="data-table">
+    <thead><tr><th>Yield range</th><th>Typical interpretation</th><th>Examples to investigate</th></tr></thead>
+    <tbody>
+      <tr><td>Under 2%</td><td>Growth-oriented or share-buyback focus</td><td>Most large-cap tech (AAPL, MSFT)</td></tr>
+      <tr><td>2–4%</td><td>Healthy dividend-growth range</td><td>KO, JNJ, MSFT, VZ, O (REIT baseline)</td></tr>
+      <tr><td>4–6%</td><td>Higher-yield equities; verify sustainability</td><td>MO, PM, ABBV, KMI</td></tr>
+      <tr><td>6–10%</td><td>Almost always sector-specific or distressed</td><td>VER, MO at distressed price, some utilities</td></tr>
+      <tr><td>10%+</td><td>Yield trap territory, or structured products (REITs/BDCs/MLPs/option-income ETFs)</td><td>Most equity names here have cut, will cut, or are not really equities</td></tr>
+    </tbody>
+  </table>
+  <p>For an equity, anything above 8% should make you stop and ask why before buying. For option-income ETFs and REITs, double-digit yield is structural — see <a href="/topics/dividend-etf-history/">Dividend ETF History</a> and <a href="/topics/high-yield-dividend-stocks/">High-Yield Dividend Stocks</a> for how to evaluate them separately.</p>
+
+  <h3>Metric 2: Payout ratio</h3>
+  <p>Payout ratio = dividends paid ÷ net income. It tells you what share of accounting profits is going out as dividends. A payout ratio near 100% means the dividend is at risk the moment earnings dip.</p>
+  <ul>
+    <li><strong>Under 50%:</strong> very safe; room to grow the dividend or absorb a downturn.</li>
+    <li><strong>50–70%:</strong> typical for mature dividend payers; usually safe.</li>
+    <li><strong>70–90%:</strong> still common but watch for any earnings decline.</li>
+    <li><strong>Over 90%:</strong> the dividend is one bad quarter away from a cut.</li>
+  </ul>
+  <p>The exceptions: REITs and MLPs are required by tax structure to pay out most of their earnings (often 90%+), so payout ratio alone is not the right filter for them. Use FFO (Funds From Operations) coverage and AFFO for REITs, and distributable cash flow for MLPs.</p>
+
+  <h3>Metric 3: Free cash flow coverage</h3>
+  <p>Earnings are accounting; cash is what actually pays the dividend. Coverage ratio = free cash flow ÷ dividends paid. Above 1.5× consistently is comfortable; below 1.2× suggests the dividend is being sustained by issuing debt or eating into the cash pile.</p>
+  <p>You can pull FCF and dividends paid from the cash flow statement in any company's 10-K (annual report) on <a href="https://www.sec.gov/edgar/search/" target="_blank" rel="noopener">SEC EDGAR</a>. Look at 5–10 years, not just one — a single strong year can mask a long-term shortfall.</p>
+
+  <h3>Metric 4: Dividend history</h3>
+  <p>Consecutive years of increases is the cleanest single quality signal, because it forces the company to have raised the dividend through at least one recession. Useful thresholds:</p>
+  <ul>
+    <li><strong>10+ years</strong> of consecutive increases — high-quality income name.</li>
+    <li><strong>25+ years</strong> — qualifies for the S&amp;P 500 Dividend Aristocrats list.</li>
+    <li><strong>50+ years</strong> — Dividend Kings, a smaller and more exclusive list maintained by <a href="https://www.spglobal.com/spdji/en/indices/equity/sp-500-dividend-aristocrats/" target="_blank" rel="noopener">S&amp;P Dow Jones Indices</a>.</li>
+    <li><strong>No cuts in 10+ years</strong> (even if no raises) — still qualifies as a stable payer.</li>
+  </ul>
+  <p>Caveat: history is informative but not predictive. AT&amp;T cut its dividend in 2022 after 36 consecutive years of increases; General Electric cut in 2009 after 112 years. Always combine streak with current payout ratio and cash flow coverage.</p>
+
+  <h3>Metric 5: Business quality</h3>
+  <p>This is the qualitative pass. A name that passes the four quantitative checks can still be the wrong investment if the underlying business is fading.</p>
+  <ul>
+    <li><strong>Durable moat.</strong> Is there a structural reason the company keeps earning above its cost of capital for a long time? Brand, network effects, switching costs, regulatory barriers, scale economies.</li>
+    <li><strong>Investment-grade balance sheet.</strong> Debt/EBITDA under 3× for typical industrials; under 4–5× for utilities; cash flow comfortably covers interest expense.</li>
+    <li><strong>Stable margins.</strong> Gross margin and operating margin that don't swing wildly year-to-year.</li>
+    <li><strong>Honest capital allocation.</strong> Management that has historically chosen buybacks and dividends over vanity M&amp;A when the stock is reasonably valued.</li>
+  </ul>
+
+  <h2>Data sources — which to trust</h2>
+  <p>Different aggregators calculate yield differently and use different refresh cadences. The same stock can show different yields on the same day depending on the source.</p>
+  <table class="data-table">
+    <thead><tr><th>Source</th><th>Strength</th><th>Limitation</th><th>Best for</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://www.sec.gov/edgar/search/" target="_blank" rel="noopener">SEC EDGAR</a></td><td>Authoritative filings (10-K, 10-Q, 8-K, 19a-1)</td><td>Raw, not pre-processed</td><td>Verifying the underlying numbers</td></tr>
+      <tr><td>Company investor relations</td><td>Authoritative dividend history</td><td>Often only the most recent 5–10 years</td><td>Long historical series</td></tr>
+      <tr><td>StockAnalysis, DividendVision</td><td>Aggregated, fast, free</td><td>Yield definitions vary; can lag corporate actions</td><td>Initial screen</td></tr>
+      <tr><td>Yahoo Finance / Robinhood</td><td>Live price, easy charts</td><td>Yield shown can be misclassified for special structures</td><td>Price tracking</td></tr>
+      <tr><td>Finviz / Stock screener</td><td>Quick multi-filter screening</td><td>Free tier is delayed</td><td>Bulk filtering</td></tr>
+    </tbody>
+  </table>
+  <p>For any candidate that passes your screen, verify against SEC EDGAR and the company's investor relations page before buying. Aggregator yield numbers can be off by 50–100 basis points because of timing, special distributions, or ROC adjustments.</p>
+
+  <h2>Sectors that need different rules</h2>
+  <p>The five-metric checklist above is calibrated for typical US industrials and consumer companies. Some sectors need adjusted filters:</p>
+  <ul>
+    <li><strong>REITs</strong> — use AFFO payout (not GAAP earnings); payout ratio above 90% is normal; require declining leverage and a strong sponsor.</li>
+    <li><strong>MLPs</strong> — use distributable cash flow coverage; tax structure (K-1) adds complexity in taxable accounts.</li>
+    <li><strong>BDCs</strong> — must pay out 90% of income to maintain BDC tax status; check non-accruals, not payout ratio.</li>
+    <li><strong>Utilities</strong> — payout ratio up to 70–80% is normal; regulatory environment matters as much as the financials.</li>
+    <li><strong>Banks</strong> — earnings include loan-loss provisions; payout ratio can be misleading; check CET1 ratio and dividend coverage.</li>
+    <li><strong>Foreign ADRs</strong> — withholding tax on qualified dividends (15% in many treaties); check treaty.</li>
+    <li><strong>Option-income ETFs</strong> — see <a href="/topics/dividend-etf-history/">Dividend ETF History</a> for a separate framework; the four-metric checklist above does not apply.</li>
+  </ul>
+
+  <h2>Sub-topic guides</h2>
   <div class="topic-links">
-    <a href="/articles/dividend-dividend-stocks/"><strong>How to Screen Dividend Stocks</strong><span>Yield, payout ratio, growth streak, and quality filters.</span></a>
-    <a href="/stocks/"><strong>Best Dividend Stocks</strong><span>Browse the site's curated stock categories.</span></a>
-    <a href="/articles/high-dividend-stocks/"><strong>High Dividend Stocks</strong><span>Sector ideas and the risks behind high yields.</span></a>
-    <a href="/articles/highest-dividend-stocks/"><strong>Highest-Yield Dividend Stocks</strong><span>Why extreme yields require additional scrutiny.</span></a>
-    <a href="/calculator/"><strong>Dividend Calculator</strong><span>Model yield and income assumptions with your own inputs.</span></a>
+    <a href="/articles/dividend-dividend-stocks/"><strong>How to Screen Dividend Stocks</strong><span>Walk-through of the five filters applied to real names.</span></a>
+    <a href="/stocks/"><strong>Best Dividend Stocks Library</strong><span>Browse curated dividend stock lists by sector and category.</span></a>
+    <a href="/articles/high-dividend-stocks/"><strong>High Dividend Stocks</strong><span>How to evaluate 4–8% yielders by sector.</span></a>
+    <a href="/articles/highest-dividend-stocks/"><strong>Highest-Yield Dividend Stocks</strong><span>Why extreme yields require extra scrutiny.</span></a>
+    <a href="/calculator/"><strong>Dividend Calculator</strong><span>Model yield and total return assumptions side by side.</span></a>
   </div>
+
+  <h2>Frequently asked questions</h2>
+  <details class="faq-item" open><summary>Is a high yield always a trap?</summary><div class="faq-answer">Not always. REITs, MLPs, BDCs, and business-development companies are required by their tax structure to distribute most of their income, so double-digit yields are normal. For typical operating companies (consumer, industrial, tech), a yield above 8% almost always signals the market expects a cut, a price decline, or both.</div></details>
+  <details class="faq-item"><summary>What's a healthy payout ratio?</summary><div class="faq-answer">For most US companies, under 70% is comfortable. For REITs and MLPs, the right metric is not payout ratio on GAAP earnings but AFFO coverage or distributable cash flow coverage. See the sectors section above.</div></details>
+  <details class="faq-item"><summary>Should I care about the dividend yield or the total return?</summary><div class="faq-answer">Total return, always. Yield is one component of total return (the other being price change), and a high yield can mask a falling price. A stock yielding 8% that loses 12% in price delivers −4% for the year. Compare total return over 3, 5, and 10 years.</div></details>
+  <details class="faq-item"><summary>Are Dividend Aristocrats safe?</summary><div class="faq-answer">Safer than non-Aristocrats, not safe. The Aristocrats list (25+ years of consecutive increases) is a quality screen, not a guarantee. General Electric was on the list until 2009 and AT&amp;T cut after 36 years in 2022. Treat it as a starting filter, not a final answer.</div></details>
+
+  <h2>Cross-links to related hubs</h2>
+  <ul>
+    <li><a href="/topics/dividend-investing-basics/">Dividend Investing Basics</a> — concepts, tax mechanics, and DRIP.</li>
+    <li><a href="/topics/dividend-etf-history/">Dividend ETF History</a> — distribution records and yield mechanics for specific ETFs.</li>
+    <li><a href="/topics/high-yield-dividend-stocks/">High-Yield Dividend Stocks</a> — suitability matrix for higher-yield names.</li>
+  </ul>
+
+  <p class="meta"><em>Last updated: 2026-08-27. Sector thresholds reflect 2026 conventions; specific names may warrant looser or tighter rules. Not investment advice.</em></p>
 </BaseLayout>

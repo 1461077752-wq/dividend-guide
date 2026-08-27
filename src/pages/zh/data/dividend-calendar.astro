@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import schedule from '../../../data/etf-distribution-schedule.json';
+
+const englishUrl = 'https://www.dividend01.com/data/dividend-calendar/';
+const chineseUrl = 'https://www.dividend01.com/zh/data/dividend-calendar/';
+const alternates = [
+  { hreflang: 'en' as const, href: englishUrl },
+  { hreflang: 'zh-CN' as const, href: chineseUrl },
+  { hreflang: 'x-default' as const, href: englishUrl }
+];
+
+const refreshedDate = schedule.refreshedAt;
+const refreshedLabel = new Date(refreshedDate).toLocaleDateString('zh-CN', { dateStyle: 'long', timeZone: 'UTC' });
+const records = schedule.records;
+
+const money = (v) => v == null || v === 0 ? (v === 0 ? '$0.00' : '—') : `$${v.toFixed(2)}`;
+const pct = (v) => v == null ? '—' : `${v.toFixed(1)}%`;
+const isHighRoc = (r) => (r.rocPct ?? 0) >= 50;
+
+const aggregateStats = {
+  total: records.length,
+  weekly: records.filter(r => r.frequency.toLowerCase() === 'weekly').length,
+  monthly: records.filter(r => r.frequency.toLowerCase().includes('monthly')).length,
+  highRoc: records.filter(isHighRoc).length,
+  avgExpense: (records.reduce((s, r) => s + (r.expenseRatioPct || 0), 0) / records.length).toFixed(2)
+};
+---
+<BaseLayout
+  title="ETF 股息日历与派发时间表 2026"
+  description="2026 年七只热门收益型 ETF（ULTY、QQQI、SPYI、JEPI、JEPQ、MSTY、BITO）的派息日历：除息日、发放日、每股派息、派发率与估计资本返还（ROC）。"
+  canonical={chineseUrl}
+  schemaType="WebPage"
+  pubDate="2026-08-27"
+  modDate={refreshedDate}
+  locale="zh"
+  alternates={alternates}
+>
+  <slot slot="title">ETF 股息日历</slot>
+  <slot slot="subtitle">最近一次核对：<time datetime={refreshedDate}>{refreshedLabel}</time> · 数据来源：基金发行商，并在 StockAnalysis、Dividend.com 与收益率追踪平台交叉核对。</slot>
+
+  <div class="page-intro">
+    <p><strong>关于本页。</strong>面向七只热门收益型 ETF 的派息日历。每行展示最近一次的除息日、股权登记日、发放日、每股派息金额、派发率、30 日 SEC 收益率（如有公布）、费率，以及基金最新 19a-1 通知中估计的资本返还占比（ROC）。所有数据均来自基金自身的派息公告，并至少通过一个独立追踪平台交叉核对。</p>
+    <p><strong>非投资建议。</strong>高派发率不等同于高回报或可持续回报。本页列出的多只基金，大部分派息被分类为资本返还，长期会侵蚀用于支撑未来派息的 NAV。在依据任何派发率做决策前，请阅读基金招募说明书与最近的 19a-1 公告。</p>
+  </div>
+
+  <h2>日历一览</h2>
+  <div class="table-wrapper" data-table="etf-distribution-schedule">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>代码</th>
+          <th>频率</th>
+          <th>除息日</th>
+          <th>发放日</th>
+          <th>每股</th>
+          <th>派发率</th>
+          <th>30 日 SEC 收益率</th>
+          <th>费率</th>
+          <th>估计 ROC</th>
+          <th>来源</th>
+        </tr>
+      </thead>
+      <tbody>
+        {records.map((r) => (
+          <tr class={isHighRoc(r) ? 'roc-warning' : ''}>
+            <td>
+              <strong>{r.ticker}</strong><br>
+              <span class="muted">{r.name}</span>
+            </td>
+            <td>{r.frequency}</td>
+            <td>{r.lastExDate}</td>
+            <td>{r.lastPayDate}</td>
+            <td>{money(r.lastAmountUsd)}</td>
+            <td>{pct(r.distributionRatePct)}</td>
+            <td>{r.secYield30DayPct != null ? pct(r.secYield30DayPct) : '—'}</td>
+            <td>{pct(r.expenseRatioPct)}</td>
+            <td class={isHighRoc(r) ? 'negative' : ''}>{pct(r.rocPct)}</td>
+            <td>
+              <a href={r.officialSourceUrl} target="_blank" rel="noopener">{r.issuer}</a><br>
+              <span class="muted">访问日 {r.accessedDate}</span>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p class="muted"><em>每一行的来源链接指向基金自身的派息页面。表中金额为该除息日对应的最近一次派息；未来派息不获保证。</em></p>
+
+  <h2>如何阅读这些字段</h2>
+  <div class="table-wrapper">
+    <table class="data-table">
+      <thead><tr><th>字段</th><th>含义</th><th>常见误读</th></tr></thead>
+      <tbody>
+        <tr><td><strong>除息日</strong></td><td>在这一天（或之后）买入，将不会获得即将到来的派息。</td><td>不是派息的宣告日，也不是发放日。</td></tr>
+        <tr><td><strong>股权登记日</strong></td><td>基金设定的股东名册登记日，通常在除息日次日。</td><td>不是买入截止日。</td></tr>
+        <tr><td><strong>发放日</strong></td><td>现金实际进入登记在册股东账户的日期。</td><td>并非派息可用的最早时点。</td></tr>
+        <tr><td><strong>派发率</strong></td><td>最近一次每股派息年化后除以当前市价。</td><td>不是未来派息的预测或保证。</td></tr>
+        <tr><td><strong>30 日 SEC 收益率</strong></td><td>SEC 定义的标准化净投资收益指标，由基金公布。</td><td>与派发率并非同一指标。</td></tr>
+        <tr><td><strong>估计 ROC</strong></td><td>基金最近一次 19a-1 公告中估计的资本返还占比。最终分类以年终税务表单为准。</td><td>不是最终税务分类。</td></tr>
+        <tr><td><strong>费率</strong></td><td>基金年度费用，从净资产中扣除。</td><td>不包含经纪佣金或基金层面的交易成本。</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>速览</h2>
+  <ul>
+    <li>共追踪 <strong>{aggregateStats.total}</strong> 只 ETF，其中 <strong>{aggregateStats.weekly}</strong> 只每周派息，<strong>{aggregateStats.monthly}</strong> 只每月派息</li>
+    <li>其中 <strong>{aggregateStats.highRoc}</strong> 只基金的最新派息中 ROC 占比 ≥ 50%（资本返还，会逐步侵蚀 NAV）</li>
+    <li>平均费率：<strong>{aggregateStats.avgExpense}%</strong></li>
+  </ul>
+
+  <h2>逐 ETF 说明</h2>
+  {records.map((r) => (
+    <details class="etf-detail">
+      <summary><strong>{r.ticker}</strong> &nbsp;·&nbsp; {r.name} &nbsp;·&nbsp; {r.frequency}</summary>
+      <p>{r.note}</p>
+      <ul>
+        <li><strong>最近除息日：</strong> {r.lastExDate} &nbsp;·&nbsp; <strong>发放日：</strong> {r.lastPayDate} &nbsp;·&nbsp; <strong>每股：</strong> {money(r.lastAmountUsd)}</li>
+        <li><strong>派发率：</strong> {pct(r.distributionRatePct)} &nbsp;·&nbsp; <strong>30 日 SEC 收益率：</strong> {r.secYield30DayPct != null ? pct(r.secYield30DayPct) : '未公布'} &nbsp;·&nbsp; <strong>费率：</strong> {pct(r.expenseRatioPct)} &nbsp;·&nbsp; <strong>估计 ROC：</strong> {pct(r.rocPct)}</li>
+        <li><strong>官方来源：</strong> <a href={r.officialSourceUrl} target="_blank" rel="noopener">{r.officialSourceName}</a>（访问日 {r.accessedDate}）</li>
+        <li><strong>交叉核对：</strong> <a href={r.crossCheckUrl} target="_blank" rel="noopener">StockAnalysis 派息历史</a></li>
+        <li><strong>延伸阅读：</strong> <a href={`/zh/articles/${r.articleSlug}/`}>{r.ticker} 股息研究</a> 与 <a href="/zh/topics/dividend-etf-history/">ETF 股息历史专题</a></li>
+      </ul>
+    </details>
+  ))}
+
+  <h2>常见问题</h2>
+  <h3>派发率与 SEC 收益率有何区别？</h3>
+  <p>派发率是把最近一次每股派息年化后除以当前市价，遇到每月派息额不固定的基金时会随之波动。30 日 SEC 收益率是 SEC 定义的标准化净投资收益指标，便于跨基金比较。两者口径不同，使用时需注意比较目标。</p>
+
+  <h3>为什么 ULTY、MSTY、BITO 的派发率那么高？</h3>
+  <p>ULTY 与 MSTY 的高派发率主要来自基金将大部分派息分类为资本返还（ROC），同时 NAV 长期缓慢下降。BITO 的派发率主要由比特币期货头寸已实现的资本利得构成，并非可重复的收入。在做决策时，请把这些数字当成背景说明，而非目标收益。</p>
+
+  <h3>本页多久更新一次？</h3>
+  <p>页面顶部的「最近一次核对」日期即表中数据再次与发行商来源核对的日期。每只 ETF 的派息频率（每周或每月）决定了除息日和发放日所在的列前进的节奏。本页不自动刷新；每次更新前都有人工核对。</p>
+
+  <h3>资本返还的估计来自哪里？</h3>
+  <p>每次派息前，基金会在 19a-1 公告中披露 ROC 的初步估计。该估计并非定稿，最终数额以年终税务表单（1099-DIV）为准。</p>
+
+  <h3>我能否在自己的研究文章中引用本页？</h3>
+  <p>可以。请链接到规范地址 <code>https://www.dividend01.com/zh/data/dividend-calendar/</code>，并引用页面顶部的「最近核对」日期作为访问日。如发现数据出入，可使用页脚的联系方式反馈。</p>
+
+  <h2>方法、来源与局限</h2>
+  <p>{schedule.methodology}</p>
+  <p>来源优先级，从高到低：(1) 发行商基金页面与招募说明书；(2) 发行商的月度派息公告或 19a-1；(3) SEC EDGAR 文件；(4) 主要交易所行情；(5) 独立追踪平台（StockAnalysis、Dividend.com、Yahoo Finance），仅作交叉核对。本表不复制聚合站数据作为主来源，也不会在发行商未公布的情况下自行编造数据。</p>
+  <p><strong>本页局限。</strong>本页是研究摘要，不是实时数据流。金额与日期在两次核对之间会变化，派发率随 NAV 同步波动。本页不构成投资、税务或法律建议。任何决策前，请以发行商页面的最新数据为准，每行「来源」列已给出链接。</p>
+
+  <div class="tip-box">
+    <strong>研究提醒。</strong>高派发率是必要信号而非结论。阅读基金最近的 19a-1 公告以了解派息中 ROC 的比例，再与目标 SEC 收益率（若公布）对照，最后再把派发率视作可重复收入。
+  </div>
+
+  <p class="home-sources">如需针对单只 ETF 的研究，可访问 <a href="/zh/topics/dividend-etf-history/">ETF 股息历史专题</a>、<a href="/zh/topics/high-yield-dividend-stocks/">高股息股票专题</a>，或 <a href="/zh/">回到首页</a>。需要做未来收益估算请使用 <a href="/zh/calculator/">股息计算器</a>。</p>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "ETF 股息日历与派发时间表 2026",
+    "description": "七只热门收益型 ETF 的派息日程、派发率与官方来源。",
+    "url": chineseUrl,
+    "dateModified": refreshedDate,
+    "creator": { "@type": "Organization", "name": "Dividend Guide", "url": "https://www.dividend01.com/zh/about/" },
+    "distribution": { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://www.dividend01.com/data/dividend-calendar.json" },
+    "temporalCoverage": "2026-08-27/..",
+    "spatialCoverage": "美国",
+    "keywords": ["ETF 股息日历","ULTY 股息","QQQI 股息","SPYI 股息","JEPI 股息","JEPQ 股息","MSTY 股息","BITO 股息","派发率","除息日","资本返还"]
+  })}></script>
+</BaseLayout>

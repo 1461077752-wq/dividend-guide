@@ -4,6 +4,7 @@ import path from 'node:path';
 const root = process.cwd();
 const distDir = path.join(root, 'dist');
 const baseUrl = 'https://www.dividend01.com';
+const canonicalSitemapUrl = `${baseUrl}/sitemap.xml`;
 const errors = [];
 const warnings = [];
 
@@ -46,6 +47,18 @@ for (const file of files) {
   if (noindex) continue;
   if (/https:\/\/https|https\/\/dividend01\.com|https:\/\/dividend01\.com/i.test(html)) {
     errors.push(`${relative}: malformed or non-www site URL found`);
+  }
+  for (const match of html.matchAll(/https?:\/\/(?:www\.)?dividend01\.com[^\s"'<>)]*/gi)) {
+    let siteUrl;
+    try { siteUrl = new URL(match[0]); } catch { continue; }
+    if (siteUrl.protocol !== 'https:' || siteUrl.hostname !== 'www.dividend01.com') {
+      errors.push(`${relative}: site URL must use ${baseUrl}: ${match[0]}`);
+      continue;
+    }
+    const isPageUrl = siteUrl.pathname === '/' || !/\.[a-z0-9]+$/i.test(siteUrl.pathname);
+    if (isPageUrl && !siteUrl.pathname.endsWith('/')) {
+      errors.push(`${relative}: absolute page URL must end with /: ${match[0]}`);
+    }
   }
   if (/https:\/\/www\.dividend01\.com\/zh\/zh(?:\/|["'<])/i.test(html)) {
     errors.push(`${relative}: repeated /zh/ prefix found`);
@@ -139,11 +152,24 @@ for (const page of pages) {
 
 const sitemap = await fs.readFile(path.join(distDir, 'sitemap.xml'), 'utf8').catch(() => '');
 if (!sitemap) errors.push('dist/sitemap.xml: missing');
+if (/https?:\/\/(?!www\.)dividend01\.com/i.test(sitemap)) errors.push('dist/sitemap.xml: non-www URL found');
+for (const match of sitemap.matchAll(/<loc>([^<]+)<\/loc>/gi)) {
+  let sitemapUrl;
+  try { sitemapUrl = new URL(match[1]); } catch {}
+  if (!sitemapUrl || sitemapUrl.origin !== baseUrl || !sitemapUrl.pathname.endsWith('/')) {
+    errors.push(`dist/sitemap.xml: URL must use ${baseUrl} and end with /: ${match[1]}`);
+  }
+}
 for (const page of pages) {
   if (!sitemap.includes(`<loc>${page.canonical}</loc>`)) errors.push(`${page.relative}: canonical missing from sitemap`);
   for (const link of page.alternateLinks) {
     if (!sitemap.includes(`href="${link.href}"`)) errors.push(`${page.relative}: hreflang target missing from sitemap: ${link.href}`);
   }
+}
+
+const robots = await fs.readFile(path.join(distDir, 'robots.txt'), 'utf8').catch(() => '');
+if (!robots.includes(`Sitemap: ${canonicalSitemapUrl}`)) {
+  errors.push(`dist/robots.txt: sitemap must be ${canonicalSitemapUrl}`);
 }
 
 if (errors.length) {

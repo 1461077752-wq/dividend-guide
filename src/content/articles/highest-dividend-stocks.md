@@ -1,9 +1,11 @@
 ---
 title: "Highest-Yield Dividend Stocks: Data and Risks"
+primaryKeyword: "highest dividend stocks"
 description: "The highest-yield dividend stocks — BDCs, mREITs, and closed-end funds paying 10-26% — why the yields are so high, and why most lose investors money."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Stock Analysis"
+canonicalHub: "/topics/high-yield-dividend-stocks/"
 tags: ["highest dividend stocks", "BDC", "mREIT", "closed-end fund", "high yield", "return of capital"]
 image: "/images/articles/highest-dividend-stocks.webp"
 dataAsOf: "2026-08-07"

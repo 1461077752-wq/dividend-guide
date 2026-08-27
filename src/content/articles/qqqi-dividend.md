@@ -1,9 +1,12 @@
 ---
-title: "QQQI Dividend: Yield, Tax Treatment and Risks"
-description: "QQQI's ~14% dividend yield explained — how the NEOS Nasdaq 100 High Income ETF generates income, the tax advantages, risks, and whether it's worth it."
+title: "QQQI Dividend 2026: ~14% Yield, Monthly Payout & 60/40 Tax"
+primaryKeyword: "QQQI dividend"
+description: "QQQI pays ~14% from NDX index options with Section 1256 tax treatment. See 2026 monthly payouts, after-tax yield vs JEPQ, and risks. Data as of Aug 2026."
 pubDate: 2026-08-04
 modDate: 2026-08-04
+dataAsOf: "2026-08-27"
 category: "Stock Analysis"
+canonicalHub: "/topics/dividend-etf-history/"
 tags: ["QQQI", "NEOS", "high yield", "covered call", "ETF", "dividend income"]
 image: "/images/articles/qqqi-dividend.webp"
 experienceType: "illustrative"
@@ -23,7 +26,7 @@ This is the "before you buy" guide to QQQI — the yield, the tax structure, the
 | Ticker | QQQI |
 | Fund name | NEOS Nasdaq 100 High Income ETF |
 | Strategy | Covered calls + call spreads on NDX index options |
-| Current yield | ~14% (distribution rate, July 2026) |
+| Current yield | ~14% (distribution rate, Aug 2026) |
 | Payment frequency | Monthly |
 | Expense ratio | 0.68% |
 | Launch date | January 2024 |
@@ -105,7 +108,7 @@ The decision framework: **QQQI for the highest income with Nasdaq growth exposur
 About **14%** as of August 2026 — the fund's distribution rate annualizing recent monthly payouts. It's one of the highest sustainable yields in the premium-income space.
 
 ### How much does QQQI pay monthly?
-Roughly **$0.53–$0.66 per share** per month, with most months around $0.60–$0.65. On a $40,000 position that's roughly $430–$520/month.
+Roughly **$0.61–$0.66 per share** per month in 2026 (actual payments ranged $0.609–$0.659), averaging about $0.64. On a $40,000 position that's roughly $430–$520/month.
 
 ### Is QQQI's 14% yield sustainable?
 Distributions come from option premiums, so they're variable — but QQQI's payouts have been unusually stable for a covered-call fund, and its NAV has held above launch while paying ~14%. No guarantee, but the record is strong so far.

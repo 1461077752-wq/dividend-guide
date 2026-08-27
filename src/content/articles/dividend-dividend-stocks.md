@@ -1,9 +1,11 @@
 ---
 title: "Dividend Stocks: How to Screen for the Best Ones (Step-by-Step)"
+primaryKeyword: "how to find dividend stocks"
 description: "How to screen dividend stocks — the yield, payout ratio, and growth streak filters that separate quality payers from yield traps, with real examples."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Strategy"
+canonicalHub: "/topics/dividend-stock-screening/"
 tags: ["dividend stocks", "stock screener", "dividend yield", "payout ratio", "dividend growth"]
 image: "/images/articles/dividend-dividend-stocks.webp"
 dataAsOf: "2026-08-07"

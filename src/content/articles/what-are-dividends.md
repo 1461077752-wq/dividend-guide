@@ -1,9 +1,11 @@
 ---
 title: "What Are Dividends? A Beginner's Guide"
+primaryKeyword: "what are dividends"
 description: "Learn the fundamentals of dividends — how they work, why companies pay them, and how to evaluate dividend stocks for your portfolio."
 pubDate: 2026-01-15
 modDate: 2026-08-07
 category: "Basics"
+canonicalHub: "/topics/dividend-investing-basics/"
 tags: ["dividends", "beginner", "passive income"]
 author: "Henry Zhou"
 dataAsOf: "2026-08-07"

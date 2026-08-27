@@ -1,19 +1,98 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Dividend Investing Basics | Dividend Guide" description="Learn dividend investing basics, including how payouts work, how to evaluate yield, how DRIP compounds income and which risks beginners should check." canonical="https://www.dividend01.com/topics/dividend-investing-basics/" schemaType="WebPage" pubDate="2026-08-07" modDate="2026-08-24">
+<BaseLayout title="Dividend Investing Basics: Concepts, DRIP, Tax | Dividend Guide" description="Beginner dividend investing basics: how dividends work, yield and payout ratio, DRIP, and tax differences for qualified, ordinary and return-of-capital income." canonical="https://www.dividend01.com/topics/dividend-investing-basics/" schemaType="WebPage" pubDate="2026-08-07" modDate="2026-08-27">
   <slot slot="title">Dividend Investing Basics</slot>
-  <slot slot="subtitle">A clear starting point for understanding dividends and building an income-focused portfolio.</slot>
-  <p>Learn the core concepts before comparing stocks or chasing yield. These guides explain how dividends work, which metrics matter, and how reinvestment affects long-term returns.</p>
+  <slot slot="subtitle">A clear starting point for understanding dividends, evaluating payers, and building a long-term income portfolio.</slot>
+
+  <p>If you're new to dividend investing, the most useful thing you can do in the first hour is learn the vocabulary. Every later decision — which stock to buy, which ETF to hold, whether a 9% yield is a bargain or a trap — comes back to a small set of definitions: what a dividend is, how yield is calculated, what "qualified" means on your tax form, and how reinvestment compounds over time. This hub gives you those definitions in plain language, with examples drawn from real funds on the rest of the site.</p>
+
+  <h2>Reading path by experience</h2>
+  <ul>
+    <li><strong>Complete beginner</strong> — read <a href="/articles/what-are-dividends/">What Are Dividends?</a> first, then the four metrics table below, then <a href="/articles/best-dividend-stocks-for-beginners/">Best Dividend Stocks for Beginners</a>.</li>
+    <li><strong>Some investing experience</strong> — read <a href="/articles/dividend-yield/">Dividend Yield Explained</a> and <a href="/articles/drip-compounding-guide/">DRIP Compounding</a>, then move to <a href="/topics/dividend-stock-screening/">Dividend Stock Screening</a>.</li>
+    <li><strong>Building a portfolio</strong> — read the tax comparison below, then <a href="/articles/dividend-calculator-guide/">the Calculator Guide</a> to size positions and stress-test DRIP assumptions.</li>
+  </ul>
+
+  <h2>The four metrics every dividend investor needs</h2>
+  <table class="data-table">
+    <thead><tr><th>Metric</th><th>What it tells you</th><th>Formula</th><th>Healthy range</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Dividend yield</strong></td><td>Annual dividend as a % of share price</td><td>Annual dividend ÷ share price</td><td>2–6% for diversified portfolios; 8%+ needs extra scrutiny</td></tr>
+      <tr><td><strong>Payout ratio</strong></td><td>% of net income paid as dividends</td><td>Dividends ÷ net income</td><td>Under 70% for typical companies (REITs/BDCs are different)</td></tr>
+      <tr><td><strong>Free cash flow coverage</strong></td><td>Whether cash flow covers the dividend</td><td>FCF ÷ dividends paid</td><td>Above 1.2× consistently</td></tr>
+      <tr><td><strong>Dividend growth streak</strong></td><td>Years of consecutive increases</td><td>Years since last cut/initiation</td><td>10+ years for "Aristocrat"-quality names</td></tr>
+    </tbody>
+  </table>
+  <p>Yield is the headline number, but it answers the wrong question on its own. A 7% yield is not "better" than a 3% yield — it could mean the price has fallen and the company is now in trouble, or it could mean the business genuinely returns more cash to shareholders. Payout ratio and free cash flow coverage tell you whether the dividend is sustainable. Growth streak tells you whether management treats the dividend as a serious commitment or as a discretionary line item that will disappear in the next recession.</p>
+
+  <h2>Yield vs. total return: the most common beginner mistake</h2>
+  <p>Beginners often compare funds by yield alone. Two funds with the same 4% yield can deliver very different one-year returns: one may have appreciated 12% (total return 16%), the other may have fallen 10% (total return −6%). The "yield trap" is a company whose price has fallen faster than the dividend has grown — the headline yield looks attractive, but you are losing capital while collecting the distribution.</p>
+  <p>The rule: compare total return (price change plus distributions) over 3, 5, and 10 years, not the current yield. Use the <a href="/calculator/">Dividend Calculator</a> to model both yield and price growth separately, and read <a href="/articles/dividend-yield/">Dividend Yield Explained</a> for the four different yield definitions and what each one means.</p>
+
+  <h2>DRIP: how reinvestment compounds</h2>
+  <p>Dividend Reinvestment Plans (DRIP) automatically buy more shares with each distribution instead of paying you cash. Over 10–30 years this compounding effect is the single biggest driver of income growth from a dividend portfolio, often more than dividend raises themselves. To see the math, the <a href="/articles/drip-compounding-guide/">DRIP Compounding guide</a> walks through a worked example: a $20,000 starting position in SCHD, KO, and O with $400/month contributions reaches $1,680 of annual dividend income by year 5, even though the current yield stays in the 3–4% range — the growth comes from buying more shares with each reinvested distribution.</p>
+  <p>DRIP works best in tax-advantaged accounts (IRA, 401k, Roth). In a taxable account, DRIP still buys more shares but each reinvested distribution is a taxable event in the year it is paid, so you owe tax on income you did not receive as cash.</p>
+
+  <h2>Tax: qualified vs. ordinary vs. ROC</h2>
+  <p>This is the single largest determinant of your after-tax income from a dividend portfolio. The same $1 of distribution can be taxed at three very different rates.</p>
+  <table class="data-table">
+    <thead><tr><th>Character</th><th>Where it comes from</th><th>Tax rate (taxable account)</th><th>When paid</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Qualified dividend</strong></td><td>Most US company dividends, held &gt;60 days during the 121-day period around ex-date</td><td>0%, 15%, or 20% (long-term capital gains rates)</td><td>Annual 1099-DIV</td></tr>
+      <tr><td><strong>Ordinary (non-qualified) dividend</strong></td><td>REITs, BDCs, MLPs, foreign stocks, ELN premiums, money market funds</td><td>Marginal income tax rate (10–37%)</td><td>Annual 1099-DIV</td></tr>
+      <tr><td><strong>Return of capital (ROC)</strong></td><td>Distribution in excess of earnings — common in option-income ETFs and some REITs</td><td>Not taxed now; reduces your cost basis</td><td>Annual 1099-DIV, Box 3</td></tr>
+      <tr><td><strong>Section 1256 contracts</strong></td><td>Index options on broad indices (SPX, NDX) held by funds like SPYI/QQQI</td><td>60% long-term / 40% short-term capital gains, regardless of holding period</td><td>Annual 1099-B</td></tr>
+    </tbody>
+  </table>
+  <p>The practical takeaway: a 6% qualified dividend yield in a taxable account can net more than a 14% yield from a covered-call ETF whose distributions are ROC, because the qualified dividend is taxed at 15% and the ROC is not taxed now but shrinks your basis. Use the <a href="/articles/dividend-calculator-guide/">Calculator Guide</a> to model both, and check each fund's 19a-1 notice or annual tax statement to confirm the character mix before assuming headline yield equals after-tax income.</p>
+
+  <h2>Common mistakes to avoid</h2>
+  <ul>
+    <li><strong>Chasing the highest yield.</strong> A 9–10% yield on an equity (excluding REITs and BDCs, which have structural reasons) usually signals the market expects a cut. Verify with payout ratio and free cash flow coverage before you buy.</li>
+    <li><strong>Ignoring total return.</strong> A fund that pays 8% but loses 12% in price delivers −4% for the year. Yield is a marketing number; total return is the investor's number.</li>
+    <li><strong>Forgetting tax in a taxable account.</strong> Two funds with the same gross yield can deliver very different after-tax cash depending on whether distributions are qualified, ordinary, or ROC.</li>
+    <li><strong>Turning off DRIP in a downturn.</strong> The best purchases usually happen after a price decline, when DRIP buys more shares with the same dollar amount of distribution.</li>
+    <li><strong>Concentrating in one sector.</strong> Dividend payers cluster in financials, utilities, energy, and consumer staples. A diversified dividend portfolio holds 20–40 names across at least 6 sectors.</li>
+    <li><strong>Treating "Aristocrats" as risk-free.</strong> The S&amp;P 500 Dividend Aristocrats list (25+ years of increases) is a quality screen, not a guarantee. Several Aristocrats cut dividends during the 2008 and 2020 downturns.</li>
+  </ul>
+
+  <h2>Where to start in practice</h2>
+  <ol>
+    <li><strong>Open a tax-advantaged account first</strong> if you have access to one (401k, IRA, Roth). It removes the most complicated variable from dividend investing.</li>
+    <li><strong>Pick a low-cost diversified core</strong> — SCHD, VIG, or VYM as a single-fund starting position. These give you exposure to dozens of dividend payers without single-stock risk.</li>
+    <li><strong>Add 5–10 individual dividend growers</strong> you understand — companies whose products you use, whose payout history is long, and whose payout ratio is under 70%.</li>
+    <li><strong>Enable DRIP</strong> on every position.</li>
+    <li><strong>Add a small income satellite</strong> (5–15% of portfolio) — a monthly-payer like O or JEPI — if you want cash flow in retirement.</li>
+    <li><strong>Review once a quarter.</strong> Reinvest the distributions, rebalance back to target weights if anything drifts more than 5%, and only act if a holding's fundamentals change.</li>
+  </ol>
+
+  <h2>Sub-topic guides</h2>
   <div class="topic-links">
-    <a href="/articles/what-are-dividends/"><strong>What Are Dividends?</strong><span>Definitions, payment dates, and common misconceptions.</span></a>
+    <a href="/articles/what-are-dividends/"><strong>What Are Dividends?</strong><span>Plain-language definition, payment dates, and common misconceptions.</span></a>
     <a href="/articles/dividend-stocks/"><strong>Dividend Stocks Explained</strong><span>How income investors evaluate dividend-paying companies.</span></a>
-    <a href="/articles/dividend-yield/"><strong>Dividend Yield Explained</strong><span>Formula, interpretation, and the risks of high yield.</span></a>
-    <a href="/articles/drip-compounding-guide/"><strong>DRIP Compounding</strong><span>How reinvesting distributions can compound income.</span></a>
-    <a href="/articles/best-dividend-stocks-for-beginners/"><strong>Best Dividend Stocks for Beginners</strong><span>A practical starting framework for new investors.</span></a>
-    <a href="/articles/nvidia-dividend/"><strong>NVIDIA Dividend</strong><span>How a growth company can pay a dividend while still offering a low current yield.</span></a>
-    <a href="/articles/divisor-and-dividend/"><strong>Dividend vs. Divisor</strong><span>Separate the investing term from the mathematical term.</span></a>
-    <a href="/articles/dividend-calculator-guide/"><strong>Dividend Calculator Guide</strong><span>Test contributions, yield and reinvestment assumptions.</span></a>
-    <a href="/articles/dividends-for-ford/"><strong>Ford Dividend</strong><span>See how a cyclical company balances dividends and investment.</span></a>
+    <a href="/articles/dividend-yield/"><strong>Dividend Yield Explained</strong><span>Formula, interpretation, and the risks of headline yield.</span></a>
+    <a href="/articles/drip-compounding-guide/"><strong>DRIP Compounding</strong><span>How reinvesting distributions compounds income over 10–30 years.</span></a>
+    <a href="/articles/best-dividend-stocks-for-beginners/"><strong>Best Dividend Stocks for Beginners</strong><span>A practical starting framework with worked examples.</span></a>
+    <a href="/articles/nvidia-dividend/"><strong>NVIDIA Dividend</strong><span>How a growth company can pay a small dividend while still reinvesting heavily.</span></a>
+    <a href="/articles/divisor-and-dividend/"><strong>Dividend vs. Divisor</strong><span>Don't confuse the investing term with the mathematical term.</span></a>
+    <a href="/articles/dividend-calculator-guide/"><strong>Dividend Calculator Guide</strong><span>Project income, model DRIP, and stress-test assumptions.</span></a>
+    <a href="/articles/dividends-for-ford/"><strong>Ford Dividend</strong><span>A cyclical company's dividend story (cut, restart, suspension).</span></a>
   </div>
+
+  <h2>Frequently asked questions</h2>
+  <details class="faq-item" open><summary>Are dividends free money?</summary><div class="faq-answer">No. When a company pays a $1 dividend, the share price typically drops by about $1 on the ex-dividend date. The total value of your holding is roughly the same immediately before and after the ex-date; what changes is the form (cash vs. unrealized price). Over time, dividend-paying stocks can outperform non-payers because the cash is reinvested or spent.</div></details>
+  <details class="faq-item"><summary>How much do I need to live off dividends?</summary><div class="faq-answer">At a 4% blended yield, you need roughly $1M for $40K of annual income. At 3%, closer to $1.3M. Use the <a href="/calculator/">Calculator</a> to run your own numbers with realistic yield, growth, and inflation assumptions. Most retirees target 4–6% blended yield with a mix of dividend growers and income satellites.</div></details>
+  <details class="faq-item"><summary>What's the difference between qualified and non-qualified dividends?</summary><div class="faq-answer">Qualified dividends (mostly from US common stocks held more than 60 days around the ex-date) are taxed at long-term capital gains rates of 0%, 15%, or 20%. Non-qualified dividends (REITs, BDCs, MLPs, foreign stocks, ELN premiums, money market funds) are taxed at your marginal ordinary income rate, which can be much higher.</div></details>
+  <details class="faq-item"><summary>Should I reinvest or take the cash?</summary><div class="faq-answer">In a tax-advantaged account, always reinvest during accumulation. In a taxable account, reinvesting is still usually right right in if you don't need the cash, but remember you owe income tax on the distribution in the year it's paid even if it never hits your bank account.</div></details>
+  <details class="faq-item"><summary>Is a Dividend Aristocrat a safe investment?</summary><div class="faq-answer">It's safer than a non-Aristocrat, but not safe. The Aristocrats list (25+ consecutive years of dividend increases) is a quality screen, not a guarantee. General Electric was an Aristocrat until 2009; AT&amp;T cut its dividend in 2022 after 36 years of increases. Always check payout ratio and cash flow coverage.</div></details>
+
+  <h2>Cross-links to related hubs</h2>
+  <ul>
+    <li><a href="/topics/dividend-etf-history/">Dividend ETF History</a> — distribution records and yield mechanics for specific ETFs.</li>
+    <li><a href="/topics/dividend-stock-screening/">Dividend Stock Screening</a> — the five-metric checklist for filtering candidates.</li>
+    <li><a href="/topics/high-yield-dividend-stocks/">High-Yield Dividend Stocks</a> — sector risks and the suitability matrix for higher-yield names.</li>
+  </ul>
+
+  <p class="meta"><em>Last updated: 2026-08-27. Tax examples use 2026 US federal long-term capital gains brackets for illustration; your actual rate depends on filing status, state tax, and account type. Not investment or tax advice.</em></p>
 </BaseLayout>

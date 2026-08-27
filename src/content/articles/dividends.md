@@ -1,9 +1,11 @@
 ---
 title: "How Much Money Can You Make From Dividends?"
+primaryKeyword: "dividends explained"
 description: "Real numbers on dividend income — how much $10,000, $50,000, or $500,000 in dividend stocks can pay each month, plus the math behind building passive income."
 pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Basics"
+canonicalHub: "/topics/dividend-investing-basics/"
 tags: ["dividends", "passive income", "dividend income", "monthly income"]
 image: "/images/articles/dividends.webp"
 dataAsOf: "2026-08-07"

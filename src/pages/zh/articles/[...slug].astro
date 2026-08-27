@@ -67,7 +67,7 @@ const isSchdGuide = translation.id.startsWith('schd-dividend');
       <span>事实核验日期：{reviewDate}</span>
       {englishArticle.data.dataAsOf && <span>数据截至：{englishArticle.data.dataAsOf}</span>}
     </div>
-    {englishArticle.data.image && <img src={englishArticle.data.image} alt={translation.data.title} class="article-cover" loading="eager">}
+    {englishArticle.data.image && <img src={englishArticle.data.image} alt={translation.data.title} class="article-cover" width="1200" height="675" loading="eager" fetchpriority="high" decoding="async">}
   </div>
   {isSchdGuide && (
     <aside class="article-research-notes" aria-labelledby="topic-guide-heading">

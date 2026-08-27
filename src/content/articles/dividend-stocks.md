@@ -1,9 +1,11 @@
 ---
 title: "Dividend Stocks Explained: A Complete Guide for Income Investors"
+primaryKeyword: "dividend stocks"
 description: "What dividend stocks are, how to evaluate them, and how to build a portfolio that generates reliable income. Includes key metrics, examples, and common mistakes."
 pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Basics"
+canonicalHub: "/topics/dividend-investing-basics/"
 tags: ["dividend stocks", "income investing", "dividend yield", "portfolio"]
 image: "/images/articles/dividend-stocks.webp"
 dataAsOf: "2026-08-07"

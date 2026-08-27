@@ -1,8 +1,9 @@
 ---
 title: "Tariff Dividend Check: Status and Eligibility"
-description: "Has the tariff dividend check been sent? Current 2026 status, reported amounts, eligibility details, and the official way to track any federal payment."
+primaryKeyword: "tariff dividend check"
+description: "Tariff dividend status: is it law, has any check been sent, who qualifies? Tracker with verification date, reported amounts, official channels, and scam warnings."
 pubDate: 2026-08-04
-modDate: 2026-08-04
+modDate: 2026-08-27
 category: "Market News"
 tags: ["tariff dividend", "tariff check", "stimulus check", "dividend check", "IRS", "tracking"]
 image: "/images/articles/tariff-dividend-check.webp"
@@ -19,6 +20,8 @@ draft: false
 ---
 
 **No tariff dividend check has been sent to any household — as of August 2026, the plan remains a proposal, not a payment.** President Trump first floated a "$2,000 per person" tariff dividend in November 2025 and raised the idea again in mid-2026, but no legislation has passed, no executive order exists, and the IRS is actively debunking rumors that "$2,000 tariff refund" deposits are arriving. Meanwhile, the *real* money movement in 2026 is different: **$35–150 billion in tariff refunds went to importers and corporations**, not to families.
+
+> **Status checked on 2026-08-27.** This page tracks payment status only. For what the proposal is and how it would be funded, read our [tariff dividend proposal explainer](/articles/tariff-dividend/).
 
 <!-- Cover image: Mailbox with a red question mark and dollar bills nearby, representing the status of a government dividend check -->
 

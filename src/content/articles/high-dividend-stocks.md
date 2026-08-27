@@ -1,6 +1,6 @@
 ---
-title: "High Dividend Stocks: 4%–8% Yield and Risk Guide"
-description: "Compare high dividend stocks by yield, payout coverage and sector risk. Learn how to evaluate sustainable income and identify potential yield traps."
+title: "High Dividend Stocks 2026: 4%–8% Yields, Safety & Top Picks"
+description: "High dividend stocks paying 4%–8% in 2026: compare yield, payout coverage and sector risk for VZ, MO, O, ET and more. Data as of Aug 2026, with FAQ."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Stock Analysis"
@@ -10,7 +10,7 @@ primaryKeyword: "high dividend stocks"
 searchIntent: "comparison"
 canonicalHub: "/topics/high-yield-dividend-stocks/"
 experienceType: "illustrative"
-dataAsOf: "2026-08-07"
+dataAsOf: "2026-08-27"
 methodology: "Yield and payout examples are point-in-time figures from issuer disclosures; sector ranges are descriptive and do not imply safety or future income."
 sources:
   - name: "SEC EDGAR company filings"

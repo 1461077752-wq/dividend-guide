@@ -1,9 +1,12 @@
 ---
 title: "Warrior Dividend Strategy: Portfolio Checklist"
+primaryKeyword: "warrior dividend"
 description: "Use the Warrior Dividend framework to screen holdings, define a core-satellite allocation, apply DRIP rules and model a disciplined income portfolio."
 pubDate: 2026-08-10
 modDate: 2026-08-10
+dataAsOf: "2026-08-27"
 category: "Strategy"
+canonicalHub: "/topics/dividend-investing-basics/"
 tags: ["warrior dividend", "dividend strategy", "passive income", "DRIP", "dividend growth", "high yield"]
 experienceType: "illustrative"
 draft: false

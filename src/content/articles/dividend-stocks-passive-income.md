@@ -1,9 +1,11 @@
 ---
 title: "Dividend Stocks for Passive Income: A Realistic Guide"
+primaryKeyword: "dividend stocks for passive income"
 description: "How to build passive income with dividend stocks — realistic yields, portfolio examples, monthly income projections, and strategies that actually work."
 pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Strategy"
+canonicalHub: "/topics/dividend-investing-basics/"
 tags: ["passive income", "dividend stocks", "monthly income", "retirement income"]
 image: "/images/articles/dividend-stocks-passive-income.webp"
 dataAsOf: "2026-08-07"

@@ -1,5 +1,6 @@
 ---
 title: "Alaska PFD 2026: Stimulus Payment Guide"
+primaryKeyword: "Alaska permanent fund dividend"
 description: "How the Alaska Permanent Fund Dividend works, 2026 payment amounts, eligibility rules, and whether extra stimulus checks are coming."
 pubDate: 2026-07-30
 modDate: 2026-07-30

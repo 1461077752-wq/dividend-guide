@@ -1,2 +1,7 @@
+# Canonical URL policy: https://www.dividend01.com/path/
 # Cloudflare Pages `_redirects` only supports path-level redirects.
-# Configure apex -> www and trailing-slash redirects in Cloudflare Redirect Rules.
+# Cloudflare Redirect Rules must issue a single permanent 301 for:
+# - http://dividend01.com/*       -> https://www.dividend01.com/:splat/
+# - http://www.dividend01.com/*   -> https://www.dividend01.com/:splat/
+# - https://dividend01.com/*      -> https://www.dividend01.com/:splat/
+# - extensionless paths without / -> the same www HTTPS path with a trailing /

@@ -3,7 +3,9 @@ title: "BITO Dividend: Payout History and Key Risks"
 description: "See BITO's monthly distribution history, why its trailing yield can mislead, and how futures gains, price declines, and payout volatility affect returns."
 pubDate: 2026-08-10
 modDate: 2026-08-10
+dataAsOf: "2026-08-27"
 category: "Stock Analysis"
+canonicalHub: "/topics/dividend-etf-history/"
 tags: ["BITO", "ProShares", "bitcoin", "futures ETF", "distribution", "high yield"]
 primaryKeyword: "BITO dividend"
 searchIntent: "informational"
@@ -11,7 +13,7 @@ experienceType: "illustrative"
 draft: false
 ---
 
-BITO (ProShares Bitcoin Strategy ETF) "pays" a dividend — monthly, sometimes with a trailing yield above **46%**. But that number is a trap. The distributions are not company earnings; they're realized gains from bitcoin futures, and they swing wildly: BITO distributed about **$14.03 per share in 2024**, **$9.52 per share in 2025**, and only **~$0.07 per share in the first seven months of 2026**. Meanwhile the share price fell from roughly $23 to under $9 within a year. A yield that high on a falling asset is not income — it's the fund handing back its own gains.
+BITO (ProShares Bitcoin Strategy ETF) "pays" a dividend — monthly, sometimes with a trailing yield above **75%**. But that number is a trap. The distributions are not company earnings; they're realized gains from bitcoin futures, and they swing wildly: BITO distributed about **$14.03 per share in 2024**, **$9.52 per share in 2025**, and only **~$0.07 per share in the first seven months of 2026**. Meanwhile the share price fell from roughly $23 to under $9 within a year. A yield that high on a falling asset is not income — it's the fund handing back its own gains.
 
 <!-- Cover image: A downward-sloping bitcoin chart with a magnifying glass over the dividend yield figure, warning tone financial graphic -->
 
@@ -27,12 +29,12 @@ This article explains what BITO's distributions actually are, why the yield misl
 | Launch date | October 2021 |
 | Expense ratio | 0.95% |
 | Payment frequency | Monthly |
-| Current price | ~$8.80 (Aug 7, 2026) |
+| Current price | ~$8.60 (Aug 2026) |
 | 52-week range | ~$7.87 – $22.90 |
-| TTM distributions | ~$4.06/share |
-| Trailing yield | ~46% (TTM) |
+| Trailing 12-mo yield | ~75%* (ProShares, 6/30/2026) |
+| Recent income yield | ~2% (2026 monthly ~$0.01–$0.016) |
 
-*Fund facts per [StockAnalysis.com BITO dividend page](https://stockanalysis.com/etf/bito/dividend/), August 2026.*
+*Fund facts per [ProShares BITO page](https://www.proshares.com/our-etfs/strategic/bito) and [StockAnalysis.com BITO dividend page](https://stockanalysis.com/etf/bito/dividend/), August 2026. *ProShares' 12-month yield includes 2025 capital-gains distributions; the recurring income (distribution) yield is ~2%.
 
 ## What BITO's "Dividend" Actually Is
 
@@ -62,8 +64,8 @@ The pattern is the opposite of a healthy dividend stock: **big payouts came with
 
 Three numbers collude to make BITO look like an income monster:
 
-1. **The numerator is backward-looking.** The ~46% TTM yield averages the fat 2025 payouts into a period that no longer resembles reality.
-2. **The denominator is crashing.** Yield = distributions ÷ price. As BITO's price fell from ~$23 to ~$8.80, the same dollar distribution produced a much higher yield percentage — a falling price inflates the yield mechanically.
+1. **The numerator is backward-looking.** The ~75% trailing 12-month yield (per ProShares, includes 2025 capital-gains distributions) averages the fat 2025 payouts into a period that no longer resembles reality.
+2. **The denominator is crashing.** Yield = distributions ÷ price. As BITO's price fell from ~$23 to ~$8.60, the same dollar distribution produced a much higher yield percentage — a falling price inflates the yield mechanically.
 3. **The payout is return of your own principal.** Much of the 2024–2025 distribution was the fund converting unrealized bitcoin gains into cash and paying them out. You were receiving your own appreciation back, not being paid to hold the fund.
 
 In other words, BITO's high "yield" is a distressed-price artifact, not an investable income rate. For context on why ultra-high yields usually signal this kind of problem, see our [highest dividend stocks](/articles/highest-dividend-stocks/) guide.
@@ -73,7 +75,7 @@ In other words, BITO's high "yield" is a distressed-price artifact, not an inves
 | Metric | BITO | SCHD |
 |--------|------|------|
 | Income source | Realized futures gains | Company dividends |
-| Trailing yield | ~46% | ~3.5% |
+| Trailing 12-mo yield | ~75%* | ~3.5% |
 | Payment frequency | Monthly | Quarterly |
 | 2025 distributions | ~$9.52/share | growing every year |
 | Distribution consistency | Near zero in falling markets | 15 straight years of increases |
@@ -106,7 +108,7 @@ The lesson from this scenario applies to every ultra-high-yield product: **yield
 BITO pays **monthly distributions**, but they are not company dividends — they're realized gains on bitcoin futures plus interest income, and the amounts vary enormously.
 
 ### What is BITO's dividend yield?
-The trailing TTM yield was about **46%** as of August 2026 per [StockAnalysis.com](https://stockanalysis.com/etf/bito/dividend/). This number is misleading because it includes fat 2025 payouts while the share price has fallen sharply, mechanically inflating the percentage.
+The trailing 12-month yield was about **75%** (per ProShares, as of 6/30/2026)* — but this figure includes 2025 capital-gains distributions, so the recurring income yield is only ~2%.
 
 ### Why did BITO's distributions collapse in 2026?
 Because most of BITO's big payouts were realized capital gains from bitcoin's 2024–2025 rally. When bitcoin fell in 2026, the fund had no gains to distribute, and monthly checks dropped from dollars to pennies.
@@ -128,7 +130,7 @@ Yes. In the first seven months of 2026 the fund paid roughly **$0.07 per share t
 
 ## The Bottom Line on BITO
 
-BITO is a bitcoin futures ETF that pays out realized gains monthly — and that payout is often repackaged as a giant "dividend yield" on financial sites. The ~46% trailing yield is a distorted number: it averages past gains over a collapsing price. The 2024–2025 payout boom ($14.03 then $9.52 per share) and the 2026 bust (~$0.07) tell the real story.
+BITO is a bitcoin futures ETF that pays out realized gains monthly — and that payout is often repackaged as a giant "dividend yield" on financial sites. The ~75% trailing 12-month yield (per ProShares) is a distorted number: it averages past gains, including 2025 capital-gains distributions, over a collapsing price. The 2024–2025 payout boom ($14.03 then $9.52 per share) and the 2026 bust (~$0.07) tell the real story.
 
 If you want bitcoin exposure, BITO has a role as a speculative satellite. If you want income, it is the wrong tool — pair it instead with funds whose distributions come from real earnings. Run your own scenario through our [Dividend Calculator](/calculator/), compare quality payers on our [best dividend stocks](/stocks/) list, and if you're chasing a similar-looking yield elsewhere, read our [high dividend stocks](/articles/high-dividend-stocks/) guide before buying.
 

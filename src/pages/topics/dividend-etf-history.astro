@@ -1,27 +1,148 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Dividend ETF History | Dividend Guide" description="Compare dividend ETF distribution histories, payment schedules, yield definitions and income strategies for SCHD, JEPQ, QQQI, VOO and other funds." canonical="https://www.dividend01.com/topics/dividend-etf-history/" schemaType="WebPage" pubDate="2026-08-07" modDate="2026-08-24">
+<BaseLayout title="Dividend ETF History: Records, Income Mechanics | Dividend Guide" description="Dividend ETF history hub: compare distribution records, payment schedules, yield definitions and income mechanics for SCHD, JEPQ, QQQI, SPYI, ULTY, VOO and more." canonical="https://www.dividend01.com/topics/dividend-etf-history/" schemaType="WebPage" pubDate="2026-08-07" modDate="2026-08-27">
   <slot slot="title">Dividend ETF History</slot>
-  <slot slot="subtitle">Distribution histories and yield context for popular income and dividend-growth ETFs.</slot>
-  <p>Use these ETF guides to compare payment schedules, historical distributions, yield definitions, and the difference between income and total return.</p>
+  <slot slot="subtitle">Distribution records, payment schedules, yield definitions, and the mechanics that turn option premiums and dividend streams into monthly checks.</slot>
+
+  <p>An exchange-traded fund's "dividend history" is more than a list of past payments — it encodes how the fund actually generates income. A traditional dividend-growth ETF like SCHD returns shareholder cash from the underlying companies' earnings. A covered-call ETF like JEPI or SPYI returns cash from selling index options on top of the underlying dividends. A single-stock option-income ETF like ULTY or MSTY returns cash mostly from selling calls on one volatile name — and most of that cash is return of capital. The reported <em>yield</em> you see on a financial site depends entirely on which of these mechanisms the fund uses, which is why two funds with the same "12% yield" can have wildly different total returns.</p>
+
+  <p>This hub collects every dividend-ETF distribution record we maintain. Each article documents payment dates, distribution amounts, the fund's mechanics, the difference between distribution rate and SEC yield, and the total-return context. Use the sub-topic groups below to navigate by family, and the comparison tables to spot the structural differences between funds that look similar on the surface.</p>
+
+  <h2>Reading path by experience</h2>
+  <ul>
+    <li><strong>Beginner</strong> — start with <a href="/articles/what-are-dividends/">What Are Dividends?</a> and <a href="/articles/dividend-yield/">Dividend Yield Explained</a>, then read the SCHD dividend history as the simplest example of a traditional dividend-growth ETF.</li>
+    <li><strong>Intermediate</strong> — read <a href="/articles/jepi-dividend/">JEPI Dividend</a> and <a href="/articles/qqqi-dividend/">QQQI Dividend</a> to understand the covered-call income model, then compare the distribution rates on the table below.</li>
+    <li><strong>Advanced</strong> — read the YieldMax and single-stock option-income articles (<a href="/articles/ulty-dividend/">ULTY</a>, <a href="/articles/msty-dividend-income/">MSTY</a>, <a href="/articles/bito-dividend/">BITO</a>) and the <a href="/articles/dividend-calculator-guide/">Dividend Calculator Guide</a> to model after-tax income across these structures.</li>
+  </ul>
+
+  <h2>Sub-topic groups</h2>
+
+  <h3>1. Traditional dividend-growth ETFs</h3>
+  <p>These funds own dividend-paying equities and distribute the cash those companies pay. Yield is driven by the underlying portfolio's average yield, growth comes from holdings that raise their payouts each year.</p>
   <div class="topic-links">
-    <a href="/articles/schd-dividend-history/"><strong>SCHD Dividend History</strong><span>Distribution history, split adjustments, and growth.</span></a>
-    <a href="/articles/jepq-dividend-history/"><strong>JEPQ Dividend History</strong><span>Monthly distributions and covered-call income.</span></a>
-    <a href="/articles/jepq-dividend-date/"><strong>JEPQ Dividend Dates</strong><span>2026 ex-dates, record dates, payment dates, and declared amounts.</span></a>
-    <a href="/articles/qqqi-dividend-history/"><strong>QQQI Dividend History</strong><span>NEOS Nasdaq-100 income ETF distributions.</span></a>
-    <a href="/articles/cony-dividend-history/"><strong>CONY Dividend History</strong><span>Weekly option-income distributions, ROC, and single-stock risk.</span></a>
-    <a href="/articles/qdte-dividend-history/"><strong>QDTE Dividend History</strong><span>Weekly 0DTE distributions, option mechanics, and total-return risk.</span></a>
-    <a href="/articles/voo-dividend/"><strong>VOO Dividend</strong><span>Yield, annual history, and comparisons with other ETFs.</span></a>
-    <a href="/articles/schd-dividend-yield/"><strong>SCHD Dividend Yield</strong><span>Current rate, historical range, and yield on cost.</span></a>
-    <a href="/articles/tltw-dividend/"><strong>TLTW Dividend</strong><span>How a Treasury covered-call ETF creates distributions.</span></a>
-    <a href="/articles/jepi-dividend/"><strong>JEPI Dividend</strong><span>Monthly income, yield and covered-call trade-offs.</span></a>
-    <a href="/articles/msty-dividend-history/"><strong>MSTY Dividend History</strong><span>YieldMax MSTR-linked distributions and risk.</span></a>
-    <a href="/articles/ulty-dividend-history/"><strong>ULTY Dividend History</strong><span>Multi-asset option-income distributions.</span></a>
-    <a href="/articles/tsly-dividend-history/"><strong>TSLY Dividend History</strong><span>Tesla-linked option income and distribution changes.</span></a>
-    <a href="/articles/best-dividend-etf/"><strong>Best Dividend ETFs</strong><span>Compare diversified funds by income, fees, and role.</span></a>
-    <a href="/articles/bito-dividend/"><strong>BITO Dividend</strong><span>Bitcoin futures distributions and their trade-offs.</span></a>
-    <a href="/articles/spyi-dividend-history/"><strong>SPYI Dividend History</strong><span>NEOS S&amp;P 500 high-income distributions.</span></a>
-    <a href="/articles/qqqi-dividend/"><strong>QQQI Dividend</strong><span>Nasdaq income, option premiums, tax treatment, and risks.</span></a>
+    <a href="/articles/schd-dividend-history/"><strong>SCHD Dividend History</strong><span>Quarterly distributions, growth streak, and split-adjusted history since 2011.</span></a>
+    <a href="/articles/schd-dividend-yield/"><strong>SCHD Dividend Yield</strong><span>Current rate, historical range, and yield-on-cost modeling.</span></a>
+    <a href="/articles/voo-dividend/"><strong>VOO Dividend</strong><span>Yield and annual history for the S&amp;P 500 wrapper.</span></a>
+    <a href="/articles/best-dividend-etf/"><strong>Best Dividend ETFs</strong><span>Compare diversified funds by income, fees, and portfolio role.</span></a>
   </div>
+
+  <h3>2. JPMorgan Equity Premium Income family</h3>
+  <p>JPMorgan's actively managed JEPI/JEPQ ETFs use an options overlay on a low-volatility equity sleeve to generate monthly income. Distribution yield is moderate (~7–8%) but backed by both dividends and option premiums.</p>
+  <div class="topic-links">
+    <a href="/articles/jepi-dividend/"><strong>JEPI Dividend</strong><span>Monthly income, distribution history, and the Section 1256 trade-off.</span></a>
+    <a href="/articles/jepq-dividend-history/"><strong>JEPQ Dividend History</strong><span>Nasdaq-100 version of the JEPI strategy, monthly since launch.</span></a>
+    <a href="/articles/jepq-dividend-date/"><strong>JEPQ Dividend Dates</strong><span>Ex-dates, record dates, payment dates, and declared amounts.</span></a>
+  </div>
+
+  <h3>3. NEOS option-income ETFs</h3>
+  <p>NEOS builds a family of equity-index option-income ETFs that sell exchange-traded index options and use Section 1256 tax treatment. Distribution rates are high (often 10–14%) but mostly return of capital — total return still tracks the index, capped.</p>
+  <div class="topic-links">
+    <a href="/articles/qqqi-dividend/"><strong>QQQI Dividend</strong><span>Nasdaq-100 option-income, ~14% distribution rate, monthly since Jan 2024.</span></a>
+    <a href="/articles/qqqi-dividend-history/"><strong>QQQI Dividend History</strong><span>Complete month-by-month distributions and Section 1256 tax breakdown.</span></a>
+    <a href="/articles/spyi-dividend-history/"><strong>SPYI Dividend History</strong><span>S&amp;P 500 option-income, ~12% rate, monthly since Aug 2022.</span></a>
+    <a href="/articles/jepi-dividend/"><strong>JEPI vs. SPYI</strong><span>Side-by-side: JPMorgan equity-linked notes vs. NEOS index options.</span></a>
+  </div>
+
+  <h3>4. YieldMax single-stock option-income ETFs</h3>
+  <p>YieldMax runs the largest family of weekly single-stock covered-call ETFs. Distribution rates are very high (50%+ annualized) because the strategy aggressively sells upside; most distributions are return of capital and total return is essentially flat since launch.</p>
+  <div class="topic-links">
+    <a href="/articles/ulty-dividend/"><strong>ULTY Dividend</strong><span>Multi-asset YieldMax option-income, ~60% distribution rate, weekly, ~100% ROC.</span></a>
+    <a href="/articles/ulty-dividend-history/"><strong>ULTY Dividend History</strong><span>Weekly payout record and the 2026 run-rate decline.</span></a>
+    <a href="/articles/msty-dividend-income/"><strong>MSTY Dividend Income</strong><span>MicroStrategy-linked option income, monthly, heavy ROC.</span></a>
+    <a href="/articles/msty-dividend-history/"><strong>MSTY Dividend History</strong><span>Distribution record and NAV erosion context.</span></a>
+    <a href="/articles/tsly-dividend-history/"><strong>TSLY Dividend History</strong><span>Tesla-linked option income and the distribution cuts of 2024–2025.</span></a>
+    <a href="/articles/cony-dividend-history/"><strong>CONY Dividend History</strong><span>Coinbase-linked weekly option income.</span></a>
+    <a href="/articles/qdte-dividend-history/"><strong>QDTE Dividend History</strong><span>0DTE Nasdaq-100 weekly distributions.</span></a>
+  </div>
+
+  <h3>5. Bitcoin futures and other specialty</h3>
+  <p>Funds whose distributions come from non-dividend sources (futures gains, royalties, etc.) — where the headline yield can be extremely high but is structurally different from equity dividends.</p>
+  <div class="topic-links">
+    <a href="/articles/bito-dividend/"><strong>BITO Dividend</strong><span>Bitcoin futures ETF distributions: ~75% trailing 12-month yield, ~2% income component.</span></a>
+    <a href="/articles/tltw-dividend/"><strong>TLTW Dividend</strong><span>Treasury covered-call ETF — not the same as a Treasury coupon.</span></a>
+  </div>
+
+  <h2>Yield definitions: how to read each number</h2>
+  <p>When you see a "yield" on a financial site for an ETF, it can mean any of four different things. Knowing which one you're looking at changes your interpretation entirely.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Yield type</th><th>What it measures</th><th>Best for</th><th>Example (ULTY, Aug 2026)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Trailing 12-month yield</strong></td>
+        <td>Sum of last 12 months of distributions ÷ current price</td>
+        <td>Comparing funds on a single common denominator</td>
+        <td>~103–106%</td>
+      </tr>
+      <tr>
+        <td><strong>Distribution rate (issuer-reported)</strong></td>
+        <td>Most recent distribution annualized ÷ NAV</td>
+        <td>Forward-looking "if today's payout continues"</td>
+        <td>~60% (YieldMax official)</td>
+      </tr>
+      <tr>
+        <td><strong>SEC 30-day yield</strong></td>
+        <td>Net investment income (excludes option premiums, capital gains) over the last 30 days, annualized</td>
+        <td>Comparing actual income generation</td>
+        <td>−0.78% (negative)</td>
+      </tr>
+      <tr>
+        <td><strong>Realized income yield (manual)</strong></td>
+        <td>Distribution components that are <em>not</em> return of capital</td>
+        <td>After-tax cash income for an investor</td>
+        <td>~2% (recent monthly payouts are largely ROC)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>The four numbers tell four different stories. A trailing yield of 100% is not "you earned 100% in a year" — it means the last 12 months of payouts, divided by today's NAV. A distribution rate of 60% is not "you will earn 60% next year" — it's a snapshot annualized from the latest distribution. An SEC 30-day yield of −0.78% tells you the fund's underlying portfolio is generating <em>less</em> income than its expense ratio. The realized income yield is the figure that matters for your tax bill, and for many option-income funds it is a small fraction of the headline number.</p>
+
+  <h2>Comparison: same yield, very different fund</h2>
+  <p>The table below shows four popular ETFs with distribution rates that look similar but reflect four different income engines.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Fund</th><th>Distribution rate</th><th>SEC 30-day yield</th><th>Income source</th><th>Tax treatment of distributions</th><th>Total return 1Y</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><a href="/articles/schd-dividend-yield/">SCHD</a></td><td>~3.5%</td><td>~3.5%</td><td>Underlying company dividends (domestic)</td><td>Mostly qualified, 0–20%</td><td>Modestly positive</td></tr>
+      <tr><td><a href="/articles/jepi-dividend/">JEPI</a></td><td>~7.6%</td><td>~7.6%</td><td>Equity-linked notes + ELN option premiums</td><td>Mostly ordinary income (ELN)</td><td>Modestly positive, capped upside</td></tr>
+      <tr><td><a href="/articles/spyi-dividend-history/">SPYI</a></td><td>~12%</td><td>~0.5%</td><td>SPX index option premiums</td><td>Section 1256 60/40 + ROC</td><td>Tracks index, capped upside</td></tr>
+      <tr><td><a href="/articles/ulty-dividend/">ULTY</a></td><td>~60%</td><td>−0.78%</td><td>Multi-asset call spreads, heavy ROC</td><td>Mostly ROC (cost basis reduction)</td><td>~0% since launch</td></tr>
+    </tbody>
+  </table>
+  <p>Read across the row, not down the column. SCHD's 3.5% is real dividend income from US companies. ULTY's 60% is mostly the fund paying you back your own money — the headline number is real, but the cash flow is the same cash you put in.</p>
+
+  <h2>Risk points specific to this category</h2>
+  <ul>
+    <li><strong>Return of capital hides NAV erosion.</strong> A 12% distribution that is 90% ROC means the fund's NAV drops by roughly 11% per year just from paying you — any price appreciation must overcome that drag. Use the issuer's 19a-1 notices, not the headline yield, to see the ROC share.</li>
+    <li><strong>Distribution rate ≠ forward yield.</strong> When a covered-call fund's underlying volatility drops, the run-rate usually follows. YieldMax warned in late 2025 that future distributions "may be somewhat lower and less predictable" after strategy changes; ULTY's weekly payout fell from $0.47–$0.52 in January to $0.31 by August 2026.</li>
+    <li><strong>Capped upside on covered-call funds.</strong> Funds that sell index options give up part of every strong rally in exchange for the monthly premium. Over a decade of flat or modest markets they can outperform; over a strong bull market they trail badly.</li>
+    <li><strong>Single-stock option ETFs concentrate risk.</strong> MSTY/TSLY/CONY/QDTE are not diversified dividend ETFs. The covered call caps the upside of a single volatile name, but if that name falls 60% the strategy still owns most of the loss. Total return since launch for several of these is sharply negative.</li>
+    <li><strong>Tax treatment varies.</strong> SCHD distributions are mostly qualified dividends. SPYI's index option premiums are Section 1256 (60/40 long-term/short-term split). MSTY/ULTY distributions are mostly ROC, not taxed now but reduce your cost basis.</li>
+  </ul>
+
+  <h2>Methodology and sources</h2>
+  <p>Distribution amounts, ex-dates and payment dates come directly from each fund's official fund page and SEC Form N-CSR / 19a-1 distribution notices. Total return figures use split-adjusted series from the issuer and major data providers (StockAnalysis, Robinhood, Morningstar) and are cross-checked against the issuer's own monthly fact sheet. We update each article's <code>dataAsOf</code> whenever we touch the figures, and the most recent refresh is shown in the article footer's "Data through" line.</p>
+  <p>For covered-call funds, the SEC 30-day yield is the most honest single number for actual income generation, but it understates total cash flow because it excludes option premiums. We therefore report both: SEC yield (for comparability) and distribution rate (for cash-flow planning), and we flag ROC percentage when the issuer discloses it.</p>
+
+  <h2>Frequently asked questions</h2>
+  <details class="faq-item" open><summary>Which dividend ETF has the longest history?</summary><div class="faq-answer">Among the funds we cover, SCHD has the longest continuous distribution record (since 2011), with VOO and traditional large-cap dividend ETFs going back further. For option-income ETFs, JEPI is the oldest (since 2020); SPYI dates to 2022; the YieldMax and NEOS families mostly began in 2024–2025.</div></details>
+  <details class="faq-item"><summary>Why do two ETFs both show 12% yield but one has flat total return?</summary><div class="faq-answer">One fund's 12% comes mostly from selling index options (SPYI); the other's comes mostly from return of capital (a heavy-ROC single-stock fund). The first can still track the underlying index over time; the second shrinks its own NAV by the payout amount. Always check the SEC 30-day yield and the issuer's ROC disclosure to know which kind of 12% you're looking at.</div></details>
+  <details class="faq-item"><summary>How often are distributions paid?</summary><div class="faq-answer">It depends on the family. Traditional dividend-growth ETFs (SCHD, VOO) pay quarterly. NEOS option-income ETFs (QQQI, SPYI, IWMI) pay monthly. JPMorgan JEPI/JEPQ pay monthly. YieldMax single-stock ETFs (ULTY, MSTY, TSLY) pay weekly (Group 1 and Group 2 funds) or monthly. ProShares BITO pays monthly from realized futures gains.</div></details>
+  <details class="faq-item"><summary>Are dividend ETF distributions the same as stock dividends?</summary><div class="faq-answer">No. A stock dividend is cash paid by a company from its earnings. An ETF distribution is whatever the fund has received from its holdings (dividends, option premiums, realized gains) minus expenses, classified by tax character. For an equity ETF the dominant source is still dividends, but for an option-income ETF the distribution is mostly premium and ROC.</div></details>
+  <details class="faq-item"><summary>Where can I see the ROC percentage?</summary><div class="faq-answer">For US mutual funds and ETFs, the issuer files a Section 19(a) notice after every distribution showing the estimated split between ordinary income, capital gains, and return of capital. NEOS publishes monthly breakdowns on each fund page; YieldMax publishes 19a-1 notices on its Group 1 supplemental tax page; ProShares lists per-distribution tax character on the BITO distributions page.</div></details>
+
+  <h2>Cross-links to related hubs</h2>
+  <ul>
+    <li><a href="/topics/dividend-investing-basics/">Dividend Investing Basics</a> — concepts, tax mechanics, DRIP, and beginner frameworks.</li>
+    <li><a href="/topics/high-yield-dividend-stocks/">High-Yield Dividend Stocks</a> — traditional high-yield risks and the suitability matrix.</li>
+    <li><a href="/topics/dividend-stock-screening/">Dividend Stock Screening</a> — five-metric checklist for filtering candidates.</li>
+    <li><a href="/calculator/">Dividend Calculator</a> — model yield, DRIP compounding, and after-tax income.</li>
+    <li><a href="/data/dividend-calendar/">ETF Dividend Calendar</a> — 2026 distribution schedule for ULTY, QQQI, SPYI, JEPI, JEPQ, MSTY and BITO with ex-date, pay date, per-share amount and ROC.</li>
+  </ul>
+
+  <p class="meta"><em>Last updated: 2026-08-27. Reviewed against issuer fund pages, SEC 19a-1 notices, and StockAnalysis / Robinhood / Morningstar total-return series. Article-level <code>dataAsOf</code> values are shown in each child's footer.</em></p>
 </BaseLayout>

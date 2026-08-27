@@ -4,6 +4,7 @@ description: "Compare the best dividend stocks for beginners in 2026, including 
 pubDate: 2026-07-30
 modDate: 2026-08-25
 category: "Basics"
+canonicalHub: "/topics/dividend-investing-basics/"
 tags: ["dividend stocks", "beginners", "passive income", "SCHD", "dividend ETFs"]
 image: "/images/articles/best-dividend-stocks-for-beginners.webp"
 dataAsOf: "2026-08-07"

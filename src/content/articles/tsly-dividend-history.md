@@ -4,6 +4,7 @@ description: "Complete TSLY distribution history since its November 2022 launch 
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Stock Analysis"
+canonicalHub: "/topics/dividend-etf-history/"
 tags: ["TSLY", "YieldMax", "covered call", "ETF", "Tesla", "high yield"]
 image: "/images/articles/tsly-dividend-history.webp"
 author: "Henry Zhou"

@@ -1,6 +1,7 @@
 ---
 title: "Trump's $2,000 Dividend: The DOGE Check Proposal, Explained"
-description: "Learn what the proposed Trump dividend check is, how DOGE savings were meant to fund it, who might qualify, and why no payment should be assumed."
+primaryKeyword: "Trump $2,000 dividend"
+description: "The proposed $2,000 Trump dividend from government savings: what it is, who would qualify, how it would be funded, and its current status."
 pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Market News"

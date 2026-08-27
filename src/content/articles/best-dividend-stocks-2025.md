@@ -1,9 +1,11 @@
 ---
-title: "Best Dividend Stocks 2025: Year-in-Review and Picks"
-description: "The best dividend stocks of 2025 — the Aristocrats and high-yield names that raised payouts and delivered, with yields, streaks, and 2025 total returns."
+title: "Best Dividend Stocks 2025: Year-in-Review (Historical Archive)"
+primaryKeyword: "best dividend stocks 2025"
+description: "2025 archive: a year-in-review of the best dividend stocks, Aristocrats and high-yield. A 2025 recap, not a 2026 buy list. Picks, see stock research."
 pubDate: 2026-08-04
-modDate: 2026-08-04
+modDate: 2026-08-27
 category: "Stock Analysis"
+canonicalHub: "/topics/dividend-investing-basics/"
 tags: ["best dividend stocks", "Dividend Aristocrats", "high yield", "dividend growth", "2025"]
 image: "/images/articles/best-dividend-stocks-2025.webp"
 dataAsOf: "2026-08-07"
@@ -18,12 +20,15 @@ sources:
 experienceType: "illustrative"
 draft: false
 ---
+> **Archive notice (2025):** This page is a 2025 year-in-review of dividend stock picks. For current recommendations, see our [stock research list](/stocks/).
+
+
 
 The best dividend stocks of 2025 were the ones that **raised their payouts while their stock prices held up** — and every one of the ten most-watched quality names did raise in 2025: JNJ, PG, KO, PEP, ABBV, O, VZ, MCD, and CVX all increased their dividends, with no cuts among them. The standout performers included **JNJ (+47% total return), ABBV (+32%), and KO (+16%)**, while the Dogs of the Dow strategy had its best year in recent memory at roughly **+18.5% total return**.
 
 <!-- Cover image: Ranked list of stocks on a financial screen with a rising chart, representing the best dividend stock picks -->
 
-This article ranks the best dividend stocks for 2025 by the metrics that matter — yield, payout ratio, growth streak, and actual 2025 performance — and explains the balance between quality growth names and high-yield picks.
+This article ranked the best dividend stocks of 2025 by the metrics that mattered — yield, payout ratio, growth streak, and actual 2025 performance — and explains the balance between quality growth names and high-yield picks. It is a 2025 historical recap, not a current buy list.
 
 ## The Best Dividend Stocks of 2025, Ranked
 
@@ -123,8 +128,8 @@ Morningstar's framing is the sharpest: it screens its dividend list for **econom
 ### What were the best dividend stocks of 2025?
 By total return, JNJ (~+47%), ABBV (~+32%), and KO (~+16%) led the quality names. By income, VZ (~6% yield) and O (~5.2%) led the high-yield picks. All ten quality names on our list raised their dividend in 2025; none cut.
 
-### What is a good dividend stock for 2025-2026?
-The pattern that keeps winning: a **25+ year dividend streak, a payout ratio under ~70%, and a durable business**. JNJ, KO, PG, ABBV, and MCD fit that profile; VZ and O add income as satellites.
+### What made a good dividend stock in 2025?
+The pattern that kept winning in 2025: a **25+ year dividend streak, a payout ratio under ~70%, and a durable business**. JNJ, KO, PG, ABBV, and MCD fit that profile; VZ and O added income as satellites. For a current watchlist, see our [best dividend stocks](/stocks/) list.
 
 ### What are the best high-yield dividend stocks?
 VZ (~6.1%), O (~5.2%), and PEP (~4.3%) are the most-watched quality high-yielders. Each pays well above the S&P 500's ~1% yield, and all raised in 2025. Watch payout ratios: PEP's ~78% and VZ's ~74% leave less margin for error.
@@ -141,12 +146,14 @@ Among quality names: ABBV (+5.8%), KO (+5.2%), MCD (+5.1%), and PG/PEP (+5.0%). 
 ### What is the best dividend ETF, and should I pick stocks or a fund?
 SCHD remains the most popular quality-dividend ETF at ~3.1% yield with a ~55% payout ratio and a history of yearly increases (see our [SCHD dividend history](/articles/schd-dividend-history/)). VOO at ~1% is the total-market anchor; see our [VOO dividend guide](/articles/voo-dividend/) for how it fits. Most investors should start with a diversified ETF and add 5-10 individual stocks as they learn — our [screening guide](/articles/dividend-dividend-stocks/) shows how to pick the individuals safely.
 
-### What is a good dividend yield for 2025?
-A healthy yield is roughly **2-5%** depending on the sector. Quality dividend growers run 2-3%, high-yield names 4-6%, and anything above 8% (except REITs/BDCs) is a warning sign. The S&P 500's aggregate yield is only ~1%.
+### What was a good dividend yield in 2025?
+For 2025, a healthy yield was roughly **2-5%** depending on the sector. Quality dividend growers ran 2-3%, high-yield names 4-6%, and anything above 8% (except REITs/BDCs) was a warning sign. The S&P 500's aggregate yield was only ~1%. Yields move with price, so check current figures before acting.
 
-## How to Build Your Best Dividend Portfolio in 2025-2026
+## Where to Go Next: Building a Dividend Portfolio
 
-The 2025 dividend stock landscape rewards one approach above all: **own the growth names for reliability, add yield names for income, and let dividend growth compound over time.** JNJ, ABBV, and KO delivered 16-47% total returns in 2025 while raising their dividends — the combination that makes dividend investing powerful.
+The 2025 dividend stock landscape rewarded one approach above all: **own the growth names for reliability, add yield names for income, and let dividend growth compound over time.** JNJ, ABBV, and KO delivered 16-47% total returns in 2025 while raising their dividends — the combination that makes dividend investing powerful.
+
+The names above are a 2025 recap. For a current portfolio, the same principles still apply — but check today's yields, prices, and streak status before acting:
 
 1. **Start with the quality core** — SCHD or the Aristocrats (JNJ, KO, PG, ABBV, MCD) for growing income
 2. **Add high-yield satellites** — VZ, O, CVX for current income, sized at 30-40% of the portfolio

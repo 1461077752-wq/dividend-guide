@@ -1,9 +1,11 @@
 ---
-title: "MSTY Dividend: How Much Does It Pay and Can You Live Off It?"
-description: "How much MSTY actually pays monthly, what that income looks like at different portfolio sizes, and the critical risk that makes covered-call ETF income misleading."
+title: "MSTY Dividend Income 2026: Monthly Payouts, Yield & Risks"
+primaryKeyword: "MSTY dividend income"
+description: "MSTY paid ~$0.14–$4.42/share historically. See 2026 monthly distribution ranges, yield math, NAV erosion risk and whether you can live off the income."
 pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Stock Analysis"
+canonicalHub: "/topics/dividend-etf-history/"
 tags: ["MSTY", "YieldMax", "dividend income", "monthly income", "covered call"]
 image: "/images/articles/msty-dividend-income.webp"
 dataAsOf: "2026-08-07"

@@ -1,9 +1,11 @@
 ---
 title: "Dividend Yield Explained: Formula, Uses and Risks"
+primaryKeyword: "dividend yield"
 description: "What dividend yield means, how to calculate it, what counts as a good yield, and why a high yield is often a warning sign rather than a bargain."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Basics"
+canonicalHub: "/topics/dividend-investing-basics/"
 tags: ["dividend yield", "dividend investing", "yield on cost", "total return"]
 image: "/images/articles/dividend-yield.webp"
 dataAsOf: "2026-08-07"

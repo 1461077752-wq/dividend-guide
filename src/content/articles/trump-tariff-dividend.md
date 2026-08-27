@@ -1,8 +1,10 @@
 ---
 title: "Trump Tariff Dividend: $2,000 Proposal Status"
-description: "Trump's tariff dividend proposal explained — the reported $2,000 per person check, how it compares to the DOGE dividend, and why neither has been paid."
+primaryKeyword: "Trump tariff dividend"
+description: "Details of Trump’s proposed tariff dividend / DOGE dividend: amount per person, funding source from tariffs, and legislative status as of 2026."
 pubDate: 2026-08-04
 modDate: 2026-08-04
+dataAsOf: "2026-08-27"
 category: "Market News"
 tags: ["Trump", "tariff dividend", "DOGE dividend", "dividend check", "tariff revenue"]
 image: "/images/articles/trump-tariff-dividend.webp"

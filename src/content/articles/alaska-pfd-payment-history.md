@@ -1,5 +1,6 @@
 ---
 title: "Alaska Permanent Fund Dividend Payments: Full History by Year"
+primaryKeyword: "Alaska PFD payment history"
 description: "Every Alaska PFD payment since 1982 — annual amounts, how the formula changed, and what current and future payments look like."
 pubDate: 2026-07-30
 modDate: 2026-07-30

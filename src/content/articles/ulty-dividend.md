@@ -1,16 +1,19 @@
 ---
-title: "ULTY Dividend: Yield, Total Return and Key Risks"
-description: "ULTY's dividend evaluated — the ~106% trailing yield vs the ~60% real run-rate, heavy return of capital, and why total return is roughly flat."
+title: "ULTY Dividend 2026: Yield, Weekly Payouts & History"
+primaryKeyword: "ULTY dividend"
+description: "ULTY pays weekly distributions via a covered-call strategy. See 2026 yield, payment dates, distribution history and total-return risks. Data as of Aug 2026."
 pubDate: 2026-08-04
 modDate: 2026-08-04
+dataAsOf: "2026-08-27"
 category: "Stock Analysis"
+canonicalHub: "/topics/dividend-etf-history/"
 tags: ["ULTY", "YieldMax", "covered call", "ETF", "high yield", "return of capital"]
 image: "/images/articles/ulty-dividend.webp"
 experienceType: "illustrative"
 draft: false
 ---
 
-ULTY (YieldMax Ultra Option Income Strategy ETF) advertises a trailing dividend yield near **106%** — one of the highest in the market. But the yield that matters is much lower: YieldMax's own current **distribution rate is ~60%**, and ULTY's **total return since its February 2024 launch is essentially flat (~+0.01% annualized)**. The gap exists because roughly **71% of ULTY's weekly distributions are classified as return of capital** — the fund pays out its own NAV, which is why the price has fallen about **86%** (split-adjusted) from launch despite the enormous "yield."
+ULTY (YieldMax Ultra Option Income Strategy ETF) advertises a trailing dividend yield near **106%** — one of the highest in the market. But the yield that matters is much lower: YieldMax's own current **distribution rate is ~60%**, and ULTY's **total return since its February 2024 launch is essentially flat (~+0.01% annualized)**. The gap exists because roughly **100% of ULTY's recent weekly distributions have been classified as return of capital** — the fund pays out its own NAV, which is why ULTY's total return since launch is roughly flat (≈0%) despite the enormous "yield."
 
 <!-- Cover image: Stack of coins beside a descending chart line, representing high yield with capital erosion -->
 
@@ -24,13 +27,14 @@ This is the "should you buy it" evaluation of ULTY — separating the advertised
 | Fund name | YieldMax Ultra Option Income Strategy ETF |
 | Launch date | February 28, 2024 |
 | Expense ratio | ~1.30% |
-| Trailing yield | ~106% |
-| YieldMax distribution rate | ~60% (realistic run-rate) |
+| Trailing yield (TTM) | ~106% |
+| YieldMax distribution rate | ~60% (official, 8/18/2026) |
 | Payout frequency | Weekly |
-| Total return since launch | ~0% annualized |
-| Price change since launch | ~−86% (split-adjusted) |
+| Total return since launch | ~0% (flat since Feb 2024) |
+| Current price (Aug 2026) | ~$26.50 |
+| 30-day SEC yield | −0.78% |
 
-*Fund facts per [StockAnalysis.com ULTY data](https://stockanalysis.com/etf/ulty/) and [YieldMax official fund page](https://www.yieldmaxetfs.com/ulty/), August 2026. ULTY executed a 1-for-10 reverse split in December 2025; figures are split-adjusted.*
+*Fund facts per [StockAnalysis.com ULTY data](https://stockanalysis.com/etf/ulty/) and [YieldMax official fund page](https://www.yieldmaxetfs.com/ulty/), August 2026. Total return ≈0% since inception per Robinhood and StockAnalysis. Independent trackers (DividendVision) put the distribution rate near 62%.*
 
 ## The Two Yields: What You See vs. What You Get
 
@@ -39,7 +43,7 @@ ULTY's dividend story is best understood as a contrast between two numbers:
 | Yield Figure | Value | What It Actually Means |
 |--------------|-------|----------------------|
 | Trailing 12-month yield | ~106% | Dividends ÷ current price, inflated by older, larger payouts |
-| YieldMax distribution rate | ~60% | Most recent weekly payout ($0.31) annualized ÷ NAV — the realistic run-rate |
+| YieldMax distribution rate | ~60% | YieldMax's official distribution rate (8/18/2026); independent trackers ~62% |
 | 30-day SEC yield | −0.78% | Net investment income excluding option income — negative |
 
 *Yield figures per [StockAnalysis.com](https://stockanalysis.com/etf/ulty/) and [YieldMax](https://www.yieldmaxetfs.com/ulty/), August 2026.*
@@ -48,22 +52,20 @@ The 106% number is a trailing artifact: it annualizes payouts made when ULTY's d
 
 ## The Return of Capital Problem
 
-The single most important fact about ULTY is that **roughly 71% of its weekly distributions are classified as ~100% return of capital (ROC)** per [YieldMax's distribution disclosures](https://www.yieldmaxetfs.com/ulty/). The most recent distribution (August 5, 2026) was 100% ROC.
+The single most important fact about ULTY is that **roughly 100% of its recent weekly distributions have been classified as return of capital (ROC)** per [YieldMax's distribution disclosures](https://www.yieldmaxetfs.com/ulty/). The most recent distribution (August 5, 2026) was 100% ROC.
 
 Return of capital means the fund is **paying you back your own money**. It's not taxed immediately, but it reduces the NAV — which is exactly what has happened:
 
 | ULTY Metric | Value |
 |-------------|-------|
-| Launch price (Feb 2024) | $20.00 |
-| Split-adjusted launch equivalent | $200.00 |
-| Current price (Aug 2026) | ~$27.31 |
-| Price change since launch | ~−86% |
+| Launch price (Feb 2024) | ~$20.00 |
+| Current price (Aug 2026) | ~$26.50 |
 | 1-year total return | ~−6% (StockAnalysis) to −11% (YieldMax) |
-| Since-inception annualized return | ~0% |
+| Since-inception total return | ~0% (flat) |
 
 *Price and return data per [StockAnalysis.com](https://stockanalysis.com/etf/ulty/) and [YieldMax](https://www.yieldmaxetfs.com/ulty/), August 2026.*
 
-**The math is the warning:** a fund that pays 106% and returns ~0% is returning your capital to you in installments. ULTY has paid out roughly $29/share over the last 12 months while the price declined — the payout and the decline are the same money.
+**The math is the warning:** a fund that pays 106% and returns ~0% is returning your capital to you in installments. ULTY has paid roughly $28/share (TTM) while the total return stayed near zero — the payout and the flat return reflect the same ROC-driven math.
 
 ## The 2026 Distribution Decline
 
@@ -106,7 +108,7 @@ ULTY sits in the middle of the YieldMax family: not as extreme as MSTY (whose ~2
 |--------------------|-----------------|---------------|
 | Headline yield | 60-106% | Attractive on paper |
 | Total return (distributions − price) | — | Roughly flat |
-| Tax classification | — | ~71% return of capital |
+| Tax classification | — | ~100% return of capital (recent) |
 
 *Illustrative investor scenario based on ULTY's published distribution and price history. Individual results vary.*
 
@@ -116,10 +118,10 @@ ULTY sits in the middle of the YieldMax family: not as extreme as MSTY (whose ~2
 The trailing-12-month yield reads ~**106%**, but YieldMax's current distribution rate is ~**60%** — the realistic figure if today's payout continues. The 30-day SEC yield is negative, meaning ULTY earns almost nothing from interest or ordinary income.
 
 ### Is ULTY's 106% yield real?
-The number is real but misleading. It's computed on a price that has fallen ~86% from launch, and a large share of the payout is return of capital. ULTY's total return since launch is essentially **zero** — the yield is not compounding income.
+The number is real but misleading. The share price is roughly flat since launch on a split-adjusted basis, and a large share of the payout is return of capital. ULTY's total return since launch is essentially **zero** — the yield is not compounding income.
 
 ### Why is ULTY's price falling?
-Because most of its distributions are return of capital. When a fund pays out more than it earns, the NAV shrinks — ULTY has paid ~$29/share over 12 months while the price declined. The payout and the decline are the same money.
+Because most of its distributions are return of capital. When a fund pays out more than it earns, the NAV shrinks — ULTY has paid roughly $28/share (TTM) while the total return stayed near zero. The payout and the flat return reflect the same ROC-driven math.
 
 ### How much does ULTY pay?
 **Weekly**, currently about **$0.31–$0.52 per week**, combining to ~$1.50–$2.00 per month. Payouts have declined ~35% since January 2026 after YieldMax's strategy changes.
@@ -141,7 +143,7 @@ ULTY executed a **1-for-10 reverse split in December 2025**. Shareholders got on
 ULTY's dividend is a case study in why **yield is not return**. The ~106% trailing yield, the ~60% current run-rate, and the ~0% total return all describe the same fund — and the difference between them is return of capital. Since its February 2024 launch, ULTY has paid enormous distributions while returning roughly nothing in total, because the payouts came from its own NAV.
 
 1. **Judge ULTY by total return, never yield** — the ~106% headline and the ~0% reality are the same story
-2. **Understand return of capital** — ~71% of payouts are ROC; they shrink the NAV that supports future income
+2. **Understand return of capital** — ~100% of recent payouts are ROC; they shrink the NAV that supports future income
 3. **Watch the run-rate decline** — payouts are ~35% lower than January, and YieldMax warns they may fall further
 4. **Cap it as a satellite** — at 5% or less of a portfolio, for income traders who accept the capital erosion
 

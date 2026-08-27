@@ -44,7 +44,11 @@ img { max-width: 100%; height: auto; }
 header {
   background:
     linear-gradient(90deg, rgba(22,43,73,.98) 0%, rgba(64,87,166,.9) 48%, rgba(64,87,166,.52) 100%),
-    url('/images/dividend-hero.jpg') center right / cover no-repeat;
+    image-set(
+      url('/images/dividend-hero.avif') type('image/avif'),
+      url('/images/dividend-hero.webp') type('image/webp'),
+      url('/images/dividend-hero.jpg') type('image/jpeg')
+    ) center right / cover no-repeat;
   color: #fff; padding: 64px 0 52px; min-height: 360px;
   position: relative; overflow: hidden;
 }
@@ -472,7 +476,7 @@ blockquote footer a { color: var(--accent); font-weight: 600; }
   --border: #dbe3ee;
   background: var(--bg);
 }
-.home-page .site-header { min-height: 360px; padding: 64px 0 52px; color: #fff; text-align: left; background: linear-gradient(90deg, rgba(22,43,73,.98) 0%, rgba(64,87,166,.9) 48%, rgba(64,87,166,.52) 100%), url('/images/dividend-hero.jpg') center right / cover no-repeat; }
+.home-page .site-header { min-height: 360px; padding: 64px 0 52px; color: #fff; text-align: left; background: linear-gradient(90deg, rgba(22,43,73,.98) 0%, rgba(64,87,166,.9) 48%, rgba(64,87,166,.52) 100%), image-set(url('/images/dividend-hero.avif') type('image/avif'), url('/images/dividend-hero.webp') type('image/webp'), url('/images/dividend-hero.jpg') type('image/jpeg')) center right / cover no-repeat; }
 .home-page .site-header::before { content: ''; position: absolute; inset: 0; width: auto; height: auto; left: auto; top: auto; transform: none; border-radius: 0; background: radial-gradient(ellipse 80% 60% at 70% 20%, rgba(64,87,166,.18) 0%, transparent 70%); box-shadow: none; }
 .home-page .site-header::after { content: none; display: none; }
 .home-page .site-header h1 { margin: 0 0 16px; max-width: none; color: #fff; font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.15; }

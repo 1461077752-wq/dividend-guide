@@ -4,6 +4,7 @@ description: "ULTY distribution history, how the YieldMax Ultra Option Income St
 pubDate: 2026-07-30
 modDate: 2026-07-30
 category: "Stock Analysis"
+canonicalHub: "/topics/dividend-etf-history/"
 tags: ["ULTY", "YieldMax", "covered call", "ETF", "high yield"]
 image: "/images/articles/ulty-dividend-history.webp"
 dataAsOf: "2026-08-07"

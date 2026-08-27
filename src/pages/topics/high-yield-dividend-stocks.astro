@@ -1,17 +1,131 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="High-Yield Dividend Stocks | Dividend Guide" description="Research high-yield dividend stocks, covered-call ETFs, REITs and BDCs by payout source, coverage, total return and the risks behind large distributions." canonical="https://www.dividend01.com/topics/high-yield-dividend-stocks/" schemaType="WebPage" pubDate="2026-08-07" modDate="2026-08-07">
+<BaseLayout title="High-Yield Dividend Stocks: Risk & Suitability" description="Research high-yield dividend names by category — traditional dividend stocks, REITs, BDCs, and covered-call ETFs — with the risk and income context each one needs." canonical="https://www.dividend01.com/topics/high-yield-dividend-stocks/" schemaType="WebPage" pubDate="2026-08-07" modDate="2026-08-27">
   <slot slot="title">High-Yield Dividend Stocks</slot>
   <slot slot="subtitle">Higher income can come with higher risk. Learn how to evaluate sustainability before comparing yields.</slot>
-  <p>This topic hub groups high-yield research by risk and structure, including traditional dividend stocks, REITs, BDCs, and covered-call ETFs.</p>
+
+  <p>A 7% yield looks attractive next to a 2% one, but the sources of high yield are very different and the risks are very different. A traditional utility trading at a 6% yield because the market expects rate cuts is not the same investment as a covered-call ETF distributing 12% mostly as return of capital, which is not the same as a BDC paying 9% because of its regulated payout structure, which is not the same as a YieldMax single-stock fund paying 60% because it's selling aggressive weekly options. This hub organizes high-yield names by their underlying mechanism, with the risk context each category needs.</p>
+
+  <h2>Reading path by experience</h2>
+  <ul>
+    <li><strong>Beginner</strong> — read the four categories below, then <a href="/articles/high-dividend-stocks/">High Dividend Stocks</a> for sector examples.</li>
+    <li><strong>Retiree / income investor</strong> — read the suitability matrix, then model after-tax income with the <a href="/calculator/">Calculator</a>.</li>
+    <li><strong>Income trader</strong> — read <a href="/articles/ulty-dividend/">ULTY</a> and <a href="/articles/msty-dividend-income/">MSTY</a> for the option-income mechanics, then <a href="/articles/dividend-calculator-guide/">the Calculator Guide</a> for sizing.</li>
+  </ul>
+
+  <h2>Sub-topic groups by category</h2>
+
+  <h3>1. Traditional high-yield equities (4–8%)</h3>
+  <p>Mature, profitable companies paying above the market-average yield, usually in stable sectors like consumer staples, tobacco, energy midstream, telecommunications, and big banks. The yield is real income from operations, but each sector has its own risks.</p>
   <div class="topic-links">
-    <a href="/articles/high-dividend-stocks/"><strong>High Dividend Stocks</strong><span>High-yield picks by sector and the major risks.</span></a>
+    <a href="/articles/high-dividend-stocks/"><strong>High Dividend Stocks Guide</strong><span>Sector-by-sector breakdown and the 4–8% yield framework.</span></a>
     <a href="/articles/highest-dividend-stocks/"><strong>Highest Dividend Stocks</strong><span>Extreme yields, return of capital, and loss risks.</span></a>
-    <a href="/articles/tsly-dividend-history/"><strong>TSLY Dividend History</strong><span>Distribution history and covered-call income risk.</span></a>
-    <a href="/articles/nvdy-dividend-history/"><strong>NVDY Dividend History</strong><span>YieldMax distributions and the limits of annualized yield.</span></a>
-    <a href="/articles/msty-dividend-income/"><strong>MSTY Dividend Income</strong><span>How monthly income can differ from total return.</span></a>
-    <a href="/articles/tltw-dividend/"><strong>TLTW Dividend</strong><span>Why a Treasury covered-call ETF is not the same as a Treasury coupon.</span></a>
-    <a href="/articles/ulty-dividend/"><strong>ULTY Dividend</strong><span>High distribution rates, option income and total-return risk.</span></a>
   </div>
+
+  <h3>2. REITs, MLPs, BDCs (structural high yield)</h3>
+  <p>These entities are required by their tax structure to distribute most of their taxable income, so double-digit yields are normal. They carry interest-rate sensitivity, sector concentration (real estate, energy, private credit), and complex tax reporting (K-1s).</p>
+  <div class="topic-links">
+    <a href="/articles/high-dividend-stocks/"><strong>REIT and BDC sections</strong><span>How to read AFFO payout, FFO coverage, and non-accrual ratios.</span></a>
+  </div>
+
+  <h3>3. Covered-call and option-income ETFs (7–14%)</h3>
+  <p>ETFs that own equities or an index and sell options on top to generate additional income. Distribution yield is real cash flow, but capped upside, NAV erosion from premiums, and tax complexity (Section 1256) all apply.</p>
+  <div class="topic-links">
+    <a href="/articles/jepi-dividend/"><strong>JEPI Dividend</strong><span>JPMorgan Equity Premium Income ETF, ~7–8%, monthly, equity-linked notes.</span></a>
+    <a href="/articles/jepq-dividend-history/"><strong>JEPQ Dividend History</strong><span>Nasdaq-100 version, ~7–8%, monthly.</span></a>
+    <a href="/articles/qqqi-dividend/"><strong>QQQI Dividend</strong><span>NEOS Nasdaq-100 option income, ~14%, monthly.</span></a>
+    <a href="/articles/spyi-dividend-history/"><strong>SPYI Dividend History</strong><span>NEOS S&amp;P 500 option income, ~12%, monthly.</span></a>
+  </div>
+
+  <h3>4. YieldMax single-stock option-income ETFs (50%–100%+ headline)</h3>
+  <p>Weekly covered-call strategies on single volatile names, run by YieldMax. Headline distribution rates are extremely high, but most of the distribution is return of capital; total return since launch is roughly flat, and a single-stock ETF is not a diversified dividend holding.</p>
+  <div class="topic-links">
+    <a href="/articles/ulty-dividend/"><strong>ULTY Dividend</strong><span>Multi-asset YieldMax option-income, ~60% rate, weekly.</span></a>
+    <a href="/articles/msty-dividend-income/"><strong>MSTY Dividend Income</strong><span>MicroStrategy-linked, monthly, heavy ROC.</span></a>
+    <a href="/articles/tsly-dividend-history/"><strong>TSLY Dividend History</strong><span>Tesla-linked, weekly.</span></a>
+    <a href="/articles/nvdy-dividend-history/"><strong>NVDY Dividend History</strong><span>NVIDIA-linked, weekly.</span></a>
+    <a href="/articles/tltw-dividend/"><strong>TLTW Dividend</strong><span>Treasury covered-call, not the same as a Treasury coupon.</span></a>
+  </div>
+
+  <h2>Suitability matrix</h2>
+  <p>The same yield figure on two different funds can be appropriate for very different investors. Use this matrix to match the category to your situation.</p>
+
+  <table class="data-table">
+    <thead><tr><th>Category</th><th>Yield range</th><th>Best suited to</th><th>Not suited for</th><th>Key risk</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>Traditional high-yield equity (4–8%)</td>
+        <td>4–8%</td>
+        <td>Retirees needing cash flow; long-term accumulators</td>
+        <td>Traders looking for outsized monthly income</td>
+        <td>Earnings decline, sector sector concentration</td>
+      </tr>
+      <tr>
+        <td>REIT / BDC (8–12%)</td>
+        <td>8–12%</td>
+        <td>Retirees in tax-advantaged accounts; real-est/credit credit diversifiers</td>
+        <td>Investors who can't handle K-1 complexity in taxable accounts</td>
+        <td>Interest-rate sensitivity, refinancing risk</td>
+      </tr>
+      <tr>
+        <td>Covered-call ETF (7–14%)</td>
+        <td>7–14%</td>
+        <td>Income investors in taxable accounts wanting Section 1256 treatment</td>
+        <td>Investors expecting equity-like upside in strong bull markets</td>
+        <td>Capped upside, NAV erosion if premiums decline</td>
+      </tr>
+      <tr>
+        <td>YieldMax single-stock (40–100%+)</td>
+        <td>40–100%+</td>
+        <td>Traders with small allocation, full ROC understanding, and high risk tolerance</td>
+        <td>Long-term income investors, retirees, anyone using it as a core holding</td>
+        <td>Single-stock risk, almost-all-ROC distributions, total return ≈0%</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Yield vs. total return across categories</h2>
+  <p>Yield alone can be misleading because the four categories above have very different total-return profiles. The same 8% yield means very different things in each.</p>
+
+  <table class="data-table">
+    <thead><tr><th>Category</th><th>Typical 1Y yield</th><th>Typical 1Y price change</th><th>Typical 1Y total return</th><th>Income quality</th></tr></thead>
+    <tbody>
+      <tr><td>Traditional dividend stock (e.g., MO, VZ)</td><td>+5–7%</td><td>−5% to +10%</td><td>+0% to +15%</td><td>High (qualified dividends)</td></tr>
+      <tr><td>REIT (e.g., O, NNN)</td><td>+5–7%</td><td>−10% to +5%</td><td>−5% to +10%</td><td>Medium (ordinary income, but real cash)</td></tr>
+      <tr><td>Covered-call ETF (e.g., JEPI, SPYI)</td><td>+8–12%</td><td>Tracks index, capped</td><td>Index return + premium, less upside</td><td>Medium-high (Section 1256 favorable)</td></tr>
+      <tr><td>YieldMax single-stock (e.g., ULTY, MSTY)</td><td>+50–100%</td><td>Sharply negative</td><td>Roughly 0% since launch</td><td>Low (mostly ROC, small real income)</td></tr>
+    </tbody>
+  </table>
+  <p>Read the table across the row. The 50% yield in the bottom row and the 5% yield in the top row can deliver very similar 1-year total returns — and the bottom row carries concentrated single-stock risk on top.</p>
+
+  <h2>Risk points specific to high-yield categories</h2>
+  <ul>
+    <li><strong>Yield trap risk (traditional equities).</strong> A 9% yield on a cyclical company often precedes a dividend cut when the cycle turns. Use <a href="/articles/dividend-dividend-stocks/">the screening guide</a> to verify payout ratio and FCF coverage before assuming the high yield is durable.</li>
+    <li><strong>Interest-rate sensitivity (REITs, BDCs, utilities).</strong> When bond yields rise, the dividend yield on these names has to compete with risk-free alternatives. A REIT yielding 5% in a 5% rate environment looks very different from the same REIT yielding 5% when bonds pay 2%.</li>
+    <li><strong>NAV erosion (option-income ETFs).</strong> The premium the fund collects from selling options is real cash, but it has to come from somewhere. In a flat or down market the fund gives up its dividend income to keep paying the option premium, which over time erodes the NAV per share. The fund can still deliver a positive total return if the underlying index appreciates, but the high distribution is partly a transfer of future returns into current income.</li>
+    <li><strong>Capped upside in strong bull markets (covered-call funds).</strong> A covered-call fund gives up part of every strong rally. JEPI and SPYI have outperformed in flat or modestly up markets but trail in strong up markets; over 10+ years the gap can be substantial.</li>
+    <li><strong>Single-stock concentration (YieldMax funds).</strong> ULTY is "multi-asset" but still concentrated in high-volatility tech and growth names. MSTY, TSLY, CONY, NVDY are each single-stock funds; a 50% drawdown in the underlying is a 50% drawdown in your holding before any premium collected. Treat as a satellite, not a core.</li>
+    <li><strong>Tax complexity.</strong> REITs distribute ordinary income even in retirement accounts (which is fine), but K-1 forms are delayed and may not be supported by every brokerage. Section 1256 funds (SPYI, QQQI) report on Form 1099-B, not 1099-DIV, which most tax software handles correctly. ROC distributions reduce cost basis; if you don't track it, you overpay tax on the eventual sale.</li>
+  </ul>
+
+  <h2>Methodology and data sources</h2>
+  <p>Yield numbers in this hub come from each fund's official fund page (YieldMax, NEOS, JPMorgan, ProShares) as of the dates shown in each child's footer. Where official and independent sources differ (e.g., YieldMax's 60.33% distribution rate vs. DividendVision's 62%), we use the official figure and note the independent estimate. ROC percentages come from issuer Section 19(a) notices, which are filed within 60 days of each distribution. Total return figures use split-adjusted series from Robinhood, StockAnalysis, and Tencent's data service, cross-checked against the issuer's monthly fact sheet where available.</p>
+  <p>Our <a href="/articles/dividend-calculator-guide/">Dividend Calculator Guide</a> and the <a href="/calculator/">online Calculator</a> let you model after-tax income from each category using your own tax bracket and contribution assumptions.</p>
+
+  <h2>Frequently asked questions</h2>
+  <details class="faq-item" open><summary>What yield is too high?</summary><div class="faq-answer">For diversified operating companies (consumer, industrial, tech), anything above 8% should make you stop and verify with payout ratio, free cash flow coverage, and dividend history. For REITs, MLPs, and BDCs, higher yields are structural and need different filters. For option-income ETFs, headline yield is largely distribution mechanics, not real income.</div></details>
+  <details class="faq-item"><summary>Are high-yield ETFs safe to hold long term?</summary><div class="faq-answer">Depends on the category. A traditional REIT or MLP with conservative leverage and a strong sponsor can be a 10+ year holding. A YieldMax single-stock option-income ETF is closer to a trading instrument with a high distribution; total return since launch for most is roughly flat, so the high yield is mostly return of capital, and the underlying concentration means a single bad quarter can wipe out years of distributions.</div></details>
+  <details class="faq-item"><summary>Should I hold high-yield names in a taxable or tax-advantaged account?</summary><div class="faq-answer">Tax-advantaged (IRA, 401k, Roth) is simpler. In a taxable account, the tax treatment matters: qualified dividends are taxed low, ordinary (REIT/BDC) at marginal rates, ROC not taxed now but reduces basis, and Section 1256 contracts at 60/40. Use the <a href="/articles/dividend-calculator-guide/">Calculator Guide</a> to compare after-tax income from each structure in your actual bracket.</div></details>
+  <details class="faq-item"><summary>Is a 12% yield from SPYI really 12% income?</summary><div class="faq-answer">No. SPYI's 12% distribution rate comes mostly from selling SPX index options. The SEC 30-day yield (which excludes option premiums and only counts actual investment income) is around 0.5%. So roughly 11.5 percentage points of the 12% is option premium and ROC. In a taxable account it gets Section 1256 treatment (60% long-term, 40% short-term); in a tax-advantaged account it's all ordinary. Either way, the cash is real but it's not "yield" in the same sense as a SCHD dividend.</div></details>
+
+  <h2>Cross-links to related hubs</h2>
+  <ul>
+    <li><a href="/topics/dividend-etf-history/">Dividend ETF History</a> — distribution records for individual covered-call and option-income ETFs.</li>
+    <li><a href="/topics/dividend-stock-screening/">Dividend Stock Screening</a> — the five-metric checklist for evaluating any candidate.</li>
+    <li><a href="/topics/dividend-investing-basics/">Dividend Investing Basics</a> — tax mechanics, DRIP, and how to size positions.</li>
+    <li><a href="/calculator/">Dividend Calculator</a> — model after-tax income across categories.</li>
+  </ul>
+
+  <p class="meta"><em>Last updated: 2026-08-27. Yields and ROC percentages as of issuer fund pages and 19a-1 notices dated 6/30/2026 to 8/27/2026. Not investment advice.</em></p>
 </BaseLayout>

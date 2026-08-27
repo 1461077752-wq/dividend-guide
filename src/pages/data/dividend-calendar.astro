@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import schedule from '../../data/etf-distribution-schedule.json';
+
+const englishUrl = 'https://www.dividend01.com/data/dividend-calendar/';
+const chineseUrl = 'https://www.dividend01.com/zh/data/dividend-calendar/';
+const alternates = [
+  { hreflang: 'en' as const, href: englishUrl },
+  { hreflang: 'zh-CN' as const, href: chineseUrl },
+  { hreflang: 'x-default' as const, href: englishUrl }
+];
+
+const refreshedDate = schedule.refreshedAt;
+const refreshedLabel = new Date(refreshedDate).toLocaleDateString('en-US', { dateStyle: 'long', timeZone: 'UTC' });
+const records = schedule.records;
+
+const money = (v) => v == null || v === 0 ? (v === 0 ? '$0.00' : '—') : `$${v.toFixed(2)}`;
+const pct = (v) => v == null ? '—' : `${v.toFixed(1)}%`;
+const isHighRoc = (r) => (r.rocPct ?? 0) >= 50;
+
+const aggregateStats = {
+  total: records.length,
+  weekly: records.filter(r => r.frequency.toLowerCase() === 'weekly').length,
+  monthly: records.filter(r => r.frequency.toLowerCase().includes('monthly')).length,
+  highRoc: records.filter(isHighRoc).length,
+  avgExpense: (records.reduce((s, r) => s + (r.expenseRatioPct || 0), 0) / records.length).toFixed(2)
+};
+
+const pageUrl = englishUrl;
+const pageDescription = schedule.description;
+const pageTitle = 'ETF Dividend Calendar & Distribution Schedule 2026';
+
+// Dataset structured data
+const datasetSchema = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": pageTitle,
+  "description": pageDescription,
+  "url": pageUrl,
+  "dateModified": refreshedDate,
+  "creator": {
+    "@type": "Organization",
+    "name": "Dividend Guide",
+    "url": "https://www.dividend01.com/about/"
+  },
+  "distribution": {
+    "@type": "DataDownload",
+    "encodingFormat": "application/json",
+    "contentUrl": "https://www.dividend01.com/data/dividend-calendar.json"
+  },
+  "temporalCoverage": "2026-08-27/..",
+  "spatialCoverage": "United States",
+  "keywords": [
+    "ETF dividend calendar", "ULTY dividend", "QQQI dividend", "SPYI dividend",
+    "JEPI dividend", "JEPQ dividend", "MSTY dividend", "BITO dividend",
+    "distribution rate", "ex-dividend date", "return of capital"
+  ]
+};
+---
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonical={englishUrl}
+  schemaType="WebPage"
+  pubDate="2026-08-27"
+  modDate={refreshedDate}
+  alternates={alternates}
+>
+  <slot slot="title">ETF Dividend Calendar</slot>
+  <slot slot="subtitle">Last refreshed: <time datetime={refreshedDate}>{refreshedLabel}</time> · Sources: fund issuers, cross-checked on StockAnalysis, Dividend.com and yield providers.</slot>
+
+  <div class="page-intro">
+    <p><strong>About this calendar.</strong> A research-friendly distribution calendar for seven popular income ETFs. Each row shows the most recent ex-date, record date, pay date, per-share amount, distribution rate, 30-day SEC yield (where reported), expense ratio, and the issuer's most recent estimated return of capital (ROC). Numbers come from the fund's own distribution notice and are cross-checked against at least one independent tracker.</p>
+    <p><strong>Not a recommendation.</strong> A high distribution rate is not the same as a high or sustainable return. Many of the funds shown here pay a large share as return of capital, which reduces the NAV that supports future income. Always read the fund's prospectus and recent 19a-1 notice before relying on a payout rate.</p>
+  </div>
+
+  <h2>The Calendar</h2>
+  <div class="table-wrapper" data-table="etf-distribution-schedule">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Ticker</th>
+          <th>Frequency</th>
+          <th>Ex-Date</th>
+          <th>Pay Date</th>
+          <th>Per Share</th>
+          <th>Distribution Rate</th>
+          <th>30-Day SEC Yield</th>
+          <th>Expense Ratio</th>
+          <th>Est. ROC</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        {records.map((r) => (
+          <tr class={isHighRoc(r) ? 'roc-warning' : ''}>
+            <td>
+              <strong>{r.ticker}</strong><br>
+              <span class="muted">{r.name}</span>
+            </td>
+            <td>{r.frequency}</td>
+            <td>{r.lastExDate}</td>
+            <td>{r.lastPayDate}</td>
+            <td>{money(r.lastAmountUsd)}</td>
+            <td>{pct(r.distributionRatePct)}</td>
+            <td>{r.secYield30DayPct != null ? pct(r.secYield30DayPct) : '—'}</td>
+            <td>{pct(r.expenseRatioPct)}</td>
+            <td class={isHighRoc(r) ? 'negative' : ''}>{pct(r.rocPct)}</td>
+            <td>
+              <a href={r.officialSourceUrl} target="_blank" rel="noopener">{r.issuer}</a><br>
+              <span class="muted">accessed {r.accessedDate}</span>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <p class="muted"><em>Source per row is the issuing fund's own distribution page. Per-share figures are the most recent distribution as of the listed ex-date; future payments are not guaranteed.</em></p>
+
+  <h2>How to Read the Columns</h2>
+  <div class="table-wrapper">
+    <table class="data-table">
+      <thead><tr><th>Column</th><th>Definition</th><th>Common Mis-Reading</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Ex-Date</strong></td><td>The day you must own shares to receive the next distribution. Trades on or after this date settle without the right to the upcoming payout.</td><td>Not the dividend's announcement or the pay date.</td></tr>
+        <tr><td><strong>Record Date</strong></td><td>The issuer's record date for the distribution. Set by the fund and usually one day after the ex-date.</td><td>Not a deadline to buy.</td></tr>
+        <tr><td><strong>Pay Date</strong></td><td>The day cash is credited to shareholders of record on the record date.</td><td>Not when the dividend becomes available to spend.</td></tr>
+        <tr><td><strong>Distribution Rate</strong></td><td>The most recent per-share distribution, annualized, divided by the current market price.</td><td>Not a forecast or a guarantee of future distributions.</td></tr>
+        <tr><td><strong>30-Day SEC Yield</strong></td><td>A standardized net investment income figure defined by the SEC, published in fund documents.</td><td>Not the same as the trailing distribution rate.</td></tr>
+        <tr><td><strong>Est. ROC</strong></td><td>Estimated Return of Capital: the share of the latest distribution the issuer classifies as a return of your own invested capital. From the most recent 19a-1 notice.</td><td>ROC is an estimate; the final classification appears on year-end tax forms.</td></tr>
+        <tr><td><strong>Expense Ratio</strong></td><td>Annual fee charged by the fund, deducted from net assets.</td><td>Does not include brokerage commissions or fund-level transaction costs.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Quick Snapshot</h2>
+  <ul>
+    <li><strong>{aggregateStats.total}</strong> ETFs tracked · <strong>{aggregateStats.weekly}</strong> weekly, <strong>{aggregateStats.monthly}</strong> monthly</li>
+    <li><strong>{aggregateStats.highRoc}</strong> funds with most recent distribution ≥50% ROC (return of capital, reduces future income support)</li>
+    <li>Average expense ratio: <strong>{aggregateStats.avgExpense}%</strong></li>
+  </ul>
+
+  <h2>ETF-by-ETF Notes</h2>
+  {records.map((r) => (
+    <details class="etf-detail">
+      <summary><strong>{r.ticker}</strong> &nbsp;·&nbsp; {r.name} &nbsp;·&nbsp; {r.frequency}</summary>
+      <p>{r.note}</p>
+      <ul>
+        <li><strong>Most recent ex-date:</strong> {r.lastExDate} &nbsp;·&nbsp; <strong>pay date:</strong> {r.lastPayDate} &nbsp;·&nbsp; <strong>per share:</strong> {money(r.lastAmountUsd)}</li>
+        <li><strong>Distribution rate:</strong> {pct(r.distributionRatePct)} &nbsp;·&nbsp; <strong>30-day SEC yield:</strong> {r.secYield30DayPct != null ? pct(r.secYield30DayPct) : 'not reported'} &nbsp;·&nbsp; <strong>Expense ratio:</strong> {pct(r.expenseRatioPct)} &nbsp;·&nbsp; <strong>Estimated ROC:</strong> {pct(r.rocPct)}</li>
+        <li><strong>Official source:</strong> <a href={r.officialSourceUrl} target="_blank" rel="noopener">{r.officialSourceName}</a> (accessed {r.accessedDate})</li>
+        <li><strong>Cross-check:</strong> <a href={r.crossCheckUrl} target="_blank" rel="noopener">distribution history on StockAnalysis</a></li>
+        <li><strong>Research:</strong> see our <a href={`/articles/${r.articleSlug}/`}>{r.ticker} dividend article</a> and the <a href="/topics/dividend-etf-history/">Dividend ETF History hub</a></li>
+      </ul>
+    </details>
+  ))}
+
+  <h2>FAQ</h2>
+  <h3>What is the difference between distribution rate and yield?</h3>
+  <p>The distribution rate annualizes the most recent per-share distribution and divides by the current market price. It can swing from one distribution to the next, especially for funds with variable monthly payouts. The 30-day SEC yield is a standardized calculation meant to be comparable across funds. They are different measures, and the right one depends on what you are comparing.</p>
+
+  <h3>Why is the rate so high for some funds (ULTY, MSTY, BITO)?</h3>
+  <p>For ULTY and MSTY, the headline rate mainly reflects weekly or monthly cash distributions that the issuer has classified largely as return of capital, while the fund's NAV grinds down over time. For BITO, the headline rate is dominated by realized capital gains from Bitcoin futures positions; BITO does not generate recurring income. Use these as context, not as a target income number.</p>
+
+  <h3>How often is this page updated?</h3>
+  <p>The "Last refreshed" date at the top of the page is the calendar date this table was re-verified against issuer sources. Each ETF's distribution frequency (weekly or monthly) determines how often the ex-date and pay-date columns advance. We do not auto-refresh; a researcher re-verifies figures before each update.</p>
+
+  <h3>Where does the estimate of return of capital come from?</h3>
+  <p>Each fund publishes a 19a-1 notice before its distribution describing how much of the upcoming payout is expected to come from ROC. This estimate is preliminary; the final figure appears on year-end tax statements (Form 1099-DIV).</p>
+
+  <h3>Can I link to this page from my own article or research?</h3>
+  <p>Yes. Please link to the canonical URL <code>https://www.dividend01.com/data/dividend-calendar/</code> and include the "last refreshed" date from the top of the page as the access date. If you spot a discrepancy, the contact link in the footer is the right place to send it.</p>
+
+  <h2>Methodology, Sources, and Limits</h2>
+  <p>{schedule.methodology}</p>
+  <p>Source priority, highest to lowest: (1) issuer fund page and prospectus, (2) issuer's monthly distribution notice or 19a-1, (3) SEC EDGAR filings, (4) major exchange listings, (5) independent trackers (StockAnalysis, Dividend.com, Yahoo Finance) used for cross-check only. We do not copy aggregator figures as primary sources, and we do not invent figures when the issuer has not yet published.</p>
+  <p><strong>Limits of this page.</strong> This calendar is a research summary, not a data feed. Amounts and dates change between refreshes, and distribution rates move with NAV. The page is not investment, tax, or legal advice. Verify a fund's current figures on the issuer's own page before any decision; the link in each row's "Source" column points there.</p>
+
+  <div class="tip-box">
+    <strong>Research reminder.</strong> A high distribution rate is necessary input, not a verdict. Read the fund's most recent 19a-1 notice to see how much of the payout is return of capital, then compare the SEC yield (if reported) to a target before treating the rate as recurring income.
+  </div>
+
+  <p class="home-sources">For research on individual ETFs, see the <a href="/topics/dividend-etf-history/">Dividend ETF History</a> hub, the <a href="/topics/high-yield-dividend-stocks/">High-Yield Dividend Stocks</a> hub, or the <a href="/stocks/">Stocks list</a>. For an estimator that projects forward income, see the <a href="/calculator/">Dividend Calculator</a>.</p>
+
+  <script type="application/ld+json" set:html={JSON.stringify(datasetSchema)}></script>
+</BaseLayout>

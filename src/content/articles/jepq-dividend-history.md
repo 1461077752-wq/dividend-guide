@@ -1,9 +1,11 @@
 ---
 title: "JEPQ Dividend History and Monthly Payouts"
+primaryKeyword: "JEPQ dividend history"
 description: "The complete JEPQ monthly distribution history since its May 2022 launch — annual totals, monthly range, peak and valley months, and total return."
 pubDate: 2026-08-04
 modDate: 2026-08-04
 category: "Stock Analysis"
+canonicalHub: "/topics/dividend-etf-history/"
 tags: ["JEPQ", "JPMorgan", "covered call", "ETF", "dividend history", "premium income"]
 image: "/images/articles/jepq-dividend-history.webp"
 author: "Henry Zhou"
