@@ -1,6 +1,6 @@
 # JSON-LD Structured Data Audit
 
-Generated: 2026-08-27T08:39:38.036Z
+Generated: 2026-08-27T15:01:08.973Z
 
 ## Summary
 - Total HTML pages scanned: **122**
@@ -9,7 +9,7 @@ Generated: 2026-08-27T08:39:38.036Z
 - Schemas by type:
   - BreadcrumbList: 121
   - Article: 89
-  - FAQPage: 38
+  - FAQPage: 52
   - Organization: 33
   - WebSite: 33
   - WebPage: 33

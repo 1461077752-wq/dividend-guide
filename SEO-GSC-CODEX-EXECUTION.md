@@ -11,7 +11,7 @@
 - HTTP、非 www 和页面缺少尾斜杠时，均应 301 到最终规范 URL。
 - `/zh/zh/.../` 已通过 Cloudflare 最高优先级规则单次 301 到 `/zh/.../`。
 - `https://www.dividend01.com/sitemap.xml` 已实测返回 HTTP 200 和 XML 内容。
-- 当前 sitemap 约含 118 个 URL；验收以执行时 sitemap 的实际 `<loc>` 数量为准，不把 118 作为永久固定值。
+- 当前 sitemap 含 120 个 URL；验收以执行时 sitemap 的实际 `<loc>` 数量为准，不把 120 作为永久固定值。
 
 ## 二、执行前置条件
 
@@ -152,3 +152,61 @@ Codex 完成后向用户报告：
 - 已导出可用于 CTR 决策的页面与查询数据。
 - 所有操作都有明确日期、结果和异常记录。
 
+## 六、2026-08-27 执行记录（本次复核）
+
+### 本地与线上前置条件
+
+- GitHub 与线上部署已同步，当前线上 sitemap 实测为 120 个规范 URL。
+- 本地构建、中文站构建、sitemap 生成、JSON-LD 审计和 SEO 构建校验均通过。
+- 线上规范检查 21/21 通过：`www`、HTTPS、尾斜杠、`/zh/zh/` 301 规则均符合预期。
+- 当前仍发现 Cloudflare Email Address Obfuscation 生成的 `/cdn-cgi/l/email-protection` 真实 404；该项由 Cloudflare 配置/联系方式处理，不在本执行文档内直接修改。
+
+### G1 读取结果
+
+读取属性：`sc-domain:dividend01.com`
+读取日期：2026-08-27
+
+- 网页索引报告上次更新：2026-08-21。
+- 已编入索引：118。
+- 未编入索引：60。
+- 未编入索引原因：自动重定向 19（验证失败）、404 15（未启动）、备用网页（有适当的规范标记）10（未启动）、已抓取尚未编入索引 14（未启动）、已发现尚未编入索引 2（未启动）。
+- HTTPS：78 个良好、0 个非 HTTPS。
+- 路径增强功能：81 个有效、0 个无效。
+
+### G2 sitemap 状态
+
+- `https://dividend01.com/sitemap.xml`：成功，GSC 当前显示发现 118 页。
+- `https://www.dividend01.com/sitemap.xml`：成功，GSC 当前显示发现 118 页。
+- 线上实际 sitemap：120 个 URL。
+- 已执行：2026-08-27 重新提交规范 `www` sitemap；提交对话框确认成功。
+- 提交后 GSC 显示：上次提交/读取 2026-08-27、状态“成功”、已发现 120 页、视频 0 个，与线上 sitemap 实际数量一致。
+- 旧的非 www sitemap 记录保留：状态“成功”、发现 118 页；暂不删除，避免在规范记录稳定前引入无必要变更。
+
+### G3 404 验证状态
+
+- 暂不启动整组“未找到 (404)”验证。
+- 原因：报告示例中仍包含 `/cdn-cgi/l/email-protection`，线上访问仍返回 404；若此时启动，整组验证可能因该项失败。
+- `/zh/zh/.../` 历史地址已在线上单次 301 到规范 `/zh/.../`，待 Cloudflare 邮件保护 404 处理后再启动验证。
+
+### G4 重点页面检查结果
+
+以下 5 个规范 URL 均显示“网址已收录到 Google”，HTTPS 与路径增强项正常，因此本次不重复请求编入索引：
+
+- `/articles/ulty-dividend/`
+- `/articles/qqqi-dividend/`
+- `/articles/msty-dividend-income/`
+- `/articles/high-dividend-stocks/`
+- `/articles/dividend-calculator-guide/`
+
+### G5 效果数据读取/导出
+
+- 最近 28 天（2026-07-28 至 2026-08-24）：14 次点击、13,320 次展示、CTR 0.1%、平均排名 13.6。
+- 最近 3 个月（2026-07-26 至 2026-08-24）：16 次点击、13,323 次展示、CTR 0.1%、平均排名 13.6。
+- 高展示查询示例：`best dividend stocks for beginners`（2 点击、10,929 展示）；其余主要查询为 `jepq dividend history`、`nvdy dividend history`、`股息如何運作` 等。
+- 已从“效果”报告触发 CSV 导出；后续标题/摘要 CTR 测试仍应基于导出的页面—查询明细，不根据单一汇总词直接全站改标题。
+
+### 当前完成度
+
+- 已完成：G1、重点页面 G4 检查、G5 汇总读取/导出。
+- 已完成：G2 规范 www sitemap 重新提交，状态成功且发现 120 页。
+- 明确阻塞：G3 404 验证，等待 Cloudflare 邮件保护 404 处理。
