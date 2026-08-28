@@ -4,7 +4,19 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 <BaseLayout title="股息股票筛选 - Dividend Guide" description="学习如何用收益率、派息率、现金流和股息增长筛选股票。" canonical="https://www.dividend01.com/zh/topics/dividend-stock-screening/" locale="zh">
   <slot slot="title">股息股票筛选</slot>
   <slot slot="subtitle">先建立筛选方法，再查看具体股票或 ETF。</slot>
+  <p class="tip-box"><strong>筛选原则：</strong>收益率只负责提出问题，不能直接给出答案。先判断商业模式和行业，再核对分配覆盖、资产负债表、估值与总回报。</p>
   <h2>筛选顺序</h2>
   <ol><li>确认商业模式和行业指标。</li><li>检查收益率是否由现金流支持。</li><li>比较派息率、债务、利率敏感性和历史减派息。</li><li>查看总回报和估值，不只看现金分配。</li></ol>
-  <p>进入<a href="/zh/stocks/">股息股票工具</a>前，建议先阅读<a href="/zh/articles/dividend-dividend-stocks/">完整筛选方法</a>。</p>
+  <h2>指标要按行业解释</h2>
+  <div class="topic-links">
+    <a href="/zh/articles/dividend-dividend-stocks/"><strong>普通公司</strong><span>收益率、派息率、盈利和自由现金流。</span></a>
+    <a href="/zh/articles/high-dividend-stocks/"><strong>高股息行业</strong><span>债务、周期、利率敏感度与减派息风险。</span></a>
+    <a href="/zh/topics/dividend-etf-history/"><strong>收入型 ETF</strong><span>分配来源、基金方法、NAV 和总回报。</span></a>
+  </div>
+  <h2>把筛选结果变成研究问题</h2>
+  <ul><li>这项分配来自经营现金流、资产出售、期权权利金，还是资本返还？</li><li>如果盈利或市场环境恶化，分配是否还有缓冲？</li><li>当前价格是否已经反映了高收益，估值和总回报如何？</li><li>数据来自哪里，最近一次更新是什么时候？</li></ul>
+  <h2>常见问题</h2>
+  <details class="faq-item"><summary>可以只按股息率排序吗？</summary><div class="faq-answer">不建议。排序会忽略价格下跌、分配来源、行业差异和减派息风险，只适合做第一步观察。</div></details>
+  <details class="faq-item"><summary>派息率多少才安全？</summary><div class="faq-answer">没有适用于所有行业的单一阈值。应结合盈利波动、现金流、债务和公司或基金的分配机制判断。</div></details>
+  <p>完成框架后再进入<a href="/zh/stocks/">股息股票工具</a>，并用<a href="/zh/articles/dividend-dividend-stocks/">完整筛选方法</a>逐项复核。</p>
 </BaseLayout>

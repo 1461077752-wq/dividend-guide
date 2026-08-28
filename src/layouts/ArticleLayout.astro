@@ -142,13 +142,17 @@ if (faqPage) structuredData.push(faqPage);
         <span class="article-topbar-name">Dividend Guide</span>
       </a>
       <nav class="article-topbar-nav">
+        <div class="nav-scroll" aria-label={locale === 'zh' ? '文章主要导航' : 'Primary article navigation'}>
           <a href={localizedPath('/')} class:list={[{ active: currentPath === localizedPath('/') }]} data-article-i18n="nav.guide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>{locale === 'zh' ? '指南' : 'Guide'}</a>
         <a href={localizedPath('/articles/')} class:list={[{ active: currentPath.startsWith('/articles/') }]} data-article-i18n="nav.articles"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>{locale === 'zh' ? '文章' : 'Articles'}</a>
         <a href={localizedPath('/stocks/')} class:list={[{ active: currentPath.startsWith('/stocks/') }]} data-article-i18n="nav.stocks"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>{locale === 'zh' ? '股票' : 'Stocks'}</a>
         <a href={localizedPath('/calculator/')} class:list={[{ active: currentPath.startsWith('/calculator/') }]} data-article-i18n="nav.calculator"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><circle cx="8" cy="11" r="1"/><circle cx="12" cy="11" r="1"/><circle cx="16" cy="11" r="1"/></svg>{locale === 'zh' ? '计算器' : 'Calculator'}</a>
-        <a href={localizedPath('/strategy/')} class:list={[{ active: currentPath.startsWith('/strategy/') }]} data-article-i18n="nav.strategy"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>{locale === 'zh' ? '策略' : 'Strategy'}</a>
+          <a href={localizedPath('/strategy/')} class:list={[{ active: currentPath.startsWith('/strategy/') }]} data-article-i18n="nav.strategy"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>{locale === 'zh' ? '策略' : 'Strategy'}</a>
+        </div>
+        <div class="nav-actions">
         <a class="article-language-switcher" href={languageHref} aria-label={locale === 'zh' ? 'Switch to English' : '切换到中文'}>{locale === 'zh' ? 'EN' : '中文'}</a>
         <a class="article-nav-cta nav-cta" href={localizedPath('/stocks/')}>{locale === 'zh' ? '开始研究' : 'Explore research'}</a>
+        </div>
       </nav>
     </div>
   </div>
