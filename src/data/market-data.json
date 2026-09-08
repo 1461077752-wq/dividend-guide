@@ -1,6 +1,6 @@
 {
   "source": "Yahoo Finance chart API",
-  "refreshedAt": "2026-09-05T00:07:29.675Z",
+  "refreshedAt": "2026-09-08T00:26:24.983Z",
   "records": [
     {
       "symbol": "JNJ",
@@ -41,7 +41,7 @@
     {
       "symbol": "PEP",
       "price": 137.63,
-      "annualDividend": 5.749,
+      "annualDividend": 5.806,
       "marketTime": "2026-09-04T20:00:00.000Z",
       "currency": "USD",
       "company": "PepsiCo",
